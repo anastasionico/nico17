@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>@yield('title')</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<style type="text/css">
 		body{
 			margin: 0;
