@@ -1,0 +1,72 @@
+header{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding-top: 1rem;
+	width: 5%;
+	background-color: $blue;
+	opacity: 0.5;
+
+}
+aside{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 5%;
+	background-color: $blue;
+	opacity: 0.5;
+}
+
+footer{
+	padding: 0 10%;
+	width: 100%;
+	background-color: $azure;
+}
+
+.mainSection{
+	width: 100%;
+
+}
+
+.hero--section{
+	width: 100%;
+	height: 100vh;
+	background-color: $azure;	
+	
+	@include media(tabletPortrait) {
+	    margin: -10% 0 0 -20%; 
+		height:100vh;
+		width:150%;
+		opacity: 0.8;
+		@include rotateZ(#{$rotationZ}deg );
+		background-color: $azure;		
+	}
+	@include media(desktop) {
+	    margin: -10% 0 0 -20%; 
+		height:100vh;
+		width:150%;
+		opacity: 0.8;
+		@include rotateZ(#{$rotationZ}deg );
+		background-color: $azure;		
+	}
+
+
+
+	
+
+}
+.about--section{
+	background-color: $white;	
+}
+.work--section{
+	background-color: $blue;	
+}
+.testimonial--section{
+	background-color: $white;	
+}
+.blog--section{
+	background-color: $blue;	
+}
+

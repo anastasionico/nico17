@@ -10,15 +10,25 @@
 	</header>
 
 	<section class="mainSection">
-		@yield('hero')
-
-		@yield('about')
+		<section class="hero--section">
+			@yield('hero')
+		</section>
 		
-		@yield('work')
+		<section class="about--section">
+			@yield('about')
+		</section>
 
-		@yield('testimonial')
+		<section class="work--section">
+			@yield('work')
+		</section>
 
-		@yield('blog')
+		<section class="testimonial--section">
+			@yield('testimonial')
+		</section>
+
+		<section class="blog--section">
+			@yield('blog')
+		</section>
 
     </section>
 	

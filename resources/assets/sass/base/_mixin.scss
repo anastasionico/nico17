@@ -1,0 +1,42 @@
+@mixin rotateZ($deg) {
+	-ms-transform: rotateZ($deg); /* IE 9 */
+    -webkit-transform: rotateZ($deg); /* Chrome, Safari, Opera */
+    transform: rotateZ($deg);
+
+    -ms-transform: rotate($deg); /* IE 9 */
+    -ms-transform-origin: center; /* IE 9 */
+    -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: center; /* Chrome, Safari, Opera */
+    transform: rotate($deg);
+    transform-origin: center;
+}
+
+@mixin media($breakpoint) { 
+	@if map-has-key($breakpoints, $breakpoint) {
+    	@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      		@content;
+		}
+  	}
+	@else {
+	    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    	    + "Please make sure it is defined in `$breakpoints` map.";
+  	}
+  	// @include media(phonePortrait) {
+   	//  	background-color: yellow;
+  	// };
+  	// @include media(phoneLandscape) {
+   	//  	background-color: orange;
+  	// };
+  	// @include media(tabletPortrait) {
+   	//  	background-color: tomato;
+  	// };
+  	// @include media(tabletLandscape) {
+   	//  	background-color: violet;
+  	// };
+  	// @include media(desktop) {
+   	//  	background-color: red;
+  	// };
+  	// @include media(bigscreen) {
+   	//  	background-color: purple;
+  	// };
+}
