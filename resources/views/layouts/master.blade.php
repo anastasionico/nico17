@@ -3,6 +3,8 @@
 <head>
 	<title>@yield('title')</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -10,9 +12,8 @@
 	</header>
 
 	<section class="mainSection">
-		<section class="hero--section">
-			@yield('hero')
-		</section>
+		
+		@yield('hero')
 		
 		<section class="about--section">
 			@yield('about')

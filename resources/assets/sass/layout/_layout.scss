@@ -1,12 +1,14 @@
+.text-center{
+	text-align:center;
+}
 header{
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	padding-top: 1rem;
-	width: 5%;
-	background-color: $blue;
-	opacity: 0.5;
+	width: 10%;
+	
 
 }
 aside{
@@ -14,13 +16,12 @@ aside{
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 5%;
-	background-color: $blue;
-	opacity: 0.5;
+	width: 10%;
+	
 }
 
 footer{
-	padding: 0 10%;
+	// padding: 0 10%;
 	width: 100%;
 	background-color: $azure;
 }
@@ -32,15 +33,15 @@ footer{
 
 .hero--section{
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	background-color: $azure;	
-	
+	overflow:hidden;
 	@include media(tabletPortrait) {
 	    margin: -10% 0 0 -20%; 
 		height:100vh;
 		width:150%;
 		opacity: 0.8;
-		@include rotateZ(#{$rotationZ}deg );
+		@include rotateZ(-#{$rotationZ}deg );
 		background-color: $azure;		
 	}
 	@include media(desktop) {
@@ -48,20 +49,19 @@ footer{
 		height:100vh;
 		width:150%;
 		opacity: 0.8;
-		@include rotateZ(#{$rotationZ}deg );
+		@include rotateZ(-#{$rotationZ}deg );
 		background-color: $azure;		
 	}
 
-
-
-	
-
 }
+
+
 .about--section{
 	background-color: $white;	
 }
 .work--section{
 	background-color: $blue;	
+
 }
 .testimonial--section{
 	background-color: $white;	

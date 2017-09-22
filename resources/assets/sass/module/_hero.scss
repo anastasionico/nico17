@@ -1,0 +1,32 @@
+.hero--section{
+
+	&-content{
+		@include media(phonePortrait) {
+			@include rotateZ(0deg);
+			margin:5rem auto 0;
+			width: 75%;
+			color: $blue;
+			h1{
+				font-size: 30px;
+				color: $white;
+				span{
+					color: $blue;
+				}
+			}
+			p{
+				font-size: 25px;
+			}
+
+
+		}
+	}
+	&-image{
+		@include media(phonePortrait) {
+			img{
+				width: 100%;	
+			}	
+			
+			
+		}
+	}
+}
