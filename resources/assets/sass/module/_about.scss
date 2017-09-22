@@ -1,32 +1,33 @@
 .about--section{
+	color:$blue;
 
 	&-content{
 		@include media(phonePortrait) {
-			@include rotateZ(0deg);
 			margin:5rem auto 0;
 			width: 75%;
-			color: $blue;
-			h1{
-				font-size: 30px;
-				color: $white;
-				span{
-					color: $blue;
-				}
-			}
-			p{
-				font-size: 25px;
-			}
-
-
 		}
 	}
-	&-image{
+	&-phasis{
 		@include media(phonePortrait) {
-			img{
-				width: 100%;	
-			}	
+			margin:5rem auto 0;
+			width: 75%;
+			text-align: center;
 			
+			&-logo{
+				margin: 1rem auto;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background: $white; 	
+				-webkit-box-shadow: 0px 5px 15px 5px #aaa;
+				-moz-box-shadow:    0px 5px 15px 5px #aaa;
+				box-shadow:         0px 5px 15px 5px #aaa;
+			}
 			
-		}
+			&-logo{
+
+			}
+		}	
 	}
+	
 }

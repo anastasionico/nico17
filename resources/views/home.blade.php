@@ -15,21 +15,32 @@
 @endsection
 
 @section('about')
-	{{-- <section class="about--section">
-		<h1>About me</h1>
+	<section class="about--section">
+		<div class="about--section-content">
+			<h3>About me</h3>
+			
+			<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
+			</p>
+		</div>
 		
-		<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
-		</p>
-
-		<br>
+		<hr>
 
 		<div class="about--section-phasis">
-			<div class="about--section-phasis-logo">
-				logo
+			<div>
+				<div class="about--section-phasis-logo"></div>
+				<h5 class="about--section-phasis-caption">Discovery</h5>	
+				<div class="about--section-phasis-logo"></div>
+				<h5 class="about--section-phasis-caption">Design</h5>	
+				<div class="about--section-phasis-logo"></div>
+				<h5 class="about--section-phasis-caption">Coding</h5>	
+				<div class="about--section-phasis-logo"></div>
+				<h5 class="about--section-phasis-caption">Testing</h5>	
+				<div class="about--section-phasis-logo"></div>
+				<h5 class="about--section-phasis-caption">Assistence</h5>	
 			</div>
-			<h4 class="about--section-phasis-caption">Discovery</h4>
+			
 		</div>
-	</section> --}}
+	</section>
 @endsection
 
 @section('work')

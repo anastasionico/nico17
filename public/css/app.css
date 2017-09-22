@@ -51,6 +51,13 @@ b {
   font-weight: 700;
 }
 
+hr {
+  width: 75%;
+  border: 2px solid;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -190,6 +197,35 @@ footer {
 @media (min-width: 0px) {
   .hero--section-image img {
     width: 100%;
+  }
+}
+
+.about--section {
+  color: #35a;
+}
+
+@media (min-width: 0px) {
+  .about--section-content {
+    margin: 5rem auto 0;
+    width: 75%;
+  }
+}
+
+@media (min-width: 0px) {
+  .about--section-phasis {
+    margin: 5rem auto 0;
+    width: 75%;
+    text-align: center;
+  }
+
+  .about--section-phasis-logo {
+    margin: 1rem auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 15px 5px #aaa;
+    box-shadow: 0px 5px 15px 5px #aaa;
   }
 }
 
