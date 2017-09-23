@@ -6,8 +6,18 @@
   border-radius: 50%;
   border-bottom-right-radius: 0px;
 }
+@mixin borderRadius($percentage){
+  -webkit-border-radius: $percentage;
+  -moz-border-radius: $percentage;
+  border-radius: $percentage;
+}
 
 @mixin lightShadow{
+  -webkit-box-shadow: 0px 3px 15px 3px $gray;
+  -moz-box-shadow:    0px 3px 15px 3px $gray;
+  box-shadow:         0px 3px 15px 3px $gray;
+}
+@mixin lightShadowZ{
   -webkit-box-shadow: 3px 3px 15px 3px $gray;
   -moz-box-shadow:    3px 3px 15px 3px $gray;
   box-shadow:         3px 3px 15px 3px $gray;

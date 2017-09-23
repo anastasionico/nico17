@@ -16,12 +16,10 @@
 
 			&-logo{
 				margin: 2rem auto;
-				width: 100px;
-				height: 100px;
 				@include borderArrow;
 				transform: rotateZ(45deg);
 				background: $white; 	
-				@include lightShadow;
+				@include lightShadowZ;
 				@include flex(center);
 			 	i{
 			 		transform: rotateZ(-45deg);
@@ -30,28 +28,43 @@
 		}	
 	}
 
-	// &-skills{
-	// 	@include media(phonePortrait) {
-	// 		margin:5rem auto 0;
-	// 		width: 75%;
-	// 		text-align: center;
-	// 		background: red;
+	&-skills{
+		@include media(phonePortrait) {
+			margin:5rem auto 0;
+			width: 75%;
+			text-align: left;
+			
+			
 
-	// 		&-logo{
-	// 			margin: 2rem auto;
-	// 			width: 100px;
-	// 			height: 100px;
-	// 			background: green;
-	// 			// @include borderArrow;
-	// 			// transform: rotateZ(45deg);
-	// 			// background: $white; 	
-	// 			// @include lightShadow;
-	// 			// @include flex(center);
-	// 		 // 	i{
-	// 		 // 		transform: rotateZ(-45deg);
-	// 		 // 	}
-	// 		}
-	// 	}		
-	// }
+			&-logo{
+				position: relative;
+				margin: 2rem 0;
+				background: $white; 	
+				@include lightShadow;
+				@include borderRadius(50%);
+				@include flex(center);
+				&:after{
+					content: "";
+				    background-color: $blue;
+				    position: absolute;
+				    height: 10px;
+				    top:45%;
+				    width: 300px;
+					z-index: -1;	
+				}
+			}
+
+			.skill-1:after{
+			    width: 300px;
+			}	
+			.skill-2:after{
+			    width: 270px;
+			}
+			.skill-3:after{
+			    width: 70px;
+			}	
+		}	
+		
+	}
 	
 }
