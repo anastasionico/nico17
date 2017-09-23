@@ -5,41 +5,29 @@
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 	<header>
 		@include('layouts.header')
 	</header>
+	
+	@include('layouts.aside')
+	
+	
 
 	<section class="mainSection">
 		
 		@yield('hero')
+		@yield('about')
 		
-		<section class="about--section">
-			@yield('about')
-		</section>
-
-		<section class="work--section">
-			@yield('work')
-		</section>
-
-		<section class="testimonial--section">
-			@yield('testimonial')
-		</section>
-
-		<section class="blog--section">
-			@yield('blog')
-		</section>
-
-    </section>
+	</section>
 	
-	<aside>
-		@include('layouts.aside')
-	</aside>
 	
-	<footer>
+	
+	{{-- <footer>
 		@include('layouts.footer')
-	</footer>
+	</footer> --}}
 </body>
 
 </html>

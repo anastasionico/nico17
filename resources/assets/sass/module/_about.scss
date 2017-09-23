@@ -7,27 +7,51 @@
 			width: 75%;
 		}
 	}
+	
 	&-phasis{
 		@include media(phonePortrait) {
 			margin:5rem auto 0;
 			width: 75%;
 			text-align: center;
-			
+
 			&-logo{
-				margin: 1rem auto;
+				margin: 2rem auto;
 				width: 100px;
 				height: 100px;
-				border-radius: 50%;
+				@include borderArrow;
+				transform: rotateZ(45deg);
 				background: $white; 	
-				-webkit-box-shadow: 0px 5px 15px 5px #aaa;
-				-moz-box-shadow:    0px 5px 15px 5px #aaa;
-				box-shadow:         0px 5px 15px 5px #aaa;
-			}
-			
-			&-logo{
-
+				@include lightShadow;
+				@include flex(center);
+			 	i{
+			 		transform: rotateZ(-45deg);
+			 	}
 			}
 		}	
 	}
+
+	// &-skills{
+	// 	@include media(phonePortrait) {
+	// 		margin:5rem auto 0;
+	// 		width: 75%;
+	// 		text-align: center;
+	// 		background: red;
+
+	// 		&-logo{
+	// 			margin: 2rem auto;
+	// 			width: 100px;
+	// 			height: 100px;
+	// 			background: green;
+	// 			// @include borderArrow;
+	// 			// transform: rotateZ(45deg);
+	// 			// background: $white; 	
+	// 			// @include lightShadow;
+	// 			// @include flex(center);
+	// 		 // 	i{
+	// 		 // 		transform: rotateZ(-45deg);
+	// 		 // 	}
+	// 		}
+	// 	}		
+	// }
 	
 }

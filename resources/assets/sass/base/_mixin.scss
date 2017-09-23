@@ -1,3 +1,18 @@
+@mixin borderArrow{
+  -webkit-border-radius: 50%;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius: 50%;
+  -moz-border-radius-bottomright: 0px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+}
+
+@mixin lightShadow{
+  -webkit-box-shadow: 3px 3px 15px 3px $gray;
+  -moz-box-shadow:    3px 3px 15px 3px $gray;
+  box-shadow:         3px 3px 15px 3px $gray;
+}
+
 @mixin rotateZ($deg) {
 	-ms-transform: rotateZ($deg); /* IE 9 */
     -webkit-transform: rotateZ($deg); /* Chrome, Safari, Opera */
@@ -11,6 +26,15 @@
     transform-origin: center;
 }
 
+@mixin flex($par){
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: $par;
+  align-items: $par;
+  -webkit-justify-content: $par;
+  justify-content: $par;
+}
+
 @mixin media($breakpoint) { 
 	@if map-has-key($breakpoints, $breakpoint) {
     	@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
@@ -21,22 +45,10 @@
 	    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
     	    + "Please make sure it is defined in `$breakpoints` map.";
   	}
-  	// @include media(phonePortrait) {
-   	//  	background-color: yellow;
-  	// };
-  	// @include media(phoneLandscape) {
-   	//  	background-color: orange;
-  	// };
-  	// @include media(tabletPortrait) {
-   	//  	background-color: tomato;
-  	// };
-  	// @include media(tabletLandscape) {
-   	//  	background-color: violet;
-  	// };
-  	// @include media(desktop) {
-   	//  	background-color: red;
-  	// };
-  	// @include media(bigscreen) {
-   	//  	background-color: purple;
-  	// };
+  	// @include media(phonePortrait) {};
+  	// @include media(phoneLandscape) {};
+  	// @include media(tabletPortrait) {};
+  	// @include media(tabletLandscape) {};
+  	// @include media(desktop) {};
+  	// @include media(bigscreen) {};
 }
