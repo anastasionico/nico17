@@ -1,32 +1,77 @@
 .hero--section{
+	position: absolute; 
+	top:-6%; 
+	left:-25% ; 
+	width: 150%;  
+	height: 100vh; 
+	transform: rotate(-10deg);
+	overflow: hidden;
+	background: radial-gradient(lighten($azure, 20%),$azure);
+	@include media(tabletPortrait){
+		height: 50vh; 
+	}
+	@include media(tabletLandscape){
+		height: 100vh; 
+	}
+	@include media(tabletLandscape){
+		top:-10%; 
+		height: 100vh; 
+	}
 
 	&-content{
-		@include media(phonePortrait) {
-			@include rotateZ(0deg);
-			margin:5rem auto 0;
-			width: 75%;
-			color: $blue;
-			h1{
-				font-size: 30px;
-				color: $white;
-				span{
-					color: $blue;
-				}
-			}
-			p{
-				font-size: 25px;
-			}
-
-
-		}
+		position:absolute;
+		top:34%;
+		left: 26%;
+		width: 50%;
+	    transform: rotate(10deg);
+	    text-align: center;
+	    color: $blue;
+	    span{
+	    	color:$white;
+	    }
+	    @include media(phoneLandscape){
+			top:40%;
+			left: 26%;
+			width: 50%;
+	    }
+	    @include media(tabletPortrait){
+			top:33%;
+			left: 48%;
+			width: 25%
+	    }
+	    @include media(tabletLandscape){
+    		top:50%;
+			left: 50%;
+			width: 25%	
+	    }
+	    
 	}
 	&-image{
-		@include media(phonePortrait) {
-			img{
-				width: 100%;	
-			}	
-			
-			
+		position:absolute;
+		top:49%;
+		left: 11%;
+		width: 67%;
+	    transform: rotate(10deg);
+	    @include media(phoneLandscape){
+			top:48%;
+			left: 33%;
+			width: 37%;
+	    }
+	    @include media(tabletPortrait){
+	    	top:20%;
+			left: 15%;
+			width: 45%;	
+	    }
+	    @include media(tabletLandscape){
+    		top:5%;
+			left: 16%;
+			width: 40%;	
+	    }
+	    @include media(desktop){
+    		top:15%;
+			left: 15%;
+			width: 41%;	
 		}
 	}
+						
 }

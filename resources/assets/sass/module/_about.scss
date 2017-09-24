@@ -1,13 +1,6 @@
 .about--section{
 	color:$blue;
 
-	&-content{
-		@include media(phonePortrait) {
-			margin:5rem auto 0;
-			width: 75%;
-		}
-	}
-	
 	&-phasis{
 		@include media(phonePortrait) {
 			margin:5rem auto 0;

@@ -27,34 +27,52 @@ aside{
 
 .mainSection{
 	width: 100%;
-
+	overflow: hidden;
+	height:2000px;
+	
 }
 
-.hero--section{
-	width: 100%;
-	height: 80vh;
-	background-color: $azure;	
+
+
+.oneThird{
 	overflow:hidden;
-	@include media(tabletPortrait) {
-	    margin: -10% 0 0 -20%; 
-		height:100vh;
-		width:150%;
-		opacity: 0.8;
-		@include rotateZ(-#{$rotationZ}deg );
-		background-color: $azure;		
+	margin:5rem auto 0;
+
+	&--big{
+		display: block;
+		margin:0 auto;
+		width: 75%;
+		&--content{
+			text-align: justify;
+		}
+
+		@include media(tabletLandscape) {
+			display: inline-block;
+			width: 66%;
+			float: left;
+			
+			&--content{
+				text-align: left;
+				width: 320px;
+				margin: 0 auto;
+				hr{text-align: left;}
+			}
+		}
 	}
-	@include media(desktop) {
-	    margin: -10% 0 0 -20%; 
-		height:100vh;
-		width:150%;
-		opacity: 0.8;
-		@include rotateZ(-#{$rotationZ}deg );
-		background-color: $azure;		
+	&--small{
+		display: block;
+		margin:0 auto ;
+		width: 75%;
+	
+		@include media(tabletLandscape) {	
+			display: inline-block;
+			width: 33%;
+			float: left;
+			
+		}
 	}
 
 }
-
-
 
 // .work--section{
 // 	background-color: $blue;	

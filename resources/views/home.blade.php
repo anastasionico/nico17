@@ -1,21 +1,43 @@
 @extends('layouts.master')
 
 @section('hero')
-	<section class="hero--section">
-		<div class="hero--section-content text-center">
-			<h1>
-				anastasio<span>nico.uk</span>
-			</h1>
-			<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
-		</div>
-		<div class="hero--section-image">
-			<img src="img/mobile-hero.png">
-		</div>
-	</section>
+
+		
+
+		{{-- <section class="hero--section">
+			
+			<div class="hero--section-content" >
+				<h1>
+					anastasio<span>nico.uk</span>
+				</h1>
+				<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
+			</div>
+			<div class="hero--section-image">
+				<img src="img/mobile-hero.png">
+			</div>
+
+		</section> --}}
+	
 @endsection
 
 @section('about')
-	<section class="about--section">
+	<div class="oneThird about--section">
+		<div class="oneThird--big">
+			<div class="oneThird--big--content ">
+				<h3>About me</h3>
+			
+				<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
+				</p>
+
+				<hr>
+			</div>
+		</div>
+		<div class="oneThird--small"></div>
+	</div>		
+
+
+
+	{{-- <section class="about--section">
 		<div class="about--section-content">
 			<h3>About me</h3>
 			
@@ -46,12 +68,11 @@
 				<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
 			</span>
 			<h5 class="about--section-phasis-caption">Testing</h5>	
-			
 
-			<h5 class="about--section-phasis-caption">Assistence</h5>	
 			<span class="about--section-phasis-logo  bigCircle">
 				<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>
 			</span>
+			<h5 class="about--section-phasis-caption">Assistence</h5>	
 		</div>
 
 		<div class="about--section-skills">
@@ -66,7 +87,7 @@
 			</span>
 		</div>
 
-	</section>
+	</section> --}}
 @endsection
 
 @section('work')

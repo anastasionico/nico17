@@ -10,9 +10,11 @@
 }
 
 .scroll--balls{
+	
 	height: 25%;
 	margin-top:100px;
 	.scroll--ball{
+		
 		display:block;
 		@include borderArrow;
 		transform: rotate(45deg);
