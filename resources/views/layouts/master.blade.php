@@ -16,21 +16,10 @@
 
 	<section class="mainSection">
 
-			<div class="hero--section">
-				<div class="hero--section-content">
-					<h1>
-						anastasio<span>nico.uk</span>
-					</h1>
-					<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
-				</div>
-				
-				<img class="hero--section-image" src="img/mobile-hero.png">
-				
-			</div>
-
+		@yield('hero')
 			
-		{{-- @yield('hero') --}}
-		{{-- @yield('about') --}}
+		
+		@yield('about')
 
  		{{-- <div class="oneThird">
  			<div class="oneThird--big">

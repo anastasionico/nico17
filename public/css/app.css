@@ -16,7 +16,6 @@ body {
   font-size: 17px;
   overflow-x: hidden;
   position: relative;
-  height: 2000px;
 }
 
 h1 {
@@ -90,7 +89,6 @@ aside {
 .mainSection {
   width: 100%;
   overflow: hidden;
-  height: 2000px;
 }
 
 .oneThird {
@@ -252,6 +250,7 @@ aside {
 }
 
 .about--section {
+  margin-top: 100vh;
   color: #35a;
 }
 

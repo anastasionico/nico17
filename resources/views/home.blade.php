@@ -2,50 +2,39 @@
 
 @section('hero')
 
+	<div class="hero--section">
+		<div class="hero--section-content">
+			<h1>
+				anastasio<span>nico.uk</span>
+			</h1>
+			<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
+		</div>
 		
+		<img class="hero--section-image" src="img/mobile-hero.png">
+		
+	</div>
 
-		{{-- <section class="hero--section">
-			
-			<div class="hero--section-content" >
-				<h1>
-					anastasio<span>nico.uk</span>
-				</h1>
-				<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
-			</div>
-			<div class="hero--section-image">
-				<img src="img/mobile-hero.png">
-			</div>
-
-		</section> --}}
-	
 @endsection
 
 @section('about')
-	<div class="oneThird about--section">
-		<div class="oneThird--big">
-			<div class="oneThird--big--content ">
-				<h3>About me</h3>
-			
-				<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
-				</p>
+	
 
-				<hr>
+
+
+	<section class="about--section">
+		<div class="oneThird about--section">
+			<div class="oneThird--big">
+				<div class="oneThird--big--content ">
+					<h3>About me</h3>
+				
+					<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
+					</p>
+
+					<hr>
+				</div>
 			</div>
-		</div>
-		<div class="oneThird--small"></div>
-	</div>		
-
-
-
-	{{-- <section class="about--section">
-		<div class="about--section-content">
-			<h3>About me</h3>
-			
-			<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
-			</p>
-		</div>
-		
-		<hr>
+			<div class="oneThird--small"></div>
+		</div>		
 
 		<div class="about--section-phasis">
 			
@@ -87,7 +76,7 @@
 			</span>
 		</div>
 
-	</section> --}}
+	</section>
 @endsection
 
 @section('work')
