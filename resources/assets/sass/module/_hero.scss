@@ -7,15 +7,8 @@
 	transform: rotate(-10deg);
 	overflow: hidden;
 	background: radial-gradient(lighten($azure, 20%),$azure);
-	@include media(tabletPortrait){
-		height: 50vh; 
-	}
-	@include media(tabletLandscape){
-		height: 100vh; 
-	}
 	@include media(tabletLandscape){
 		top:-100px;
-		height: 100vh; 
 	}
 
 	&-content{

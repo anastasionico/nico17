@@ -17,7 +17,13 @@
 	<section class="mainSection">
 
 		@yield('hero')
-		{{-- @yield('about') --}}
+		@yield('about')
+
+
+
+ 		
+ 		{{-- 
+		LAYOUT SAMPLE
 
  		<div class="oneThird">
  			<div class="oneThird--big">
@@ -25,7 +31,6 @@
 			</div>
  			<div class="oneThird--small"></div>
  		</div>		
-
 
  		<div class="fullWidth">
  			<div class="fullWidth--content">A</div>
@@ -52,8 +57,10 @@
 			<div class="sectionCenter--content">
 				section center
 			</div>
-
 		</div>
+		
+		 --}}
+	
 	</section>
 	
 	<header>

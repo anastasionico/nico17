@@ -28,3 +28,7 @@
 		background-color: $azure;
 	}
 }
+
+.flexCenter{
+	@include flex(center);
+}

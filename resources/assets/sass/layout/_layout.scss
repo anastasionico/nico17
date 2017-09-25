@@ -35,7 +35,6 @@ aside{
 .oneThird{
 	overflow:hidden;
 	margin:5rem auto 0;
-	background-color:#300;
 	margin-top:100vh;
 	@include media(tabletPortrait) {
 		margin-top:100vh;
@@ -47,7 +46,6 @@ aside{
 		
 		&--content{
 			text-align: justify;
-			background-color:#f00;
 		}
 		
 		@include media(tabletPortrait) {
@@ -64,8 +62,6 @@ aside{
 		}
 	}
 	&--small{
-		background-color:#800;
-
 		display: block;
 		margin:0 auto ;
 		width: 75%;
@@ -129,7 +125,6 @@ aside{
 
 .fullWidth{
 	margin:5rem auto 0;
-	background-color: #020;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -145,7 +140,6 @@ aside{
 	}
 	
 	&--content{
-		background-color: #0a0;
 		width: 75%;
 		text-align:center;
 		@include media(tabletPortrait) {	
@@ -158,11 +152,9 @@ aside{
 .sectionCenter{
 	margin:5rem auto 0;
 	text-align:center;
-	background-color: #0a0;
 	&--content{
 		display: block;
 		margin:0 auto;
 		width: 75%;
-		background-color: #040;
 	}
 }

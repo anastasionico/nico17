@@ -36,45 +36,61 @@
 			<div class="oneThird--small"></div>
 		</div>		
 
-		<div class="about--section-phasis">
-			
-			<span class="about--section-phasis-logo  bigCircle">
-				<i class="fa fa-binoculars fa-2x" aria-hidden="true"></i>
-			</span>
-			<h5 class="about--section-phasis-caption">Discovery</h5>
 
-			<span class="about--section-phasis-logo  bigCircle">
-				<i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
-			</span>
-			<h5 class="about--section-phasis-caption">Design</h5>	
-			
-			<span class="about--section-phasis-logo  bigCircle">
-				<i class="fa fa-code fa-2x" aria-hidden="true"></i>
-			</span>
-			<h5 class="about--section-phasis-caption">Coding</h5>	
-			
-			<span class="about--section-phasis-logo  bigCircle">
-				<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
-			</span>
-			<h5 class="about--section-phasis-caption">Testing</h5>	
+ 		<div class="fullWidth about--section-phasis">
+ 			<div class="fullWidth--content">
+ 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-binoculars fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Discovery</h5>
+ 			</div>
+ 			<div class="fullWidth--content">
+ 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Design</h5>	
+ 			</div>
+ 			<div class="fullWidth--content">
+				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-code fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Coding</h5>	
+ 			</div>
+ 			<div class="fullWidth--content">
+ 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Testing</h5>	
+ 			</div>
+ 			<div class="fullWidth--content">
+ 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Assistence</h5>	
+ 			</div>
+ 		</div>
 
-			<span class="about--section-phasis-logo  bigCircle">
-				<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>
-			</span>
-			<h5 class="about--section-phasis-caption">Assistence</h5>	
+ 		<div class="sectionCenter">
+			<div class="sectionCenter--content">
+				<span  class="about--section-skills-logo smallCircle flexCenter skill-1">
+					html
+				</span>
+			</div>
 		</div>
 
-		<div class="about--section-skills">
-			<span  class="about--section-skills-logo smallCircle skill-1">
-				html
-			</span>
-			<span  class="about--section-skills-logo smallCircle skill-2">
-				Css
-			</span>
-			<span  class="about--section-skills-logo smallCircle skill-3">
-				Sass
-			</span>
-		</div>
+		{{-- 
+			<div class="about--section-skills">
+				<span  class="about--section-skills-logo smallCircle skill-1">
+					html
+				</span>
+				<span  class="about--section-skills-logo smallCircle skill-2">
+					Css
+				</span>
+				<span  class="about--section-skills-logo smallCircle skill-3">
+					Sass
+				</span>
+			</div> 
+		--}}
 
 	</section>
 @endsection
