@@ -18,11 +18,7 @@
   box-shadow:         #{$hShadow}px #{$vShadow}px #{$blur}px #{$spread}px $color;
 }
 
-@mixin lightShadowZ{
-  -webkit-box-shadow: ;
-  -moz-box-shadow:    3px 3px 15px 3px $gray;
-  box-shadow:         3px 3px 15px 3px $gray;
-}
+
 
 @mixin rotateZ($deg) {
 	-ms-transform: rotateZ($deg); /* IE 9 */

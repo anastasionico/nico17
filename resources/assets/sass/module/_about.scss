@@ -30,31 +30,43 @@
 
 	&-skills{
 		&-logo{
-			@include lightShadow(3, 3, 15, 3, $gray);
+			@include lightShadow(0, 3, 15, 3, $gray);
 			@include borderRadius(50%);
-			// &:after{
-			// 	content: "";
-			//     background-color: $blue;
-			//     position: absolute;
-			//     height: 10px;
-			//     top:45%;
-			//     width: 300px;
-			// 	z-index: -1;	
-			// }
-		}
-		// @include media(phonePortrait) {
-			
+			position:relative;
+			background-color:$white;
+			&:after{
+				content: "";
+			    background-color: $blue;
+			    position: absolute;
+			    height: 5px;
+			    top:45%;
+			    left: 18px;
+			    z-index: -1;	
 
-		// 	.skill-1:after{
-		// 	    width: 300px;
-		// 	}	
-		// 	.skill-2:after{
-		// 	    width: 270px;
-		// 	}
-		// 	.skill-3:after{
-		// 	    width: 70px;
-		// 	}	
-		// }	
+			}
+			@include media(tabletPortrait){
+				margin: 1rem auto;
+			}
+		}
 	}
-	
+	#skill-1:after{
+		width: 250px;
+	}	
+	#skill-2:after{
+	    width: 167px;
+	}
+	#skill-3:after{
+	 	width: 54px;
+	}
+	@include media(tabletPortrait){
+		@for $i from 1 through 100{
+			@if $i % 2 == 0 { 
+				#skill-#{$i}:after{
+					transform: rotate(180deg);
+					transform-origin: left;
+				}	
+		  	}
+			
+		}
+	}	
 }

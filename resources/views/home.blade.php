@@ -71,26 +71,24 @@
  		</div>
 
  		<div class="sectionCenter">
+			
 			<div class="sectionCenter--content">
-				<span  class="about--section-skills-logo smallCircle flexCenter skill-1">
+				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-1">
 					html
 				</span>
 			</div>
-		</div>
-
-		{{-- 
-			<div class="about--section-skills">
-				<span  class="about--section-skills-logo smallCircle skill-1">
-					html
-				</span>
-				<span  class="about--section-skills-logo smallCircle skill-2">
+			<div class="sectionCenter--content">
+				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-2">
 					Css
 				</span>
-				<span  class="about--section-skills-logo smallCircle skill-3">
+			</div>
+			<div class="sectionCenter--content">
+				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-3">
 					Sass
 				</span>
-			</div> 
-		--}}
+			</div>
+
+		</div>
 
 	</section>
 @endsection

@@ -1,12 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400,700);.smallCircle {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   font-size: 0.75rem;
 }
 
 .bigCircle {
-  margin: 0 auto;
   width: 100px;
   height: 100px;
   font-size: 0.75rem;
@@ -80,6 +78,10 @@ hr {
   text-align: center;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -103,8 +105,8 @@ aside {
 }
 
 .oneThird {
+  margin: 4rem auto 1rem;
   overflow: hidden;
-  margin: 5rem auto 0;
   margin-top: 100vh;
 }
 
@@ -157,8 +159,8 @@ aside {
 }
 
 .twoThird {
+  margin: 4rem auto 1rem;
   overflow: hidden;
-  margin: 5rem auto 0;
 }
 
 .twoThird--small {
@@ -208,7 +210,7 @@ aside {
 }
 
 .fullWidth {
-  margin: 5rem auto 0;
+  margin: 4rem auto 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,14 +253,16 @@ aside {
 }
 
 .sectionCenter {
-  margin: 5rem auto 0;
+  margin: 4rem auto 1rem;
   text-align: center;
+  width: 100%;
 }
 
 .sectionCenter--content {
   display: block;
   margin: 0 auto;
   width: 75%;
+  text-align: center;
 }
 
 .hero--section {
@@ -407,9 +411,391 @@ aside {
 }
 
 .about--section-skills-logo {
-  -webkit-box-shadow: 3px 3px 15px 3px #aaa;
-  box-shadow: 3px 3px 15px 3px #aaa;
+  -webkit-box-shadow: 0px 3px 15px 3px #aaa;
+  box-shadow: 0px 3px 15px 3px #aaa;
   border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+}
+
+.about--section-skills-logo:after {
+  content: "";
+  background-color: #35a;
+  position: absolute;
+  height: 5px;
+  top: 45%;
+  left: 18px;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .about--section-skills-logo {
+    margin: 1rem auto;
+  }
+}
+
+.about--section #skill-1:after {
+  width: 250px;
+}
+
+.about--section #skill-2:after {
+  width: 167px;
+}
+
+.about--section #skill-3:after {
+  width: 54px;
+}
+
+@media (min-width: 768px) {
+  .about--section #skill-2:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-4:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-6:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-8:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-10:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-12:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-14:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-16:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-18:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-20:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-22:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-24:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-26:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-28:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-30:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-32:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-34:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-36:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-38:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-40:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-42:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-44:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-46:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-48:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-50:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-52:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-54:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-56:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-58:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-60:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-62:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-64:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-66:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-68:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-70:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-72:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-74:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-76:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-78:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-80:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-82:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-84:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-86:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-88:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-90:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-92:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-94:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-96:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-98:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section #skill-100:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 
 .hamburger {

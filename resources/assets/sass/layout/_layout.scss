@@ -1,6 +1,10 @@
 .text-center{
 	text-align:center;
 }
+.mt-1{
+	margin-top:1rem;
+}
+
 header{
 	position: fixed;
 	top: 0;
@@ -19,22 +23,14 @@ aside{
 
 }
 
-// footer{
-// 	// padding: 0 10%;
-// 	width: 100%;
-// 	background-color: $azure;
-// }
-
 .mainSection{
 	width: 100%;
 	overflow: hidden;
 }
 
-
-
 .oneThird{
+	margin:4rem auto 1rem;
 	overflow:hidden;
-	margin:5rem auto 0;
 	margin-top:100vh;
 	@include media(tabletPortrait) {
 		margin-top:100vh;
@@ -77,8 +73,8 @@ aside{
 }
 
 .twoThird{
+	margin:4rem auto 1rem;
 	overflow:hidden;
-	margin:5rem auto 0;
 	
 	&--small{
 		display: block;
@@ -122,9 +118,8 @@ aside{
 	}
 }
 
-
 .fullWidth{
-	margin:5rem auto 0;
+	margin:4rem auto 1rem;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -150,11 +145,15 @@ aside{
 }
 
 .sectionCenter{
-	margin:5rem auto 0;
+	margin:4rem auto 1rem;
 	text-align:center;
+	width:100%;
 	&--content{
 		display: block;
 		margin:0 auto;
 		width: 75%;
+		text-align: center;
+
+
 	}
 }
