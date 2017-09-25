@@ -94,6 +94,14 @@ aside {
 .oneThird {
   overflow: hidden;
   margin: 5rem auto 0;
+  background-color: #300;
+  margin-top: 100vh;
+}
+
+@media (min-width: 768px) {
+  .oneThird {
+    margin-top: 100vh;
+  }
 }
 
 .oneThird--big {
@@ -104,9 +112,10 @@ aside {
 
 .oneThird--big--content {
   text-align: justify;
+  background-color: #f00;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .oneThird--big {
     display: inline-block;
     width: 66%;
@@ -125,12 +134,13 @@ aside {
 }
 
 .oneThird--small {
+  background-color: #800;
   display: block;
   margin: 0 auto;
   width: 75%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .oneThird--small {
     display: inline-block;
     width: 33%;
@@ -138,9 +148,118 @@ aside {
   }
 }
 
+.twoThird {
+  overflow: hidden;
+  margin: 5rem auto 0;
+}
+
+.twoThird--small {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  background-color: #880;
+}
+
+@media (min-width: 768px) {
+  .twoThird--small {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .twoThird--small-content {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.twoThird--big {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  background-color: #808;
+}
+
+@media (min-width: 768px) {
+  .twoThird--big {
+    display: inline-block;
+    width: 66%;
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .twoThird--big-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.fullWidth {
+  margin: 5rem auto 0;
+  background-color: #020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .fullWidth {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 75%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fullWidth {
+    width: 66%;
+  }
+}
+
+.fullWidth--content {
+  background-color: #0a0;
+  width: 75%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .fullWidth--content {
+    width: 100px;
+  }
+}
+
+.sectionCenter {
+  margin: 5rem auto 0;
+  text-align: center;
+  background-color: #0a0;
+}
+
+.sectionCenter--content {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  background-color: #040;
+}
+
 .hero--section {
   position: absolute;
-  top: -6%;
+  top: -100px;
   left: -25%;
   width: 150%;
   height: 100vh;
@@ -164,7 +283,7 @@ aside {
 
 @media (min-width: 1024px) {
   .hero--section {
-    top: -10%;
+    top: -100px;
     height: 100vh;
   }
 }

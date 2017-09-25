@@ -17,16 +17,43 @@
 	<section class="mainSection">
 
 		@yield('hero')
-			
-		
-		@yield('about')
+		{{-- @yield('about') --}}
 
- 		{{-- <div class="oneThird">
+ 		<div class="oneThird">
  			<div class="oneThird--big">
  				<div class="oneThird--big--content">a</div>
 			</div>
- 			<div class="oneThird--small">f</div>
- 		</div>		 --}}
+ 			<div class="oneThird--small"></div>
+ 		</div>		
+
+
+ 		<div class="fullWidth">
+ 			<div class="fullWidth--content">A</div>
+ 			<div class="fullWidth--content">A</div>
+ 			<div class="fullWidth--content">A</div>
+ 			<div class="fullWidth--content">A</div>
+ 			<div class="fullWidth--content">A</div>
+ 		</div>
+
+ 		<div class="twoThird">
+ 			<div class="twoThird--small">
+ 				<div class="twoThird--small-content">
+ 					small-content
+ 				</div>
+ 			</div>
+ 			<div class="twoThird--big">
+ 				<div class="twoThird--big-content">
+ 					big-content
+ 				</div>
+			</div>
+		</div>
+
+		<div class="sectionCenter">
+			<div class="sectionCenter--content">
+				section center
+			</div>
+
+		</div>
 	</section>
 	
 	<header>

@@ -35,16 +35,22 @@ aside{
 .oneThird{
 	overflow:hidden;
 	margin:5rem auto 0;
-
+	background-color:#300;
+	margin-top:100vh;
+	@include media(tabletPortrait) {
+		margin-top:100vh;
+	}
 	&--big{
 		display: block;
 		margin:0 auto;
 		width: 75%;
+		
 		&--content{
 			text-align: justify;
+			background-color:#f00;
 		}
-
-		@include media(tabletLandscape) {
+		
+		@include media(tabletPortrait) {
 			display: inline-block;
 			width: 66%;
 			float: left;
@@ -58,11 +64,13 @@ aside{
 		}
 	}
 	&--small{
+		background-color:#800;
+
 		display: block;
 		margin:0 auto ;
 		width: 75%;
-	
-		@include media(tabletLandscape) {	
+		
+		@include media(tabletPortrait) {	
 			display: inline-block;
 			width: 33%;
 			float: left;
@@ -72,14 +80,89 @@ aside{
 
 }
 
-// .work--section{
-// 	background-color: $blue;	
+.twoThird{
+	overflow:hidden;
+	margin:5rem auto 0;
+	
+	&--small{
+		display: block;
+		margin:0 auto;
+		width: 75%;
+		background-color:#880;
+		@include media(tabletPortrait) {
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+			float: left;
+		}	
+		&-content{
+	
+			@include media(tabletPortrait) {
+				width: 200px;
+				height: auto;
+				margin: 0 auto;
+				
+			}
+		}
+	}
+	&--big{
+		display: block;
+		margin:0 auto;
+		width: 75%;
+		background-color:#808;
 
-// }
-// .testimonial--section{
-// 	background-color: $white;	
-// }
-// .blog--section{
-// 	background-color: $blue;	
-// }
+		@include media(tabletPortrait) {
+			display: inline-block;
+			width: 66%;
+			float: left;
+		}
 
+		&-content{
+			@include media(tabletPortrait) {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}	
+	}
+}
+
+
+.fullWidth{
+	margin:5rem auto 0;
+	background-color: #020;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:flex-start;
+
+	@include media(tabletPortrait) {	
+		flex-wrap:nowrap;
+		width:75%;
+		justify-content:space-between;
+	}
+	@include media(tabletLandscape) {	
+		width:66%;
+	}
+	
+	&--content{
+		background-color: #0a0;
+		width: 75%;
+		text-align:center;
+		@include media(tabletPortrait) {	
+			width: 100px;
+
+		}
+	}
+}
+
+.sectionCenter{
+	margin:5rem auto 0;
+	text-align:center;
+	background-color: #0a0;
+	&--content{
+		display: block;
+		margin:0 auto;
+		width: 75%;
+		background-color: #040;
+	}
+}
