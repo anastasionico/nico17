@@ -16,26 +16,26 @@
 
 @endsection
 
-@section('about')
+@section('homeAbout')
 	
-
-
-
 	<section class="about--section">
 		<div class="oneThird about--section">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					<h3>About me</h3>
 				
-					<p>I am Nico. The Italian speaker, movie and design enthusiast. The one who can code, draw and make pasta at the same time.
+					<p>I am Nico.
+					<br>
+					The Italian speaker, movie and <b>design enthusiast</b>.
+					<br> 
+					The one who can <b>code</b>, draw and make pasta at the same time.
 					</p>
 
-					<hr>
+					<hr class="border-blue">
 				</div>
 			</div>
 			<div class="oneThird--small"></div>
 		</div>		
-
 
  		<div class="fullWidth about--section-phasis">
  			<div class="fullWidth--content">
@@ -87,14 +87,58 @@
 					Sass
 				</span>
 			</div>
-
 		</div>
 
 	</section>
+
 @endsection
 
-@section('work')
-		This is the work.	
+@section('homeWork')
+
+	<section class="work--section">	
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content ">
+					<h3>My Projects</h3>
+				
+					<p>
+						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+						<br>
+						I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+					</p>
+					
+					<hr class="border-white">
+				</div>
+		</div>
+			<div class="oneThird--small"></div>
+		</div>		
+		
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a>Visit Website</a>
+						</div>	
+					</div>
+					
+				</div>
+		</div>
+			<div class="oneThird--small"></div>
+		</div>			
+		
+		
+	</section>
+
 @endsection
 
 @section('testimonial')

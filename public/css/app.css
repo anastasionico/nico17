@@ -17,17 +17,11 @@
   }
 }
 
-html,
-body,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -38,31 +32,33 @@ body {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.9rem;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.6rem;
 }
 
 h4 {
-  font-size: 17px;
+  font-size: 1.4rem;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 h6 {
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
 p {
-  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 100;
 }
 
 b {
@@ -70,8 +66,9 @@ b {
 }
 
 hr {
-  width: 75%;
-  border: 1px solid #35a;
+  margin: 1rem 0 0;
+  width: 100%;
+  border-width: 1px;
 }
 
 .text-center {
@@ -80,6 +77,14 @@ hr {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.border-blue {
+  border-color: #35a;
+}
+
+.border-white {
+  border-color: #fff;
 }
 
 header {
@@ -105,15 +110,9 @@ aside {
 }
 
 .oneThird {
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 0rem;
+  padding-top: 2rem;
   overflow: hidden;
-  margin-top: 100vh;
-}
-
-@media (min-width: 768px) {
-  .oneThird {
-    margin-top: 100vh;
-  }
 }
 
 .oneThird--big {
@@ -126,6 +125,10 @@ aside {
   text-align: justify;
 }
 
+.oneThird--big--content h3 {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .oneThird--big {
     display: inline-block;
@@ -135,7 +138,7 @@ aside {
 
   .oneThird--big--content {
     text-align: left;
-    width: 320px;
+    width: 66%;
     margin: 0 auto;
   }
 
@@ -159,7 +162,7 @@ aside {
 }
 
 .twoThird {
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 0rem;
   overflow: hidden;
 }
 
@@ -210,7 +213,7 @@ aside {
 }
 
 .fullWidth {
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +256,7 @@ aside {
 }
 
 .sectionCenter {
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 0rem;
   text-align: center;
   width: 100%;
 }
@@ -263,6 +266,49 @@ aside {
   margin: 0 auto;
   width: 75%;
   text-align: center;
+}
+
+.card {
+  margin: 1rem auto;
+  border-radius: 7px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+}
+
+.card--image {
+  height: 150px;
+  background-color: yellow;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .card--image {
+    height: 200px;
+  }
+}
+
+.card--caption {
+  padding: 1.5rem;
+}
+
+.card--caption p {
+  margin: 1rem 0;
+}
+
+.card--caption em {
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card--caption a {
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  background-color: #fff;
+  color: #35a;
 }
 
 .hero--section {
@@ -364,38 +410,36 @@ aside {
 }
 
 .about--section {
-  margin-top: 100vh;
+  margin: 100vh auto 0rem;
   color: #35a;
 }
 
-@media (min-width: 0px) {
-  .about--section-phasis-logo {
-    margin: 2rem auto;
-    -webkit-border-radius: 50%;
-    -webkit-border-bottom-right-radius: 0px;
-    -moz-border-radius: 50%;
-    -moz-border-radius-bottomright: 0px;
-    border-radius: 50%;
-    border-bottom-right-radius: 0px;
-    -webkit-transform: rotateZ(45deg);
-            transform: rotateZ(45deg);
-    background: #fff;
-    -webkit-box-shadow: 3px 3px 15px 3px #aaa;
-    box-shadow: 3px 3px 15px 3px #aaa;
-  }
-
-  .about--section-phasis-logo i {
-    -webkit-transform: rotateZ(-45deg);
-            transform: rotateZ(-45deg);
-  }
+.about--section-phasis-logo {
+  margin: 1rem auto;
+  -webkit-border-radius: 50%;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius: 50%;
+  -moz-border-radius-bottomright: 0px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 5px 3px #aaa;
+  box-shadow: 3px 3px 5px 3px #aaa;
 }
 
-@media (min-width: 0px) and (min-width: 768px) {
+.about--section-phasis-logo i {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+@media (min-width: 768px) {
   .about--section-phasis-logo {
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
-    -webkit-box-shadow: 0px 3px 15px 3px #aaa;
-    box-shadow: 0px 3px 15px 3px #aaa;
+    -webkit-box-shadow: 0px 3px 5px 3px #aaa;
+    box-shadow: 0px 3px 5px 3px #aaa;
     -webkit-border-radius: 50%;
     -webkit-border-bottom-right-radius: 0px;
     -moz-border-radius: 50%;
@@ -411,8 +455,8 @@ aside {
 }
 
 .about--section-skills-logo {
-  -webkit-box-shadow: 0px 3px 15px 3px #aaa;
-  box-shadow: 0px 3px 15px 3px #aaa;
+  -webkit-box-shadow: 0px 3px 5px 3px #aaa;
+  box-shadow: 0px 3px 5px 3px #aaa;
   border-radius: 50%;
   position: relative;
   background-color: #fff;
@@ -796,6 +840,12 @@ aside {
     -webkit-transform-origin: left;
             transform-origin: left;
   }
+}
+
+.work--section {
+  background-color: #35a;
+  color: #fff;
+  padding-bottom: 1rem;
 }
 
 .hamburger {

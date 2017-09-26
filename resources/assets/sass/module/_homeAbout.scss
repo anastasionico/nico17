@@ -1,16 +1,16 @@
 .about--section{
-	margin-top:100vh;
+	margin:100vh auto 0rem;
 	color:$blue;
 	 	
 	&-phasis{
-		@include media(phonePortrait) {
+		
 			&-logo{
-				margin: 2rem auto;
+				margin: 1rem auto;
 				@include borderArrow;
 				transform: rotateZ(45deg);
 				background: $white; 	
 				
-				@include lightShadow(3, 3, 15, 3, $gray);
+				@include lightShadow(3, 3, 5, 3, $gray);
 				i{
 			 		transform: rotateZ(-45deg);
 			 	}
@@ -18,19 +18,19 @@
 			 	@include media(tabletPortrait){
 			 		transform: rotateZ(-45deg);
 
-			 		@include lightShadow(0, 3, 15, 3, $gray);
+			 		@include lightShadow(0, 3, 5, 3, $gray);
 					@include borderArrow;
 					i{
 				 		transform: rotateZ(45deg);
 				 	}
 			 	}
 			}
-		}	
+			
 	}
 
 	&-skills{
 		&-logo{
-			@include lightShadow(0, 3, 15, 3, $gray);
+			@include lightShadow(0, 3, 5, 3, $gray);
 			@include borderRadius(50%);
 			position:relative;
 			background-color:$white;

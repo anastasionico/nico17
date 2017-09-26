@@ -4,6 +4,12 @@
 .mt-1{
 	margin-top:1rem;
 }
+.border-blue{
+	border-color:$blue;
+}
+.border-white{
+	border-color:$white;
+}
 
 header{
 	position: fixed;
@@ -29,12 +35,10 @@ aside{
 }
 
 .oneThird{
-	margin:4rem auto 1rem;
+	margin:2rem auto 0rem;
+	padding-top:2rem;
 	overflow:hidden;
-	margin-top:100vh;
-	@include media(tabletPortrait) {
-		margin-top:100vh;
-	}
+	
 	&--big{
 		display: block;
 		margin:0 auto;
@@ -42,6 +46,9 @@ aside{
 		
 		&--content{
 			text-align: justify;
+			h3{
+				margin-bottom:1rem; 
+			}
 		}
 		
 		@include media(tabletPortrait) {
@@ -51,7 +58,7 @@ aside{
 			
 			&--content{
 				text-align: left;
-				width: 320px;
+				width: 66%;
 				margin: 0 auto;
 				hr{text-align: left;}
 			}
@@ -73,7 +80,7 @@ aside{
 }
 
 .twoThird{
-	margin:4rem auto 1rem;
+	margin:2rem auto 0rem;
 	overflow:hidden;
 	
 	&--small{
@@ -119,7 +126,7 @@ aside{
 }
 
 .fullWidth{
-	margin:4rem auto 1rem;
+	margin:2rem auto 0rem;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -145,7 +152,7 @@ aside{
 }
 
 .sectionCenter{
-	margin:4rem auto 1rem;
+	margin:2rem auto 0rem;
 	text-align:center;
 	width:100%;
 	&--content{
@@ -155,5 +162,43 @@ aside{
 		text-align: center;
 
 
+	}
+}
+
+.card{
+	// background-color:red;
+	margin: 1rem auto;
+	@include borderRadius(7px)
+	overflow:hidden;
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
+	
+	&--image{
+		height: 150px;
+		background-color:yellow;
+		background-position:center;
+		background-size:cover;
+
+		@include media(tabletPortrait){
+			height: 200px;
+		}
+	}
+	&--caption{
+		padding:1.5rem;
+		p{
+			margin: 1rem 0;
+		}
+		em{
+			font-size: 0.7rem;
+			display:block;
+			margin-bottom:1rem; 
+		}
+		a{
+			text-transform: uppercase;
+			padding:0.5rem 1rem;
+			font-size: 0.7rem;
+			background-color:$white;
+			color:$blue;
+
+		}
 	}
 }

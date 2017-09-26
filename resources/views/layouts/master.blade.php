@@ -17,12 +17,12 @@
 	<section class="mainSection">
 
 		@yield('hero')
-		@yield('about')
-
+		@yield('homeAbout')
+		@yield('homeWork')
 
 
  		
- 		{{-- 
+ 		{{--
 		LAYOUT SAMPLE
 
  		<div class="oneThird">
@@ -58,8 +58,8 @@
 				section center
 			</div>
 		</div>
-		
 		 --}}
+		
 	
 	</section>
 	
