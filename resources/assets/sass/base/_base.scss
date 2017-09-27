@@ -10,28 +10,37 @@ body{
 }
 
 h1{
-	font-size:2.2rem;
-
+	font-size:2rem;
+	font-weight:700;
 }
 h2{
-	font-size:1.9rem;
+	font-size:1.7rem;
+	font-weight:700;
 }
 h3{
-	font-size:1.6rem;
+	font-size:1.4rem;
+	font-weight:700;
 }
 h4{
-	font-size:1.4rem;
+	font-size:1.1rem;
+	font-weight:700;
 }
 h5{
-	font-size:1.2rem;}
+	font-size:1.1rem;
+	font-weight:300;
+}
 h6{
-	font-size:1.1rem;}
+	font-size:1rem;
+	font-weight:300;
+}
 p{
 	font-size:1rem;
 	line-height:1.5rem;
 	font-weight:100;
 }
-
+a{
+	cursor: pointer;
+}
 b{font-weight:700;}
 
 hr{

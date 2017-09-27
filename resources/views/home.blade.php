@@ -109,7 +109,7 @@
 					
 					<hr class="border-white">
 				</div>
-		</div>
+			</div>
 			<div class="oneThird--small"></div>
 		</div>		
 		
@@ -127,15 +127,189 @@
 								Responsive Webdesign and CMS
 							</em>
 
-							<a>Visit Website</a>
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
 						</div>	
 					</div>
 					
 				</div>
-		</div>
+			</div>
 			<div class="oneThird--small"></div>
 		</div>			
+
+		<div class="oneThird" >
+			<div class="oneThird--small">&nbsp;</div>
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Yufash</h4>
+							<p>
+								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
+
+								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
+							</p>
+							<em>
+								Redesign website and CMS update
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>			
 		
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Kick Fit Consult</h4>
+							<p>
+								With his bespoke consulting and mentoring programme for martial arts school owners,
+
+								You’ll learn how to build a better business to boost your profits, attract and retain students, and gain a great reputation in your community.
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="oneThird--small"></div>
+		</div>			
+
+		<div class="oneThird" >
+			<div class="oneThird--small">&nbsp;</div>
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="oneThird--small"></div>
+		</div>			
+
+		<div class="oneThird" >
+			<div class="oneThird--small">&nbsp;</div>
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="oneThird--small"></div>
+		</div>			
+
+		<div class="oneThird" >
+			<div class="oneThird--small">&nbsp;</div>
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							<em>
+								Responsive Webdesign and CMS
+							</em>
+
+							<a class="btn btn-ghost">Visit Website</a>
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sectionCenter">
+			<div class="sectionCenter--content">
+				<a class="btn-cta">See More</a>
+			</div>
+		</div>
 		
 	</section>
 

@@ -5,7 +5,7 @@
 	&-phasis{
 		
 			&-logo{
-				margin: 1rem auto;
+				margin: 2rem auto;
 				@include borderArrow;
 				transform: rotateZ(45deg);
 				background: $white; 	
@@ -17,8 +17,8 @@
 			 	
 			 	@include media(tabletPortrait){
 			 		transform: rotateZ(-45deg);
-
-			 		@include lightShadow(0, 3, 5, 3, $gray);
+			 		margin: 1rem auto;
+			 		@include lightShadow(-2, 3, 5, 3, $gray);
 					@include borderArrow;
 					i{
 				 		transform: rotateZ(45deg);

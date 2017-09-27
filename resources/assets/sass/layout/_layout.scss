@@ -80,7 +80,7 @@ aside{
 }
 
 .twoThird{
-	margin:2rem auto 0rem;
+	margin:3rem auto 3rem;
 	overflow:hidden;
 	
 	&--small{
@@ -126,7 +126,7 @@ aside{
 }
 
 .fullWidth{
-	margin:2rem auto 0rem;
+	margin:3rem auto 3rem;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -152,7 +152,7 @@ aside{
 }
 
 .sectionCenter{
-	margin:2rem auto 0rem;
+	margin:3rem auto 3rem;
 	text-align:center;
 	width:100%;
 	&--content{
@@ -185,20 +185,13 @@ aside{
 	&--caption{
 		padding:1.5rem;
 		p{
-			margin: 1rem 0;
+			margin: 0.7rem 0;
 		}
 		em{
 			font-size: 0.7rem;
-			display:block;
-			margin-bottom:1rem; 
+			display:block;			
+			margin-bottom:0.7rem; 
 		}
-		a{
-			text-transform: uppercase;
-			padding:0.5rem 1rem;
-			font-size: 0.7rem;
-			background-color:$white;
-			color:$blue;
-
-		}
+		
 	}
 }

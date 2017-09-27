@@ -3,11 +3,18 @@
 @import 'homeWork';
 
 .hamburger{
-	display: block;
-	margin: 4px auto;
-	background-color: $white;
-	width: 66%;
-	height: 2px;
+	cursor: pointer;
+	@include rotateZ(-10deg);
+	
+	@for $i from 3 through 1{
+		.hamburgerLine-#{$i}{
+			display: block;
+			margin: 4px auto;
+			background-color: $white;
+			height: 2px;
+			width: 20 + $i * 3%;
+	    }
+	}
 }
 
 .scroll--balls{
@@ -32,4 +39,62 @@
 
 .flexCenter{
 	@include flex(center);
+}
+
+.btn{
+	text-transform: uppercase;	
+	padding:0.3rem 1rem;
+	font-size: 0.7rem;
+	background-color:$white;
+	color:$blue;
+	border:1px solid $white;
+	display:block;
+	margin:1rem;
+	text-align:center;
+	font-weight:700;
+	@include media(phoneLandscape){
+		display:inline-block;
+		margin:0rem;
+	}
+
+	&-ghost{
+		background-color: transparent;
+		color: $white;
+	}
+	&-cta{
+		background-color:$white;
+		color:$blue;
+		padding:1rem 3rem;
+		
+		@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
+		transition: all 0.3s ease-in-out;
+		
+		&:hover{
+			@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
+		}
+		// width: 100px;
+		// position:relative;
+		// overflow:hidden;1111
+		
+		// &:after{
+		// 	content: 'sdf';
+		// 	display: block;
+			// position: absolute;
+			// margin: -50% -100%;
+			// top: -150%;
+			// left: -25%;
+			// height: 400px;
+			// width: 150px;
+			
+			// background:linear-gradient($white,$azure);
+			// opacity: 0.5;
+
+			// @include spin
+			// animation-name: spin;
+			
+			
+		// }
+	}
+
+	
 }

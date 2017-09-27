@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400,700);.smallCircle {
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:100,300,400,700);.smallCircle {
   width: 36px;
   height: 36px;
   font-size: 0.75rem;
@@ -32,33 +32,43 @@ body {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 h6 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 100;
+}
+
+a {
+  cursor: pointer;
 }
 
 b {
@@ -162,7 +172,7 @@ aside {
 }
 
 .twoThird {
-  margin: 2rem auto 0rem;
+  margin: 3rem auto 3rem;
   overflow: hidden;
 }
 
@@ -213,7 +223,7 @@ aside {
 }
 
 .fullWidth {
-  margin: 2rem auto 0rem;
+  margin: 3rem auto 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,7 +266,7 @@ aside {
 }
 
 .sectionCenter {
-  margin: 2rem auto 0rem;
+  margin: 3rem auto 3rem;
   text-align: center;
   width: 100%;
 }
@@ -294,21 +304,13 @@ aside {
 }
 
 .card--caption p {
-  margin: 1rem 0;
+  margin: 0.7rem 0;
 }
 
 .card--caption em {
   font-size: 0.7rem;
   display: block;
-  margin-bottom: 1rem;
-}
-
-.card--caption a {
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  font-size: 0.7rem;
-  background-color: #fff;
-  color: #35a;
+  margin-bottom: 0.7rem;
 }
 
 .hero--section {
@@ -415,7 +417,7 @@ aside {
 }
 
 .about--section-phasis-logo {
-  margin: 1rem auto;
+  margin: 2rem auto;
   -webkit-border-radius: 50%;
   -webkit-border-bottom-right-radius: 0px;
   -moz-border-radius: 50%;
@@ -438,8 +440,9 @@ aside {
   .about--section-phasis-logo {
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
-    -webkit-box-shadow: 0px 3px 5px 3px #aaa;
-    box-shadow: 0px 3px 5px 3px #aaa;
+    margin: 1rem auto;
+    -webkit-box-shadow: -2px 3px 5px 3px #aaa;
+    box-shadow: -2px 3px 5px 3px #aaa;
     -webkit-border-radius: 50%;
     -webkit-border-bottom-right-radius: 0px;
     -moz-border-radius: 50%;
@@ -849,11 +852,45 @@ aside {
 }
 
 .hamburger {
+  cursor: pointer;
+  /* IE 9 */
+  -webkit-transform: rotateZ(-10deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(-10deg);
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(-10deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+  transform-origin: center;
+}
+
+.hamburger .hamburgerLine-3 {
   display: block;
   margin: 4px auto;
   background-color: #fff;
-  width: 66%;
   height: 2px;
+  width: 29%;
+}
+
+.hamburger .hamburgerLine-2 {
+  display: block;
+  margin: 4px auto;
+  background-color: #fff;
+  height: 2px;
+  width: 26%;
+}
+
+.hamburger .hamburgerLine-1 {
+  display: block;
+  margin: 4px auto;
+  background-color: #fff;
+  height: 2px;
+  width: 23%;
 }
 
 .scroll--balls {
@@ -892,5 +929,45 @@ aside {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  background-color: #fff;
+  color: #35a;
+  border: 1px solid #fff;
+  display: block;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  .btn {
+    display: inline-block;
+    margin: 0rem;
+  }
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #fff;
+}
+
+.btn-cta {
+  background-color: #fff;
+  color: #35a;
+  padding: 1rem 3rem;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-cta:hover {
+  -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
+  box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
 }
 

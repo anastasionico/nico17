@@ -22,15 +22,15 @@
 
 @mixin rotateZ($deg) {
 	-ms-transform: rotateZ($deg); /* IE 9 */
-    -webkit-transform: rotateZ($deg); /* Chrome, Safari, Opera */
-    transform: rotateZ($deg);
+  -webkit-transform: rotateZ($deg); /* Chrome, Safari, Opera */
+  transform: rotateZ($deg);
 
-    -ms-transform: rotate($deg); /* IE 9 */
-    -ms-transform-origin: center; /* IE 9 */
-    -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
-    -webkit-transform-origin: center; /* Chrome, Safari, Opera */
-    transform: rotate($deg);
-    transform-origin: center;
+  -ms-transform: rotate($deg); /* IE 9 */
+  -ms-transform-origin: center; /* IE 9 */
+  -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center; /* Chrome, Safari, Opera */
+  transform: rotate($deg);
+  transform-origin: center;
 }
 
 @mixin flex($par){
@@ -58,4 +58,22 @@
   	// @include media(tabletLandscape) {};
   	// @include media(desktop) {};
   	// @include media(bigscreen) {};
+}
+@mixin spin{
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+      from {transform:rotate(0deg);}
+      to {transform:rotate(360deg);}
+  }
 }
