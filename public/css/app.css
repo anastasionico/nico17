@@ -2,18 +2,34 @@
   width: 36px;
   height: 36px;
   font-size: 0.75rem;
+  border-radius: 50%;
 }
 
 .bigCircle {
   width: 100px;
   height: 100px;
   font-size: 0.75rem;
+  border-radius: 50%;
 }
 
 @media (min-width: 768px) {
   .bigCircle {
     width: 75px;
     height: 75px;
+  }
+}
+
+.hugeCircle {
+  width: 150px;
+  height: 150px;
+  font-size: 0.75rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .hugeCircle {
+    width: 125px;
+    height: 125px;
   }
 }
 
@@ -172,7 +188,7 @@ aside {
 }
 
 .twoThird {
-  margin: 3rem auto 3rem;
+  margin: 2rem auto 2rem;
   overflow: hidden;
 }
 
@@ -180,7 +196,6 @@ aside {
   display: block;
   margin: 0 auto;
   width: 75%;
-  background-color: #880;
 }
 
 @media (min-width: 768px) {
@@ -204,7 +219,6 @@ aside {
   display: block;
   margin: 0 auto;
   width: 75%;
-  background-color: #808;
 }
 
 @media (min-width: 768px) {
@@ -223,7 +237,7 @@ aside {
 }
 
 .fullWidth {
-  margin: 3rem auto 3rem;
+  margin: 2rem auto 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +280,7 @@ aside {
 }
 
 .sectionCenter {
-  margin: 3rem auto 3rem;
+  margin: 2rem auto 2rem;
   text-align: center;
   width: 100%;
 }
@@ -500,355 +514,307 @@ aside {
     -webkit-transform-origin: left;
             transform-origin: left;
   }
-
-  .about--section #skill-4:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-6:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-8:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-10:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-12:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-14:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-16:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-18:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-20:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-22:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-24:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-26:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-28:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-30:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-32:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-34:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-36:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-38:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-40:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-42:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-44:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-46:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-48:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-50:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-52:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-54:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-56:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-58:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-60:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-62:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-64:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-66:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-68:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-70:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-72:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-74:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-76:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-78:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-80:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-82:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-84:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-86:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-88:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-90:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-92:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-94:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-96:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-98:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-
-  .about--section #skill-100:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
 }
 
 .work--section {
   background-color: #35a;
   color: #fff;
   padding-bottom: 1rem;
+}
+
+.testimonials--container {
+  width: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-item: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container {
+    display: block;
+    width: auto;
+    height: 390px;
+    text-align: center;
+  }
+}
+
+.testimonials--container > div:first-child {
+  margin-left: -4%;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container > div:first-child {
+    display: block;
+    margin: 2rem auto;
+  }
+}
+
+.testimonials--container-photo {
+  overflow: hidden;
+  margin: auto 1rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container-photo {
+    display: block;
+    margin: 2rem auto;
+  }
+}
+
+.testimonials--container-photo img {
+  width: 200%;
+  margin: -50%;
+}
+
+.testimonials--container .photo-prev {
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius: 50%;
+  -moz-border-radius-bottomright: 0px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+  /* IE 9 */
+  -webkit-transform: rotateZ(-45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(-45deg);
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-prev {
+    display: block;
+    margin: 2rem auto;
+    /* IE 9 */
+    -webkit-transform: rotateZ(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotateZ(45deg);
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -ms-transform-origin: center;
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    -webkit-transform-origin: center;
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+}
+
+.testimonials--container .photo-prev img {
+  /* IE 9 */
+  -webkit-transform: rotateZ(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-prev img {
+    /* IE 9 */
+    -webkit-transform: rotateZ(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotateZ(-45deg);
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -ms-transform-origin: center;
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    -webkit-transform-origin: center;
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+}
+
+.testimonials--container .photo-active {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: auto 1rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-active {
+    display: block;
+    margin: 2rem auto;
+  }
+}
+
+.testimonials--container .photo-active img {
+  margin: 1%;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-active img {
+    width: 100%;
+  }
+}
+
+.testimonials--container .photo-next {
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius: 50%;
+  -moz-border-radius-bottomright: 0px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+  /* IE 9 */
+  -webkit-transform: rotateZ(-225deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(-225deg);
+  -ms-transform: rotate(-225deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(-225deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(-225deg);
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-next {
+    display: block;
+    margin: 2rem auto;
+    /* IE 9 */
+    -webkit-transform: rotateZ(225deg);
+    /* Chrome, Safari, Opera */
+    transform: rotateZ(225deg);
+    -ms-transform: rotate(225deg);
+    /* IE 9 */
+    -ms-transform-origin: center;
+    /* IE 9 */
+    -webkit-transform: rotate(225deg);
+    /* Chrome, Safari, Opera */
+    -webkit-transform-origin: center;
+    /* Chrome, Safari, Opera */
+    transform: rotate(225deg);
+    transform-origin: center;
+  }
+}
+
+.testimonials--container .photo-next img {
+  /* IE 9 */
+  -webkit-transform: rotateZ(225deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(225deg);
+  -ms-transform: rotate(225deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(225deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(225deg);
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .testimonials--container .photo-next img {
+    /* IE 9 */
+    -webkit-transform: rotateZ(-225deg);
+    /* Chrome, Safari, Opera */
+    transform: rotateZ(-225deg);
+    -ms-transform: rotate(-225deg);
+    /* IE 9 */
+    -ms-transform-origin: center;
+    /* IE 9 */
+    -webkit-transform: rotate(-225deg);
+    /* Chrome, Safari, Opera */
+    -webkit-transform-origin: center;
+    /* Chrome, Safari, Opera */
+    transform: rotate(-225deg);
+    transform-origin: center;
+  }
+}
+
+.testimonials--quote {
+  padding: 5rem;
+  color: #35a;
+}
+
+@media (min-width: 768px) {
+  .testimonials--quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.testimonials--quote q {
+  display: block;
+  margin: 0.7rem 0;
+  position: relative;
+}
+
+.testimonials--quote q:before {
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  font-size: 10rem;
+  color: #96abe0;
+  opacity: 0.5;
+}
+
+.testimonials--quote q:after {
+  position: absolute;
+  right: -5px;
+  bottom: -135px;
+  font-size: 10rem;
+  color: #96abe0;
+  opacity: 0.5;
+}
+
+.testimonials--quote em {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.7rem 0;
 }
 
 .hamburger {

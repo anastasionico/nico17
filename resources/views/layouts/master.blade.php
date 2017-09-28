@@ -19,10 +19,11 @@
 		@yield('hero')
 		@yield('homeAbout')
 		@yield('homeWork')
-
+		@yield('homeTestimonial')
+		{{-- @yield('homeBlog') --}}
 
  		
- 		{{--
+ 		{{-- 
 		LAYOUT SAMPLE
 
  		<div class="oneThird">
@@ -58,8 +59,8 @@
 				section center
 			</div>
 		</div>
+		 
 		 --}}
-		
 	
 	</section>
 	

@@ -80,14 +80,14 @@ aside{
 }
 
 .twoThird{
-	margin:3rem auto 3rem;
+	margin:2rem auto 2rem;
 	overflow:hidden;
 	
 	&--small{
 		display: block;
 		margin:0 auto;
 		width: 75%;
-		background-color:#880;
+		
 		@include media(tabletPortrait) {
 			display: inline-block;
 			width: 33%;
@@ -108,8 +108,7 @@ aside{
 		display: block;
 		margin:0 auto;
 		width: 75%;
-		background-color:#808;
-
+		
 		@include media(tabletPortrait) {
 			display: inline-block;
 			width: 66%;
@@ -126,7 +125,7 @@ aside{
 }
 
 .fullWidth{
-	margin:3rem auto 3rem;
+	margin:2rem auto 2rem;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -152,7 +151,7 @@ aside{
 }
 
 .sectionCenter{
-	margin:3rem auto 3rem;
+	margin:2rem auto 2rem;
 	text-align:center;
 	width:100%;
 	&--content{
