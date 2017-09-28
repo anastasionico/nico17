@@ -10,7 +10,13 @@
 .border-white{
 	border-color:$white;
 }
-
+.clearfix{
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
 header{
 	position: fixed;
 	top: 0;
@@ -164,33 +170,4 @@ aside{
 	}
 }
 
-.card{
-	// background-color:red;
-	margin: 1rem auto;
-	@include borderRadius(7px)
-	overflow:hidden;
-	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
-	
-	&--image{
-		height: 150px;
-		background-color:yellow;
-		background-position:center;
-		background-size:cover;
 
-		@include media(tabletPortrait){
-			height: 200px;
-		}
-	}
-	&--caption{
-		padding:1.5rem;
-		p{
-			margin: 0.7rem 0;
-		}
-		em{
-			font-size: 0.7rem;
-			display:block;			
-			margin-bottom:0.7rem; 
-		}
-		
-	}
-}

@@ -20,7 +20,7 @@
 		@yield('homeAbout')
 		@yield('homeWork')
 		@yield('homeTestimonial')
-		{{-- @yield('homeBlog') --}}
+		@yield('homeBlog')
 
  		
  		{{-- 

@@ -1,4 +1,4 @@
-.work--section{
+.blog--section{
 	background-color:$blue;
 	color: $white;
 	padding-bottom:1rem;
@@ -15,7 +15,7 @@
 			background-color:yellow;
 			background-position:center;
 			background-size:cover;
-
+			padding:1.5rem;
 			@include media(tabletPortrait){
 				height: 200px;
 			}
@@ -30,7 +30,22 @@
 				display:block;			
 				margin-bottom:0.7rem; 
 			}
-			
+			&-CatnDate{
+				b, em{
+					font-size: 0.7rem;
+					display: inline-block;
+					float: left;
+				}
+				em{
+					float: right;	
+					margin-bottom: 0;
+					@include media(tabletPortrait){
+						margin-bottom:0.7rem; 
+					}
+
+
+				}
+			}
 		}
 	}
 }

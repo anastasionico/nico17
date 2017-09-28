@@ -34,7 +34,7 @@
 					<hr class="border-blue">
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 
  		<div class="fullWidth about--section-phasis">
@@ -110,7 +110,7 @@
 					<hr class="border-white">
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 		
 		<div class="oneThird" >
@@ -134,7 +134,7 @@
 					
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>			
 
 		<div class="oneThird" >
@@ -185,7 +185,7 @@
 					
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>			
 
 		<div class="sectionCenter">
@@ -262,13 +262,13 @@
 	
 @endsection
 
-{{-- @section('homeBlog')
+@section('homeBlog')
 
-	<section class="work--section">	
+	<section class="blog--section">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>My Projects</h3>
+					<h3>Articles</h3>
 				
 					<p>
 						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
@@ -279,7 +279,7 @@
 					<hr class="border-white">
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 		
 		<div class="oneThird" >
@@ -288,22 +288,26 @@
 					<div class="card">
 						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
 						<div class="card--caption">
+							<div class="card--caption-CatnDate clearfix">
+								<b>
+									Category
+								</b>	
+								<em>
+									28-09-2017
+								</em>	
+							</div>
 							<h4>Cation Consulting</h4>
 							<p>
 								Cation Consulting Limited is a small consultancy providing change management support in the areas
 							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
+							
 							<a class="btn">See details</a>
 						</div>	
 					</div>
 					
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
+			<div class="oneThird--small">&nbsp;</div>
 		</div>			
 
 		<div class="oneThird" >
@@ -313,50 +317,83 @@
 					<div class="card">
 						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
 						<div class="card--caption">
-							<h4>Yufash</h4>
+							<div class="card--caption-CatnDate clearfix">
+								<b>
+									Category
+								</b>	
+								<em>
+									28-09-2017
+								</em>	
+							</div>
+							<h4>Cation Consulting</h4>
 							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
 							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>			
-		
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Kick Fit Consult</h4>
-							<p>
-								With his bespoke consulting and mentoring programme for martial arts school owners,
-
-								You’ll learn how to build a better business to boost your profits, attract and retain students, and gain a great reputation in your community.
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
+							
 							<a class="btn">See details</a>
 						</div>	
 					</div>
 					
 				</div>
 			</div>
-			<div class="oneThird--small"></div>
 		</div>			
 
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<div class="card--caption-CatnDate clearfix">
+								<b>
+									Category
+								</b>	
+								<em>
+									28-09-2017
+								</em>	
+							</div>
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="oneThird--small">&nbsp;</div>
+		</div>			
+
+		<div class="oneThird" >
+			<div class="oneThird--small">&nbsp;</div>
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
+					<div class="card">
+						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+						<div class="card--caption">
+							<div class="card--caption-CatnDate clearfix">
+								<b>
+									Category
+								</b>	
+								<em>
+									28-09-2017
+								</em>	
+							</div>
+							<h4>Cation Consulting</h4>
+							<p>
+								Cation Consulting Limited is a small consultancy providing change management support in the areas
+							</p>
+							
+							<a class="btn">See details</a>
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+		</div>			
+		
 		<div class="sectionCenter">
 			<div class="sectionCenter--content">
 				<a class="btn-cta">See More</a>
@@ -365,7 +402,7 @@
 		
 	</section>
 
-@endsection --}}
+@endsection
 
 @section('blog')
 		This is the blog.	
