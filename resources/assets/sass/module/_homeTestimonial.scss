@@ -1,3 +1,6 @@
+.testimonial--section{
+	background-color:$white;
+}
 .testimonials--container{
 	width:2000px;
 	display: flex;
@@ -32,7 +35,6 @@
 			width: 200%;
 			margin:-50%; 
 		}
-		
 	}
 	.photo-prev{
 		overflow: hidden;
@@ -68,9 +70,10 @@
 		}
 		img{
 			margin: 1%;
-			@include media(tabletPortrait){
-				width: 100%;
-			}
+			width: 100%;
+			// @include media(tabletPortrait){
+			// 	width: 100%;
+			// }
 		}
 	}
 	.photo-next{
@@ -96,6 +99,7 @@
 			}
 		}
 	}
+
 }
 
 .testimonials--quote{
@@ -136,6 +140,4 @@
 		display:block;			
 		margin:0.7rem 0; 
 	}
-	
-
 }

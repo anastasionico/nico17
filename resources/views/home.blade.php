@@ -19,7 +19,7 @@
 @section('homeAbout')
 	
 	<section class="about--section">
-		<div class="oneThird about--section">
+		<div class="oneThird">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					<h3>About me</h3>
@@ -200,65 +200,64 @@
 
 @section('homeTestimonial')
 	
-	<div>
+	<section class="testimonial--section">	
 		<div class="twoThird">
-		<div class="twoThird--small">
-			<div class="twoThird--small-content">
-				
-				<div class="testimonials--container">
+			<div class="twoThird--small">
+				<div class="twoThird--small-content">
 					
-					<div class="testimonials--container-photo photo-prev bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-					<div class="testimonials--container-photo photo-active bigCircle">
-						<img src="img/testimonials/giovanna.jpg">	
-					</div>							
-					<div class="testimonials--container-photo photo-next bigCircle">
-						<img src="img/testimonials/tom.jpg">	
-					</div>							
-					<div class="testimonials--container-photo bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-					<div class="testimonials--container-photo bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-					<div class="testimonials--container-photo bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-					<div class="testimonials--container-photo bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-					<div class="testimonials--container-photo bigCircle">
-						<img src="img/testimonials/peter.jpg">	
-					</div>							
-			
-				</div>
-
-			</div>
-		</div>
-		<div class="twoThird--big">
-			<div class="twoThird--big-content">
+					<div class="testimonials--container clearfix">
+						
+						<div class="testimonials--container-photo photo-prev bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo photo-active bigCircle">
+							<img src="img/testimonials/giovanna.jpg">	
+						</div>							
+						<div class="testimonials--container-photo photo-next bigCircle">
+							<img src="img/testimonials/tom.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
 				
-				<div class="testimonials--quote">
-					<q>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</q>
-					<h4>F.I.P.E Web Design</h4>
-					<em>Peter Azea</em
-				</div>
-				
+					</div>
 
+				</div>
 			</div>
-		</div>
-	</div>	
-	</div>
+			<div class="twoThird--big">
+				<div class="twoThird--big-content">
+					
+					<div class="testimonials--quote">
+						<q>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</q>
+						<h4>F.I.P.E Web Design</h4>
+						<em>Peter Azea</em
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+	</section>
 	
 @endsection
 
@@ -396,7 +395,7 @@
 		
 		<div class="sectionCenter">
 			<div class="sectionCenter--content">
-				<a class="btn-cta">See More</a>
+				<a class="btn-cta">Browse Articles</a>
 			</div>
 		</div>
 		
@@ -404,8 +403,11 @@
 
 @endsection
 
-@section('blog')
-		This is the blog.	
+@section('rotatedDiv')
+		<div class="rotatedDivHome">
+			sdfljhdslfj
+		</div>
+
 @endsection
 
 

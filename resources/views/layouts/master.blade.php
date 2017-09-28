@@ -21,6 +21,7 @@
 		@yield('homeWork')
 		@yield('homeTestimonial')
 		@yield('homeBlog')
+		@yield('rotatedDiv')
 
  		
  		{{-- 
@@ -68,10 +69,8 @@
 		@include('layouts.header')
 	</header>
 	@include('layouts.aside')	
+	@include('layouts.footer')
 	
-	{{-- <footer>
-		@include('layouts.footer')
-	</footer> --}}
 </body>
 
 </html>

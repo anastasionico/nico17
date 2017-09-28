@@ -119,6 +119,10 @@ hr {
   clear: both;
 }
 
+body {
+  background-color: #fff;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -136,13 +140,26 @@ aside {
   width: 10%;
 }
 
+footer {
+  background-color: green;
+  width: 100%;
+  height: 25rem;
+  position: fixed;
+  padding-top: 5rem;
+  bottom: 0;
+  text-align: center;
+  z-index: -10;
+}
+
 .mainSection {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 20rem;
+  z-index: 2;
 }
 
 .oneThird {
-  margin: 2rem auto 0rem;
+  margin: 0rem auto 0rem;
   padding-top: 2rem;
   overflow: hidden;
 }
@@ -194,7 +211,8 @@ aside {
 }
 
 .twoThird {
-  margin: 2rem auto 2rem;
+  margin: 0rem auto 0rem;
+  padding-top: 2rem;
   overflow: hidden;
 }
 
@@ -223,7 +241,7 @@ aside {
 
 .twoThird--big {
   display: block;
-  margin: 0 auto;
+  margin: 3rem auto;
   width: 75%;
 }
 
@@ -231,6 +249,7 @@ aside {
   .twoThird--big {
     display: inline-block;
     width: 66%;
+    margin: 0rem auto;
     float: left;
   }
 }
@@ -286,7 +305,8 @@ aside {
 }
 
 .sectionCenter {
-  margin: 2rem auto 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
   width: 100%;
 }
@@ -296,6 +316,28 @@ aside {
   margin: 0 auto;
   width: 75%;
   text-align: center;
+}
+
+.rotatedDivHome {
+  z-index: -1;
+  margin: -10rem auto 2rem -10rem;
+  width: 150%;
+  height: 250px;
+  /* IE 9 */
+  -webkit-transform: rotateZ(-10deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(-10deg);
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+  -ms-transform-origin: center;
+  /* IE 9 */
+  -webkit-transform: rotate(-10deg);
+  /* Chrome, Safari, Opera */
+  -webkit-transform-origin: center;
+  /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+  transform-origin: center;
+  background-color: #35a;
 }
 
 .hero--section {
@@ -397,7 +439,9 @@ aside {
 }
 
 .about--section {
-  margin: 100vh auto 0rem;
+  margin: 70vh auto 0rem;
+  padding-top: 12rem;
+  background-color: #fff;
   color: #35a;
 }
 
@@ -526,6 +570,10 @@ aside {
   font-size: 0.7rem;
   display: block;
   margin-bottom: 0.7rem;
+}
+
+.testimonial--section {
+  background-color: #fff;
 }
 
 .testimonials--container {
@@ -693,12 +741,7 @@ aside {
 
 .testimonials--container .photo-active img {
   margin: 1%;
-}
-
-@media (min-width: 768px) {
-  .testimonials--container .photo-active img {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .testimonials--container .photo-next {
@@ -866,7 +909,7 @@ aside {
 
 .blog--section .card--image {
   height: 150px;
-  background-color: yellow;
+  background-color: green;
   background-position: center;
   background-size: cover;
   padding: 1.5rem;
