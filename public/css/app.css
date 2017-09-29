@@ -141,11 +141,11 @@ aside {
 }
 
 footer {
-  background-color: green;
+  color: #fff;
+  background-color: #3aa;
   width: 100%;
-  height: 25rem;
+  height: 100%;
   position: fixed;
-  padding-top: 5rem;
   bottom: 0;
   text-align: center;
   z-index: -10;
@@ -154,7 +154,7 @@ footer {
 .mainSection {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 20rem;
+  margin-bottom: 50rem;
   z-index: 2;
 }
 
@@ -951,6 +951,83 @@ footer {
   .blog--section .card--caption-CatnDate em {
     margin-bottom: 0.7rem;
   }
+}
+
+.footer--section {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.footer--section .footerForm input,
+.footer--section .footerForm textarea {
+  width: 100%;
+  margin: 0.7rem auto;
+  background-color: #3aa;
+  border: 0;
+  border-bottom: 2px solid #fff;
+}
+
+.footer--section .footerForm input[type=submit] {
+  display: block;
+  background-color: #fff;
+  color: #3aa;
+  border: 0;
+}
+
+.footer--section .social-logo {
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(170, 170, 170, 0.5);
+  box-shadow: 0px 3px 5px 3px rgba(170, 170, 170, 0.5);
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  color: #3aa;
+}
+
+.footer--section .social-logo:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  height: 5px;
+  top: 45%;
+  left: 18px;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .footer--section .social-logo {
+    margin: 1rem auto;
+  }
+}
+
+.footer--section #social-1:after {
+  width: 250px;
+}
+
+.footer--section #social-2:after {
+  width: 167px;
+}
+
+.footer--section #social-3:after {
+  width: 54px;
+}
+
+.footer--section-blog ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.footer--section-blog ul li {
+  margin: 0.3rem auto;
+}
+
+.footer--section-blog ul li:first-child {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.footer--section-copyright {
+  padding: 0.3rem;
+  background-color: #278383;
 }
 
 .hamburger {
