@@ -1,52 +1,30 @@
 .hero--section{
-	position: absolute; 
-	top:-100px; 
-	left:-25% ; 
-	width: 150%;  
+	margin: -5rem auto 0;
+	width: 100%;  
 	height: 100vh; 
-	transform: rotate(-10deg);
 	overflow: hidden;
 	background: radial-gradient(lighten($azure, 20%),$azure);
+	@include skewY(-10deg);
 	@include media(tabletLandscape){
-		top:-100px;
+		margin: -7rem auto 0;
 	}
 
 	&-content{
-		position:absolute;
-		top:34%;
-		left: 26%;
-		width: 50%;
-	    transform: rotate(10deg);
+		margin:7rem auto 0;
+	    @include skewY(10deg);
 	    text-align: center;
 	    color: $blue;
 	    span{
 	    	color:$white;
 	    }
-	    
-	    @include media(phoneLandscape){
-			top:40%;
-			left: 26%;
-			width: 50%;
-	    }
-	    @include media(tabletPortrait){
-			top:33%;
-			left: 48%;
-			width: 25%
-	    }
-	    @include media(tabletLandscape){
-    		top:50%;
-			left: 50%;
-			width: 25%	
-	    }
-	    
 	}
 	&-image{
-		position:absolute;
-		top:49%;
-		left: 11%;
-		width: 67%;
-	    transform: rotate(10deg);
-	    @include media(phoneLandscape){
+		display: block;
+		margin: 0 auto; 
+		width: 90%;
+		transform: skewY(10deg);
+		
+	    /* @include media(phoneLandscape){
 			top:48%;
 			left: 33%;
 			width: 37%;
@@ -65,7 +43,7 @@
     		top:15%;
 			left: 15%;
 			width: 41%;	
-		}
+		} */
 	}
 						
 }

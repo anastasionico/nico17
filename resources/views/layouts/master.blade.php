@@ -7,13 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body >
+<body>
 	
-	
-
-	
-	
-
 	<section class="mainSection">
 
 		@yield('hero')
@@ -21,10 +16,18 @@
 		@yield('homeWork')
 		@yield('homeTestimonial')
 		@yield('homeBlog')
-		@yield('rotatedDiv')
-
- 		
- 		{{-- 
+		
+	</section>
+	
+	<header>
+		@include('layouts.header')
+	</header>
+	@include('layouts.aside')	
+	@include('layouts.footer')
+	
+</body>
+</html>
+{{-- 
 		LAYOUT SAMPLE
 
  		<div class="oneThird">
@@ -62,15 +65,3 @@
 		</div>
 		 
 		 --}}
-	
-	</section>
-	
-	<header>
-		@include('layouts.header')
-	</header>
-	@include('layouts.aside')	
-	@include('layouts.footer')
-	
-</body>
-
-</html>

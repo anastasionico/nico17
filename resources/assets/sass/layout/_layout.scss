@@ -54,9 +54,10 @@ footer{
 
 .mainSection{
 	width: 100%;
-	overflow: hidden;
-	margin-bottom:50rem;
-	z-index:2;
+	margin:0 auto 125vh;
+
+	/* overflow: hidden; */
+	/* z-index:2; */
 }
 
 .oneThird{
@@ -202,4 +203,8 @@ footer{
 	height:250px;
 	@include rotateZ(-10deg);
 	background-color:$blue;
+}
+.skewReverse{
+
+	
 }

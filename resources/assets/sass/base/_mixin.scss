@@ -32,6 +32,12 @@
   transform: rotate($deg);
   transform-origin: center;
 }
+@mixin skewY($deg){
+  transform: skewY($deg);
+  -webkit-transform: skewY($deg);
+  -moz-transform: skewY($deg);
+  -o-transform: skewY($deg);
+}
 
 @mixin flex($par){
   display: -webkit-flex;

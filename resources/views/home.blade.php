@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('hero')
-
 	<div class="hero--section">
+		
 		<div class="hero--section-content">
 			<h1>
 				anastasio<span>nico.uk</span>
@@ -13,11 +13,9 @@
 		<img class="hero--section-image" src="img/mobile-hero.png">
 		
 	</div>
-
 @endsection
 
 @section('homeAbout')
-	
 	<section class="about--section">
 		<div class="oneThird">
 			<div class="oneThird--big">
@@ -90,11 +88,9 @@
 		</div>
 
 	</section>
-
 @endsection
 
 @section('homeWork')
-
 	<section class="work--section">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
@@ -195,7 +191,6 @@
 		</div>
 		
 	</section>
-
 @endsection
 
 @section('homeTestimonial')
@@ -258,158 +253,149 @@
 			</div>
 		</div>	
 	</section>
-	
 @endsection
 
 @section('homeBlog')
-
-	<section class="blog--section">	
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content ">
-					<h3>Articles</h3>
-				
-					<p>
-						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
-						<br>
-						I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
-					</p>
+	<section class="blog--section">
+		<div class="skewReverse">
+			<div class="oneThird" >
+				<div class="oneThird--big">
+					<div class="oneThird--big--content ">
+						<h3>Articles</h3>
 					
-					<hr class="border-white">
+						<p>
+							I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+							<br>
+							I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+						</p>
+						
+						<hr class="border-white">
+					</div>
+				</div>
+				<div class="oneThird--small">&nbsp;</div>
+			</div>		
+			
+			<div class="oneThird" >
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+							<div class="card--caption">
+								<div class="card--caption-CatnDate clearfix">
+									<b>
+										Category
+									</b>	
+									<em>
+										28-09-2017
+									</em>	
+								</div>
+								<h4>Cation Consulting</h4>
+								<p>
+									Cation Consulting Limited is a small consultancy providing change management support in the areas
+								</p>
+								
+								<a class="btn">See details</a>
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+				<div class="oneThird--small">&nbsp;</div>
+			</div>			
+
+			<div class="oneThird" >
+				<div class="oneThird--small">&nbsp;</div>
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+							<div class="card--caption">
+								<div class="card--caption-CatnDate clearfix">
+									<b>
+										Category
+									</b>	
+									<em>
+										28-09-2017
+									</em>	
+								</div>
+								<h4>Cation Consulting</h4>
+								<p>
+									Cation Consulting Limited is a small consultancy providing change management support in the areas
+								</p>
+								
+								<a class="btn">See details</a>
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+			</div>			
+
+			<div class="oneThird" >
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+							<div class="card--caption">
+								<div class="card--caption-CatnDate clearfix">
+									<b>
+										Category
+									</b>	
+									<em>
+										28-09-2017
+									</em>	
+								</div>
+								<h4>Cation Consulting</h4>
+								<p>
+									Cation Consulting Limited is a small consultancy providing change management support in the areas
+								</p>
+								
+								<a class="btn">See details</a>
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+				<div class="oneThird--small">&nbsp;</div>
+			</div>			
+
+			<div class="oneThird" >
+				<div class="oneThird--small">&nbsp;</div>
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
+							<div class="card--caption">
+								<div class="card--caption-CatnDate clearfix">
+									<b>
+										Category
+									</b>	
+									<em>
+										28-09-2017
+									</em>	
+								</div>
+								<h4>Cation Consulting</h4>
+								<p>
+									Cation Consulting Limited is a small consultancy providing change management support in the areas
+								</p>
+								
+								<a class="btn">See details</a>
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+			</div>			
+			
+			<div class="sectionCenter">
+				<div class="sectionCenter--content">
+					<a class="btn-cta">Browse Articles</a>
 				</div>
 			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
+	
+		</div>	
 		
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<div class="card--caption-CatnDate clearfix">
-								<b>
-									Category
-								</b>	
-								<em>
-									28-09-2017
-								</em>	
-							</div>
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
 
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<div class="card--caption-CatnDate clearfix">
-								<b>
-									Category
-								</b>	
-								<em>
-									28-09-2017
-								</em>	
-							</div>
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<div class="card--caption-CatnDate clearfix">
-								<b>
-									Category
-								</b>	
-								<em>
-									28-09-2017
-								</em>	
-							</div>
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<div class="card--caption-CatnDate clearfix">
-								<b>
-									Category
-								</b>	
-								<em>
-									28-09-2017
-								</em>	
-							</div>
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-		</div>			
-		
-		<div class="sectionCenter">
-			<div class="sectionCenter--content">
-				<a class="btn-cta">Browse Articles</a>
-			</div>
-		</div>
 		
 	</section>
-
 @endsection
-
-@section('rotatedDiv')
-		<div class="rotatedDivHome">
-			sdfljhdslfj
-		</div>
-
-@endsection
-
-
-
-
