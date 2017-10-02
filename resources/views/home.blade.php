@@ -68,24 +68,26 @@
  			</div>
  		</div>
 
- 		<div class="sectionCenter">
-			
-			<div class="sectionCenter--content">
-				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-1">
-					html
-				</span>
-			</div>
-			<div class="sectionCenter--content">
-				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-2">
-					Css
-				</span>
-			</div>
-			<div class="sectionCenter--content">
-				<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-3">
-					Sass
-				</span>
-			</div>
-		</div>
+ 		<div class="about--section-skills">
+ 			<div class="sectionCenter">
+				<div class="sectionCenter--content">
+					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-1">
+						html
+					</span>
+				</div>
+				<div class="sectionCenter--content">
+					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-2">
+						Css
+					</span>
+				</div>
+				<div class="sectionCenter--content">
+					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-3">
+						Sass
+					</span>
+				</div>
+			</div>	
+ 		</div>
+ 		
 
 	</section>
 @endsection

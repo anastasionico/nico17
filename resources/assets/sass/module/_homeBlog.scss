@@ -8,7 +8,16 @@
 		height: 150px;
 		margin: 1rem auto -5rem; 
 		background-color:$blue;
+		
 		@include skewY(-10deg);
+		@include media(tabletPortrait){
+			margin: 1rem auto -6rem; 
+		}
+		@include media(tabletLandscape){
+			margin: 1rem auto -7rem;
+			height: 200px; 
+		}
+		
 	}
 	.card{
 		// background-color:red;

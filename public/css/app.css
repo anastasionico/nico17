@@ -144,7 +144,7 @@ footer {
   color: #fff;
   background-color: #3aa;
   width: 100%;
-  height: 100%;
+  /* height:100%; */
   position: fixed;
   bottom: 0;
   text-align: center;
@@ -154,8 +154,18 @@ footer {
 .mainSection {
   width: 100%;
   margin: 0 auto 125vh;
-  /* overflow: hidden; */
-  /* z-index:2; */
+}
+
+@media (min-width: 768px) {
+  .mainSection {
+    margin: 0 auto 75vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainSection {
+    margin: 0 auto 105vh;
+  }
 }
 
 .oneThird {
@@ -407,6 +417,13 @@ footer {
   color: #35a;
 }
 
+@media (min-width: 1024px) {
+  .about--section {
+    margin-top: -7rem;
+    padding-top: 11rem;
+  }
+}
+
 .about--section-phasis-logo {
   margin: 2rem auto;
   -webkit-border-radius: 50%;
@@ -446,6 +463,11 @@ footer {
     -webkit-transform: rotateZ(45deg);
             transform: rotateZ(45deg);
   }
+}
+
+.about--section-skills {
+  position: relative;
+  z-index: 1;
 }
 
 .about--section-skills-logo {
@@ -873,6 +895,19 @@ footer {
   -o-transform: skewY(-10deg);
 }
 
+@media (min-width: 768px) {
+  .blog--section:after {
+    margin: 1rem auto -6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog--section:after {
+    margin: 1rem auto -7rem;
+    height: 200px;
+  }
+}
+
 .blog--section .card {
   margin: 1rem auto;
   border-radius: 7px;
@@ -928,8 +963,14 @@ footer {
 }
 
 .footer--section {
-  height: 100%;
+  /* height: 100%; */
   overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .footer--section {
+    padding-top: 15rem;
+  }
 }
 
 .footer--section .footerForm input,
@@ -948,7 +989,7 @@ footer {
   border: 0;
 }
 
-.footer--section .social-logo {
+.footer--section-social .social-logo {
   -webkit-box-shadow: 0px 3px 5px 3px rgba(170, 170, 170, 0.5);
   box-shadow: 0px 3px 5px 3px rgba(170, 170, 170, 0.5);
   border-radius: 50%;
@@ -957,7 +998,7 @@ footer {
   color: #3aa;
 }
 
-.footer--section .social-logo:after {
+.footer--section-social .social-logo:after {
   content: "";
   background-color: #fff;
   position: absolute;
@@ -968,21 +1009,206 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .footer--section .social-logo {
+  .footer--section-social .social-logo {
     margin: 1rem auto;
   }
 }
 
-.footer--section #social-1:after {
+.footer--section-social #social-1:after {
   width: 250px;
 }
 
-.footer--section #social-2:after {
-  width: 167px;
+@media (min-width: 480px) {
+  .footer--section-social #social-1:after {
+    width: 480px;
+  }
 }
 
-.footer--section #social-3:after {
-  width: 54px;
+@media (min-width: 768px) {
+  .footer--section-social #social-1:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-2:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-2:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-2:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-3:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-3:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-3:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-4:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-4:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-4:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-5:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-5:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-5:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-6:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-6:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-6:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-7:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-7:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-7:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-8:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-8:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-8:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-9:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-9:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-9:after {
+    width: 250px;
+  }
+}
+
+.footer--section-social #social-10:after {
+  width: 250px;
+}
+
+@media (min-width: 480px) {
+  .footer--section-social #social-10:after {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-10:after {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--section-social #social-2:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .footer--section-social #social-4:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .footer--section-social #social-6:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .footer--section-social #social-8:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .footer--section-social #social-10:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 
 .footer--section-blog ul {
@@ -991,7 +1217,7 @@ footer {
 }
 
 .footer--section-blog ul li {
-  margin: 0.3rem auto;
+  /* 	margin:0.3rem auto; */
 }
 
 .footer--section-blog ul li:first-child {
@@ -1000,6 +1226,10 @@ footer {
 }
 
 .footer--section-copyright {
+  /* position:absolute;
+		bottom:0;
+		left:0;
+		right: 0; */
   padding: 0.3rem;
   background-color: #278383;
 }
