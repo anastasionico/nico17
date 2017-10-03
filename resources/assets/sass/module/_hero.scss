@@ -3,17 +3,32 @@
 	width: 100%;  
 	height: 100vh; 
 	overflow: hidden;
-	background: radial-gradient(lighten($azure, 20%),$azure);
+	@include linearGradient(130deg, $azure, $blue);
 	@include skewY(-10deg);
+	@include media(tabletPortrait){
+		@include linearGradient(140deg, $azure, $blue);
+	}
 	@include media(tabletLandscape){
 		margin: -7rem auto 0;
+		@include linearGradient(160deg, $azure, $blue);
 	}
-
+	@include media(desktop){
+		margin: -10rem auto 0;
+		@include linearGradient(170deg, $azure, $blue);
+	}
+	@include media(bigscreen){
+		margin: -14rem auto 0;
+		@include linearGradient(170deg, $azure, $blue);
+	}
+	
 	&-content{
 		margin:7rem auto 0;
 	    @include skewY(10deg);
 	    text-align: center;
 	    color: $blue;
+	    @include media(desktop){
+			margin: 15rem;
+		}
 	    span{
 	    	color:$white;
 	    }
@@ -23,27 +38,6 @@
 		margin: 0 auto; 
 		width: 90%;
 		transform: skewY(10deg);
-		
-	    /* @include media(phoneLandscape){
-			top:48%;
-			left: 33%;
-			width: 37%;
-	    }
-	    @include media(tabletPortrait){
-	    	top:20%;
-			left: 15%;
-			width: 45%;	
-	    }
-	    @include media(tabletLandscape){
-    		top:5%;
-			left: 16%;
-			width: 40%;	
-	    }
-	    @include media(desktop){
-    		top:15%;
-			left: 15%;
-			width: 41%;	
-		} */
 	}
 						
 }

@@ -26,17 +26,17 @@
 		<div class="footer--section-social">
 			<div class="sectionCenter">
 				<div class="sectionCenter--content">
-					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-3">
+					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
 						mail
 					</span>
 				</div>
 				<div class="sectionCenter--content">
-					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
+					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-2">
 						fb
 					</span>
 				</div>
 				<div class="sectionCenter--content">
-					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-2">
+					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-3">
 						LIn
 					</span>
 				</div>
@@ -71,7 +71,7 @@
  		</div>	
 		
 		<div class="footer--section-copyright">
-			<small>&copy; Copyright {{date("Y")}}  Anastasio Domenico, All Rights Reserved</small>
+			<small>&copy; Copyright {{date("Y")}} Anastasio Domenico, All Rights Reserved</small>
 		</div>
 
 

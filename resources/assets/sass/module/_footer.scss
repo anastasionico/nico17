@@ -1,6 +1,5 @@
 .footer--section{
-	/* height: 100%; */
-	overflow-y: scroll;	
+		
 	@include media(tabletPortrait){
 		padding-top:15rem;
 	}
@@ -24,6 +23,8 @@
 	}
 
 	&-social{
+		position:relative;
+		z-index: 1;
 		.social-logo{
 			@include lightShadow(0, 3, 5, 3, rgba($gray,0.5));
 			@include borderRadius(50%);
@@ -47,7 +48,7 @@
 			#social-#{$i}:after{
 				width: 250px;
 				@include media(phoneLandscape){
-					width: 480px;
+					width: 340px;
 				}
 				@include media(tabletPortrait){
 					width: 250px;

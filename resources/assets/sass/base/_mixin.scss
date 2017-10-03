@@ -83,3 +83,10 @@
       to {transform:rotate(360deg);}
   }
 }
+
+@mixin linearGradient($deg, $primary, $secondary){
+    background: -webkit-linear-gradient($deg, $primary 50%, $secondary);
+    background: -o-linear-gradient($deg, $primary 50%, $secondary); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($deg, $primary 50%, $secondary); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($deg, $primary 50%, $secondary); /* Standard syntax */
+}

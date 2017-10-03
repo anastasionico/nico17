@@ -8,6 +8,14 @@
 		margin-top:-7rem;
 		padding-top:11rem;
 	}
+	@include media(tabletLandscape){
+		margin-top:-10rem;
+		padding-top:17rem;
+	}
+	@include media(desktop){
+		margin-top:-15rem;
+		padding-top:27rem;
+	}
 	
 	&-phasis{
 		
