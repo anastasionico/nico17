@@ -25,10 +25,13 @@ header{
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: 0;
+	left: -100px;
 	padding-top: 1rem;
 	width: 10%;
-	
+	&.visible{
+		background-color:red;
+		left: -01px;
+	}
 }
 aside{
 	position: fixed;
@@ -63,7 +66,7 @@ footer{
 		margin:0 auto 75vh;
 	}
 	@include media(tabletLandscape){
-		margin:0 auto 105vh;
+		margin:0 auto 135vh;
 	}
 	@include media(desktop){
 		margin:0 auto 120vh;

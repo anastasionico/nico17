@@ -19,9 +19,9 @@
 		
 	</section>
 	
-	<header>
-		@include('layouts.header')
-	</header>
+	
+	@include('layouts.header')
+	
 	@include('layouts.aside')	
 	@include('layouts.footer')
 	

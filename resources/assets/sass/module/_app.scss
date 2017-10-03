@@ -5,22 +5,10 @@
 @import 'homeTestimonial';
 @import 'homeBlog';
 @import 'footer';
+@import 'header';
 
 
-.hamburger{
-	cursor: pointer;
-	@include rotateZ(-10deg);
-	
-	@for $i from 3 through 1{
-		.hamburgerLine-#{$i}{
-			display: block;
-			margin: 4px auto;
-			background-color: $white;
-			height: 2px;
-			width: 20 + $i * 3%;
-	    }
-	}
-}
+
 
 .scroll--balls{
 	

@@ -127,9 +127,14 @@ header {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -100px;
   padding-top: 1rem;
   width: 10%;
+}
+
+header.visible {
+  background-color: red;
+  left: -01px;
 }
 
 aside {
@@ -175,7 +180,7 @@ footer {
 
 @media (min-width: 1024px) {
   .mainSection {
-    margin: 0 auto 105vh;
+    margin: 0 auto 135vh;
   }
 }
 
@@ -962,8 +967,8 @@ footer {
 
 @media (min-width: 1024px) {
   .blog--section:after {
-    margin: 1rem auto -7rem;
-    height: 200px;
+    margin: 1rem auto -10rem;
+    height: 270px;
   }
 }
 
@@ -1041,8 +1046,14 @@ footer {
   }
 }
 
+.footer--section .footerForm {
+  padding: 0 5rem;
+}
+
 .footer--section .footerForm input,
 .footer--section .footerForm textarea {
+  outline: 0;
+  color: #35a;
   width: 100%;
   margin: 0.7rem auto;
   background-color: transparent;
@@ -1055,6 +1066,13 @@ footer {
   background-color: #fff;
   color: #3aa;
   border: 0;
+}
+
+@media (min-width: 768px) {
+  .footer--section .footerForm input[type=submit] {
+    width: 200px;
+    float: right;
+  }
 }
 
 .footer--section-social {
@@ -1307,46 +1325,60 @@ footer {
   background-color: #278383;
 }
 
-.hamburger {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .hamburger {
   cursor: pointer;
-  /* IE 9 */
-  -webkit-transform: rotateZ(-10deg);
-  /* Chrome, Safari, Opera */
-  transform: rotateZ(-10deg);
-  -ms-transform: rotate(-10deg);
-  /* IE 9 */
-  -ms-transform-origin: center;
-  /* IE 9 */
-  -webkit-transform: rotate(-10deg);
-  /* Chrome, Safari, Opera */
-  -webkit-transform-origin: center;
-  /* Chrome, Safari, Opera */
-  transform: rotate(-10deg);
-  transform-origin: center;
+  margin-right: -150px;
+  transform: skewY(-10deg);
+  -webkit-transform: skewY(-10deg);
+  -moz-transform: skewY(-10deg);
+  -o-transform: skewY(-10deg);
 }
 
-.hamburger .hamburgerLine-3 {
+header .hamburger .hamburgerLine-3 {
   display: block;
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 29%;
+  width: 26px;
 }
 
-.hamburger .hamburgerLine-2 {
+header .hamburger .hamburgerLine-2 {
   display: block;
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 26%;
+  width: 34px;
 }
 
-.hamburger .hamburgerLine-1 {
+header .hamburger .hamburgerLine-1 {
   display: block;
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 23%;
+  width: 42px;
+}
+
+header nav a {
+  display: block;
+  color: white;
 }
 
 .scroll--balls {
