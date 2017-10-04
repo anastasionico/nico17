@@ -25,12 +25,12 @@ header{
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: -100px;
-	padding-top: 1rem;
-	width: 10%;
+	left: -11rem;
+	padding-top: 0;
+	background-color:red;
+	transition:left 0.3s ease-in-out;
 	&.visible{
-		background-color:red;
-		left: -01px;
+		left:0;
 	}
 }
 aside{
@@ -73,6 +73,9 @@ footer{
 	}
 	@include media(bigscreen){
 		margin:0 auto 90vh;
+	}
+	& .menuVisible{
+		margin-left: 11rem; 
 	}
 }
 

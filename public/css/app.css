@@ -127,14 +127,15 @@ header {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -100px;
-  padding-top: 1rem;
-  width: 10%;
+  left: -11rem;
+  padding-top: 0;
+  background-color: red;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
 }
 
 header.visible {
-  background-color: red;
-  left: -01px;
+  left: 0;
 }
 
 aside {
@@ -194,6 +195,10 @@ footer {
   .mainSection {
     margin: 0 auto 90vh;
   }
+}
+
+.mainSection .menuVisible {
+  margin-left: 11rem;
 }
 
 .oneThird {
@@ -1329,15 +1334,23 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+header .links,
+header .hamburgerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1345,7 +1358,7 @@ header {
 
 header .hamburger {
   cursor: pointer;
-  margin-right: -150px;
+  margin-right: -100px;
   transform: skewY(-10deg);
   -webkit-transform: skewY(-10deg);
   -moz-transform: skewY(-10deg);
@@ -1378,7 +1391,8 @@ header .hamburger .hamburgerLine-1 {
 
 header nav a {
   display: block;
-  color: white;
+  padding: 0.7rem 2rem;
+  color: #35a;
 }
 
 .scroll--balls {
