@@ -24,15 +24,22 @@ header{
 				background-color: $white;
 				height: 2px;
 				width: 50px - ($i*8);
+				&.menuVisible{
+					//MAKE THE HAMBURGER BLUE WHEN THE MENU IS VISIBLE
+				}
 		    }
 		}
 	}
 	
 	nav{
 		a{
+			font-size: 0.7rem; 
+			font-weight: 700;
 			display: block;
-			padding: 0.7rem 2rem;
-			color:$blue;
+			padding: 0.7rem 1rem;
+			color:$white;
+			text-decoration: none;
+			text-transform: uppercase;
 		}
 
 	}	

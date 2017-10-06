@@ -1,4 +1,4 @@
-<header class="visible">
+<header>
 	<div class='links'>
 		<nav>
 			<a href="#">My Projects</a>
@@ -12,9 +12,9 @@
 	</div>
 	<div class="hamburgerDiv">
 		<div class="hamburger">
-			<span class="hamburgerLine-1">&nbsp;</span>
-		    <span class="hamburgerLine-2">&nbsp;</span>
-		    <span class="hamburgerLine-3">&nbsp;</span>
+			<span class="hamburgerLine-1"></span>
+		    <span class="hamburgerLine-2"></span>
+		    <span class="hamburgerLine-3"></span>
 		</div>
 	</div>
 

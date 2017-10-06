@@ -74,12 +74,8 @@
 			<small>&copy; Copyright {{date("Y")}} Anastasio Domenico, All Rights Reserved</small>
 		</div>
 
-
-
-
 	</div>
 	
-	
-
-	
 </footer>
+
+<script src="/js/main.js"></script>

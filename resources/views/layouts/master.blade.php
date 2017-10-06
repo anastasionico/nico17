@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>@yield('title')</title>
-	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
-	
-	<section class="mainSection">
-
-		@yield('hero')
-		@yield('homeAbout')
-		@yield('homeWork')
-		@yield('homeTestimonial')
-		@yield('homeBlog')
+	<head>
+		<title>@yield('title')</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+	<body>
 		
-	</section>
-	
-	
-	@include('layouts.header')
-	
-	@include('layouts.aside')	
-	@include('layouts.footer')
-	
-</body>
+		<div id="content">
+			<section class="mainSection">
+
+				@yield('hero')
+				@yield('homeAbout')
+				@yield('homeWork')
+				@yield('homeTestimonial')
+				@yield('homeBlog')
+				
+			</section>
+		
+			@include('layouts.aside')	
+		
+			@include('layouts.footer')
+		
+		</div>
+
+		@include('layouts.header')
+		
+	</body>
 </html>
 {{-- 
 		LAYOUT SAMPLE

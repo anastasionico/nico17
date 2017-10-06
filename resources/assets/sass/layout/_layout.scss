@@ -18,18 +18,24 @@
 	}
 }
 body{
-	background-color:$white;
+
+	background-color:lighten($azure,45%);
+	&.menuVisible{
+		overflow-y: hidden;
+	}
 }
 
 header{
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: -11rem;
+	left: -138px;
 	padding-top: 0;
-	background-color:red;
+	background-color:rgba($blue,0.8);
 	transition:left 0.3s ease-in-out;
-	&.visible{
+	z-index:50;
+
+	&.menuVisible{
 		left:0;
 	}
 }
@@ -56,9 +62,19 @@ footer{
 	@include media(desktop){
 		padding-top:10rem;
 	}
-	
+	&.menuVisible{
+		position:static;
+	}
 }
-
+#content{
+	transition:all 0.3s ease-in-out;
+	&.menuVisible{
+		margin-top: 10%;
+		overflow-y: scroll;
+		transform: scale(0.75);
+		transform-origin: top right;
+	}	
+}
 .mainSection{
 	width: 100%;
 	margin:0 auto 0vh;
@@ -74,9 +90,9 @@ footer{
 	@include media(bigscreen){
 		margin:0 auto 90vh;
 	}
-	& .menuVisible{
-		margin-left: 11rem; 
-	}
+	&.menuVisible{
+		margin-bottom: 0;
+	}	
 }
 
 .oneThird{

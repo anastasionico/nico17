@@ -120,21 +120,26 @@ hr {
 }
 
 body {
-  background-color: #fff;
+  background-color: #d1f1f1;
+}
+
+body.menuVisible {
+  overflow-y: hidden;
 }
 
 header {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -11rem;
+  left: -138px;
   padding-top: 0;
-  background-color: red;
+  background-color: rgba(51, 85, 170, 0.8);
   -webkit-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
+  z-index: 50;
 }
 
-header.visible {
+header.menuVisible {
   left: 0;
 }
 
@@ -168,6 +173,24 @@ footer {
   }
 }
 
+footer.menuVisible {
+  position: static;
+}
+
+#content {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#content.menuVisible {
+  margin-top: 10%;
+  overflow-y: scroll;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
 .mainSection {
   width: 100%;
   margin: 0 auto 0vh;
@@ -197,8 +220,8 @@ footer {
   }
 }
 
-.mainSection .menuVisible {
-  margin-left: 11rem;
+.mainSection.menuVisible {
+  margin-bottom: 0;
 }
 
 .oneThird {
@@ -1390,9 +1413,13 @@ header .hamburger .hamburgerLine-1 {
 }
 
 header nav a {
+  font-size: 0.7rem;
+  font-weight: 700;
   display: block;
-  padding: 0.7rem 2rem;
-  color: #35a;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .scroll--balls {
