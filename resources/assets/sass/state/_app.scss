@@ -1,0 +1,7 @@
+@for $i from 3 through 1{
+	.hamburgerLine-#{$i}{
+		&.menuVisible{
+			background-color: $blue;
+		}
+    }
+}

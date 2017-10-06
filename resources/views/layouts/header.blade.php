@@ -9,12 +9,15 @@
 			<a href="#">Up</a>
 			<a href="#">Git</a>
 		</nav>
+		<small style="font-size: 0.5rem;text-align: center;color: white">
+			CHOOSE <br> ANOTHER PAGE<br> OR CONTINUE <br>BY SCROLLING <br>THE CURRENT ONE
+		</small>
 	</div>
 	<div class="hamburgerDiv">
 		<div class="hamburger">
-			<span class="hamburgerLine-1"></span>
-		    <span class="hamburgerLine-2"></span>
-		    <span class="hamburgerLine-3"></span>
+			<span class="hamburgerLine-1 bg-white"></span>
+		    <span class="hamburgerLine-2 bg-white"></span>
+		    <span class="hamburgerLine-3 bg-white"></span>
 		</div>
 	</div>
 

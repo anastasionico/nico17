@@ -21,7 +21,6 @@ header{
 			.hamburgerLine-#{$i}{
 				display: block;
 				margin: 4px auto;
-				background-color: $white;
 				height: 2px;
 				// width: 50px - ($i*8);
 				transition: all 0.3s ease-in-out;

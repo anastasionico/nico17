@@ -10,6 +10,12 @@
 .border-white{
 	border-color:$white;
 }
+.bg-blue{
+	background-color:$blue;	
+}
+.bg-white{
+	background-color:$white;	
+}
 .clearfix{
 	&:after{
 		content: '';
@@ -44,7 +50,7 @@ aside{
 	top: 0;
 	right: 0;
 	height:100%;
-	width: 10%;
+	width: 5%;
 
 }
 
@@ -73,8 +79,9 @@ footer{
 		overflow-y: scroll;
 		transform: scale(0.75);
 		transform-origin: top right;
-		//insert box shadow
-	}	
+		@include lightShadow(5, 5, 15, 5, $gray);
+	}
+
 }
 .mainSection{
 	width: 100%;
@@ -93,6 +100,7 @@ footer{
 	}
 	&.menuVisible{
 		margin-bottom: 0;
+
 	}	
 }
 
@@ -217,7 +225,6 @@ footer{
 }
 
 .sectionCenter{
-	// margin:2rem auto 2rem;
 	padding-top:2rem;
 	padding-bottom:2rem;
 	text-align:center;
@@ -239,8 +246,4 @@ footer{
 	height:250px;
 	@include rotateZ(-10deg);
 	background-color:$blue;
-}
-.skewReverse{
-
-	
 }

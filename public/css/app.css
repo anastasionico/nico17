@@ -113,6 +113,14 @@ hr {
   border-color: #fff;
 }
 
+.bg-blue {
+  background-color: #35a;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
 .clearfix:after {
   content: '';
   display: block;
@@ -148,7 +156,7 @@ aside {
   top: 0;
   right: 0;
   height: 100%;
-  width: 10%;
+  width: 5%;
 }
 
 footer {
@@ -189,6 +197,8 @@ footer.menuVisible {
           transform: scale(0.75);
   -webkit-transform-origin: top right;
           transform-origin: top right;
+  -webkit-box-shadow: 5px 5px 15px 5px #aaa;
+  box-shadow: 5px 5px 15px 5px #aaa;
 }
 
 .mainSection {
@@ -1391,7 +1401,6 @@ header .hamburger {
 header .hamburger .hamburgerLine-3 {
   display: block;
   margin: 4px auto;
-  background-color: #fff;
   height: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1404,7 +1413,6 @@ header .hamburger .hamburgerLine-3.menuVisible {
 header .hamburger .hamburgerLine-2 {
   display: block;
   margin: 4px auto;
-  background-color: #fff;
   height: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1417,7 +1425,6 @@ header .hamburger .hamburgerLine-2.menuVisible {
 header .hamburger .hamburgerLine-1 {
   display: block;
   margin: 4px auto;
-  background-color: #fff;
   height: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1464,12 +1471,42 @@ header nav a {
   text-transform: uppercase;
 }
 
-.scroll--balls {
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+aside .scroll--ball-Div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+aside .scroll--ball-Div .scroll--balls {
   height: 25%;
   margin-top: 100px;
 }
 
-.scroll--balls .scroll--ball {
+aside .scroll--ball-Div .scroll--balls .scroll--ball {
   display: block;
   -webkit-border-radius: 50%;
   -webkit-border-bottom-right-radius: 0px;
@@ -1484,9 +1521,11 @@ header nav a {
   height: 10px;
   background-color: #fff;
   border: 1px solid #35a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.scroll--balls .scroll--ball.active {
+aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
   background-color: #3aa;
 }
 
@@ -1540,5 +1579,17 @@ header nav a {
 .btn-cta:hover {
   -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
   box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
+}
+
+.hamburgerLine-3.menuVisible {
+  background-color: #35a;
+}
+
+.hamburgerLine-2.menuVisible {
+  background-color: #35a;
+}
+
+.hamburgerLine-1.menuVisible {
+  background-color: #35a;
 }
 
