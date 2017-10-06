@@ -102,6 +102,9 @@ function menuVisible() {
 				content.className = '';
 				content.style.height = document.documentElement.clientHeight + 'px';
 				body.className = '';
+				hamburgerLine1.className = 'hamburgerLine-1';
+				hamburgerLine2.className = 'hamburgerLine-2';
+				hamburgerLine3.className = 'hamburgerLine-3';
 			}
 		} else {
 
@@ -116,9 +119,9 @@ function menuVisible() {
 				content.className = 'menuVisible';
 				content.style.height = clientHeight + 'px';
 				body.className = 'menuVisible';
-				hamburgerLine1.className = 'hamburgerLine1 menuVisible';
-				hamburgerLine2.className = 'hamburgerLine2 menuVisible';
-				hamburgerLine3.className = 'hamburgerLine3 menuVisible';
+				hamburgerLine1.className = 'hamburgerLine-1 menuVisible';
+				hamburgerLine2.className = 'hamburgerLine-2 menuVisible';
+				hamburgerLine3.className = 'hamburgerLine-3 menuVisible';
 			}
 		}
 	};

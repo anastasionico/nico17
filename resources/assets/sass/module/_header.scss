@@ -23,11 +23,30 @@ header{
 				margin: 4px auto;
 				background-color: $white;
 				height: 2px;
-				width: 50px - ($i*8);
+				// width: 50px - ($i*8);
+				transition: all 0.3s ease-in-out;
 				&.menuVisible{
-					//MAKE THE HAMBURGER BLUE WHEN THE MENU IS VISIBLE
+					background-color: $blue;
 				}
 		    }
+		}
+		.hamburgerLine-1{
+			width: 25px;
+			&.menuVisible{
+				transform: rotate(157deg);
+			}
+		}
+		.hamburgerLine-2{
+			width: 40px;
+			&.menuVisible{
+				transform: translate(8px,2px) rotate(10deg);
+			}
+		}
+		.hamburgerLine-3{
+			width: 25px;
+			&.menuVisible{
+				transform: rotate(-147deg);
+			}
 		}
 	}
 	

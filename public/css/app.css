@@ -1393,7 +1393,12 @@ header .hamburger .hamburgerLine-3 {
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 26px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .hamburger .hamburgerLine-3.menuVisible {
+  background-color: #35a;
 }
 
 header .hamburger .hamburgerLine-2 {
@@ -1401,7 +1406,12 @@ header .hamburger .hamburgerLine-2 {
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 34px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .hamburger .hamburgerLine-2.menuVisible {
+  background-color: #35a;
 }
 
 header .hamburger .hamburgerLine-1 {
@@ -1409,7 +1419,39 @@ header .hamburger .hamburgerLine-1 {
   margin: 4px auto;
   background-color: #fff;
   height: 2px;
-  width: 42px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .hamburger .hamburgerLine-1.menuVisible {
+  background-color: #35a;
+}
+
+header .hamburger .hamburgerLine-1 {
+  width: 25px;
+}
+
+header .hamburger .hamburgerLine-1.menuVisible {
+  -webkit-transform: rotate(157deg);
+          transform: rotate(157deg);
+}
+
+header .hamburger .hamburgerLine-2 {
+  width: 40px;
+}
+
+header .hamburger .hamburgerLine-2.menuVisible {
+  -webkit-transform: translate(8px, 2px) rotate(10deg);
+          transform: translate(8px, 2px) rotate(10deg);
+}
+
+header .hamburger .hamburgerLine-3 {
+  width: 25px;
+}
+
+header .hamburger .hamburgerLine-3.menuVisible {
+  -webkit-transform: rotate(-147deg);
+          transform: rotate(-147deg);
 }
 
 header nav a {
