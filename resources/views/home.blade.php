@@ -36,31 +36,31 @@
 		</div>		
 
  		<div class="fullWidth about--section-phasis">
- 			<div class="fullWidth--content">
+ 			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-binoculars fa-2x" aria-hidden="true"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">Discovery</h5>
  			</div>
- 			<div class="fullWidth--content">
+ 			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">Design</h5>	
  			</div>
- 			<div class="fullWidth--content">
+ 			<div class="fullWidth--content about--section-phasisDivs">
 				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-code fa-2x" aria-hidden="true"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">Coding</h5>	
  			</div>
- 			<div class="fullWidth--content">
+ 			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">Testing</h5>	
  			</div>
- 			<div class="fullWidth--content">
+ 			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>
 				</span>
