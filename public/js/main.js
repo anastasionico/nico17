@@ -127,24 +127,7 @@ function menuVisible() {
 	};
 }
 
-function mediaController() {
-
-	if (screen.width <= 399) {
-
-		calculateScrollSection(240, 1708, 3911, 4621, 7115);
-	} else if (screen.width >= 400 && screen.width < 767) {
-
-		calculateScrollSection(20, 1530, 3443, 3767, 5833);
-	} else if (screen.width >= 768 && screen.width < 1023) {
-
-		calculateScrollSection(396, 1121, 3122, 3684, 6180);
-	} else if (screen.width >= 1024) {
-
-		calculateScrollSection(191, 972, 2820, 3327, 5690);
-	}
-}
-
-function calculateScrollSection(first, second, third, fourth, fifth) {
+function offsetTop() {
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
 	var header = document.getElementsByTagName('header')[0];
@@ -152,7 +135,18 @@ function calculateScrollSection(first, second, third, fourth, fifth) {
 	var hamburgerLine2 = document.getElementsByClassName('hamburgerLine-2')[0];
 	var hamburgerLine3 = document.getElementsByClassName('hamburgerLine-3')[0];
 
-	if (scrollPosition < first) {
+	var heroSection = document.getElementsByClassName('hero--section')[0];
+	var heroSectionOffsetTop = heroSection.offsetTop;
+	var aboutSection = document.getElementsByClassName('about--section')[0];
+	var aboutSectionOffsetTop = aboutSection.offsetTop - 200;
+	var workSection = document.getElementsByClassName('work--section')[0];
+	var workSectionOffsetTop = workSection.offsetTop - 420;
+	var testimonialSection = document.getElementsByClassName('testimonial--section')[0];
+	var testimonialSectionOffsetTop = testimonialSection.offsetTop - 450;
+	var blogSection = document.getElementsByClassName('blog--section')[0];
+	var blogSectionOffsetTop = blogSection.offsetTop - 450;
+
+	if (scrollPosition >= heroSectionOffsetTop) {
 		if (header.className == 'menuVisible') {
 			hamburgerLine1.className = 'hamburgerLine-1 menuVisible';
 			hamburgerLine2.className = 'hamburgerLine-2 menuVisible';
@@ -163,66 +157,56 @@ function calculateScrollSection(first, second, third, fourth, fifth) {
 			hamburgerLine3.className = 'hamburgerLine-3 bg-white';
 		}
 
-		for (var i = 0; i < scrollBall.length; i++) {
+		scrollBall[0].className = 'scroll--ball active';
+
+		for (var i = 1; i < scrollBall.length; i++) {
 			scrollBall[i].className = 'scroll--ball';
 		}
-	} else if (scrollPosition > first && scrollPosition < second) {
-
+	}
+	if (scrollPosition >= aboutSectionOffsetTop) {
 		hamburgerLine1.className = 'hamburgerLine-1 bg-blue';
 		hamburgerLine2.className = 'hamburgerLine-2 bg-blue';
 		hamburgerLine3.className = 'hamburgerLine-3 bg-blue';
 
-		scrollBall[0].className = 'scroll--ball active';
-
-		for (var i = 1; i < scrollBall.length; i++) {
-			scrollBall[i].className = 'scroll--ball ';
-		}
-	} else if (scrollPosition > second && scrollPosition < third) {
-
-		hamburgerLine1.className = 'hamburgerLine-1 bg-white';
-		hamburgerLine2.className = 'hamburgerLine-2 bg-white';
-		hamburgerLine3.className = 'hamburgerLine-3 bg-white';
-
-		for (var i = 0; i < 2; i++) {
+		for (var i = 0; i <= 1; i++) {
 			scrollBall[i].className = 'scroll--ball active';
 		}
 
 		for (var i = 2; i < scrollBall.length; i++) {
 			scrollBall[i].className = 'scroll--ball';
 		}
-	} else if (scrollPosition > third && scrollPosition < fourth) {
+	}
+	if (scrollPosition >= workSectionOffsetTop) {
+		hamburgerLine1.className = 'hamburgerLine-1 bg-white';
+		hamburgerLine2.className = 'hamburgerLine-2 bg-white';
+		hamburgerLine3.className = 'hamburgerLine-3 bg-white';
 
-		hamburgerLine1.className = 'hamburgerLine-1 bg-blue';
-		hamburgerLine2.className = 'hamburgerLine-2 bg-blue';
-		hamburgerLine3.className = 'hamburgerLine-3 bg-blue';
-
-		for (var i = 0; i < 2; i++) {
+		for (var i = 0; i <= 2; i++) {
 			scrollBall[i].className = 'scroll--ball active';
 		}
 
 		for (var i = 3; i < scrollBall.length; i++) {
 			scrollBall[i].className = 'scroll--ball';
 		}
-	} else if (scrollPosition > fourth && scrollPosition < fifth) {
+	}
+	if (scrollPosition >= testimonialSectionOffsetTop) {
+		hamburgerLine1.className = 'hamburgerLine-1 bg-blue';
+		hamburgerLine2.className = 'hamburgerLine-2 bg-blue';
+		hamburgerLine3.className = 'hamburgerLine-3 bg-blue';
 
-		hamburgerLine1.className = 'hamburgerLine-1 bg-white';
-		hamburgerLine2.className = 'hamburgerLine-2 bg-white';
-		hamburgerLine3.className = 'hamburgerLine-3 bg-white';
-
-		for (var i = 0; i < 3; i++) {
+		for (var i = 0; i <= 3; i++) {
 			scrollBall[i].className = 'scroll--ball active';
 		}
 
 		for (var i = 4; i < scrollBall.length; i++) {
 			scrollBall[i].className = 'scroll--ball';
 		}
-	} else {
-
+	}
+	if (scrollPosition >= blogSectionOffsetTop) {
 		hamburgerLine1.className = 'hamburgerLine-1 bg-white';
 		hamburgerLine2.className = 'hamburgerLine-2 bg-white';
 		hamburgerLine3.className = 'hamburgerLine-3 bg-white';
-
-		for (var i = 0; i < scrollBall.length; i++) {
+		for (var i = 0; i <= 4; i++) {
 			scrollBall[i].className = 'scroll--ball active';
 		}
 	}
@@ -232,7 +216,7 @@ window.onload = function () {
 	menuVisible();
 
 	this.onscroll = function () {
-		mediaController();
+		offsetTop();
 	};
 };
 
