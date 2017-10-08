@@ -54,45 +54,83 @@
 	&-skills{
 		position:relative;
 		z-index: 1;	
-		
-		&-logo{
-			@include lightShadow(0, 3, 5, 3, $gray);
-			@include borderRadius(50%);
-			position:relative;
-			background-color:$white;
-			
-			&:after{
-				content: "";
-			    background-color: $blue;
-			    position: absolute;
-			    height: 5px;
-			    top:45%;
-			    left: 18px;
-			    z-index: -1;	
+		margin-top: 5rem;
+		&-divs{
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+			&-logo{
+				@include lightShadow(0, 3, 5, 3, $gray);
+				@include borderRadius(50%);
+				position:relative;
+				background-color:$white;
+				
+				&:after {
+					content: "";
+				    background-color: $blue;
+				    position: absolute;
+				    height: 5px;
+				    top:45%;
+				    left: 18px;
+				    z-index: -1;	
+				    width: 0px;
+				   	transition: width 0.3s ease-in-out;
+				}
+				@include media(tabletPortrait){
+					margin: 1rem auto;
+				}
+
+				// The following selectors are active when javascript add the visibleWidth to the &-logo divs, they change the width of the after making an animation
+				&.visibleWidth#skill-1:after {
+					width: 250px;
+				}
+				&.visibleWidth#skill-2:after {
+				    width: 167px;
+				}
+				&.visibleWidth#skill-3:after {
+				 	width: 54px;
+				}
+				&.visibleWidth#skill-4:after {
+					width: 250px;
+				}
+				&.visibleWidth#skill-5:after {
+				    width: 167px;
+				}
+				&.visibleWidth#skill-6:after {
+				 	width: 54px;
+				}
+				&.visibleWidth#skill-7:after {
+					width: 250px;
+				}
+				&.visibleWidth#skill-8:after {
+				    width: 167px;
+				}
+				&.visibleWidth#skill-9:after {
+				 	width: 54px;
+				}
+				&.visibleWidth#skill-10:after {
+					width: 250px;
+				}
+
+				@include media(tabletPortrait){
+					@for $i from 1 through 10{
+						@if $i % 2 == 0 { 
+							&.visibleWidth#skill-#{$i}:after{
+								transform: rotate(180deg);
+								transform-origin: left;
+							}	
+					  	}
+					}
+				}	
 
 			}
-			@include media(tabletPortrait){
-				margin: 1rem auto;
-			}
+
+
+
+
 		}
+		
 	}
-	#skill-1:after{
-		width: 250px;
-	}	
-	#skill-2:after{
-	    width: 167px;
-	}
-	#skill-3:after{
-	 	width: 54px;
-	}
-	@include media(tabletPortrait){
-		@for $i from 1 through 3{
-			@if $i % 2 == 0 { 
-				#skill-#{$i}:after{
-					transform: rotate(180deg);
-					transform-origin: left;
-				}	
-		  	}
-		}
-	}	
+
+		
+	
 }

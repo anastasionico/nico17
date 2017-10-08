@@ -6,7 +6,8 @@
  * if it is visible instead remove the menuVisible class on the header and, 
  * if the devices is a tablet or bigger put any other elements of the page back
 */
-function menuVisible(){
+function menuVisible()
+{
 	var hamburger = document.getElementsByClassName('hamburger')[0];
 	var mainSection = document.getElementsByClassName('mainSection')[0];
 	var header = document.getElementsByTagName('header')[0];
@@ -66,7 +67,8 @@ function menuVisible(){
  * The below function check the position of the OffsetTop of the various sections of the pages 
  * as soon as they are surpassed by the window.scrollY they active the class on the .scrollBalls changing their colors.
 */
-function offsetTop_Hamburger_scrollBalls() {
+function offsetTop_Hamburger_scrollBalls() 
+{
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
 	var header = document.getElementsByTagName('header')[0];
@@ -157,11 +159,12 @@ function offsetTop_Hamburger_scrollBalls() {
  * as soon as the Offset is surpassed by the scrollY of the windows it activate the animation on the about--phases
  * the animation change ( is-translateY or is-translatX) depending of the device;	
  */
-function offsetTop_AboutPhases(){
+function offsetTop_AboutPhases()
+{
 	var aboutSection = document.getElementsByClassName('about--section')[0];
 	var aboutSectionOffsetTop = aboutSection.offsetTop;
 	var aboutSectionPhasisDivs = document.getElementsByClassName('about--section-phasisDivs');
-	
+	// console.log(aboutSectionOffsetTop);
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
 	
@@ -175,14 +178,46 @@ function offsetTop_AboutPhases(){
 			(function(i) {
 		        setTimeout(function() {             
 	                aboutSectionPhasisDivs[i].className += 'fullWidth--content about--section-phasisDivs is-visible ' + translateClass;		
-		        }, i * 100);
+		        }, i * 300);
 		    })(i);
 		}
 	}
 
 }
 
+/*
+ * The below function edit the about--section-skills section
+ * as soon as the offsetTop of the section is hight enough a loop add the is-visible class
+ * at the same time the visibleWidth class is added to the about--section-skills-divs-logo 
+ * thanks to the css this class allow the animation of the after elements 
+*/
+function offsetTop_AboutSkills()
+{
+	var scrollPosition = window.scrollY;
+	var skillsSection = document.getElementsByClassName('about--section-skills')[0];
+	var skillsSection_OffsetTop = skillsSection.offsetTop;
+	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
+	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo') 
+	var clientHeight = document.documentElement.clientHeight;
 
+	
+
+	if( scrollPosition > skillsSection_OffsetTop - (clientHeight/1.5)){
+		for (var i = 0; i < skillsDivs.length; i++) {
+			(function(i){
+				setTimeout(function(){
+					skillsDivs[i].className = 'sectionCenter--content about--section-skills-divs is-visible';	
+					skillsDivsLogo[i].className = 'about--section-skills-divs-logo mt-1 smallCircle flexCenter visibleWidth ';				
+					// var width = window.getComputedStyle( document.querySelector('.skillsDivs'+[i]), ':after').getPropertyValue('width');
+					// console.log(width);
+
+
+
+				}, i * 150);
+			})(i);
+		}
+	}
+}
 
 
 
@@ -205,7 +240,12 @@ window.onload = function () {
 	this.onscroll = function () {
 		offsetTop_Hamburger_scrollBalls();
 		offsetTop_AboutPhases();
+		offsetTop_AboutSkills();
 	}
+
+
+
+	
 };
 
 

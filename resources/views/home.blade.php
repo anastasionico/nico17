@@ -70,19 +70,54 @@
 
  		<div class="about--section-skills">
  			<div class="sectionCenter">
-				<div class="sectionCenter--content">
-					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-1">
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-1">
 						html
 					</span>
 				</div>
-				<div class="sectionCenter--content">
-					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-2">
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-2">
 						Css
 					</span>
 				</div>
-				<div class="sectionCenter--content">
-					<span  class="about--section-skills-logo mt-1 smallCircle flexCenter" id="skill-3">
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-3">
 						Sass
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-4">
+						html
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-5">
+						Css
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-6">
+						Sass
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-7">
+						html
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-8">
+						Css
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-9">
+						Sass
+					</span>
+				</div>
+				<div class="sectionCenter--content about--section-skills-divs">
+					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-10">
+						html
 					</span>
 				</div>
 			</div>	

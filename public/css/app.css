@@ -577,9 +577,16 @@ footer.menuVisible {
 .about--section-skills {
   position: relative;
   z-index: 1;
+  margin-top: 5rem;
 }
 
-.about--section-skills-logo {
+.about--section-skills-divs {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about--section-skills-divs-logo {
   -webkit-box-shadow: 0px 3px 5px 3px #aaa;
   box-shadow: 0px 3px 5px 3px #aaa;
   border-radius: 50%;
@@ -587,7 +594,7 @@ footer.menuVisible {
   background-color: #fff;
 }
 
-.about--section-skills-logo:after {
+.about--section-skills-divs-logo:after {
   content: "";
   background-color: #35a;
   position: absolute;
@@ -595,28 +602,87 @@ footer.menuVisible {
   top: 45%;
   left: 18px;
   z-index: -1;
+  width: 0px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
-  .about--section-skills-logo {
+  .about--section-skills-divs-logo {
     margin: 1rem auto;
   }
 }
 
-.about--section #skill-1:after {
+.about--section-skills-divs-logo.visibleWidth#skill-1:after {
   width: 250px;
 }
 
-.about--section #skill-2:after {
+.about--section-skills-divs-logo.visibleWidth#skill-2:after {
   width: 167px;
 }
 
-.about--section #skill-3:after {
+.about--section-skills-divs-logo.visibleWidth#skill-3:after {
   width: 54px;
 }
 
+.about--section-skills-divs-logo.visibleWidth#skill-4:after {
+  width: 250px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-5:after {
+  width: 167px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-6:after {
+  width: 54px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-7:after {
+  width: 250px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-8:after {
+  width: 167px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-9:after {
+  width: 54px;
+}
+
+.about--section-skills-divs-logo.visibleWidth#skill-10:after {
+  width: 250px;
+}
+
 @media (min-width: 768px) {
-  .about--section #skill-2:after {
+  .about--section-skills-divs-logo.visibleWidth#skill-2:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo.visibleWidth#skill-4:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo.visibleWidth#skill-6:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo.visibleWidth#skill-8:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo.visibleWidth#skill-10:after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;

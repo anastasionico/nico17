@@ -233,7 +233,7 @@ function offsetTop_AboutPhases() {
 	var aboutSection = document.getElementsByClassName('about--section')[0];
 	var aboutSectionOffsetTop = aboutSection.offsetTop;
 	var aboutSectionPhasisDivs = document.getElementsByClassName('about--section-phasisDivs');
-
+	// console.log(aboutSectionOffsetTop);
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
 
@@ -247,7 +247,36 @@ function offsetTop_AboutPhases() {
 			(function (i) {
 				setTimeout(function () {
 					aboutSectionPhasisDivs[i].className += 'fullWidth--content about--section-phasisDivs is-visible ' + translateClass;
-				}, i * 100);
+				}, i * 300);
+			})(i);
+		}
+	}
+}
+
+/*
+ * The below function edit the about--section-skills section
+ * as soon as the offsetTop of the section is hight enough a loop add the is-visible class
+ * at the same time the visibleWidth class is added to the about--section-skills-divs-logo 
+ * thanks to the css this class allow the animation of the after elements 
+*/
+function offsetTop_AboutSkills() {
+	var scrollPosition = window.scrollY;
+	var skillsSection = document.getElementsByClassName('about--section-skills')[0];
+	var skillsSection_OffsetTop = skillsSection.offsetTop;
+	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
+	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo');
+	var clientHeight = document.documentElement.clientHeight;
+
+	if (scrollPosition > skillsSection_OffsetTop - clientHeight / 1.5) {
+		for (var i = 0; i < skillsDivs.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					skillsDivs[i].className = 'sectionCenter--content about--section-skills-divs is-visible';
+					skillsDivsLogo[i].className = 'about--section-skills-divs-logo mt-1 smallCircle flexCenter visibleWidth ';
+					// var width = window.getComputedStyle( document.querySelector('.skillsDivs'+[i]), ':after').getPropertyValue('width');
+					// console.log(width);
+
+				}, i * 150);
 			})(i);
 		}
 	}
@@ -259,6 +288,7 @@ window.onload = function () {
 	this.onscroll = function () {
 		offsetTop_Hamburger_scrollBalls();
 		offsetTop_AboutPhases();
+		offsetTop_AboutSkills();
 	};
 };
 
