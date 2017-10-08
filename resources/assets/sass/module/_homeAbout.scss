@@ -23,10 +23,11 @@
 			position:relative;
 			transition: all 0.3s ease-in-out;
 			top: -50px;	
-			// @include media(tabletPortrait){
-			// 	top: 0;	
-			// 	left: -50px;	
-			// }
+
+			@include media(tabletPortrait){
+				top: 0;	
+				left: -50px;		
+			}
 		}
 		&-logo{
 			margin: 5rem auto 2rem;

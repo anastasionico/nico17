@@ -534,6 +534,13 @@ footer.menuVisible {
   top: -50px;
 }
 
+@media (min-width: 768px) {
+  .about--section-phasisDivs {
+    top: 0;
+    left: -50px;
+  }
+}
+
 .about--section-phasis-logo {
   margin: 5rem auto 2rem;
   -webkit-border-radius: 50%;
@@ -702,6 +709,17 @@ footer.menuVisible {
   overflow: hidden;
   -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
   box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+  opacity: 0;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: -50px;
+}
+
+@media (min-width: 768px) {
+  .work--section .card {
+    top: 0;
+  }
 }
 
 .work--section .card--image {
@@ -1103,6 +1121,17 @@ footer.menuVisible {
   overflow: hidden;
   -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
   box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+  opacity: 0;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: -50px;
+}
+
+@media (min-width: 768px) {
+  .blog--section .card {
+    top: 0;
+  }
 }
 
 .blog--section .card--image {
@@ -1667,12 +1696,17 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 }
 
 .is-visible {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .is-translatedX {
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
+}
+
+.is-translatedXReverse {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .is-translatedY {

@@ -170,10 +170,10 @@ function offsetTop_AboutPhases()
 	
 	if( scrollPosition > aboutSectionOffsetTop ){
 		for (var i = 0; i < aboutSectionPhasisDivs.length; i++) {
-			if(window.width <= 480){
-				var translateClass = 'is-translatedX';
-			}else{
+			if(screen.width <= 480){
 				var translateClass = 'is-translatedY';
+			}else{
+				var translateClass = 'is-translatedX';
 			}
 			(function(i) {
 		        setTimeout(function() {             
@@ -220,6 +220,41 @@ function offsetTop_AboutSkills()
 }
 
 
+function offsetTop_homeWork(){
+	var scrollPosition = window.scrollY;
+	var clientHeight = document.documentElement.clientHeight;
+	var workSection = document.getElementsByClassName('work--section')[0];
+	var workSectionOffsetTop = workSection.offsetTop;
+	var cards = document.getElementsByClassName('card');
+
+
+	
+
+	if( scrollPosition > workSectionOffsetTop - (clientHeight/2)){
+		for (var i = 0; i < cards.length; i++) {
+			
+
+			// console.log( i + translateClass);
+			
+			(function(i){
+				setTimeout(function(){
+
+					if(screen.width <= 480){
+						var translateClass = 'is-translatedY';
+					}else{
+						if( i % 2 == 0 ){
+							cards[i].style.left = '-50px';
+							cards[i].className = 'card is-visible is-translatedX';		
+						}else{
+							cards[i].style.left = '50px';
+							cards[i].className = 'card is-visible is-translatedXReverse';		
+						}
+					}
+				}, i * 300);							
+			})(i);
+		}
+	}
+}
 
 
 
@@ -241,6 +276,7 @@ window.onload = function () {
 		offsetTop_Hamburger_scrollBalls();
 		offsetTop_AboutPhases();
 		offsetTop_AboutSkills();
+		offsetTop_homeWork()
 	}
 
 

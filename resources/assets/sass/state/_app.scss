@@ -6,10 +6,13 @@
     }
 }
 .is-visible{
-	opacity:1;
+	opacity:1 !important;
 }
 .is-translatedX{
 	transform: translateX(50px);
+}
+.is-translatedXReverse{
+	transform: translateX(-50px);
 }
 .is-translatedY{
 	transform: translateY(50px);
