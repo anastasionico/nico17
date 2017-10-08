@@ -76,6 +76,14 @@ module.exports = __webpack_require__(42);
 /***/ 42:
 /***/ (function(module, exports) {
 
+/*
+ * This function is about the menu,
+ * when clicking on the hamburger it check if the menu is already visible or not
+ * if is not visible yet it add the menuVisible class and, 
+ * if the devices is a tablet or bigger add the menuVisible to the other elements of the page
+ * if it is visible instead remove the menuVisible class on the header and, 
+ * if the devices is a tablet or bigger put any other elements of the page back
+*/
 function menuVisible() {
 	var hamburger = document.getElementsByClassName('hamburger')[0];
 	var mainSection = document.getElementsByClassName('mainSection')[0];
@@ -127,6 +135,10 @@ function menuVisible() {
 	};
 }
 
+/*
+ * The below function check the position of the OffsetTop of the various sections of the pages 
+ * as soon as they are surpassed by the window.scrollY they active the class on the .scrollBalls changing their colors.
+*/
 function offsetTop_Hamburger_scrollBalls() {
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
@@ -212,6 +224,11 @@ function offsetTop_Hamburger_scrollBalls() {
 	}
 }
 
+/*
+ * The below function check the OffsetTop of the about section (homepage)
+ * as soon as the Offset is surpassed by the scrollY of the windows it activate the animation on the about--phases
+ * the animation change ( is-translateY or is-translatX) depending of the device;	
+ */
 function offsetTop_AboutPhases() {
 	var aboutSection = document.getElementsByClassName('about--section')[0];
 	var aboutSectionOffsetTop = aboutSection.offsetTop;
@@ -222,10 +239,15 @@ function offsetTop_AboutPhases() {
 
 	if (scrollPosition > aboutSectionOffsetTop) {
 		for (var i = 0; i < aboutSectionPhasisDivs.length; i++) {
+			if (window.width <= 480) {
+				var translateClass = 'is-translatedX';
+			} else {
+				var translateClass = 'is-translatedY';
+			}
 			(function (i) {
 				setTimeout(function () {
-					aboutSectionPhasisDivs[i].className = 'fullWidth--content about--section-phasisDivs is-visible is-translatedX';
-				}, i * 300);
+					aboutSectionPhasisDivs[i].className += 'fullWidth--content about--section-phasisDivs is-visible ' + translateClass;
+				}, i * 100);
 			})(i);
 		}
 	}

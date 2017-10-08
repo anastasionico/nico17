@@ -529,13 +529,13 @@ footer.menuVisible {
 .about--section-phasisDivs {
   opacity: 0;
   position: relative;
-  left: -50px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  top: -50px;
 }
 
 .about--section-phasis-logo {
-  margin: 2rem auto;
+  margin: 5rem auto 2rem;
   -webkit-border-radius: 50%;
   -webkit-border-bottom-right-radius: 0px;
   -moz-border-radius: 50%;
@@ -558,7 +558,6 @@ footer.menuVisible {
   .about--section-phasis-logo {
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
-    margin: 1rem auto;
     -webkit-box-shadow: -2px 3px 5px 3px #aaa;
     box-shadow: -2px 3px 5px 3px #aaa;
     -webkit-border-radius: 50%;
@@ -1608,5 +1607,10 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 .is-translatedX {
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
+}
+
+.is-translatedY {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
