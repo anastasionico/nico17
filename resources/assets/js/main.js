@@ -220,12 +220,13 @@ function offsetTop_AboutSkills()
 }
 
 
-function offsetTop_homeWork(){
+function offsetTop_homeWork()
+{
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
 	var workSection = document.getElementsByClassName('work--section')[0];
 	var workSectionOffsetTop = workSection.offsetTop;
-	var cards = document.getElementsByClassName('card');
+	var cards = document.querySelectorAll('.work--section .card');
 
 
 	
@@ -240,7 +241,7 @@ function offsetTop_homeWork(){
 				setTimeout(function(){
 
 					if(screen.width <= 480){
-						var translateClass = 'is-translatedY';
+						cards[i].className = 'card is-visible is-translatedY';		
 					}else{
 						if( i % 2 == 0 ){
 							cards[i].style.left = '-50px';
@@ -250,12 +251,48 @@ function offsetTop_homeWork(){
 							cards[i].className = 'card is-visible is-translatedXReverse';		
 						}
 					}
-				}, i * 300);							
+				}, i * 700);							
 			})(i);
 		}
 	}
 }
 
+function offsetTop_homeBlog()
+{
+	var scrollPosition = window.scrollY;
+	var clientHeight = document.documentElement.clientHeight;
+	var blogSection = document.getElementsByClassName('blog--section')[0];
+	var blogSectionOffsetTop = blogSection.offsetTop;
+	var cards = document.querySelectorAll('.blog--section .card');
+
+
+	
+
+	if( scrollPosition > blogSectionOffsetTop - (clientHeight/2)){
+		for (var i = 0; i < cards.length; i++) {
+			
+
+			// console.log( i + translateClass);
+			
+			(function(i){
+				setTimeout(function(){
+
+					if(screen.width <= 480){
+						cards[i].className = 'card is-visible is-translatedY';		
+					}else{
+						if( i % 2 == 0 ){
+							cards[i].style.left = '-50px';
+							cards[i].className = 'card is-visible is-translatedX';		
+						}else{
+							cards[i].style.left = '50px';
+							cards[i].className = 'card is-visible is-translatedXReverse';		
+						}
+					}
+				}, i * 700);							
+			})(i);
+		}
+	}
+}
 
 
 
@@ -277,6 +314,7 @@ window.onload = function () {
 		offsetTop_AboutPhases();
 		offsetTop_AboutSkills();
 		offsetTop_homeWork()
+		offsetTop_homeBlog()
 	}
 
 
