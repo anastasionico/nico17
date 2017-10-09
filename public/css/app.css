@@ -755,6 +755,7 @@ footer.menuVisible {
 
 .testimonials--container {
   width: 2000px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,13 +795,13 @@ footer.menuVisible {
 
 .testimonials--container-photo {
   overflow: hidden;
-  margin: auto 1rem;
+  margin: auto 3rem;
 }
 
 @media (min-width: 768px) {
   .testimonials--container-photo {
     display: block;
-    margin: 2rem auto;
+    margin: 5rem auto;
   }
 }
 

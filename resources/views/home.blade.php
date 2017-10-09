@@ -239,6 +239,22 @@
 					
 					<div class="testimonials--container clearfix">
 						
+						
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
+						<div class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/peter.jpg">	
+						</div>							
 						<div class="testimonials--container-photo photo-prev bigCircle">
 							<img src="img/testimonials/peter.jpg">	
 						</div>							
@@ -247,21 +263,6 @@
 						</div>							
 						<div class="testimonials--container-photo photo-next bigCircle">
 							<img src="img/testimonials/tom.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
 						</div>							
 				
 					</div>

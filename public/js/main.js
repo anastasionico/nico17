@@ -282,6 +282,10 @@ function offsetTop_AboutSkills() {
 	}
 }
 
+/*
+ * The below function make the .card of the work--section in the homepage appears one after another
+ * the direction of the animation depend of the class triggered by the funtion and the devices
+*/
 function offsetTop_homeWork() {
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
@@ -314,6 +318,31 @@ function offsetTop_homeWork() {
 	}
 }
 
+function offsetTop_testimonial() {
+	var scrollPosition = window.scrollY;
+	var screenWidth = screen.width;
+	var testimonialSection = document.getElementsByClassName('testimonial--section')[0];
+	var testimonialsContainer = document.querySelector('.testimonials--container');
+	var photoPrev = document.querySelector('.photo-prev');
+	var photoActive = document.querySelector('.photo-active');
+	var photoNext = document.querySelector('.photo-next');
+
+	if (screenWidth < 480) {
+		if (scrollPosition > 4300) {
+			testimonialsContainer.style.left = (scrollPosition - 3900) * -1 + 'px';
+		}
+	} else {
+		console.log(scrollPosition);
+		if (scrollPosition > 2800) {
+			testimonialsContainer.style.top = (scrollPosition - 2600) * -1 + 'px';
+		}
+	}
+}
+
+/*
+ * The below function make the .card of the blog--section in the homepage appears one after another
+ * the direction of the animation depend of the class triggered by the funtion and the devices
+*/
 function offsetTop_homeBlog() {
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
@@ -354,6 +383,7 @@ window.onload = function () {
 		offsetTop_AboutPhases();
 		offsetTop_AboutSkills();
 		offsetTop_homeWork();
+		offsetTop_testimonial();
 		offsetTop_homeBlog();
 	};
 };

@@ -3,6 +3,8 @@
 }
 .testimonials--container{
 	width:2000px;
+	position:relative;
+	// left:-18rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap:nowrap;
@@ -26,10 +28,10 @@
 	}
 	&-photo{
 		overflow: hidden;
-		margin:auto 1rem;
+		margin:auto 3rem;
 		@include media(tabletPortrait){
 			display: block;
-			margin:2rem auto;
+			margin:5rem auto;
 		}
 		img{
 			width: 200%;
