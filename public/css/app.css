@@ -796,6 +796,7 @@ footer.menuVisible {
 .testimonials--container-photo {
   overflow: hidden;
   margin: auto 3rem;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

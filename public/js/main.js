@@ -326,14 +326,18 @@ function offsetTop_testimonial() {
 	var screenWidth = screen.width;
 	var testimonialsContainer = document.querySelector('.testimonials--container');
 
-	if (screenWidth < 480) {
-		if (scrollPosition > 4300) {
-			testimonialsContainer.style.left = (scrollPosition - 3900) * -1 + 'px';
-		}
-	} else {
-		if (scrollPosition > 2800) {
-			testimonialsContainer.style.top = (scrollPosition - 2600) * -1 + 'px';
-		}
+	if (screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 4300) {
+		testimonialsContainer.style.left = (scrollPosition - 3900) * -1 + 'px';
+	} else if (screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828) {
+		testimonialsContainer.style.left = (scrollPosition - 3225) * -1 + 'px';
+	} else if (screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100) {
+		testimonialsContainer.style.top = (scrollPosition - 3225) * -1 + 'px';
+	} else if (screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923) {
+		testimonialsContainer.style.top = (scrollPosition - 2750) * -1 + 'px';
+	} else if (screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800) {
+		testimonialsContainer.style.top = (scrollPosition - 2550) * -1 + 'px';
+	} else if (screenWidth >= 1920 && scrollPosition > 2600) {
+		testimonialsContainer.style.top = (scrollPosition - 3550) * -1 + 'px';
 	}
 }
 
@@ -342,6 +346,7 @@ function offsetTop_testimonial() {
 */
 function click_testimonial_photos() {
 	var testimonialSection = document.querySelector('.testimonial--section');
+	var testimonialsContainer = document.querySelector('.testimonials--container');
 	var photos = document.getElementsByClassName('testimonials--container-photo');
 
 	var photoPrev = document.querySelector('.photo-prev');
@@ -350,7 +355,6 @@ function click_testimonial_photos() {
 
 	Array.from(photos).forEach(function (p) {
 		p.addEventListener('click', function () {
-
 			var siblings = p.parentNode.children;
 
 			Array.from(siblings).forEach(function (s) {
@@ -364,7 +368,6 @@ function click_testimonial_photos() {
 
 			// WHEN A PHOTO IS CLICKED IT HAS TO BE CENTERED IN THE DIV.
 			// CREATE SOME OTHER DIVS WITH QUOTES AND THEY HAVE TO APPEAR AND DISAPPEAR ACCORDING WITH THE PHOTO 
-
 		});
 	});
 }
@@ -382,8 +385,6 @@ function offsetTop_homeBlog() {
 
 	if (scrollPosition > blogSectionOffsetTop - clientHeight / 2) {
 		for (var i = 0; i < cards.length; i++) {
-
-			// console.log( i + translateClass);
 
 			(function (i) {
 				setTimeout(function () {

@@ -1,10 +1,10 @@
 .testimonial--section{
 	background-color:$white;
+	// position:relative;
 }
 .testimonials--container{
 	width:2000px;
 	position:relative;
-	// left:-18rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap:nowrap;
@@ -29,6 +29,7 @@
 	&-photo{
 		overflow: hidden;
 		margin:auto 3rem;
+		cursor: pointer;
 		@include media(tabletPortrait){
 			display: block;
 			margin:5rem auto;
