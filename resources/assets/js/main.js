@@ -260,28 +260,64 @@ function offsetTop_homeWork()
 	}
 }
 
-function offsetTop_testimonial(){
+/*
+ * The function below takes care of the scroll of the testimonials' photo during scrolling
+*/
+function offsetTop_testimonial()
+{
 	var scrollPosition = window.scrollY;
 	var screenWidth = screen.width;
-	var testimonialSection = document.getElementsByClassName('testimonial--section')[0];
 	var testimonialsContainer = document.querySelector('.testimonials--container');
-	var photoPrev = document.querySelector('.photo-prev');
-	var photoActive = document.querySelector('.photo-active');
-	var photoNext = document.querySelector('.photo-next');
-	
 	
 	if(screenWidth < 480){
 		if(scrollPosition > 4300){
 			testimonialsContainer.style.left = ((scrollPosition - 3900)* -1) + 'px';	
 		}	
 	}else{
-		console.log(scrollPosition);
 		if(scrollPosition > 2800){
 			testimonialsContainer.style.top = ((scrollPosition - 2600) * -1) + 'px';	
 		}
 	}
-	
 }
+
+/*
+ * The function below update the class of the testimonials' photo when the click event occurs
+*/
+function click_testimonial_photos()
+{
+	var testimonialSection = document.querySelector('.testimonial--section');
+	var photos = document.getElementsByClassName('testimonials--container-photo');
+
+	var photoPrev = document.querySelector('.photo-prev');
+	var photoActive = document.querySelector('.photo-active');
+	var photoNext = document.querySelector('.photo-next');
+
+	Array.from(photos).forEach(function(p){
+		p.addEventListener('click', function(){
+			
+			var siblings = p.parentNode.children;
+
+			Array.from(siblings).forEach(function(s){
+				s.classList.remove('photo-prev');
+				s.classList.remove('photo-active');
+				s.classList.remove('photo-next');
+			})
+			p.previousElementSibling.classList.add('photo-prev');
+			p.classList.add('photo-active');
+			p.nextElementSibling.classList.add('photo-next');
+			
+			// WHEN A PHOTO IS CLICKED IT HAS TO BE CENTERED IN THE DIV.
+			// CREATE SOME OTHER DIVS WITH QUOTES AND THEY HAVE TO APPEAR AND DISAPPEAR ACCORDING WITH THE PHOTO 
+
+
+		})
+	});
+}
+
+
+
+
+
 
 /*
  * The below function make the .card of the blog--section in the homepage appears one after another
@@ -337,7 +373,7 @@ function offsetTop_homeBlog()
 
 window.onload = function () {
 	menuVisible();
-	
+	click_testimonial_photos();
 
 	this.onscroll = function () {
 		offsetTop_Hamburger_scrollBalls();
