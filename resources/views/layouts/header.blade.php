@@ -1,8 +1,9 @@
 <header>
 	<div class='links'>
 		<nav>
-			<a href="#">My Projects</a>
-			<a href="#">Articles</a>
+			<a href="/">Home</a>
+			<a href="/projects">My Projects</a>
+			<a href="/blog">Articles</a>
 			<a href="#">Contact</a>
 			<a href="#">F</a>
 			<a href="#">Lin</a>

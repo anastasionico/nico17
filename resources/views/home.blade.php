@@ -127,7 +127,7 @@
 	</section>
 @endsection
 
-@section('homeWork')
+@section('work')
 	<section class="work--section">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
@@ -223,7 +223,7 @@
 
 		<div class="sectionCenter">
 			<div class="sectionCenter--content">
-				<a class="btn-cta">See More</a>
+				<a href='/projects' class="btn-cta">See More</a>
 			</div>
 		</div>
 		
@@ -264,13 +264,7 @@
 					
 					<div class="testimonials--quote" id="quote1">
 						<q>
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							This guy is a badass!!!
 						</q>
 						<h4>F.I.P.E Web Design</h4>
 						<em>Peter Azea  - C.E.O.</em>
@@ -318,8 +312,8 @@
 	</section>
 @endsection
 
-@section('homeBlog')
-	<section class="blog--section">
+@section('blog')
+	<section class="blog--section skewed">
 		<div class="skewReverse">
 			<div class="oneThird" >
 				<div class="oneThird--big">
@@ -452,7 +446,7 @@
 			
 			<div class="sectionCenter">
 				<div class="sectionCenter--content">
-					<a class="btn-cta">Browse Articles</a>
+					<a href='/blog' class="btn-cta">Browse Articles</a>
 				</div>
 			</div>
 	

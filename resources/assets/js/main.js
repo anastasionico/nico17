@@ -77,6 +77,7 @@ function offsetTop_Hamburger_scrollBalls()
 	var hamburgerLine2 = document.getElementsByClassName('hamburgerLine-2')[0];
 	var hamburgerLine3 = document.getElementsByClassName('hamburgerLine-3')[0];
 
+
 	var heroSection = document.getElementsByClassName('hero--section')[0];
 	var heroSectionOffsetTop = heroSection.offsetTop;
 	var aboutSection = document.getElementsByClassName('about--section')[0];
@@ -270,34 +271,24 @@ function offsetTop_testimonial()
 	var testimonialsContainer = document.querySelector('.testimonials--container');
 	var photos = document.querySelectorAll('.testimonials--container-photo');
 
-	photos.forEach(function(photo){
-
-		//if the photos have the class of .photoClicked they do not have to move anymore
-		
-		if( photo.getAttribute('class').indexOf('photoClicked') == -1 ){
-		
-			if( screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 4300){
-				testimonialsContainer.style.left = ((scrollPosition - 4650)* -1) + 'px';	
-			}else if( screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828){
-				testimonialsContainer.style.left = ((scrollPosition - 3225)* -1) + 'px';	
-			}else if( screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100){
-				testimonialsContainer.style.top = ((scrollPosition - 3225)* -1) + 'px';	
-			}else if( screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923){
-				testimonialsContainer.style.top = ((scrollPosition - 2750)* -1) + 'px';	
-			}else if( screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800){
-				testimonialsContainer.style.top = ((scrollPosition - 3300)* -1) + 'px';	
-			}else if( screenWidth >= 1920 && scrollPosition > 2600){
-				testimonialsContainer.style.top = ((scrollPosition - 3550)* -1) + 'px';	
-			}		
-		
-		}
-
-	});
-
+	//if the testimonialsContainer have the class of .photoClicked they do not have to move anymore
+	if( testimonialsContainer.getAttribute('class').indexOf('photoClicked') == -1 ){
 	
-
+		if( screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 4300){
+			testimonialsContainer.style.left = ((scrollPosition - 4650)* -1) + 'px';	
+		}else if( screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828){
+			testimonialsContainer.style.left = ((scrollPosition - 3225)* -1) + 'px';	
+		}else if( screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100){
+			testimonialsContainer.style.top = ((scrollPosition - 3225)* -1) + 'px';	
+		}else if( screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923){
+			testimonialsContainer.style.top = ((scrollPosition - 2750)* -1) + 'px';	
+		}else if( screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800){
+			testimonialsContainer.style.top = ((scrollPosition - 3300)* -1) + 'px';	
+		}else if( screenWidth >= 1920 && scrollPosition > 2600){
+			testimonialsContainer.style.top = ((scrollPosition - 3550)* -1) + 'px';	
+		}		
 	
-	
+	}
 }
 
 /*
@@ -328,6 +319,9 @@ function click_testimonial_photos()
 				}
 			})
 
+
+			testimonialsContainer.classList.add('photoClicked');
+
 			// changing the state of the photos
 			var siblings = photo.parentNode.children;
 
@@ -335,7 +329,7 @@ function click_testimonial_photos()
 				s.classList.remove('photo-prev');
 				s.classList.remove('photo-active');
 				s.classList.remove('photo-next');
-				s.classList.add('photoClicked');
+				
 			})
 
 			
@@ -403,14 +397,27 @@ window.onload = function () {
 	menuVisible();
 	click_testimonial_photos();
 
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
+	console.log( page );
+	
 
 	this.onscroll = function () {
-		offsetTop_Hamburger_scrollBalls();
-		offsetTop_AboutPhases();
-		offsetTop_AboutSkills();
-		offsetTop_homeWork()
-		offsetTop_testimonial();
-		offsetTop_homeBlog()
+		if(page == ''){
+			offsetTop_Hamburger_scrollBalls();
+			offsetTop_AboutPhases();
+			offsetTop_AboutSkills();
+			offsetTop_homeWork()
+			offsetTop_testimonial();
+			offsetTop_homeBlog()
+		}else if(page == 'projects'){
+			offsetTop_homeWork()
+		}else if(page == 'blog'){
+			offsetTop_homeBlog()
+		}
+
+
+		
 
 	}
 };    

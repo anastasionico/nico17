@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/projects', function () {
+    return view('projects');
+});
+Route::get('/blog', function () {
+    return view('blog');
+});

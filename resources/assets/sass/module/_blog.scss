@@ -2,33 +2,7 @@
 	background-color:$blue;
 	color: $white;
 	padding-bottom:1rem;
-	&:after{
-		content: "";
-		display: block;
-		height: 150px;
-		margin: 1rem auto -5rem; 
-		background-color:$blue;
-		
-		@include skewY(-10deg);
-		@include media(tabletPortrait){
-			margin: 1rem auto -6rem; 
-		}
-		@include media(tabletLandscape){
-			margin: 1rem auto -10rem;
-			height: 270px; 
-		}
-		@include media(desktop){
-
-			margin: 1rem auto -11rem;
-			height: 315px; 
-		}
-		@include media(bigscreen){
-			
-			margin: 2rem auto -25rem;
-			height: 600px; 
-		}
-		
-	}
+	
 	.card{
 		// background-color:red;
 		margin: 1rem auto;

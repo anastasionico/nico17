@@ -1,9 +1,9 @@
 @import 'hero';
 
 @import 'homeAbout';
-@import 'homeWork';
+@import 'work';
 @import 'homeTestimonial';
-@import 'homeBlog';
+@import 'blog';
 @import 'footer';
 @import 'header';
 @import 'sidebar';
@@ -17,6 +17,7 @@
 }
 
 .btn{
+	text-decoration:none;
 	text-transform: uppercase;	
 	padding:0.3rem 1rem;
 	font-size: 0.7rem;
@@ -33,10 +34,12 @@
 	}
 
 	&-ghost{
+		text-decoration:none;
 		background-color: transparent;
 		color: $white;
 	}
 	&-cta{
+		text-decoration:none;
 		background-color:$white;
 		color:$blue;
 		padding:1rem 3rem;
@@ -47,29 +50,36 @@
 		&:hover{
 			@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
 		}
-		// width: 100px;
-		// position:relative;
-		// overflow:hidden;1111
 		
-		// &:after{
-		// 	content: 'sdf';
-		// 	display: block;
-			// position: absolute;
-			// margin: -50% -100%;
-			// top: -150%;
-			// left: -25%;
-			// height: 400px;
-			// width: 150px;
-			
-			// background:linear-gradient($white,$azure);
-			// opacity: 0.5;
-
-			// @include spin
-			// animation-name: spin;
-			
-			
-		// }
 	}
+}
 
-	
+.skewed{
+	&:after{
+		content: "";
+		display: block;
+		height: 150px;
+		margin: 1rem auto -5rem; 
+		background-color:$blue;
+		
+		@include skewY(-10deg);
+		@include media(tabletPortrait){
+			margin: 1rem auto -6rem; 
+		}
+		@include media(tabletLandscape){
+			margin: 5rem auto -10rem;
+			height: 260px; 
+		}
+		@include media(desktop){
+
+			margin: 1rem auto -11rem;
+			height: 315px; 
+		}
+		@include media(bigscreen){
+			
+			margin: 2rem auto -25rem;
+			height: 600px; 
+		}
+		
+	}
 }

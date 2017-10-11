@@ -15,9 +15,9 @@
 
 				@yield('hero')
 				@yield('homeAbout')
-				@yield('homeWork')
+				@yield('work')
 				@yield('homeTestimonial')
-				@yield('homeBlog')
+				@yield('blog')
 				
 			</section>
 		

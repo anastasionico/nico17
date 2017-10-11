@@ -101,8 +101,16 @@ hr {
   text-align: center;
 }
 
+.Nmt-10 {
+  margin-top: -10rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
+}
+
+.pt-15 {
+  padding-top: 15rem;
 }
 
 .border-blue {
@@ -771,8 +779,8 @@ footer.menuVisible {
   align-item: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -1082,45 +1090,6 @@ footer.menuVisible {
   background-color: #35a;
   color: #fff;
   padding-bottom: 1rem;
-}
-
-.blog--section:after {
-  content: "";
-  display: block;
-  height: 150px;
-  margin: 1rem auto -5rem;
-  background-color: #35a;
-  transform: skewY(-10deg);
-  -webkit-transform: skewY(-10deg);
-  -moz-transform: skewY(-10deg);
-  -o-transform: skewY(-10deg);
-}
-
-@media (min-width: 768px) {
-  .blog--section:after {
-    margin: 1rem auto -6rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .blog--section:after {
-    margin: 1rem auto -10rem;
-    height: 270px;
-  }
-}
-
-@media (min-width: 1366px) {
-  .blog--section:after {
-    margin: 1rem auto -11rem;
-    height: 315px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .blog--section:after {
-    margin: 2rem auto -25rem;
-    height: 600px;
-  }
 }
 
 .blog--section .card {
@@ -1652,6 +1621,7 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 }
 
 .btn {
+  text-decoration: none;
   text-transform: uppercase;
   padding: 0.3rem 1rem;
   font-size: 0.7rem;
@@ -1672,11 +1642,13 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 }
 
 .btn-ghost {
+  text-decoration: none;
   background-color: transparent;
   color: #fff;
 }
 
 .btn-cta {
+  text-decoration: none;
   background-color: #fff;
   color: #35a;
   padding: 1rem 3rem;
@@ -1689,6 +1661,45 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 .btn-cta:hover {
   -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
   box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
+}
+
+.skewed:after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: 1rem auto -5rem;
+  background-color: #35a;
+  transform: skewY(-10deg);
+  -webkit-transform: skewY(-10deg);
+  -moz-transform: skewY(-10deg);
+  -o-transform: skewY(-10deg);
+}
+
+@media (min-width: 768px) {
+  .skewed:after {
+    margin: 1rem auto -6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skewed:after {
+    margin: 5rem auto -10rem;
+    height: 260px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .skewed:after {
+    margin: 1rem auto -11rem;
+    height: 315px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .skewed:after {
+    margin: 2rem auto -25rem;
+    height: 600px;
+  }
 }
 
 .hamburgerLine-3.menuVisible {
