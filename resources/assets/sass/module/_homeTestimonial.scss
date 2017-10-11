@@ -11,7 +11,8 @@
 	justify-content:flex-start;
 	align-item:center;
 	align-content:center;
-	
+	transition: all 0.3s ease-in-out;
+
 	@include media(tabletPortrait){
 		display: block;
 		width:auto;
@@ -111,12 +112,13 @@
 	color:$blue;
 	display: none;
 	@include media(tabletPortrait){
-		flex-direction: column;
+		
 		padding:5rem;
 		text-align: left;
 	}
 	&.active{
 		@include flex(center);
+		flex-direction: column;
 	}
 	q{
 		display: block;

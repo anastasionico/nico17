@@ -245,7 +245,7 @@
 						<div data-quote="quote2" class="testimonials--container-photo photo-prev bigCircle">
 							<img src="img/testimonials/tom.jpg">	
 						</div>							
-						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle active">
+						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle ">
 							<img src="img/testimonials/giovanna.jpg">	
 						</div>							
 						<div data-quote="quote4" class="testimonials--container-photo photo-next bigCircle">
@@ -264,7 +264,6 @@
 					
 					<div class="testimonials--quote" id="quote1">
 						<q>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -297,7 +296,6 @@
 					</div>
 					<div class="testimonials--quote" id="quote4">
 						<q>
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						</q>
@@ -306,7 +304,6 @@
 					</div>
 					<div class="testimonials--quote" id="quote5">
 						<q>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
