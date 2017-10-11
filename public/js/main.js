@@ -76,6 +76,7 @@ module.exports = __webpack_require__(42);
 /***/ 42:
 /***/ (function(module, exports) {
 
+
 /*
  * This function is about the menu,
  * when clicking on the hamburger it check if the menu is already visible or not
@@ -327,7 +328,7 @@ function offsetTop_testimonial() {
 	var testimonialsContainer = document.querySelector('.testimonials--container');
 
 	if (screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 4300) {
-		testimonialsContainer.style.left = (scrollPosition - 3900) * -1 + 'px';
+		testimonialsContainer.style.left = (scrollPosition - 4650) * -1 + 'px';
 	} else if (screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828) {
 		testimonialsContainer.style.left = (scrollPosition - 3225) * -1 + 'px';
 	} else if (screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100) {
@@ -335,7 +336,7 @@ function offsetTop_testimonial() {
 	} else if (screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923) {
 		testimonialsContainer.style.top = (scrollPosition - 2750) * -1 + 'px';
 	} else if (screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800) {
-		testimonialsContainer.style.top = (scrollPosition - 2550) * -1 + 'px';
+		testimonialsContainer.style.top = (scrollPosition - 3300) * -1 + 'px';
 	} else if (screenWidth >= 1920 && scrollPosition > 2600) {
 		testimonialsContainer.style.top = (scrollPosition - 3550) * -1 + 'px';
 	}
@@ -345,29 +346,43 @@ function offsetTop_testimonial() {
  * The function below update the class of the testimonials' photo when the click event occurs
 */
 function click_testimonial_photos() {
-	var testimonialSection = document.querySelector('.testimonial--section');
 	var testimonialsContainer = document.querySelector('.testimonials--container');
 	var photos = document.getElementsByClassName('testimonials--container-photo');
+	var quotes = document.querySelectorAll('.testimonials--quote');
 
 	var photoPrev = document.querySelector('.photo-prev');
 	var photoActive = document.querySelector('.photo-active');
 	var photoNext = document.querySelector('.photo-next');
 
-	Array.from(photos).forEach(function (p) {
-		p.addEventListener('click', function () {
-			var siblings = p.parentNode.children;
+	Array.from(photos).forEach(function (photo) {
+		photo.addEventListener('click', function () {
+
+			var quoteRef = photo.dataset.quote;
+
+			quotes.forEach(function (quote) {
+				var quoteId = quote.getAttribute('id');
+				if (quoteId == quoteRef) {
+					quote.classList.add('active');
+				} else {
+					quote.classList.remove('active');
+				}
+			});
+
+			var siblings = photo.parentNode.children;
 
 			Array.from(siblings).forEach(function (s) {
 				s.classList.remove('photo-prev');
 				s.classList.remove('photo-active');
 				s.classList.remove('photo-next');
 			});
-			p.previousElementSibling.classList.add('photo-prev');
-			p.classList.add('photo-active');
-			p.nextElementSibling.classList.add('photo-next');
 
-			// WHEN A PHOTO IS CLICKED IT HAS TO BE CENTERED IN THE DIV.
-			// CREATE SOME OTHER DIVS WITH QUOTES AND THEY HAVE TO APPEAR AND DISAPPEAR ACCORDING WITH THE PHOTO 
+			if (photo.previousElementSibling != null) {
+				photo.previousElementSibling.classList.add('photo-prev');
+			}
+			if (photo.nextElementSibling != null) {
+				photo.nextElementSibling.classList.add('photo-next');
+			}
+			photo.classList.add('photo-active');
 		});
 	});
 }

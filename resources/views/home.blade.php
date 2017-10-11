@@ -239,30 +239,20 @@
 					
 					<div class="testimonials--container clearfix">
 						
-						
-						<div class="testimonials--container-photo bigCircle">
+						<div data-quote="quote1" class="testimonials--container-photo bigCircle">
 							<img src="img/testimonials/peter.jpg">	
 						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
+						<div data-quote="quote2" class="testimonials--container-photo photo-prev bigCircle">
+							<img src="img/testimonials/tom.jpg">	
 						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo photo-prev bigCircle">
-							<img src="img/testimonials/peter.jpg">	
-						</div>							
-						<div class="testimonials--container-photo photo-active bigCircle">
+						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle active">
 							<img src="img/testimonials/giovanna.jpg">	
 						</div>							
-						<div class="testimonials--container-photo photo-next bigCircle">
-							<img src="img/testimonials/tom.jpg">	
+						<div data-quote="quote4" class="testimonials--container-photo photo-next bigCircle">
+							<img src="img/testimonials/ken.jpg">	
+						</div>							
+						<div data-quote="quote5" class="testimonials--container-photo bigCircle">
+							<img src="img/testimonials/david.jpg">	
 						</div>							
 				
 					</div>
@@ -272,7 +262,7 @@
 			<div class="twoThird--big">
 				<div class="twoThird--big-content">
 					
-					<div class="testimonials--quote">
+					<div class="testimonials--quote" id="quote1">
 						<q>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -284,9 +274,47 @@
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</q>
 						<h4>F.I.P.E Web Design</h4>
-						<em>Peter Azea</em
+						<em>Peter Azea  - C.E.O.</em>
 					</div>
-					
+					<div class="testimonials--quote" id="quote2">
+						<q>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+						</q>
+						<h4>Imperial Commercials</h4>
+						<em>Tom Hughes  - Web Development Manager</em>
+					</div>
+					<div class="testimonials--quote active" id="quote3">
+						<q>
+							Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</q>
+						<h4>Petali di Wedding</h4>
+						<em>Giovanna Leonardi - Execute Manager</em>
+					</div>
+					<div class="testimonials--quote" id="quote4">
+						<q>
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						</q>
+						<h4>Kick Fit Academy</h4>
+						<em>Ken Pankiewicz  - Director</em>
+					</div>
+					<div class="testimonials--quote" id="quote5">
+						<q>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</q>
+						<h4>Talk IT Training</h4>
+						<em>David Ringsell - Founder</em>
+					</div>
 				</div>
 			</div>
 		</div>	
