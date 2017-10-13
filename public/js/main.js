@@ -140,7 +140,7 @@ function menuVisible() {
  * The below function check the position of the OffsetTop of the various sections of the pages 
  * as soon as they are surpassed by the window.scrollY they active the class on the .scrollBalls changing their colors.
 */
-function offsetTop_Hamburger_scrollBalls() {
+function offsetTop_Hamburger_scrollBalls_home() {
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
 	var header = document.getElementsByTagName('header')[0];
@@ -225,6 +225,68 @@ function offsetTop_Hamburger_scrollBalls() {
 	}
 }
 
+function offsetTop_Hamburger_scrollBalls() {
+
+	var scrollHeight = document.body.scrollHeight;
+	var scrollPosition = window.scrollY;
+	var scrollBall = document.getElementsByClassName('scroll--ball');
+
+	var percentageScrolled = (scrollPosition + 200) / scrollHeight * 100;
+	console.log(percentageScrolled);
+
+	if (percentageScrolled <= 16) {
+		for (var i = 0; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 16 && percentageScrolled <= 31) {
+		scrollBall[0].className = 'scroll--ball active';
+
+		for (var i = 1; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 32 && percentageScrolled <= 47) {
+		for (var i = 0; i <= 1; i++) {
+			scrollBall[i].className = 'scroll--ball active';
+		}
+
+		for (var i = 2; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 48 && percentageScrolled <= 61) {
+		for (var i = 0; i <= 2; i++) {
+			scrollBall[i].className = 'scroll--ball active';
+		}
+
+		for (var i = 3; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 62 && percentageScrolled <= 79) {
+		for (var i = 0; i <= 3; i++) {
+			scrollBall[i].className = 'scroll--ball active';
+		}
+
+		for (var i = 4; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 80 && percentageScrolled <= 95) {
+		for (var i = 0; i <= 4; i++) {
+			scrollBall[i].className = 'scroll--ball active';
+		}
+
+		for (var i = 5; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball';
+		}
+	} else if (percentageScrolled > 96) {
+		for (var i = 0; i < scrollBall.length; i++) {
+			scrollBall[i].className = 'scroll--ball active';
+		}
+	}
+
+	//con else if cambiare il background dei ball depending dalla percentuale 
+	//16 32 48 62 80 96
+	//0  1. 2. 3. 4  5
+}
+
 /*
  * The below function check the OffsetTop of the about section (homepage)
  * as soon as the Offset is surpassed by the scrollY of the windows it activate the animation on the about--phases
@@ -234,7 +296,6 @@ function offsetTop_AboutPhases() {
 	var aboutSection = document.getElementsByClassName('about--section')[0];
 	var aboutSectionOffsetTop = aboutSection.offsetTop;
 	var aboutSectionPhasisDivs = document.getElementsByClassName('about--section-phasisDivs');
-	// console.log(aboutSectionOffsetTop);
 	var scrollPosition = window.scrollY;
 	var clientHeight = document.documentElement.clientHeight;
 
@@ -275,8 +336,6 @@ function offsetTop_AboutSkills() {
 					skillsDivs[i].className = 'sectionCenter--content about--section-skills-divs is-visible';
 					skillsDivsLogo[i].className = 'about--section-skills-divs-logo mt-1 smallCircle flexCenter visibleWidth ';
 					// var width = window.getComputedStyle( document.querySelector('.skillsDivs'+[i]), ':after').getPropertyValue('width');
-					// console.log(width);
-
 				}, i * 150);
 			})(i);
 		}
@@ -296,9 +355,6 @@ function offsetTop_homeWork() {
 
 	if (scrollPosition > workSectionOffsetTop - clientHeight / 2) {
 		for (var i = 0; i < cards.length; i++) {
-
-			// console.log( i + translateClass);
-
 			(function (i) {
 				setTimeout(function () {
 
@@ -446,20 +502,21 @@ window.onload = function () {
 
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
-	console.log(page);
 
 	this.onscroll = function () {
 		if (page == '') {
-			offsetTop_Hamburger_scrollBalls();
+			offsetTop_Hamburger_scrollBalls_home();
 			offsetTop_AboutPhases();
 			offsetTop_AboutSkills();
 			offsetTop_homeWork();
 			offsetTop_testimonial();
 			offsetTop_homeBlog();
 		} else if (page == 'projects') {
+			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
 		} else if (page == 'blog') {
 			offsetTop_homeBlog();
+			offsetTop_Hamburger_scrollBalls();
 		}
 	};
 };
