@@ -1,0 +1,96 @@
+// background
+.bg-blue{
+	background-color:$blue;	
+}
+.bg-white{
+	background-color:$white;	
+}
+.bg-azure{
+	background-color:$azure;	
+}
+
+// border
+.border-blue{
+	border-color:$blue;
+}
+.border-white{
+	border-color:$white;
+}
+
+
+// color
+.c-azure{
+	color:$azure;
+}
+.c-blue{
+	color:$blue;
+}
+.c-white{
+	color:$white;
+}
+
+//clearfix
+.clearfix{
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+// display
+.d-block{
+	display:block;
+}
+
+
+// margin
+.mt-1{
+	margin-top:1rem;
+}
+.mt-5{
+	margin-top:5rem;
+}
+
+.mb-1{
+	margin-bottom:1rem;
+}
+
+.my-1{
+	margin-top:1rem;
+	margin-bottom:1rem;
+}
+
+.Nmt-10{
+	margin-top:-10rem;
+}
+
+// padding
+.pt-1{
+	padding-top:1rem;
+}
+.pt-5{
+	padding-top:5rem;
+}
+.pt-15{
+	padding-top:15rem;
+}
+
+.pb-1{
+	padding-bottom:1rem;
+}
+.pb-5{
+	padding-bottom:5rem;
+}
+
+
+
+// text alignment
+.text-center{
+	text-align:center;
+}
+
+
+
+
+

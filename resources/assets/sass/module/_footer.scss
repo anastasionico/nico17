@@ -9,29 +9,17 @@
 		padding:0 5rem;
 
 		input, textarea{
-			// outline: 0;
 			color: $white;
-			// width: 100%;
-			// margin:0.7rem auto;
-			// background-color:transparent;
-			// border:0;
 			border-bottom: 2px solid $white;
 			&::placeholder{
 				color:$white;
 			}
+
 		}
 		
 		input[type=submit]{
-			// display: block;
 			background-color:$white;
 			color: $azure;
-			// border:0;
-			// @include media(tabletPortrait){
-			// 	width: 200px;
-			// 	float: right;
-			// }
-
-			
 		}
 	}
 

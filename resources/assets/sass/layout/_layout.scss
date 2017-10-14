@@ -1,84 +1,6 @@
-.text-center{
-	text-align:center;
-}
-
-.d-block{
-	display:block;
-}
-.Nmt-10{
-	margin-top:-10rem;
-}
-
-.my-1{
-	margin-top:1rem;
-	margin-bottom:1rem;
-}
-
-.mt-1{
-	margin-top:1rem;
-}
-.mt-5{
-	margin-top:5rem;
-}
-.mb-1{
-	margin-bottom:1rem;
-}
-
-.pt-1{
-	padding-top:1rem;
-}
-.pt-5{
-	padding-top:5rem;
-}
-.pb-1{
-	padding-bottom:1rem;
-}
-.pb-5{
-	padding-bottom:5rem;
-}
-
-.pt-15{
-	padding-top:15rem;
-}
-
-.border-blue{
-	border-color:$blue;
-}
-.border-white{
-	border-color:$white;
-}
-
-.bg-blue{
-	background-color:$blue;	
-}
-.bg-white{
-	background-color:$white;	
-}
-.bg-azure{
-	background-color:$azure;	
-}
-
-.c-azure{
-	color:$azure;
-}
-.c-blue{
-	color:$blue;
-}
-.c-white{
-	color:$white;
-}
-
-.clearfix{
-	&:after{
-		content: '';
-		display: block;
-		clear: both;
-	}
-}
-
 body{
-
 	background-color:lighten($azure,45%);
+
 	&.menuVisible{
 		overflow-y: hidden;
 	}
@@ -161,6 +83,7 @@ footer{
 }
 
 .oneThird{
+	position:relative;
 	margin:0rem auto 0rem;
 	padding-top:5rem;
 	overflow:hidden;
@@ -179,11 +102,12 @@ footer{
 				width: 100%;
 				margin: 1rem auto;
 				@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
-				transition: all 0.3s ease-in-out;
+				transition: transform 0.3s ease-in-out;
 				
 				&:hover{
 					cursor: pointer;
-					transform: translateY(-5px);
+					transform: translateY(-2px);
+				
 					@include lightShadow(0, 5, 13, 3, rgba($black,0.6));
 				}
 			}
@@ -317,6 +241,9 @@ footer{
 }
 
 .detail--page{
+	&:after{
+		background-color:$white;
+	}
 	&-index{
 		ul{
 			list-style-type: none;

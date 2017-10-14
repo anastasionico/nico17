@@ -10,7 +10,7 @@
 
 @section('work')
 
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">	
+	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page skewed">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
@@ -56,12 +56,14 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.		
+					</p>
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
@@ -138,6 +140,15 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
+					<img src="img/blog/hatfield.jpg">	
+				</div>
+			</div>
+			<div class="oneThird--small">&nbsp;</div>
+		</div>		
+
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content">
 					<table>
 						<tr>
 							<th>Lorem</th>
@@ -165,7 +176,10 @@
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
 					<form>
-						<textarea rows="1">Insert your comment here</textarea>
+						<div class="form-control">
+							<label>Insert your comment here</label>
+							<textarea rows="1"></textarea>
+						</div>
 						<input class="btn" type="submit" name="COMMENT" value="COMMENT">
 					</form>
 				</div>

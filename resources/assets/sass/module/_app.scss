@@ -1,5 +1,4 @@
 @import 'hero';
-
 @import 'homeAbout';
 @import 'work';
 @import 'homeTestimonial';
@@ -61,7 +60,6 @@
 		display: block;
 		height: 150px;
 		margin: 1rem auto -5rem; 
-		background-color:$blue;
 		
 		@include skewY(-10deg);
 		@include media(tabletPortrait){
@@ -144,4 +142,31 @@
 		position: absolute;
 		left: 1rem;
 	}
+}
+
+.smallCircle{
+  width:36px;
+  height:36px;
+  font-size: 0.75rem;
+  @include borderRadius(50%);
+}
+.bigCircle{
+  width:100px;
+  height:100px;
+  font-size: 0.75rem;
+  @include borderRadius(50%);
+  @include media(tabletPortrait){
+    width:75px;
+    height:75px;
+  }
+}
+.hugeCircle{
+  width:150px;
+  height:150px;
+  font-size: 0.75rem;
+  @include borderRadius(50%);
+  @include media(tabletPortrait){
+    width:125px;
+    height:125px;
+  }
 }

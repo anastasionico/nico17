@@ -156,14 +156,13 @@ function offsetTop_Hamburger_scrollBalls_home()
 	}	
 }
 
-function offsetTop_Hamburger_scrollBalls() {
+function offsetTop_Hamburger_scrollBalls() 
+{
 	
 	var scrollHeight = document.body.scrollHeight;
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
-	
 	var percentageScrolled = ((scrollPosition + 200 ) / scrollHeight) * 100;
-	console.log( percentageScrolled);
 	
 	if(percentageScrolled <= 16){
 		for (var i = 0; i < scrollBall.length ; i++) {
@@ -261,8 +260,6 @@ function offsetTop_AboutSkills()
 	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
 	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo') 
 	var clientHeight = document.documentElement.clientHeight;
-
-	
 
 	if( scrollPosition > skillsSection_OffsetTop - (clientHeight/1.5)){
 		for (var i = 0; i < skillsDivs.length; i++) {
@@ -446,10 +443,52 @@ function offsetTop_homeBlog()
 	}
 }
 
+// the following function add the animation at the label in the forms
+function formBehaviour()
+{
+	var labelStayHigh = false;
+	formControl = document.querySelectorAll('.form-control');
+	
+	formControl.forEach(function(form){
+		var label = form.children[0];
+		var input = form.children[1];
+		
+		input.onfocus = function(){
+			var label = form.children[0];
+			label.style.top = 0;
+		}
+
+	});
+}
+
+function enlargePhoto(){
+	var photos = document.querySelectorAll('.detail--page img');
+	
+	photos.forEach(function(photo){
+		
+		photo.onclick = function (){
+			if (photo.classList.contains('is-enlarged')) {
+				photo.classList.remove('is-enlarged');
+				
+			}else{
+				photo.classList.add('is-enlarged');
+			}
+			
+			
+			
+		}
+	})
+}
+
+
+
 window.onload = function () {
 	menuVisible();
 	click_testimonial_photos();
+	formBehaviour();
+	enlargePhoto();
 
+	//retrieve the page name 
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
 	
@@ -466,6 +505,8 @@ window.onload = function () {
 			offsetTop_homeWork();
 		}else if(page == 'blog'){
 			offsetTop_homeBlog();
+			offsetTop_Hamburger_scrollBalls();
+		}else{
 			offsetTop_Hamburger_scrollBalls();
 		}
 

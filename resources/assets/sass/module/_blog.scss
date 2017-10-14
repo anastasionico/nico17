@@ -1,6 +1,8 @@
 .blog--section{
 	padding-bottom:1rem;
-	
+	&:after{
+		background-color:$blue;
+	}
 	.card{
 		// background-color:red;
 		margin: 1rem auto;

@@ -1,4 +1,7 @@
 .work--section{
+	&:after{
+		background-color:$blue;
+	}
 	.card{
 		
 		margin: 1rem auto;
