@@ -24,3 +24,6 @@ Route::get('/projects', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
+Route::get('/detail', function () {
+    return view('detail');
+});

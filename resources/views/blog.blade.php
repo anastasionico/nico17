@@ -16,7 +16,7 @@
 @endsection
 
 @section('blog')
-	<section class="blog--section pt-15 Nmt-10 skewed">	
+	<section class="blog--section bg-blue c-white pt-15 Nmt-10 skewed">	
 		<div class="oneThird" >
 				<div class="oneThird--big">
 					<div class="oneThird--big--content ">

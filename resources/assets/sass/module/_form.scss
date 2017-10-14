@@ -1,0 +1,31 @@
+form{
+	// padding:0 5rem;
+	input, textarea{
+		font-family: Comfortaa;
+		font-style:italic;
+		font-weight: 100;
+		font-size: 0.7rem;
+		outline: 0;
+		color: $blue;
+		width: 100%;
+		margin:0.7rem auto;
+		background-color:transparent;
+		border:0;
+		border-bottom: 2px solid $blue;
+		&::placeholder{
+			
+		}
+	}
+	input[type=submit]{
+		display: block;
+		background-color:$blue;
+		color: $white;
+		border:0;
+		@include media(tabletPortrait){
+			width: 200px;
+			float: right;
+		}
+
+		
+	}
+}

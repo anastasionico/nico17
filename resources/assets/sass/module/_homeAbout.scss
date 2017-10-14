@@ -1,9 +1,7 @@
 .about--section{
-	
 	margin-top:-5rem;
 	padding-top:7rem;
-	background-color:$white;
-	color:$blue;
+	
 	@include media(tabletLandscape){
 		margin-top:-7rem;
 		padding-top:11rem;
@@ -55,7 +53,7 @@
 	&-skills{
 		position:relative;
 		z-index: 1;	
-		margin-top: 5rem;
+		
 		&-divs{
 			opacity: 0;
 			transition: all 0.3s ease-in-out;

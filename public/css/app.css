@@ -101,12 +101,45 @@ hr {
   text-align: center;
 }
 
+.d-block {
+  display: block;
+}
+
 .Nmt-10 {
   margin-top: -10rem;
 }
 
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
 }
 
 .pt-15 {
@@ -127,6 +160,22 @@ hr {
 
 .bg-white {
   background-color: #fff;
+}
+
+.bg-azure {
+  background-color: #3aa;
+}
+
+.c-azure {
+  color: #3aa;
+}
+
+.c-blue {
+  color: #35a;
+}
+
+.c-white {
+  color: #fff;
 }
 
 .clearfix:after {
@@ -244,7 +293,7 @@ footer.menuVisible {
 
 .oneThird {
   margin: 0rem auto 0rem;
-  padding-top: 2rem;
+  padding-top: 5rem;
   overflow: hidden;
 }
 
@@ -260,6 +309,23 @@ footer.menuVisible {
 
 .oneThird--big--content h3 {
   margin-bottom: 1rem;
+}
+
+.oneThird--big--content img {
+  width: 100%;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.oneThird--big--content img:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.6);
+  box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.6);
 }
 
 @media (min-width: 768px) {
@@ -424,6 +490,35 @@ footer.menuVisible {
   background-color: #35a;
 }
 
+.detail--page-index ul {
+  list-style-type: none;
+}
+
+.detail--page-index ul ul {
+  padding-left: 5rem;
+}
+
+.detail--page-index ul a {
+  color: #3aa;
+  text-decoration: none;
+}
+
+.detail--page table {
+  width: 100%;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.detail--page table th {
+  padding: 0.2rem;
+  background-color: #35a;
+}
+
+.detail--page table td {
+  padding: 0.2rem;
+  background-color: #3aa;
+}
+
 .hero--section {
   margin: -5rem auto 0;
   width: 100%;
@@ -509,8 +604,6 @@ footer.menuVisible {
 .about--section {
   margin-top: -5rem;
   padding-top: 7rem;
-  background-color: #fff;
-  color: #35a;
 }
 
 @media (min-width: 1024px) {
@@ -592,7 +685,6 @@ footer.menuVisible {
 .about--section-skills {
   position: relative;
   z-index: 1;
-  margin-top: 5rem;
 }
 
 .about--section-skills-divs {
@@ -705,12 +797,6 @@ footer.menuVisible {
   }
 }
 
-.work--section {
-  background-color: #35a;
-  color: #fff;
-  padding-bottom: 1rem;
-}
-
 .work--section .card {
   margin: 1rem auto;
   border-radius: 7px;
@@ -755,10 +841,6 @@ footer.menuVisible {
   font-size: 0.7rem;
   display: block;
   margin-bottom: 0.7rem;
-}
-
-.testimonial--section {
-  background-color: #fff;
 }
 
 .testimonials--container {
@@ -1029,7 +1111,6 @@ footer.menuVisible {
 .testimonials--quote {
   padding: 0rem;
   text-align: justify;
-  color: #35a;
   display: none;
 }
 
@@ -1087,8 +1168,6 @@ footer.menuVisible {
 }
 
 .blog--section {
-  background-color: #35a;
-  color: #fff;
   padding-bottom: 1rem;
 }
 
@@ -1169,27 +1248,28 @@ footer.menuVisible {
 
 .footer--section .footerForm input,
 .footer--section .footerForm textarea {
-  outline: 0;
-  color: #35a;
-  width: 100%;
-  margin: 0.7rem auto;
-  background-color: transparent;
-  border: 0;
+  color: #fff;
   border-bottom: 2px solid #fff;
 }
 
-.footer--section .footerForm input[type=submit] {
-  display: block;
-  background-color: #fff;
-  color: #3aa;
-  border: 0;
+.footer--section .footerForm input::-webkit-input-placeholder,
+.footer--section .footerForm textarea::-webkit-input-placeholder {
+  color: #fff;
 }
 
-@media (min-width: 768px) {
-  .footer--section .footerForm input[type=submit] {
-    width: 200px;
-    float: right;
-  }
+.footer--section .footerForm input:-ms-input-placeholder,
+.footer--section .footerForm textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer--section .footerForm input::placeholder,
+.footer--section .footerForm textarea::placeholder {
+  color: #fff;
+}
+
+.footer--section .footerForm input[type=submit] {
+  background-color: #fff;
+  color: #3aa;
 }
 
 .footer--section-social {
@@ -1608,6 +1688,35 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
   background-color: #3aa;
 }
 
+form input,
+form textarea {
+  font-family: Comfortaa;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 0.7rem;
+  outline: 0;
+  color: #35a;
+  width: 100%;
+  margin: 0.7rem auto;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #35a;
+}
+
+form input[type=submit] {
+  display: block;
+  background-color: #35a;
+  color: #fff;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  form input[type=submit] {
+    width: 200px;
+    float: right;
+  }
+}
+
 .flexCenter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1700,6 +1809,76 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
     margin: 2rem auto -25rem;
     height: 600px;
   }
+}
+
+.alert {
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
+  color: #fff;
+  text-align: right;
+  position: relative;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.4);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.4);
+}
+
+.alert-danger {
+  background-color: #E87009;
+}
+
+.alert-danger:before {
+  content: "\F057";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+}
+
+.alert-warning {
+  background-color: #E8C309;
+}
+
+.alert-warning:before {
+  content: "\F06A";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+}
+
+.alert-success {
+  background-color: #28B959;
+}
+
+.alert-success:before {
+  content: "\F058";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+}
+
+.alert-primary {
+  background-color: #35a;
+}
+
+.alert-primary:before {
+  content: "\F055";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+}
+
+.alert-info {
+  background-color: #3aa;
+}
+
+.alert-info:before {
+  content: "\F05A";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
 }
 
 .hamburgerLine-3.menuVisible {

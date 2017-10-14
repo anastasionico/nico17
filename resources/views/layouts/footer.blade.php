@@ -14,9 +14,9 @@
 				<div class="twoThird--big">
 					<div class="twoThird--big-content">
 						<form class="footerForm">
-							<input type="text" name="name">
-							<input type="text" name="email">
-							<textarea rows="1" cols="33"></textarea>
+							<input type="text" name="name" placeholder="Your Name">
+							<input type="text" name="email" placeholder="Your Email">
+							<textarea rows="1" cols="33">Insert your message here</textarea>
 							<input class="btn" type="submit" name="SEND">
 						</form>
 					</div>

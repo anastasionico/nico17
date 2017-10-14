@@ -16,7 +16,7 @@
 @endsection
 
 @section('homeAbout')
-	<section class="about--section">
+	<section class="about--section bg-white c-blue">
 		<div class="oneThird">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
@@ -68,7 +68,7 @@
  			</div>
  		</div>
 
- 		<div class="about--section-skills">
+ 		<div class="about--section-skills pt-5 pb-5">
  			<div class="sectionCenter">
 				<div class="sectionCenter--content about--section-skills-divs">
 					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-1">
@@ -128,7 +128,7 @@
 @endsection
 
 @section('work')
-	<section class="work--section">	
+	<section class="work--section bg-blue c-white pt-5 pb-5">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
@@ -221,7 +221,7 @@
 			<div class="oneThird--small">&nbsp;</div>
 		</div>			
 
-		<div class="sectionCenter">
+		<div class="sectionCenter mt-5">
 			<div class="sectionCenter--content">
 				<a href='/projects' class="btn-cta">See More</a>
 			</div>
@@ -232,7 +232,7 @@
 
 @section('homeTestimonial')
 	
-	<section class="testimonial--section">	
+	<section class="testimonial--section bg-white c-blue">	
 		<div class="twoThird">
 			<div class="twoThird--small">
 				<div class="twoThird--small-content">
@@ -313,7 +313,7 @@
 @endsection
 
 @section('blog')
-	<section class="blog--section skewed">
+	<section class="blog--section bg-blue c-white skewed pt-5 pb-5">
 		<div class="skewReverse">
 			<div class="oneThird" >
 				<div class="oneThird--big">
@@ -444,7 +444,7 @@
 				</div>
 			</div>			
 			
-			<div class="sectionCenter">
+			<div class="sectionCenter mt-5">
 				<div class="sectionCenter--content">
 					<a href='/blog' class="btn-cta">Browse Articles</a>
 				</div>
