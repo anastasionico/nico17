@@ -510,6 +510,7 @@ function formBehaviour() {
 	});
 }
 
+// The following function increase and descrease the size of the image on the detail page
 function enlargePhoto() {
 	var photos = document.querySelectorAll('.detail--page img');
 
@@ -525,11 +526,28 @@ function enlargePhoto() {
 	});
 }
 
+function enlargeGist() {
+	var codeBlocks = document.querySelectorAll('.gist');
+
+	codeBlocks.forEach(function (codeBlock) {
+
+		codeBlock.onclick = function () {
+			if (codeBlock.classList.contains('is-enlarged')) {
+				codeBlock.style.overflow = 'auto';
+				codeBlock.classList.remove('is-enlarged');
+			} else {
+				codeBlock.classList.add('is-enlarged');
+			}
+		};
+	});
+}
+
 window.onload = function () {
 	menuVisible();
 	click_testimonial_photos();
 	formBehaviour();
 	enlargePhoto();
+	enlargeGist();
 
 	//retrieve the page name 
 	var path = window.location.pathname;

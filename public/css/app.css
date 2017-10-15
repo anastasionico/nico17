@@ -404,6 +404,10 @@ footer.menuVisible {
   background-color: #3aa;
 }
 
+.detail--page .gist {
+  cursor: pointer;
+}
+
 .detail--page .gist pre {
   padding: 20px;
   color: #fff !important;
@@ -2031,6 +2035,7 @@ form input[type=submit] {
 }
 
 .is-enlarged {
+  cursor: pointer;
   position: fixed;
   top: 0rem;
   left: 0rem;
