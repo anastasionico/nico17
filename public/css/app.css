@@ -404,6 +404,95 @@ footer.menuVisible {
   background-color: #3aa;
 }
 
+.detail--page .gist pre {
+  padding: 20px;
+  color: #fff !important;
+}
+
+.detail--page .gist .highlight {
+  background: #1a1a1a  !important;
+}
+
+.detail--page .gist .line-data,
+.detail--page .gist .file-data,
+.detail--page .gist .line-numbers {
+  color: #fff !important;
+  background: #222  !important;
+}
+
+.detail--page .gist .gist-meta {
+  color: #35a !important;
+  background: #fff !important;
+}
+
+.detail--page .gist .blob-code-inner {
+  font-family: 'Ubuntu mono' !important;
+}
+
+.detail--page .gist .blob-num {
+  color: #6a737d !important;
+}
+
+.detail--page .gist .blob-code {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-vo,
+.detail--page .gist .pl-v,
+.detail--page .gist .pl-vpf {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-s3 {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-c {
+  font-family: 'Comfortaa' !important;
+  font-style: italic;
+}
+
+.detail--page .gist .pl-c1 {
+  color: #28B959 !important;
+}
+
+.detail--page .gist .pl-st {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-k {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-pds {
+  color: #35a !important;
+}
+
+.detail--page .gist .pl-s1 {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-ent {
+  color: #E87009 !important;
+}
+
+.detail--page .gist .pl-e {
+  color: #3aa !important;
+}
+
+.detail--page .gist .pl-en {
+  color: #fff !important;
+}
+
+.detail--page .gist .pl-s,
+.detail--page .gist .pl-s .pl-pse .pl-s1,
+.detail--page .gist .pl-sr,
+.detail--page .gist .pl-sr .pl-cce,
+.detail--page .gist .pl-sr .pl-sre,
+.detail--page .gist .pl-sr .pl-sra {
+  color: #E8C309 !important;
+}
+
 .bg-blue {
   background-color: #35a;
 }

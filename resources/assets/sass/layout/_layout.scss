@@ -269,6 +269,93 @@ footer{
 			padding:0.2rem;
 			background-color:$azure;
 		}
-		
 	}
+	
+	
+	.gist{
+		pre {
+		  	padding: 20px;
+		  	color: $white !important;
+
+		}	
+
+		.highlight{
+			background: #1a1a1a  !important; 
+		}	
+
+		.line-data,  .file-data,  .line-numbers {
+		  	color: $white !important;
+		  	background: #222  !important; 
+	  	}
+		
+		.gist-meta {
+		  	color: $blue !important;
+		  	background: $white !important;
+		}
+		
+		.blob-code-inner{
+			font-family: 'Ubuntu mono' !important;
+		}
+		
+		.blob-num	{
+	  		color: #6a737d !important; 
+	  	}
+	  	
+	  	.blob-code	{						// tags and symbols
+	  		color: $white !important; 
+	  	}
+
+		.pl-vo,  .pl-v,  .pl-vpf { 			
+		  	color: $white !important; 
+	  	}
+	  	
+	  	.pl-s3 {					
+		  	color: $white !important; 
+	  	}
+		.pl-c{
+			font-family: 'Comfortaa' !important;	
+			font-style: italic;
+
+		}
+		.pl-c1{								//entities and css values
+		  	color: $success !important; 
+	  	}
+	  	
+	  	.pl-st {		
+			color: $white !important; 
+		}
+		
+		.pl-k{								//css em px ecc
+			color: $white !important; 
+		}
+		
+		.pl-pds {							// '' and ""
+		  	color: $blue !important; 
+	  	}
+		
+		.pl-s1 {					//
+		  	color: $white !important; 
+	  	}
+	  	
+	  	.pl-ent{							//html tags
+	  		color: $danger !important; 	
+	  	}
+	  	
+	  	.pl-e{								// html attributes
+	  		color: $azure !important; 	
+	  	}
+	  	
+	  	.pl-en{
+	  		color: $white !important; 	
+	  	}
+	  	
+	  	.pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sre, .pl-sr .pl-sra{
+	  		color: $warning !important; 	
+	  	}
+	}	
+
+
+	
+
+	
 }
