@@ -191,12 +191,13 @@ footer{
 }
 
 .fullWidth{
-	margin:2rem auto 2rem;
+	margin:0rem auto ;
+	padding:2rem 0;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
 	align-items:flex-start;
-
+	
 	@include media(tabletPortrait) {	
 		flex-wrap:nowrap;
 		width:75%;
@@ -209,10 +210,7 @@ footer{
 	&--content{
 		width: 75%;
 		text-align:center;
-		@include media(tabletPortrait) {	
-			width: 100px;
-
-		}
+		
 	}
 }
 

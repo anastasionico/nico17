@@ -50,6 +50,7 @@ p {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 b {
@@ -293,7 +294,8 @@ footer.menuVisible {
 }
 
 .fullWidth {
-  margin: 2rem auto 2rem;
+  margin: 0rem auto;
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,12 +329,6 @@ footer.menuVisible {
 .fullWidth--content {
   width: 75%;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .fullWidth--content {
-    width: 100px;
-  }
 }
 
 .sectionCenter {
@@ -1803,6 +1799,65 @@ form input[type=submit] {
     width: 200px;
     float: right;
   }
+}
+
+form.formContact {
+  transform: skewY(10deg);
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -o-transform: skewY(10deg);
+  width: 250px;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  form.formContact {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  form.formContact {
+    width: 600px;
+  }
+}
+
+form.formContact p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+  color: #fff;
+}
+
+form.formContact label {
+  font-size: 1rem;
+}
+
+form.formContact input,
+form.formContact textarea {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-size: 1.4rem;
+  margin: 0.7rem auto;
+}
+
+form.formContact input[type=submit] {
+  background-color: #fff;
+  color: #35a;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  form.formContact input[type=submit] {
+    width: 200px;
+    float: left;
+  }
+}
+
+.contactLinks--section:after {
+  background-color: #35a;
 }
 
 .flexCenter {
