@@ -72,7 +72,7 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
-					<img src="img/blog/london.jpg">	
+					<img class='clickable' src="img/blog/london.jpg">	
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
@@ -99,7 +99,7 @@
 
 		<div class="oneThird" >
 			<div class="oneThird--big">
-				<div class="oneThird--big--content">
+				<div class="oneThird--big--content clickable">
 					<script src="https://gist.github.com/xfbs/1188092.js"></script>
 				</div>
 			</div>
@@ -154,7 +154,7 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
-					<img src="img/blog/hatfield.jpg">	
+					<img class='clickable' src="img/blog/hatfield.jpg">	
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>

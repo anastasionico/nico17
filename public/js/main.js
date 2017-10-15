@@ -511,32 +511,18 @@ function formBehaviour() {
 }
 
 // The following function increase and descrease the size of the image on the detail page
-function enlargePhoto() {
-	var photos = document.querySelectorAll('.detail--page img');
+function enlargeClickable() {
+	var clickables = document.querySelectorAll('.clickable');
+	console.log(clickables);
 
-	photos.forEach(function (photo) {
+	clickables.forEach(function (clickable) {
 
-		photo.onclick = function () {
-			if (photo.classList.contains('is-enlarged')) {
-				photo.classList.remove('is-enlarged');
+		clickable.onclick = function () {
+			if (clickable.classList.contains('is-enlarged')) {
+				clickable.style.overflow = 'auto';
+				clickable.classList.remove('is-enlarged');
 			} else {
-				photo.classList.add('is-enlarged');
-			}
-		};
-	});
-}
-
-function enlargeGist() {
-	var codeBlocks = document.querySelectorAll('.gist');
-
-	codeBlocks.forEach(function (codeBlock) {
-
-		codeBlock.onclick = function () {
-			if (codeBlock.classList.contains('is-enlarged')) {
-				codeBlock.style.overflow = 'auto';
-				codeBlock.classList.remove('is-enlarged');
-			} else {
-				codeBlock.classList.add('is-enlarged');
+				clickable.classList.add('is-enlarged');
 			}
 		};
 	});
@@ -546,8 +532,8 @@ window.onload = function () {
 	menuVisible();
 	click_testimonial_photos();
 	formBehaviour();
-	enlargePhoto();
-	enlargeGist();
+	// enlargeGist();
+	enlargeClickable();
 
 	//retrieve the page name 
 	var path = window.location.pathname;
