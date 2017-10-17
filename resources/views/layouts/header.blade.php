@@ -4,11 +4,21 @@
 			<a href="/">Home</a>
 			<a href="/projects">My Projects</a>
 			<a href="/blog">Articles</a>
-			<a href="#">Contact</a>
-			<a href="#">F</a>
-			<a href="#">Lin</a>
-			<a href="#">Up</a>
-			<a href="#">Git</a>
+			<a href="/contact">Contact</a>
+			<a href="/detail">detail</a>
+			<a href="#">
+				<i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-2x fa-git-square" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-2x fa-square" aria-hidden="true"></i>
+				{{-- create and add upwork logo here --}}
+			</a>
 		</nav>
 		<small style="font-size: 0.5rem;text-align: center;color: white">
 			CHOOSE <br> ANOTHER PAGE<br> OR CONTINUE <br>BY SCROLLING <br>THE CURRENT ONE

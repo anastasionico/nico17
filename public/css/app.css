@@ -2061,6 +2061,25 @@ form.formContact input[type=submit] {
   box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.6);
 }
 
+.commentPosts {
+  margin-bottom: 2rem;
+}
+
+.commentPosts em {
+  font-size: 0.9rem;
+  float: right;
+}
+
+.commentPosts p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+.commentPosts hr {
+  margin-top: 0.5rem;
+}
+
 .hamburgerLine-3.menuVisible {
   background-color: #35a;
 }

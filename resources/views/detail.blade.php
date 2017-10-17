@@ -201,6 +201,74 @@
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content commentPosts">
+					<b>Nico Anastasio</b>
+					<em class="clearfix">
+						<small>
+							{{ date('d-m-Y')}}
+						</small>
+					</em>
+					<p>
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<hr>
+				</div>
+				<div class="oneThird--big--content commentPosts">
+					<b>Nico Anastasio</b>
+					<em class="clearfix">
+						<small>
+							{{ date('d-m-Y')}}
+						</small>
+					</em>
+					<p>
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<hr>
+				</div>
+				<div class="oneThird--big--content commentPosts">
+					<b>Nico Anastasio</b>
+					<em class="clearfix">
+						<small>
+							{{ date('d-m-Y')}}
+						</small>
+					</em>
+					<p>
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<hr>
+				</div>
+				<div class="oneThird--big--content commentPosts">
+					<b>Nico Anastasio</b>
+					<em class="clearfix">
+						<small>
+							{{ date('d-m-Y')}}
+						</small>
+					</em>
+					<p>
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<hr>
+				</div>
+			</div>
+
+			<div class="oneThird--small">&nbsp;</div>
+		</div>		
+
+
 
 	</section>
 	
