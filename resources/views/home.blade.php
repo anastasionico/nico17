@@ -10,7 +10,7 @@
 			<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
 		</div>
 		
-		<img class="hero--section-image" src="img/mobile-hero.png">
+		{{-- <img class="hero--section-image" src="img/mobile-hero.png"> --}}
 		
 	</div>
 @endsection

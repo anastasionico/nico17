@@ -229,21 +229,19 @@ function offsetTop_Hamburger_scrollBalls_whitePage() {
 	var scrollPosition = window.scrollY;
 	var heroHeight = document.querySelector('.hero--section').offsetHeight - 200;
 	var hamburger = document.querySelectorAll('.hamburger span');
-	var footerOffsetTop = document.querySelector('footer').offsetTop - 200;
+	var bgWhite = document.querySelectorAll('.mainSection .bg-white');
+	var bgBlue = document.querySelectorAll('.mainSection .bg-blue');
 
-	if (scrollPosition < heroHeight) {
-		hamburger.forEach(function (line) {
-			line.classList.add('bg-white');
-			line.classList.remove('bg-blue');
-		});
-	}
+	console.log(heroHeight);
+	console.log(scrollPosition);
+
 	if (scrollPosition > heroHeight) {
 		hamburger.forEach(function (line) {
 			line.classList.add('bg-blue');
 			line.classList.remove('bg-white');
 		});
 	}
-	if (scrollPosition > footerOffsetTop) {
+	if (scrollPosition < heroHeight) {
 		hamburger.forEach(function (line) {
 			line.classList.add('bg-white');
 			line.classList.remove('bg-blue');
@@ -538,8 +536,6 @@ function formBehaviour() {
 // The following function increase and descrease the size of the image on the detail page
 function enlargeClickable() {
 	var clickables = document.querySelectorAll('.clickable');
-	console.log(clickables);
-
 	clickables.forEach(function (clickable) {
 
 		clickable.onclick = function () {
