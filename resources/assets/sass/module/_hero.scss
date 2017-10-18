@@ -4,12 +4,14 @@
 	height: 100vh; 
 	overflow: hidden;
 	
-	 background: 
-    	linear-gradient($azure 0%, $blue 100%), 
-    	linear-gradient(to right, $azure 0%, $blue 100%),   url("/img/heroBW.jpg");
-  		background-blend-mode: multiply;
+	background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
+	background-blend-mode: multiply;
+	background-size:cover;
+	background-position:center;
+ 	// background-attachment: fixed;
 
 
+ 	@include flex(center);
 
 	
 	// @include linearGradient(130deg, $azure, $blue);
@@ -32,15 +34,15 @@
 	}
 	
 	&-content{
-		margin:7rem auto 0;
+		// margin:25rem auto 0;
 	    @include skewY(10deg);
 	    text-align: center;
-	    color: $blue;
+	    color: $white;
 	    @include media(desktop){
 			margin: 15rem;
 		}
 	    span{
-	    	color:$white;
+	    	color:$azure;
 	    }
 	}
 	&-image{

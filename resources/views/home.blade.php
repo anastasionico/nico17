@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('hero')
-	<div class="hero--section">
+	<div class="hero--section ">
 		
 		<div class="hero--section-content">
 			<h1>
