@@ -567,14 +567,6 @@ footer.menuVisible {
 }
 
 .hero--section {
-  margin: -5rem auto 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,6 +576,10 @@ footer.menuVisible {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: -5rem auto 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   transform: skewY(-10deg);
   -webkit-transform: skewY(-10deg);
   -moz-transform: skewY(-10deg);
@@ -608,6 +604,28 @@ footer.menuVisible {
   }
 }
 
+.hero--section:before {
+  content: "";
+  transform: skewY(10deg);
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -o-transform: skewY(10deg);
+  background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* new styles */
+  position: absolute;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  width: 100%;
+  /* something ridiculously big */
+  height: 200vh;
+  /* something ridiculously big */
+}
+
 .hero--section-content {
   transform: skewY(10deg);
   -webkit-transform: skewY(10deg);
@@ -625,14 +643,6 @@ footer.menuVisible {
 
 .hero--section-content span {
   color: #3aa;
-}
-
-.hero--section-image {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-  -webkit-transform: skewY(10deg);
-          transform: skewY(10deg);
 }
 
 .about--section {
@@ -1301,6 +1311,11 @@ footer.menuVisible {
 
 .footer--section .footerForm input:-ms-input-placeholder,
 .footer--section .footerForm textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer--section .footerForm input::-ms-input-placeholder,
+.footer--section .footerForm textarea::-ms-input-placeholder {
   color: #fff;
 }
 

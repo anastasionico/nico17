@@ -1,38 +1,44 @@
 .hero--section{
+	@include flex(center);
 	margin: -5rem auto 0;
 	width: 100%;  
 	height: 100vh; 
 	overflow: hidden;
 	
-	background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
-	background-blend-mode: multiply;
-	background-size:cover;
-	background-position:center;
- 	// background-attachment: fixed;
-
-
- 	@include flex(center);
-
 	
-	// @include linearGradient(130deg, $azure, $blue);
-	@include skewY(-10deg);
-	@include media(tabletPortrait){
-
-		// @include linearGradient(140deg, $azure, $blue);
-	}
+ 	
+ 	@include skewY(-10deg);
 	@include media(tabletLandscape){
 		margin: -7rem auto 0;
-		// @include linearGradient(160deg, $azure, $blue);
 	}
 	@include media(desktop){
 		margin: -10rem auto 0;
-		// @include linearGradient(170deg, $azure, $blue);
 	}
 	@include media(bigscreen){
 		margin: -14rem auto 0;
-		// @include linearGradient(170deg, $azure, $blue);
 	}
 	
+	&:before {
+	    content: "";
+	    @include skewY(10deg);
+	    background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
+		background-blend-mode: multiply;
+		background-size:cover;
+		background-position:center center;
+	    background-repeat: no-repeat; 
+	    background-attachment:fixed;
+
+
+	    
+		/* new styles */
+	    position: absolute;
+	    -webkit-transform-origin: center;
+	    -ms-transform-origin: center;
+	    transform-origin: center;
+	    width: 100%; /* something ridiculously big */
+	    height: 200vh; /* something ridiculously big */
+}
+
 	&-content{
 		// margin:25rem auto 0;
 	    @include skewY(10deg);
@@ -44,12 +50,6 @@
 	    span{
 	    	color:$azure;
 	    }
-	}
-	&-image{
-		display: block;
-		margin: 0 auto; 
-		width: 90%;
-		transform: skewY(10deg);
 	}
 						
 }
