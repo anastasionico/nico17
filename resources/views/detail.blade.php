@@ -3,7 +3,9 @@
 @section('hero')
 	<div class="hero--section">
 		
-		<img class="hero--section-image" src="img/mobile-hero.png">
+		<div class="hero--section-content">
+			<h1>Laravel Promo Post</h1>
+		</div>
 		
 	</div>
 @endsection

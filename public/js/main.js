@@ -248,6 +248,15 @@ function offsetTop_Hamburger_scrollBalls_whitePage() {
 		});
 	}
 }
+
+function offsetTop_hero() {
+	var scrollPosition = window.scrollY;
+	var content = document.querySelector(".hero--section-content");
+	var foreground = document.querySelector(".hero--section-foreground");
+	content.style.transform = "skewY(10deg) translateY(" + scrollPosition / 3 + "%)";
+	foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition / 10 + "%)";
+}
+
 function offsetTop_Hamburger_scrollBalls() {
 
 	var scrollHeight = document.body.scrollHeight;
@@ -561,6 +570,7 @@ window.onload = function () {
 	var page = path.split("/").pop();
 
 	this.onscroll = function () {
+		offsetTop_hero();
 		if (page == '') {
 			offsetTop_Hamburger_scrollBalls_home();
 			offsetTop_AboutPhases();

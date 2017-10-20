@@ -610,7 +610,7 @@ footer.menuVisible {
   -webkit-transform: skewY(10deg);
   -moz-transform: skewY(10deg);
   -o-transform: skewY(10deg);
-  background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
+  background: linear-gradient(-50deg, #35a 5%, #3aa 50%), url("/img/heroBW.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
@@ -635,14 +635,44 @@ footer.menuVisible {
   color: #fff;
 }
 
-@media (min-width: 1366px) {
-  .hero--section-content {
-    margin: 15rem;
+.hero--section-content h1 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero--section-content h1 {
+    font-size: 4rem;
+  }
+}
+
+.hero--section-content h3 {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  .hero--section-content h3 {
+    font-size: 2rem;
   }
 }
 
 .hero--section-content span {
-  color: #3aa;
+  color: #35a;
+}
+
+.hero--section-foreground {
+  position: absolute;
+  top: 45%;
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.5rem;
+  color: #fff;
+  transform: skewY(10deg);
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -o-transform: skewY(10deg);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
 }
 
 .about--section {

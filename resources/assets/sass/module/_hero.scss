@@ -17,11 +17,11 @@
 	@include media(bigscreen){
 		margin: -14rem auto 0;
 	}
-	
+	// before contain the hero image
 	&:before {
 	    content: "";
 	    @include skewY(10deg);
-	    background: linear-gradient(-50deg, #35a 15%, #3aa 70%), url("/img/heroBW.jpg");
+	    background: linear-gradient(-50deg, #35a 5%, #3aa 50%), url("/img/heroBW.jpg");
 		background-blend-mode: multiply;
 		background-size:cover;
 		background-position:center center;
@@ -37,19 +37,40 @@
 	    transform-origin: center;
 	    width: 100%; /* something ridiculously big */
 	    height: 200vh; /* something ridiculously big */
-}
+	}
 
 	&-content{
-		// margin:25rem auto 0;
-	    @include skewY(10deg);
+		@include skewY(10deg);
 	    text-align: center;
 	    color: $white;
-	    @include media(desktop){
-			margin: 15rem;
-		}
-	    span{
-	    	color:$azure;
+	    h1{
+	    	margin-bottom: 1rem;
+	    	@include media(tabletPortrait){
+	    		font-size: 4rem;	
+	    	}
 	    }
+	    h3{
+    		font-size: 1.3rem;	
+	    	font-weight: 100;
+	    	@include media(tabletPortrait){
+	    		font-size: 2rem;	
+	    	}
+	    }
+	    span{
+	    	color:$blue;
+	    }
+	}
+	&-foreground{
+		position:absolute;
+		// opacity: 0.8;
+		top:45%;
+
+		font-size: 5rem;
+		line-height: 5rem;
+		letter-spacing: -0.5rem;
+		color: $white;
+		@include skewY(10deg);
+	 	filter:blur(6px);
 	}
 						
 }

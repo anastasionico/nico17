@@ -7,10 +7,8 @@
 			<h1>
 				anastasio<span>nico.uk</span>
 			</h1>
-			<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
+			<h3>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></h3>
 		</div>
-		
-		<img class="hero--section-image" src="img/mobile-hero.png">
 		
 	</div>
 @endsection

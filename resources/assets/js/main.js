@@ -156,6 +156,7 @@ function offsetTop_Hamburger_scrollBalls_home()
 	}	
 }
 
+
 function offsetTop_Hamburger_scrollBalls_whitePage()
 {
 	var scrollPosition = window.scrollY;
@@ -163,7 +164,7 @@ function offsetTop_Hamburger_scrollBalls_whitePage()
 	var hamburger = document.querySelectorAll('.hamburger span');
 	var bgWhite = document.querySelectorAll('.mainSection .bg-white');
 	var bgBlue = document.querySelectorAll('.mainSection .bg-blue');
-	
+		
 
 	console.log(heroHeight);
 	console.log(scrollPosition);
@@ -181,10 +182,17 @@ function offsetTop_Hamburger_scrollBalls_whitePage()
 			line.classList.remove('bg-blue');
 		});
 	}
-	
-	
-
 }
+
+function offsetTop_hero(){
+	var scrollPosition = window.scrollY;
+	var content = document.querySelector(".hero--section-content");
+	var foreground = document.querySelector(".hero--section-foreground");
+	content.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+	foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition/10 + "%)";
+	
+}
+
 function offsetTop_Hamburger_scrollBalls() 
 {
 	
@@ -522,13 +530,15 @@ window.onload = function () {
 	var page = path.split("/").pop();
 	
 	this.onscroll = function () {
+		offsetTop_hero();
 		if(page == ''){
 			offsetTop_Hamburger_scrollBalls_home();
 			offsetTop_AboutPhases();
 			offsetTop_AboutSkills();
 			offsetTop_homeWork()
 			offsetTop_testimonial();
-			offsetTop_homeBlog()
+			offsetTop_homeBlog();
+			
 		}else if(page == 'projects'){
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
