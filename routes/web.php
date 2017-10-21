@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// the following routes method manage all the register, login, and password routes
+Auth::routes();
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -31,6 +33,26 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Auth::routes();
+Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function()
+{
+    // /admin/dashboard
+    Route::get('home', 'HomeController@index');
+	
 
-Route::get('/admin/home', 'HomeController@index');
+    
+
+    // admin/task
+    Route::group(['prefix' => 'task/'], function()
+    {
+    	Route::get('', function () {
+		    return view('/admin/task/index');
+		});
+
+        
+
+    });
+    
+    
+});
+
+

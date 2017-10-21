@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('menuPrimary')
-	<div class="col-2" style="background-color: #35a">
+	<div class="col-sm-2" style="background-color: #236">
 		<ul class="nav flex-column">
 		  	<li class="nav-item">
 			    <a class="nav-link active" href="#">Home</a>
@@ -27,14 +27,14 @@
 		  	<li class="nav-item">
 			    <a class="nav-link disabled" href="#">Contact & Social</a>
 		  	</li>
-		  	<li class="nav-item">
-			    <a class="nav-link disabled" href="#">Disabled</a>
-		  	</li>
 		</ul>
 	</div>	
 @endsection
 
 @section('content')
-	this is the content
+	<div class="col-sm-10" style="background-color: #125">
+		<h1>This is the content</h1>
+		
+	</div>
 	
 @endsection
