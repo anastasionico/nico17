@@ -627,6 +627,7 @@ footer.menuVisible {
 }
 
 .hero--section-content {
+  width: 320px;
   transform: skewY(10deg);
   -webkit-transform: skewY(10deg);
   -moz-transform: skewY(10deg);
@@ -1341,11 +1342,6 @@ footer.menuVisible {
 
 .footer--section .footerForm input:-ms-input-placeholder,
 .footer--section .footerForm textarea:-ms-input-placeholder {
-  color: #fff;
-}
-
-.footer--section .footerForm input::-ms-input-placeholder,
-.footer--section .footerForm textarea::-ms-input-placeholder {
   color: #fff;
 }
 

@@ -4,10 +4,9 @@
 	<div class="hero--section">
 		
 		<div class="hero--section-content">
-			<h1>
-				anastasio<span>nico.uk</span>
-			</h1>
-			<h3>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></h3>
+			<h1>The Journal</h1>
+			<cite>"Write what you know. That should leave you with a lot of free time."</cite>
+			<b>Howard Nemerov</b>
 		</div>
 		
 	</div>

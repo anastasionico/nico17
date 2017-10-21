@@ -4,13 +4,10 @@
 	<div class="hero--section">
 		
 		<div class="hero--section-content">
-			<h1>
-				anastasio<span>nico.uk</span>
-			</h1>
-			<p>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></p>
+			<h1>Portfolio</h1>
+			<cite>"Quality without results is pointless. Results without quality is boring."</cite>
+			<b>Johan Cruyff</b>
 		</div>
-		
-		<img class="hero--section-image" src="img/mobile-hero.png">
 		
 	</div>
 @endsection

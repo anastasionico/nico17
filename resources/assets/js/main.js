@@ -188,8 +188,20 @@ function offsetTop_hero(){
 	var scrollPosition = window.scrollY;
 	var content = document.querySelector(".hero--section-content");
 	var foreground = document.querySelector(".hero--section-foreground");
-	content.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
-	foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition/10 + "%)";
+	var formContact = document.querySelector(".formContact");
+	if(content !== null ){
+		content.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+	}
+	if(foreground !== null ){
+		foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition/10 + "%)";
+	}
+	if(formContact !== null ){
+		formContact.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+	}
+	
+
+	
+	
 	
 }
 

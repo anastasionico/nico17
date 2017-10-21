@@ -40,6 +40,7 @@
 	}
 
 	&-content{
+		width: 320px;
 		@include skewY(10deg);
 	    text-align: center;
 	    color: $white;
