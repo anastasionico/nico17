@@ -8,18 +8,87 @@
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	
+		<style type="text/css">
+			body{
+				font-family:Comfortaa;
+			}
+		</style>
 	</head>
-	<body>
+	<body class="text-white">
 		<div class="container-fluid">
 			
 			<div class="row">
 		  	
-		  		@yield('menuPrimary')
+		  			<nav class="col-sm-2" style="background-color: #236">
+						<ul class="nav flex-column">
+						  	<li class="nav-item">
+							    <a class="nav-link active" href="/" target="_black">Home</a>
+							</li>
+						  	<li class="nav-item">
+							    <a class="nav-link" href="/admin/home">Dashboard</a>
+							</li>
+					  		<li class="nav-item">
+						    	<a class="nav-link disabled" href="/admin/task">Task list</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">About</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">Projects</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">Testimonials</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">Blog</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">Social</a>
+						  	</li>
+						  	<li class="nav-item">
+							    <a class="nav-link disabled" href="#">Contact & Social</a>
+						  	</li>
+						</ul>
+					</nav>	
 		  		
-	  			
-  				@yield('content')
-	  			
+		  			<section class="col-sm-10" style="background-color: #125">
+		  				<div class="container-fluid">
+		  					<div class="row">
+		  						<div class="col-12">
+			  						This is a navbar for notifications
+			  					</div>	
+			  				</div>
+			  				<div class="row">
+			  					<div class="col-12">
+			  						@yield('premenu')	
+			  					</div>	
+			  				</div>
+			  				<div class="row">
+			  					<div class="col-12">
+			  						@yield('jumbotron')	
+			  					</div>	
+			  				</div>
+			  				<div class="row">
+			  					<div class="col-12">
+			  						@yield('submenu')	
+			  					</div>	
+			  				</div>
+			  				<div class="row">
+			  					<div class="col-12">
+			  						@yield('content')	
+			  					</div>	
+			  				</div>
+			  				<div class="row">
+			  					<div class="col-12">
+			  						@yield('footer')	
+			  					</div>	
+			  				</div>	
+		  				</div>
+		  				
+		  				
+
+		  			</section>
+  					  			
 			</div>
 		</div>			
 	
