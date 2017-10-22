@@ -10,55 +10,93 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<style type="text/css">
 			body{
+				min-height: 95vh;
 				font-family:Comfortaa;
+				background-color: #236;
+				
+			}
+			nav{
+				min-height: 95vh !important;
+				background-color: #347
+				;
+			}
+			.notificationDiv {
+				min-height: 5vh;
+				background-color: #014;
 			}
 		</style>
 	</head>
 	<body class="text-white">
 		<div class="container-fluid">
-			
+			<div class="row">
+				<div class="notificationDiv col-12">
+					This is a navbar for notifications
+				</div>	
+			</div>
 			<div class="row">
 		  	
-		  			<nav class="col-sm-2" style="background-color: #236">
+		  			<nav class="col-sm-2">
 						<ul class="nav flex-column">
 						  	<li class="nav-item">
-							    <a class="nav-link active" href="/" target="_black">Home</a>
+							    <a class="nav-link active" href="/" target="_black">
+							    	<i class="fa fa-home" aria-hidden="true"></i>&emsp;
+							    	Home
+						    	</a>
 							</li>
 						  	<li class="nav-item">
-							    <a class="nav-link" href="/admin/home">Dashboard</a>
+							    <a class="nav-link" href="/admin/home">
+								    <i class="fa fa-tachometer" aria-hidden="true"></i>&emsp;
+									Dashboard
+								</a>
 							</li>
 					  		<li class="nav-item">
-						    	<a class="nav-link disabled" href="/admin/task">Task list</a>
+						    	<a class="nav-link" href="/admin/task">
+									<i class="fa fa-tasks" aria-hidden="true"></i>&emsp;
+									Task list
+								</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">About</a>
+							    <a class="nav-link disabled" href="#">
+							    	<i class="fa fa-address-card" aria-hidden="true"></i>&emsp;
+							    	About
+						    	</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">Projects</a>
+							    <a class="nav-link disabled" href="#">
+							    	<i class="fa fa-globe" aria-hidden="true"></i>&emsp;
+							    	Projects
+						    	</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">Testimonials</a>
+							    <a class="nav-link disabled" href="#">
+							    	<i class="fa fa-microphone" aria-hidden="true"></i>&emsp;
+									Testimonials
+								</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">Blog</a>
+							    <a class="nav-link disabled" href="#">
+							    	<i class="fa fa-file-text" aria-hidden="true"></i>&emsp;
+						    		Blog
+					    		</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">Social</a>
+							    <a class="nav-link disabled" href="#">
+								    <i class="fa fa-share-square" aria-hidden="true"></i>&emsp;
+									Social
+								</a>
 						  	</li>
 						  	<li class="nav-item">
-							    <a class="nav-link disabled" href="#">Contact & Social</a>
+							    <a class="nav-link disabled" href="#">
+							    	<i class="fa fa-envelope" aria-hidden="true"></i>&emsp;
+							    	Contact
+						    	</a>
 						  	</li>
 						</ul>
 					</nav>	
 		  		
-		  			<section class="col-sm-10" style="background-color: #125">
+		  			<section class="col-sm-10">
 		  				<div class="container-fluid">
 		  					<div class="row">
-		  						<div class="col-12">
-			  						This is a navbar for notifications
-			  					</div>	
-			  				</div>
-			  				<div class="row">
 			  					<div class="col-12">
 			  						@yield('premenu')	
 			  					</div>	

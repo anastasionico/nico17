@@ -6,7 +6,7 @@
 	.card{
 		// background-color:red;
 		margin: 1rem auto;
-		@include borderRadius(7px)
+		@include borderRadius(3px)
 		overflow:hidden;
 		@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
 		

@@ -91,6 +91,10 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
+
+					<div class="alert alert-danger">
+						This is a Danger Alert 
+					</div>
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>

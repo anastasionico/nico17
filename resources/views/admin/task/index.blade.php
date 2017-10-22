@@ -31,25 +31,20 @@
 		  	</thead>
 		  	<tbody>
 		    	<tr>
-		      		<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		      		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		      		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		      		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		      		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-		      		<td>Otto</td>
-		      		<td>@mdo</td>
-					<td>
+		      		<td>Watch Laracast tutorials and start creating tasks in php</td>
+		      		<td>backend functionality</td>
+		      		<td>1</td>
+		      		<td>
 						<div class="btn-group" role="group" aria-label="Basic example">
   							<a href="#" class="btn btn-info">Details</a>
   							<a href="#" class="btn btn-danger">Delete</a>
 						</div>
 					</td>
 		    	</tr>
-	    		<tr>
-		      		<td>Jacob</td>
-		      		<td>Thornton</td>
-		      		<td>@fat</td>
+		    	<tr>
+		      		<td>Fix hero content align of h1</td>
+		      		<td>backend functionality</td>
+		      		<td>10</td>
 		      		<td>
 						<div class="btn-group" role="group" aria-label="Basic example">
   							<a href="#" class="btn btn-info">Details</a>
