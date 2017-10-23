@@ -11,15 +11,10 @@
     <link href="/matrixAdmin/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="/matrixAdmin/css/jquery.gritter.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 
-{{--     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/matrixAdmin//matrixAdmin/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="/matrixAdmin/css/matrix-login.css" />
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- --}}    
 
     <style type="text/css">
         body{
@@ -31,7 +26,9 @@
 
   <!--Header-part-->
   <div id="header">
-    <h3><a href="dashboard.html">Anastasionico.uk</a></h3>
+    <h4>
+      <a style="color: #35a" href="dashboard.html">Anastasio<span style="color:white;">nico.uk</span></a>
+    </h4>
   </div>
   <!--close-Header-part--> 
 
@@ -75,7 +72,63 @@
   <!--sidebar-menu-->
   <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
     <ul>
-      <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+      <li class="active">
+        <a href="/admin/home"><i class="icon icon-home"></i> <span>Dashboard</span></a> 
+      </li>
+      <li> <a href="#"><i class="icon icon-tasks"></i> <span>Tasks</span></a> </li>
+      <li class="submenu"> 
+        <a href="#">
+          <i class="icon icon-user"></i> 
+          <span>About</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li><a href="#">Text</a></li>
+          <li><a href="#">Phases</a></li>
+          <li><a href="#">Skills</a></li>
+        </ul>
+      </li>
+      <li class="submenu"> 
+        <a href="#">
+          <i class="icon icon-briefcase"></i> 
+          <span>Project</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li><a href="#">Home Text</a></li>
+          <li><a href="#">Project Page Text</a></li>
+          <li><a href="#">Projects list</a></li>
+        </ul>
+      </li>
+      <li class="submenu"> 
+        <a href="#">
+          <i class="fa fa-file-text" aria-hidden="true"></i>
+          <span>Blog</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li><a href="#">Home Text</a></li>
+          <li><a href="#">Blog Page Text</a></li>
+          <li><a href="#">Posts list</a></li>
+        </ul>
+      </li>
+      <li> <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>
+        <span>Testimonials</span></a> 
+      </li>
+      <li> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>Messages</span></a> 
+      </li>
+      <li> <a href="#"><i class="fa fa-share-square" aria-hidden="true"></i>
+        <span>Social</span></a> 
+      </li>
+      <li> <a href="#"></a> 
+      </li>
+
+
+      
+
+
+
       <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
       <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
       <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
@@ -218,9 +271,32 @@
               <div class="todo">
                 <ul>
                   <li class="clearfix">
-                    <div class="txt"> Luanch This theme on Themeforest <span class="by label">Alex</span></div>
-                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
+                    <div class="txt"> 
+                      Create tasks(table, phpUnit, migration, controller, and pages in the admin area) <span class="by label">Admin</span>
+                    </div>
+                    <div class="pull-right"> 
+                      <a class="tip" href="#" title="Edit Task">
+                        <i class="icon-pencil"></i>
+                      </a> 
+                      <a class="tip" href="#" title="Delete">
+                        <i class="icon-remove"></i>
+                      </a> 
+                    </div>
                   </li>
+                  <li class="clearfix">
+                    <div class="txt"> 
+                      TO CREATE: About skills, Projects, Testimonials, Blog, Contact, Social <span class="by label">Admin</span>
+                    </div>
+                    <div class="pull-right"> 
+                      <a class="tip" href="#" title="Edit Task">
+                        <i class="icon-pencil"></i>
+                      </a> 
+                      <a class="tip" href="#" title="Delete">
+                        <i class="icon-remove"></i>
+                      </a> 
+                    </div>
+                  </li>
+                  
                   <li class="clearfix">
                     <div class="txt"> Manage Pending Orders <span class="date badge badge-warning">Today</span> </div>
                     <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
