@@ -1345,6 +1345,11 @@ footer.menuVisible {
   color: #fff;
 }
 
+.footer--section .footerForm input::-ms-input-placeholder,
+.footer--section .footerForm textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
 .footer--section .footerForm input::placeholder,
 .footer--section .footerForm textarea::placeholder {
   color: #fff;

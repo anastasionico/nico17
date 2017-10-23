@@ -17,6 +17,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -33,11 +34,13 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function()
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     // /admin/dashboard
     Route::get('home', 'HomeController@index');
 	
+
+
 
     
 
@@ -47,12 +50,8 @@ Route::group(['prefix' => 'admin/', 'middleware' => 'auth'], function()
     	Route::get('', function () {
 		    return view('/admin/task/index');
 		});
-
-        
-
     });
     
     
 });
-
 
