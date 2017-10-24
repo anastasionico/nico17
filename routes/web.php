@@ -45,10 +45,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     
 
     // admin/task
-    Route::group(['prefix' => 'task/'], function()
+    Route::group(['prefix' => 'tasks/'], function()
     {
     	Route::get('', function () {
-		    return view('/admin/task/index');
+		    return view('/admin/tasks/index');
 		});
     });
     
