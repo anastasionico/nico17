@@ -172,6 +172,53 @@
                   								</a> 
 		                  					</div>
 		                				</li>
+		              					@foreach($tasksUndone as $taskUndone)
+		              						<li class="clearfix">
+			                  					<div class="txt"> 
+			                  						{{ $taskUndone->description }}
+			                  						<span class="by label label-info">
+			                  							{{ $taskUndone->category }}
+	                  								</span> 
+	                  								@switch($taskUndone->priority)
+													    @case(1)
+															<span class="date badge">
+																Not Important
+				                  							</span> 
+													        @break
+													    @case(2)
+															<span class="date badge badge-inverse">
+					                  							Low Priority	
+				                  							</span> 
+													        @break
+
+													    @case(3)
+													        <span class="date badge badge-info">
+													        	Medium Priority
+												        	</span> 
+													        @break
+
+													    @case(4)
+													        <span class="date badge badge-warning">
+													        	High Priority
+												        	</span> 
+													        @break
+													    @case(5)
+													        <span class="date badge badge-important">
+													        	To do Yesterday
+												        	</span> 
+													        @break
+													@endswitch
+			                  					</div>
+			                  					<div class="pull-right"> 
+			                  						<a class="tip" href="#" title="Edit Task">
+			                  							<i class="icon-pencil"></i>
+		                  							</a> 
+		                  							<a class="tip" href="#" title="Delete">
+		                  								<i class="icon-remove"></i>
+	                  								</a> 
+			                  					</div>
+			                				</li>
+		              					@endforeach		                				
 		              				</ul>
 		            			</div>
 		          			</div>
@@ -186,17 +233,21 @@
     							<h5>Tasks Finished</h5>
   							</div>
   							<div class="widget-content nopadding updates">
-    							<div class="new-update clearfix"><i class="icon-ok-sign"></i>
-									<div class="update-done">
-										<a href="#" title="">
-											<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
-										</a> 
-										<span>dolor sit amet, consectetur adipiscing eli</span> 
-									</div>
-  									<div class="update-date">
-										<span class="update-day">20</span>jan
-									</div>
-    							</div>
+								@foreach($tasksDone as $taskDone)
+		              				<div class="new-update clearfix"><i class="icon-ok-sign"></i>
+										<div class="update-done">
+											<a href="#" title="">
+												<strong>{{$taskDone->description}}</strong>
+											</a> 
+											<span>{{$taskDone->category}}</span> 
+										</div>
+	  									<div class="update-date">
+											<span class="update-day">{{$taskDone->updated_at->format('d')}}</span>{{$taskDone->updated_at->format('M')}}
+										</div>
+	    							</div>
+  								@endforeach
+
+    							
 							</div>
 						</div>
     				</div>

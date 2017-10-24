@@ -14,9 +14,9 @@
         	<ul class="dropdown-menu">
           		<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
           		<li class="divider"></li>
-          		<li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+          		<li><a href="/admin/tasks"><i class="icon-check"></i> My Tasks</a></li>
           		<li class="divider"></li>
-          		<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+          		<li><a href="login"><i class="icon-key"></i> Log Out</a></li>
         	</ul>
       	</li>
       	<li class="dropdown" id="menu-messages">

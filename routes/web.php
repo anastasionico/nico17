@@ -13,10 +13,6 @@
 // the following routes method manage all the register, login, and password routes
 Auth::routes();
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
 
 Route::get('/', function () {
     return view('home');
@@ -37,7 +33,7 @@ Route::get('/contact', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     // /admin/dashboard
-    Route::get('home', 'HomeController@index');
+    Route::get('dashboard', 'HomeController@index');
 	
 
 
@@ -47,9 +43,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()
     {
-    	Route::get('', function () {
-		    return view('/admin/tasks/index');
-		});
+    	Route::get('', 'TaskController@index');
+        
     });
     
     
