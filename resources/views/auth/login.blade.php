@@ -2,7 +2,7 @@
 <html lang="en">
     
 <head>
-    <title>Matrix Admin</title><meta charset="UTF-8" />
+    <title>anastasionico.uk | Login </title><meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
     <link rel="stylesheet" href="matrixAdmin/css/bootstrap.min.css" />
@@ -22,16 +22,19 @@
             
             <form class="form-vertical" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-				<div class="control-group normal_text"> <h3>Anastasionico.uk</h3></div>
+				<div class="control-group normal_text"> 
+                    <h3>Anastasio<span>nico.uk</span></h3>
+                </div>
 
 
 
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span class="add-on bg_lb"><i class="fa fa-user" aria-hidden="true"></i></span>
                             
                             <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
+                            
                             @if ($errors->has('email'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('email') }}</strong>
@@ -43,7 +46,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <span class="add-on bg_lb"><i class="fa fa-lock" aria-hidden="true"></i></span>
 
                             <input id="password" type="password"  name="password" required placeholder="Password">
                             @if ($errors->has('password'))
