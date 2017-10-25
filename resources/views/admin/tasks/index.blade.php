@@ -172,6 +172,19 @@
                   								</a> 
 		                  					</div>
 		                				</li>
+		                				<li class="clearfix">
+		                  					<div class="txt"> 
+		                  						Make register page invisible</span> <span class="date badge badge-default">Low Priority</span> 
+		                  					</div>
+		                  					<div class="pull-right"> 
+		                  						<a class="tip" href="#" title="Edit Task">
+		                  							<i class="icon-pencil"></i>
+	                  							</a> 
+	                  							<a class="tip" href="#" title="Delete">
+	                  								<i class="icon-remove"></i>
+                  								</a> 
+		                  					</div>
+		                				</li>
 		              					@foreach($tasksUndone as $taskUndone)
 		              						<li class="clearfix">
 			                  					<div class="txt"> 
@@ -233,12 +246,11 @@
     							<h5>Tasks Finished</h5>
   							</div>
   							<div class="widget-content nopadding updates">
+							
 								@foreach($tasksDone as $taskDone)
 		              				<div class="new-update clearfix"><i class="icon-ok-sign"></i>
 										<div class="update-done">
-											<a href="#" title="">
-												<strong>{{$taskDone->description}}</strong>
-											</a> 
+											<strong>{{$taskDone->description}}</strong>
 											<span>{{$taskDone->category}}</span> 
 										</div>
 	  									<div class="update-date">
@@ -246,8 +258,7 @@
 										</div>
 	    							</div>
   								@endforeach
-
-    							
+							
 							</div>
 						</div>
     				</div>

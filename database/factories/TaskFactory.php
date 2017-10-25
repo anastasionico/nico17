@@ -7,7 +7,7 @@ $factory->define(App\Task::class, function (Faker $faker) {
     	'description' => $faker->paragraph,
     	'category' => $faker->sentence,
     	'priority' => rand(1,5),
-    	'done' => rand(0,1),
+    	'done' => 0,
     ];
 });
 

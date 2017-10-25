@@ -16,28 +16,56 @@ class TaskTest extends TestCase
 		$user = factory('App\User')->create();
 
         $response = $this->actingAs($user)
-                         ->withSession(['name' => 'sess'])
-                         ->get('/admin/tasks');
-
-		$response->assertStatus(200);
+                        ->withSession(['name' => 'sess'])
+                        ->get('/admin/tasks')
+						->assertStatus(200);
 	}
 
 	/** @test */
-	public function admin_can_see_task_form_task_index()
+	public function admin_can_see_tasks_from_task_index()
 	{
 		
-		$user = factory('App\User')->create();
-		$task = factory('App\Task'::class)->create();
+		$user = $this->be(factory('App\User')->create());
+		$task = factory('App\Task')->create();
 
-        $response = $this->actingAs($user)
-                         ->withSession(['name' => 'sess'])
-                         ->get('/admin/tasks');
+
+
+        $response = $this->get('/admin/tasks')
+						->assertSee($task->description);
+  	}
+
+  	/** @test */
+	public function admin_can_see_finished_tasks_from_index_page()
+	{
+		$user = $this->be(factory('App\User')->create());
+		$tasks = factory('App\Task')->create(['done' => 1]);
+
+		$response = $this->get('admin/tasks')
+						->assertSee($tasks->description);
+	}		
+
+
+	/** @test */
+	public function admin_can_create_tasks(){
+
+		$this->withoutExceptionHandling();
+		// given and admin
+		$this->be( $user = factory('App\User')->create());
+
+		// where the admin creates a task and send the request to task/store
+		$task = factory('App\Task')->make();
+		$this->post('admin/tasks', $task->toArray());
 		
-		$response->assertSee($task->description);
-  
+		// the new task as to appear in the database
+		// the new task has to have done as 0
+		
+		$response =  $this->assertDatabaseHas('tasks', [
+       					 'description' => $task->description
+    				])->assertEquals($task->done, 0);
 
+		// work on the method taskController@store
+		
 	}
-		
 
 
 
@@ -59,21 +87,4 @@ class TaskTest extends TestCase
 
 
 
-
-
-
-
-
-  //   /** @test */
-  //   public function admin_can_see_task_form_task_index()
-  //   {
-  //       //	given that the  admin visit the admin/tasks/index
-  //       $response = $this->get('/admin/tasks/');
-
-		// //	when a task is in the database
-		// $tasks = factory("\App\Task" , 1)->create();
-  //       //	then the admin have to be able to see it
-        
-  //       $response->assertSee($tasks->category);
-  //   }
 }

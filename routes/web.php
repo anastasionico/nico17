@@ -35,16 +35,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     // /admin/dashboard
     Route::get('dashboard', 'HomeController@index');
 	
-
-
-
-    
-
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()
     {
     	Route::get('', 'TaskController@index');
-        
+        Route::post('', 'TaskController@store');
+                
     });
     
     

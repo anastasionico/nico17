@@ -38,7 +38,16 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $post = request()->validate([
+            'description' => 'required|string|min:10',
+            'category' => 'required|string|min:10',
+            'priority' => 'required|numeric|between:1,5',
+            
+        ]);
+    
+        Task::create($post);
+
     }
 
     /**
