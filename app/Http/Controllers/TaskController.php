@@ -41,7 +41,7 @@ class TaskController extends Controller
         
         $post = request()->validate([
             'description' => 'required|string|min:10',
-            'category' => 'required|string|min:10',
+            'category' => 'required|string|min:5',
             'priority' => 'required|numeric|between:1,5',
             
         ]);
@@ -70,7 +70,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        return view('/admin/tasks/edit', compact('task'));
     }
 
     /**
@@ -82,7 +82,21 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        $updatedData = request()->validate([
+            'description' => 'string|min:10',
+            'category' => 'string|min:5',
+            'priority' => 'numeric|between:1,5',
+            
+        ]);
+
+        $task = Task::find($task->id);
+        if(isset($updatedData['category'])){ $task->category = $updatedData['category'];}
+        if(isset($updatedData['description'])){ $task->description = $updatedData['description'];}
+        if(isset($updatedData['priority'])){ $task->priority = $updatedData['priority'];}
+        $task->save();
+        
+        return redirect('/admin/tasks');
+
     }
 
     /**
@@ -107,3 +121,25 @@ class TaskController extends Controller
     }
 
 }
+    
+  // public function update(Request $request, $id)
+  //   {
+  //       //validate
+  //       $this->validate(request(),[
+  //           'name' => 'required',
+  //           'description' => 'nullable',
+  //           'priority' => 'integer',
+  //           'user_id' => 'integer|required'
+  //       ]);
+        
+  //       //save
+  //       $task = Task::find($id);
+  //       $task->name = $request->input('name');
+  //       $task->description = $request->input('description');
+  //       $task->priority = $request->input('priority');
+  //       $task->user_id = $request->input('user_id');
+  //       $task->save();
+        
+  //       //redirect
+  //       return redirect("/tasks");
+  //   }

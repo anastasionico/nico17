@@ -42,155 +42,11 @@
 	          				<div class="widget-content">
 		            			<div class="todo">
 		              				<ul>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete Tasks CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-important">Hight Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete About Skills CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-warning">Quite Hight Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete Project CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-warning">Quite Hight Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete  Blog CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-warning">Quite Hight Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete  messagges and form CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-info">Normal Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete  social CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-info">Normal Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete testimonials CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-info">Normal Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete About Text and Phases CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-default">Low Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete Project home and detail text CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-default">Low Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Complete Blog home and detail text CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-default">Low Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		                				<li class="clearfix">
-		                  					<div class="txt"> 
-		                  						Make register page invisible</span> <span class="date badge badge-default">Low Priority</span> 
-		                  					</div>
-		                  					<div class="pull-right"> 
-		                  						<a class="tip" href="#" title="Edit Task">
-		                  							<i class="icon-pencil"></i>
-	                  							</a> 
-	                  							<a class="tip" href="#" title="Delete">
-	                  								<i class="icon-remove"></i>
-                  								</a> 
-		                  					</div>
-		                				</li>
-		              					@foreach($tasksUndone as $taskUndone)
+		                				@foreach($tasksUndone as $taskUndone)
 		              						<li class="clearfix">
 			                  					<div class="txt"> 
 			                  						{{ $taskUndone->description }}
-			                  						<span class="by label label-info">
+			                  						<span class="by label label-default">
 			                  							{{ $taskUndone->category }}
 	                  								</span> 
 	                  								@switch($taskUndone->priority)
@@ -225,16 +81,17 @@
 			                  					</div>
 			                  					<div class="pull-right"> 
 			                  						@php
-			                  							$setDoneUrl = "/admin/tasks/". $taskUndone->id . "/setDone";
-			                  							$deleteUrl = "/admin/tasks/". $taskUndone->id . "/delete";
+			                  							$setDoneUrl = "/admin/tasks/setDone/". $taskUndone->id;
+			                  							$editUrl = "/admin/tasks/edit/". $taskUndone->id;
+			                  							$deleteUrl = "/admin/tasks/delete/". $taskUndone->id;
 			                  						@endphp
 			                  						<a class="tip" href="{{ $setDoneUrl}}" title="Set as Done">
 			                  							<i class="icon-check"></i>
 		                  							</a> 
-			                  						<a class="tip" href="#" title="Edit Task">
+		                  							<a class="tip" href="{{ $editUrl}}" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-		                  							<a class="tip" href="{{ $deleteUrl }}" title="Delete">
+			                  						<a class="tip" href="{{ $deleteUrl }}" title="Delete">
 		                  								<i class="icon-remove"></i>
 	                  								</a> 
 			                  					</div>

@@ -75,7 +75,7 @@ class TaskTest extends TestCase
 		
 		// when he set a task as completed
 		$task->done = 1;
-		$this->get('/admin/tasks/'. $task->id . '/setDone', $task->toArray());
+		$this->get('/admin/tasks/setDone/'. $task->id , $task->toArray());
 		
 		// then the task must have the done field as 0
 		$this->assertEquals($task->done, 1);
@@ -90,11 +90,41 @@ class TaskTest extends TestCase
 		$task = factory('App\Task')->create();
 		
 		//when the user wants to delete a task completely
-		$this->get('/admin/tasks/'. $task->id . '/delete');
-		
-		// the task must disappear from the database
+		$response =$this->get('/admin/tasks/delete/'. $task->id);
 		$this->assertDatabaseMissing('tasks', [
-        	'id' => $task->id
-    	]);
+        					'id' => $task->id
+    					]);
 	}
-}
+
+	/** @test */
+	public function an_admin_can_see_the_edit_task_page(){
+		$this->withoutExceptionHandling();
+		// given an user and a task
+		$this->be( $user = factory('App\User')->create());
+		$task = factory('App\Task')->create();
+
+		// when the user goes to the update page, then he has to see the admin/edit page
+		$this->get('/admin/tasks/edit/'. $task->id)
+			->assertSee("Update this task");
+	}
+
+	/** @test */
+	public function an_admin_can_update_a_task(){
+		
+		$this->withoutExceptionHandling();
+		// given a user and a task
+		$this->be(factory('App\User')->create());
+		$task = factory('App\Task')->create();
+
+		// when the user sent a request with some new data, then the database has to be changed
+		$taskNew['description'] = 'This is a new description';
+		$taskNew['category'] = 'This is a new cat';
+		$this->post('/admin/tasks/update/' . $task->id, $taskNew);
+
+		$this->assertDatabaseHas('tasks',[
+				'description' => 'This is a new description',
+			]);
+
+	}
+}	
+	    

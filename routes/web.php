@@ -41,8 +41,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     	Route::get('', 'TaskController@index');
         Route::get('create', 'TaskController@create');
         Route::post('', 'TaskController@store');
-        Route::get('/{task}/setDone', 'TaskController@setDone');
-        Route::get('/{task}/delete', 'TaskController@destroy');
+        Route::get('/setDone/{task}', 'TaskController@setDone');
+        Route::get('/delete/{task}', 'TaskController@destroy');
+        Route::get('/edit/{task}', 'TaskController@edit');
+        Route::post('/update/{task}', 'TaskController@update');
                 
     });
     

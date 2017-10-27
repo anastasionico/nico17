@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Task;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('/admin/dashboard');
+        $tasksUndone = Task::where('done', 0)->orderBy('priority','desc')->get();
+        return view('/admin/dashboard', compact('tasksUndone'));
     }
 }

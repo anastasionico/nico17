@@ -50,62 +50,72 @@
 
 	      <div class="row-fluid">
 	        <div class="span6">
-	          
-	          <div class="widget-box">
-	            <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
-	              <h5>To Do list</h5>
-	            </div>
-	            <div class="widget-content">
-	              <div class="todo">
-	                <ul>
-	                  <li class="clearfix">
-	                    <div class="txt"> 
-	                      Create tasks(table, phpUnit, migration, controller, and pages in the admin area) <span class="by label">Admin</span>
-	                    </div>
-	                    <div class="pull-right"> 
-	                      <a class="tip" href="#" title="Edit Task">
-	                        <i class="icon-pencil"></i>
-	                      </a> 
-	                      <a class="tip" href="#" title="Delete">
-	                        <i class="icon-remove"></i>
-	                      </a> 
-	                    </div>
-	                  </li>
-	                  <li class="clearfix">
-	                    <div class="txt"> 
-	                      TO CREATE: About skills, Projects, Testimonials, Blog, Contact, Social <span class="by label">Admin</span>
-	                    </div>
-	                    <div class="pull-right"> 
-	                      <a class="tip" href="#" title="Edit Task">
-	                        <i class="icon-pencil"></i>
-	                      </a> 
-	                      <a class="tip" href="#" title="Delete">
-	                        <i class="icon-remove"></i>
-	                      </a> 
-	                    </div>
-	                  </li>
-	                  
-	                  <li class="clearfix">
-	                    <div class="txt"> Manage Pending Orders <span class="date badge badge-warning">Today</span> </div>
-	                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-	                  </li>
-	                  <li class="clearfix">
-	                    <div class="txt"> MAke your desk clean <span class="by label">Admin</span></div>
-	                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-	                  </li>
-	                  <li class="clearfix">
-	                    <div class="txt"> Today we celebrate the theme <span class="date badge badge-info">08.03.2013</span> </div>
-	                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-	                  </li>
-	                  <li class="clearfix">
-	                    <div class="txt"> Manage all the orders <span class="date badge badge-important">12.03.2013</span> </div>
-	                    <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-	                  </li>
-	                </ul>
-	              </div>
-	            </div>
-	          	</div>
-	          	
+	        	<div class="widget-box">
+          			<div class="widget-title"> <span class="icon"><i class="fa fa-hourglass" aria-hidden="true"></i></span>
+            			<h5>Current To Do list</h5>
+          			</div>
+      				<div class="widget-content">
+            			<div class="todo">
+              				<ul>
+                				@foreach($tasksUndone as $taskUndone)
+              						<li class="clearfix">
+	                  					<div class="txt"> 
+	                  						{{ $taskUndone->description }}
+	                  						<span class="by label label-default">
+	                  							{{ $taskUndone->category }}
+              								</span> 
+              								@switch($taskUndone->priority)
+											    @case(1)
+													<span class="date badge">
+														Not Important
+		                  							</span> 
+											        @break
+											    @case(2)
+													<span class="date badge badge-inverse">
+			                  							Low Priority	
+		                  							</span> 
+											        @break
+
+											    @case(3)
+											        <span class="date badge badge-info">
+											        	Medium Priority
+										        	</span> 
+											        @break
+
+											    @case(4)
+											        <span class="date badge badge-warning">
+											        	High Priority
+										        	</span> 
+											        @break
+											    @case(5)
+											        <span class="date badge badge-important">
+											        	To do Yesterday
+										        	</span> 
+											        @break
+											@endswitch
+	                  					</div>
+	                  					<div class="pull-right"> 
+	                  						@php
+	                  							$setDoneUrl = "/admin/tasks/setDone/". $taskUndone->id;
+	                  							$editUrl = "/admin/tasks/edit/". $taskUndone->id;
+	                  							$deleteUrl = "/admin/tasks/delete/". $taskUndone->id;
+	                  						@endphp
+	                  						<a class="tip" href="{{ $setDoneUrl}}" title="Set as Done">
+	                  							<i class="icon-check"></i>
+                  							</a> 
+                  							<a class="tip" href="{{ $editUrl}}" title="Edit">
+	                  							<i class="icon-pencil"></i>
+                  							</a> 
+	                  						<a class="tip" href="{{ $deleteUrl }}" title="Delete">
+                  								<i class="icon-remove"></i>
+              								</a> 
+	                  					</div>
+	                				</li>
+              					@endforeach		                				
+              				</ul>
+            			</div>
+          			</div>
+        		</div>
 	        </div>
 	        <div class="span6">
 	        	<div class="widget-box">
