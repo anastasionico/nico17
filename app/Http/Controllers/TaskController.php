@@ -27,7 +27,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/tasks/create');
     }
 
     /**
@@ -48,6 +48,7 @@ class TaskController extends Controller
     
         Task::create($post);
 
+        return redirect('/admin/tasks');
     }
 
     /**

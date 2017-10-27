@@ -22,7 +22,7 @@
     			<div class="quick-actions_homepage">
       				<ul class="quick-actions">
 				        <li class="bg_lb"> 
-				        	<a href="/admin/tasks/new"> 
+				        	<a href="/admin/tasks/create"> 
 				        		<i class="icon-plus"></i> 
 			        			Add Task 
 		        			</a> 

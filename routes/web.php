@@ -39,6 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::group(['prefix' => 'tasks/'], function()
     {
     	Route::get('', 'TaskController@index');
+        Route::get('create', 'TaskController@create');
         Route::post('', 'TaskController@store');
                 
     });

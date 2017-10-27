@@ -52,6 +52,7 @@ class TaskTest extends TestCase
 		// given and admin
 		$this->be( $user = factory('App\User')->create());
 
+
 		// where the admin creates a task and send the request to task/store
 		$task = factory('App\Task')->make();
 		$this->post('admin/tasks', $task->toArray());
@@ -63,9 +64,13 @@ class TaskTest extends TestCase
        					 'description' => $task->description
     				])->assertEquals($task->done, 0);
 
-		// work on the method taskController@store
+		//create the form in the admin/tasks/create page
 		
+		
+
+
 	}
+
 
 
 
