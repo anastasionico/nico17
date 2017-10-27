@@ -15,7 +15,7 @@
 	      	<div class="quick-actions_homepage">
 	        	<ul class="quick-actions">
 		          	<li class="bg_lb span3"> 
-			          	<a href="/"> 
+			          	<a href="/" target="_blank"> 
 	          				<i class="icon-home"></i> 
           					Home
       					</a> 
@@ -44,6 +44,13 @@
           					Detail
       					</a> 
   					</li>
+  					<li class="bg_lb"> 
+  						<a href="/admin/tasks"> 
+  							<i class="icon-check-empty"></i> 
+  							<span class="label label-important">{{ count($tasksUndone)}}</span> 
+  							Pending Tasks
+						</a> 
+					</li>
   				</ul>
 	      </div>
 	      <!--End-Action boxes-->    

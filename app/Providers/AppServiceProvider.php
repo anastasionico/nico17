@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('layouts.admin.sidebar' , function( $view ){
+            $view->with('tasksCount', \App\Task::getAll());
+        });
     }
 
     /**

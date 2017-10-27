@@ -107,7 +107,7 @@
 	    		<div class="row-fluid">
 		    		<div class="span12">
     			        <div class="widget-box">
-  							<div class="widget-title"> <span class="icon"> <i class="icon-refresh"></i> </span>
+  							<div class="widget-title"> <span class="icon"> <i class="icon-check"></i> </span>
     							<h5>Tasks Finished</h5>
   							</div>
   							<div class="widget-content nopadding updates">

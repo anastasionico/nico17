@@ -3,6 +3,7 @@
 	@section('title', 'Anastasionico.uk | Dashboard')
 
 	@section('content')
+
 		<div id="content">
 
 		  	<div id="content-header">
@@ -11,7 +12,7 @@
 			    		<i class="icon-home"></i> Home
 		    		</a> 
 	    			<a href="/admin/tasks" class="current">Tasks</a> 
-	    			<a href="/admin/tasks/". {{ $task->id }} . "/update" class="current">Update</a> 
+	    			<a href="/admin/tasks/edit/{{ $task->id }}" class="current">Edit</a> 
     			</div>
 			    <h1>Update this task</h1>
 		  	</div>

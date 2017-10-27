@@ -62,10 +62,14 @@
     	</li>
       <li class="content"> <span>Tasks to Complete</span>
         <div class="progress progress-mini active progress-striped">
-          <div style="width: 0%;" class="bar"></div>
+          @php 
+            $tasksPercentage = ($tasksCount['undone'] / $tasksCount['total'])  * 100; 
+            $tasksPercentage = round($tasksPercentage);
+          @endphp
+          <div style="width: {{ $tasksPercentage }}%;" class="bar"></div>
         </div>
-        <span class="percent">0%</span>
-        <div class="stat">0 / 10</div>
+        <span class="percent">{{ $tasksPercentage }}%</span>
+        <div class="stat">{{ $tasksCount['undone'] }} / {{ $tasksCount['total'] }}</div>
       </li>
       <li class="content"> <span>Time</span>
         <?php
@@ -76,8 +80,11 @@
           $numeric_interval = $interval->format('%a ');
           // $percent = $interval->format('%a') *
         ?>
-        <span class="percent">{{ $interval->format('%R%a days') }}</span>
-        <div class="stat">&nbsp;</div>
+        <div class="progress progress-mini active progress-striped">
+          <div style="width: {{ $interval->format('%a') }}%;" class="bar"></div>
+        </div>
+        <span class="percent">{{ $interval->format('%R %a') }}</span>
+        <div class="stat">Days</div>
       </li>
     </ul>
 </div>
