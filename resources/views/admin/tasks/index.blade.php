@@ -24,7 +24,7 @@
 				        <li class="bg_lb"> 
 				        	<a href="/admin/tasks/create"> 
 				        		<i class="icon-plus"></i> 
-			        			Add Task 
+			        			Create Task 
 		        			</a> 
 	        			</li>
 					        
@@ -47,6 +47,7 @@
 		                  						Complete Tasks CRUD<span class="by label label-info">Nico</span> <span class="date badge badge-important">Hight Priority</span> 
 		                  					</div>
 		                  					<div class="pull-right"> 
+		                  						
 		                  						<a class="tip" href="#" title="Edit Task">
 		                  							<i class="icon-pencil"></i>
 	                  							</a> 
@@ -223,10 +224,17 @@
 													@endswitch
 			                  					</div>
 			                  					<div class="pull-right"> 
+			                  						@php
+			                  							$setDoneUrl = "/admin/tasks/". $taskUndone->id . "/setDone";
+			                  							$deleteUrl = "/admin/tasks/". $taskUndone->id . "/delete";
+			                  						@endphp
+			                  						<a class="tip" href="{{ $setDoneUrl}}" title="Set as Done">
+			                  							<i class="icon-check"></i>
+		                  							</a> 
 			                  						<a class="tip" href="#" title="Edit Task">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-		                  							<a class="tip" href="#" title="Delete">
+		                  							<a class="tip" href="{{ $deleteUrl }}" title="Delete">
 		                  								<i class="icon-remove"></i>
 	                  								</a> 
 			                  					</div>

@@ -64,32 +64,37 @@ class TaskTest extends TestCase
        					 'description' => $task->description
     				])->assertEquals($task->done, 0);
 
-		//create the form in the admin/tasks/create page
-		
-		
+	}
 
-
+	/** @test */
+	public function an_admin_car_set_a_task_as_done(){
+		// given an authenticate user and a task
+		$this->withoutExceptionHandling();
+		$this->be($user = factory('App\User')->create());
+		$task = factory('App\Task')->create();
+		
+		// when he set a task as completed
+		$task->done = 1;
+		$this->get('/admin/tasks/'. $task->id . '/setDone', $task->toArray());
+		
+		// then the task must have the done field as 0
+		$this->assertEquals($task->done, 1);
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	/** @test */
+	public function an_admin_can_delete_a_task(){
+		//given an authenticate user and a task
+		$this->withoutExceptionHandling();
+		$this->be( $user = factory("App\User")->create());
+		$task = factory('App\Task')->create();
+		
+		//when the user wants to delete a task completely
+		$this->get('/admin/tasks/'. $task->id . '/delete');
+		
+		// the task must disappear from the database
+		$this->assertDatabaseMissing('tasks', [
+        	'id' => $task->id
+    	]);
+	}
 }

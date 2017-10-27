@@ -93,6 +93,17 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
+
+        return redirect('/admin/tasks');
     }
+
+    public function setDone(Request $request, Task $task)
+    {
+        $task->done = 1;
+        $task->save();
+
+        return redirect('/admin/tasks');
+    }
+
 }
