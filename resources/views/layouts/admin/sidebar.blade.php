@@ -62,10 +62,19 @@
     	</li>
       <li class="content"> <span>Tasks to Complete</span>
         <div class="progress progress-mini active progress-striped">
-          @php 
-            $tasksPercentage = ($tasksCount['undone'] / $tasksCount['total'])  * 100; 
-            $tasksPercentage = round($tasksPercentage);
-          @endphp
+           
+            @if ($tasksCount['total'] > 0) 
+              @php            
+                $tasksPercentage = ($tasksCount['undone'] / $tasksCount['total'])  * 100; 
+                $tasksPercentage = round($tasksPercentage);
+              @endphp
+            @else
+              @php
+                $tasksPercentage = 0;
+              @endphp
+            @endif
+            
+          
           <div style="width: {{ $tasksPercentage }}%;" class="bar"></div>
         </div>
         <span class="percent">{{ $tasksPercentage }}%</span>

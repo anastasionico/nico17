@@ -13,11 +13,9 @@ class TaskTest extends TestCase
 	/** @test */    
 	public function admin_task_exists()
 	{
-		$user = factory('App\User')->create();
-
-        $response = $this->actingAs($user)
-                        ->withSession(['name' => 'sess'])
-                        ->get('/admin/tasks')
+		$this->withoutExceptionHandling();
+		$this->be( $user = factory('App\User')->create());
+        $response = $this->get('/admin/tasks')
 						->assertStatus(200);
 	}
 
@@ -25,7 +23,7 @@ class TaskTest extends TestCase
 	public function admin_can_see_tasks_from_task_index()
 	{
 		
-		$user = $this->be(factory('App\User')->create());
+		$this->be($user = factory('App\User')->create());
 		$task = factory('App\Task')->create();
 
 
@@ -37,7 +35,7 @@ class TaskTest extends TestCase
   	/** @test */
 	public function admin_can_see_finished_tasks_from_index_page()
 	{
-		$user = $this->be(factory('App\User')->create());
+		$this->be($user = factory('App\User')->create());
 		$tasks = factory('App\Task')->create(['done' => 1]);
 
 		$response = $this->get('admin/tasks')
