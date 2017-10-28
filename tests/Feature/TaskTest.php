@@ -26,8 +26,6 @@ class TaskTest extends TestCase
 		$this->be($user = factory('App\User')->create());
 		$task = factory('App\Task')->create();
 
-
-
         $response = $this->get('/admin/tasks')
 						->assertSee($task->description);
   	}

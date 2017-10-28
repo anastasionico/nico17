@@ -15,7 +15,7 @@ class SkillsController extends Controller
     public function index()
     {
         $skills = Skill::all();
-        return view('admin/about/skills', compact('skills'));
+        return view('admin/about/skills/index', compact('skills'));
     }
 
     /**
@@ -25,7 +25,8 @@ class SkillsController extends Controller
      */
     public function create()
     {
-        //
+        // dd('hello');
+        return view('admin/about/skills/create');
     }
 
     /**
