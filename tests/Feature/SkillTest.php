@@ -11,18 +11,32 @@ class SkillTest extends TestCase
 
     /** @test */
     public function admin_can_see_skill_list_page(){
-  //   	$this->withoutExceptionHandling();
-
-  //   	// given an admin and some skills
-		$this->be($user = factory('App\User')->create());
+  
+      // given an admin and some skills
+		  $this->be(factory('App\User')->create());
     	$skill = factory('App\Skill')->create();
     	
-  //   	// when we get the page about/skills
-  //   	// then he need to be able to see them in the page
-    	$response = $this->get('admin/about/skills')
+    	// when we get the page about/skills
+    	// then he need to be able to see them in the page
+    	$this->get('admin/about/skills')
     					->assertSee($skill->name);
+  }
 
-    	
-    }
+  /** @test */
+  public function admin_can_create_a_new_skill(){
+    
+    $this->withoutExceptionHandling();
+    // given an admin
+    $this->be(factory('App\User')->create());
 
+    // when he create a new skill
+    $skill = factory('App\Skill')->make();
+    $this->post('admin/about/skills', $skill->toArray());
+
+    // then a new skill will appear in the database
+    $this->assertDatabaseHas('skills',[
+        'name' => $skill->name
+      ]);
+
+  }
 }

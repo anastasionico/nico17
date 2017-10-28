@@ -36,7 +36,14 @@ class SkillsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $skill = request()->validate([
+            'name' => 'required|string|min:2',
+            'value' => 'required|numeric|between:1,99',
+        ]);
+        
+        Skill::create($skill);
+
+        return back();
     }
 
     /**
