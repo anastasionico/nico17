@@ -50,12 +50,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     
     Route::group(['prefix' => 'about/'], function(){
         Route::resource('skills', 'SkillsController');
-        // Route::get('skills', 'SkillsController@index');
-        // Route::get('skills/create', 'SkillsController@create');
-        // Route::post('skills', 'SkillsController@store');
-        // Route::get('skills/delete/{skill}', 'SkillsController@destroy');
-        // Route::get('skills/edit/{skill}', 'SkillsController@edit');
-        // Route::post('skills/update/{skill}', 'SkillsController@update');
     });
 });
-// 11
+

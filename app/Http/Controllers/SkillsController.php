@@ -64,9 +64,10 @@ class SkillsController extends Controller
      * @param  \App\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function edit(Skill $skills)
+    public function edit(Skill $skill)
     {
-        //
+        $skill = Skill::findOrFail($skill->id);
+        return view('admin/about/skills/edit', compact('skill'));
     }
 
     /**

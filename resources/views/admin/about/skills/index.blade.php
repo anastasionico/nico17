@@ -51,7 +51,7 @@
 				            				{{$skill->name}}
 				            				<span class="pull-right strong">
 				            					
-				            					<a class="tip" href="#" title="Edit">
+				            					<a class="tip" href="skills/{{$skill->id}}/edit" title="Edit">
 		                  							<i class="icon-pencil"></i>
 	                  							</a> 
 												

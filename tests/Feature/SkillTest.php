@@ -9,12 +9,18 @@ class SkillTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function setUp(){
+      parent::setUp();
+
+      $this->admin = $this->be(factory('App\User')->create());
+    }
+    
     /** @test */
     public function admin_can_see_skill_list_page(){
       $this->withoutExceptionHandling();
+      
       // given an admin and some skills
-		  $this->be(factory('App\User')->create());
-    	$skill = factory('App\Skill')->create();
+		  $skill = factory('App\Skill')->create();
     	
     	// when we get the page about/skills
     	// then he need to be able to see them in the page
@@ -26,9 +32,8 @@ class SkillTest extends TestCase
   public function admin_can_create_a_new_skill(){
     
     $this->withoutExceptionHandling();
+    
     // given an admin
-    $this->be(factory('App\User')->create());
-
     // when he create a new skill
     $skill = factory('App\Skill')->make();
     $skill->name = "Productivity";
@@ -45,9 +50,8 @@ class SkillTest extends TestCase
   public function admin_can_submit_the_form_to_create_a_new_skill(){
     
     $this->withoutExceptionHandling();
+    
     // given an admin wants to create a new skill
-    $this->be(factory('App\User')->create());
-  
     // when he goes to the create page he should be able to see the form 
     // then we will see the headline of the form
     $this->get('admin/about/skills/create')
@@ -57,15 +61,28 @@ class SkillTest extends TestCase
 
   /** @test */
   public function admin_can_delete_a_skill(){
-    // give an admin and a skill
     $this->withoutExceptionHandling();
-    $this->be(factory('App\User')->create());
-    $skill = factory('App\Skill')->create();
 
+    // give an admin and a skill
+    $skill = factory('App\Skill')->create();
     $response = $this->call('DELETE', 'admin/about/skills/'. $skill->id, ['_token' => csrf_token()]);
-    
     $this->assertDatabaseMissing('skills', ['id' => $skill->id]);
     
   }
-  
+    
+  /** @test */
+  public function admin_can_see_the_edit_page(){
+    $this->withoutExceptionHandling();
+    // given an admin and a skill
+    $skill = factory('App\Skill')->create();
+    
+    // when we visit the edit page
+    // he should see the form and the name of the skill
+    $this->get("admin/about/skills/$skill->id/edit")
+      ->assertSee("Edit $skill->name");
+      
+    
+
+  }
+
 }

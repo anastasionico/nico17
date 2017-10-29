@@ -11,9 +11,9 @@
 			    		<i class="icon-home"></i> Home
 		    		</a> 
 	    			<a href="/admin/about/skills" class="current">Skills</a> 
-	    			<a href="/admin/about/skills/create" class="current">Create</a> 
+	    			<a href="/admin/about/skills/{{ $skill->id}}/edit" class="current">{{ $skill->name}}</a> 
     			</div>
-			    <h1>Create a new Skill</h1>
+			    <h1>Edit {{$skill->name}}</h1>
 		  	</div>
 
 			<div class="container-fluid">
@@ -47,14 +47,14 @@
 				            <div class="control-group">
 				              <label class="control-label">Name *</label>
 				              <div class="controls">
-				                <input type="text" name="name" class="span11" placeholder="Name" required />
+				                <input type="text" name="name" class="span11" value="{{$skill->name}}" required />
 				                <span class="help-block">One word</span>
 				              </div>
 				            </div>
 				            <div class="control-group">
 				              <label class="control-label">Value *</label>
 				              <div class="controls">
-				                <input type="number" name="value" class="span11" placeholder="Number" required />
+				                <input type="number" name="value" class="span11" value="{{$skill->value}}" required />
 				                <span class="help-block">Level of knowledge from 1 to 99</span>
 				              </div>
 				            </div>
