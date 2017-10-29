@@ -73,6 +73,7 @@ class SkillTest extends TestCase
   /** @test */
   public function admin_can_see_the_edit_page(){
     $this->withoutExceptionHandling();
+    
     // given an admin and a skill
     $skill = factory('App\Skill')->create();
     
@@ -80,9 +81,26 @@ class SkillTest extends TestCase
     // he should see the form and the name of the skill
     $this->get("admin/about/skills/$skill->id/edit")
       ->assertSee("Edit $skill->name");
-      
-    
+  }
 
+  /** @test */
+  public function admin_can_update_a_skill(){
+    $this->withoutExceptionHandling();
+    
+    // given an admin and a skill
+    $skill = factory('App\Skill')->create();
+
+    $skill->name = 'pippo';
+    $skill->value = '89';
+    
+    // when the admin submit a new request
+    // then the data in the database must be changed 
+    $response = $this->call('PATCH',  "admin/about/skills/". $skill->id, ['_token' => csrf_token(),'name'=>$skill->name,'value'=>$skill->value]);
+    $this->assertDatabaseHas('skills', [
+        'name' => 'pippo',
+        'value' => 89
+      ]);
+    
   }
 
 }

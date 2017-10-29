@@ -77,9 +77,23 @@ class SkillsController extends Controller
      * @param  \App\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Skills $skills)
+    public function update(Request $request, Skill $skill)
     {
-        //
+        $skillUpdated = request()->validate([
+            'name' => 'required|string|min:2',
+            'value' => 'required|numeric|between:1,99',
+        ]);
+        
+        
+        if (array_key_exists("name",$skillUpdated)){
+            $skill->name = $skillUpdated['name'];
+        }
+        if (array_key_exists("value",$skillUpdated)){
+            $skill->value = $skillUpdated['value'];
+        }
+        $skill->save();
+
+        return redirect('admin/about/skills');
     }
 
     /**

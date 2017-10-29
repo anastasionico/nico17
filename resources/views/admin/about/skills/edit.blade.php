@@ -41,8 +41,8 @@
 			        @endif
 
 			        <div class="widget-content nopadding">
-			          	<form action="/admin/about/skills" method="post" class="form-horizontal">
-
+			          	<form action="/admin/about/skills/{{ $skill->id}}" method="post" class="form-horizontal">
+			          		{{ method_field('PATCH') }}
 			          		{{ csrf_field() }}
 				            <div class="control-group">
 				              <label class="control-label">Name *</label>
