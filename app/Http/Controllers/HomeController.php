@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Task;
+use App\Skill;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $tasksUndone = Task::where('done', 0)->orderBy('priority','desc')->get();
-        return view('/admin/dashboard', compact('tasksUndone'));
+        $skills = Skill::all();
+        return view('/admin/dashboard', compact('tasksUndone','skills'));
     }
 }
