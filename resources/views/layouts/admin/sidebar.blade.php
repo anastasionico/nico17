@@ -15,7 +15,7 @@
         	<ul>
           		<li><a href="#">Text</a></li>
           		<li><a href="#">Phases</a></li>
-          		<li><a href="#">Skills</a></li>
+          		<li><a href="/admin/about/skills">Skills</a></li>
         	</ul>
       	</li>
       	<li class="submenu"> 
@@ -78,7 +78,7 @@
           <div style="width: {{ $tasksPercentage }}%;" class="bar"></div>
         </div>
         <span class="percent">{{ $tasksPercentage }}%</span>
-        <div class="stat">{{ $tasksCount['undone'] }} / {{ $tasksCount['total'] }}</div>
+        <div class="stat">{{ $tasksCount['undone'] }} done out of  {{ $tasksCount['total'] }}</div>
       </li>
       <li class="content"> <span>Time</span>
         <?php

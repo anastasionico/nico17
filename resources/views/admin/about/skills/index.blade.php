@@ -10,7 +10,7 @@
 			    	<a href="/admin/home" title="Go to Home" class="tip-bottom">
 			    		<i class="icon-home"></i> Home
 		    		</a> 
-	    			<a href="/admin/about/skills" class="current">skills</a> 
+	    			<a href="/admin/about/skills" class="current">Skills</a> 
     			</div>
 			    <h1>Skills</h1>
 		  	</div>
@@ -36,7 +36,10 @@
 		    		<div class="span12">
 
 				        <div class="widget-box">
-				          	<div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
+				          	<div class="widget-title"> 
+				          		<span class="icon">
+				          			<i class="fa fa-wrench" aria-hidden="true"></i>
+								</span>
 					            <h5>Skills list</h5>
 				          	</div>
 				          	<div class="widget-content">
@@ -46,14 +49,39 @@
 					            		<li> 
 					            			<span class="icon24 icomoon-icon-arrow-up-2 green"></span> 
 				            				{{$skill->name}}
-				            				<span class="pull-right strong">{{$skill->value}}</span>
-				            				@php
+				            				<span class="pull-right strong">
+				            					
+				            					<a class="tip" href="#" title="Edit">
+		                  							<i class="icon-pencil"></i>
+	                  							</a> 
+												
+	              								{{ Form::open([
+	              									'method' => 'DELETE', 
+	              									'route' => ['skills.destroy', $skill->id],
+	              									'style' => 'display:inline-block'
+													]) 
+												}}
+													
+														{{ Form::button('<i class="icon-remove"></i>', 
+															array(
+																'type' => 'submit', 
+																'style' => 'color:#aaa;border:0;background:transparent;')) 
+														}}
+													
+												{{ Form::close() }}
+			            						
 
-				            				@endphp
-					                		<div class="progress progress-striped ">
-					                  			<div style="width: {{$skill->value}}%;" class="bar"></div>
-					                		</div>
-					              		</li>
+													
+
+
+
+			            					</span>
+				            				<div class="progress progress-striped ">
+					                  			<div style="width: {{$skill->value}}%;" class="bar">
+					                  				{{$skill->value}}
+					                  			</div>
+											</div>
+					                	</li>
 					            	@endforeach
 				            	</ul>
 				          	</div>

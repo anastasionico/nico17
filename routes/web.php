@@ -33,7 +33,7 @@ Route::get('/contact', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     // /admin/dashboard
-    Route::get('dashboard', 'HomeController@index');
+    Route::get('dashboard', 'HomeController@index')->name('dashboard');
 	
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()
@@ -49,7 +49,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     });
     
     Route::group(['prefix' => 'about/'], function(){
-        Route::resource('skills','SkillsController');
+        Route::resource('skills', 'SkillsController');
+        // Route::get('skills', 'SkillsController@index');
+        // Route::get('skills/create', 'SkillsController@create');
+        // Route::post('skills', 'SkillsController@store');
+        // Route::get('skills/delete/{skill}', 'SkillsController@destroy');
+        // Route::get('skills/edit/{skill}', 'SkillsController@edit');
+        // Route::post('skills/update/{skill}', 'SkillsController@update');
     });
 });
-
+// 11

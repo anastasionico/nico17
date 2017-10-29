@@ -54,4 +54,18 @@ class SkillTest extends TestCase
       ->assertSee('Create a new Skill');
   
   }
+
+  /** @test */
+  public function admin_can_delete_a_skill(){
+    // give an admin and a skill
+    $this->withoutExceptionHandling();
+    $this->be(factory('App\User')->create());
+    $skill = factory('App\Skill')->create();
+
+    $response = $this->call('DELETE', 'admin/about/skills/'. $skill->id, ['_token' => csrf_token()]);
+    
+    $this->assertDatabaseMissing('skills', ['id' => $skill->id]);
+    
+  }
+  
 }

@@ -44,7 +44,7 @@ class SkillsController extends Controller
         
         Skill::create($skill);
 
-        return back();
+        return redirect('admin/about/skills/');
     }
 
     /**
@@ -53,7 +53,7 @@ class SkillsController extends Controller
      * @param  \App\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function show(Skills $skills)
+    public function show(Skill $skills)
     {
         //
     }
@@ -64,7 +64,7 @@ class SkillsController extends Controller
      * @param  \App\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function edit(Skills $skills)
+    public function edit(Skill $skills)
     {
         //
     }
@@ -87,8 +87,15 @@ class SkillsController extends Controller
      * @param  \App\Skills  $skills
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Skills $skills)
+    public function destroy(Skill $skill)
     {
-        //
+        
+        $skill = Skill::findOrFail($skill->id);
+        $skill->delete();
+
+        return back();
+
+
     }
+
 }

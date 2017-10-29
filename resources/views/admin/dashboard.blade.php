@@ -51,6 +51,12 @@
   							Pending Tasks
 						</a> 
 					</li>
+					<li class="bg_lh"> 
+  						<a href="/admin/about/skills"> 
+							<i class="icon-wrench"></i> 
+  							Skills
+						</a> 
+					</li>
   				</ul>
 	      </div>
 	      <!--End-Action boxes-->    
