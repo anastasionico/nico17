@@ -18,7 +18,24 @@
 
 
 		  	<div class="container-fluid">
+		  		
+				@foreach (['danger', 'warning', 'success', 'info'] as $msg)
+					@if(Session::has($msg))
 
+						<div class="alert alert-{{ $msg }} alert-block"> 
+	  						<a class="close" data-dismiss="alert" href="#">
+	  							×
+				  			</a>
+		              		<h4 class="alert-heading">{{ ucfirst($msg) }}</h4>
+		          			<p>{!! session($msg) !!}</p>
+		          			
+		      			</div>
+
+
+						
+				    @endif
+				@endforeach
+			
     			<div class="quick-actions_homepage">
       				<ul class="quick-actions">
 				        <li class="bg_lb"> 

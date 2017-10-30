@@ -44,6 +44,7 @@ class SkillsController extends Controller
         
         Skill::create($skill);
 
+        $request->session()->flash('success', $skill['name']. ' was successful Created');
         return redirect('admin/about/skills/');
     }
 
@@ -93,6 +94,7 @@ class SkillsController extends Controller
         }
         $skill->save();
 
+        $request->session()->flash('success', $skill->name. ' was successful Updated');
         return redirect('admin/about/skills');
     }
 
@@ -107,10 +109,8 @@ class SkillsController extends Controller
         
         $skill = Skill::findOrFail($skill->id);
         $skill->delete();
-
+        \Session::flash('success', 'You have delete ' . $skill->name);
         return back();
-
-
     }
 
 }

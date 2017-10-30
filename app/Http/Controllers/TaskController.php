@@ -48,6 +48,7 @@ class TaskController extends Controller
     
         Task::create($post);
 
+        $request->session()->flash('success', 'This Task was successful Created');
         return redirect('/admin/tasks');
     }
 
@@ -95,6 +96,7 @@ class TaskController extends Controller
         if(isset($updatedData['priority'])){ $task->priority = $updatedData['priority'];}
         $task->save();
         
+        $request->session()->flash('success', 'This Task was successful Updated');
         return redirect('/admin/tasks');
 
     }
@@ -109,6 +111,7 @@ class TaskController extends Controller
     {
         $task->delete();
 
+        \Session::flash('success', 'You have delete this Task');
         return redirect('/admin/tasks');
     }
 
@@ -117,6 +120,7 @@ class TaskController extends Controller
         $task->done = 1;
         $task->save();
 
+        $request->session()->flash('success', 'You have completed this Task');
         return redirect('/admin/tasks');
     }
 
