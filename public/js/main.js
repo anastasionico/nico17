@@ -365,6 +365,7 @@ function offsetTop_AboutSkills() {
 	var skillsSection_OffsetTop = skillsSection.offsetTop;
 	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
 	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo');
+
 	var clientHeight = document.documentElement.clientHeight;
 
 	if (scrollPosition > skillsSection_OffsetTop - clientHeight / 1.5) {
@@ -372,8 +373,7 @@ function offsetTop_AboutSkills() {
 			(function (i) {
 				setTimeout(function () {
 					skillsDivs[i].className = 'sectionCenter--content about--section-skills-divs is-visible';
-					skillsDivsLogo[i].className = 'about--section-skills-divs-logo mt-1 smallCircle flexCenter visibleWidth ';
-					// var width = window.getComputedStyle( document.querySelector('.skillsDivs'+[i]), ':after').getPropertyValue('width');
+					skillsDivsLogo[i].className = 'about--section-skills-divs-logo mt-1 smallCircle flexCenter';
 				}, i * 150);
 			})(i);
 		}

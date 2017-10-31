@@ -15,7 +15,8 @@ Auth::routes();
 
 
 Route::get('/', function () {
-    return view('home');
+    $skills = \App\Skill::all();
+    return view('home', compact('skills'));
 });
 Route::get('/projects', function () {
     return view('projects');

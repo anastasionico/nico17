@@ -62,9 +62,17 @@
 				@include borderRadius(50%);
 				position:relative;
 				background-color:$white;
-				
-				&:after {
-					content: "";
+				@include media(tabletPortrait){
+					margin: 1rem auto;
+				}
+				& small{
+					position: absolute;
+				    top: 0;
+				    left: 3rem;
+				    width: 6rem;
+				    text-align: left;
+				}
+				& span{
 				    background-color: $blue;
 				    position: absolute;
 				    height: 5px;
@@ -72,50 +80,19 @@
 				    left: 18px;
 				    z-index: -1;	
 				    width: 0px;
-				   	transition: width 0.3s ease-in-out;
-				}
+				   	transition: width 3.3s ease-in-out;
+				}				
+				
 				@include media(tabletPortrait){
-					margin: 1rem auto;
-				}
-
-				// The following selectors are active when javascript add the visibleWidth to the &-logo divs, they change the width of the after making an animation
-				&.visibleWidth#skill-1:after {
-					width: 250px;
-				}
-				&.visibleWidth#skill-2:after {
-				    width: 167px;
-				}
-				&.visibleWidth#skill-3:after {
-				 	width: 54px;
-				}
-				&.visibleWidth#skill-4:after {
-					width: 250px;
-				}
-				&.visibleWidth#skill-5:after {
-				    width: 167px;
-				}
-				&.visibleWidth#skill-6:after {
-				 	width: 54px;
-				}
-				&.visibleWidth#skill-7:after {
-					width: 250px;
-				}
-				&.visibleWidth#skill-8:after {
-				    width: 167px;
-				}
-				&.visibleWidth#skill-9:after {
-				 	width: 54px;
-				}
-				&.visibleWidth#skill-10:after {
-					width: 250px;
-				}
-
-				@include media(tabletPortrait){
-					@for $i from 1 through 10{
+					@for $i from 1 through 25{
 						@if $i % 2 == 0 { 
-							&.visibleWidth#skill-#{$i}:after{
+							&#skill-#{$i} span{
 								transform: rotate(180deg);
 								transform-origin: left;
+							}
+							&#skill-#{$i} small{
+								left: -7rem;
+								text-align: right;
 							}	
 					  	}
 					}

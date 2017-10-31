@@ -85,56 +85,20 @@
 
  		<div class="about--section-skills pt-5 pb-5">
  			<div class="sectionCenter">
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-1">
-						html
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-2">
-						Css
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-3">
-						Sass
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-4">
-						html
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-5">
-						Css
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-6">
-						Sass
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-7">
-						html
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-8">
-						Css
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-9">
-						Sass
-					</span>
-				</div>
-				<div class="sectionCenter--content about--section-skills-divs">
-					<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-10">
-						html
-					</span>
-				</div>
+ 				@php
+ 					$i = 0;
+ 				@endphp
+ 				@foreach($skills as $skill)
+ 					@php
+ 						$i++
+ 					@endphp
+ 					<div class="sectionCenter--content about--section-skills-divs">
+						<span  class="about--section-skills-divs-logo mt-1 smallCircle flexCenter" id="skill-{{$i}}">
+							<small>{{ $skill->name}}</small>
+							<span style="width: {{ $skill->value*2.5 }}px"></span>
+						</span>
+					</div>
+ 				@endforeach
 			</div>	
  		</div>
  		

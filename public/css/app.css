@@ -776,8 +776,21 @@ footer.menuVisible {
   background-color: #fff;
 }
 
-.about--section-skills-divs-logo:after {
-  content: "";
+@media (min-width: 768px) {
+  .about--section-skills-divs-logo {
+    margin: 1rem auto;
+  }
+}
+
+.about--section-skills-divs-logo small {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  width: 6rem;
+  text-align: left;
+}
+
+.about--section-skills-divs-logo span {
   background-color: #35a;
   position: absolute;
   height: 5px;
@@ -785,90 +798,153 @@ footer.menuVisible {
   left: 18px;
   z-index: -1;
   width: 0px;
-  -webkit-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 3.3s ease-in-out;
+  transition: width 3.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
-  .about--section-skills-divs-logo {
-    margin: 1rem auto;
-  }
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-1:after {
-  width: 250px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-2:after {
-  width: 167px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-3:after {
-  width: 54px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-4:after {
-  width: 250px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-5:after {
-  width: 167px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-6:after {
-  width: 54px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-7:after {
-  width: 250px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-8:after {
-  width: 167px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-9:after {
-  width: 54px;
-}
-
-.about--section-skills-divs-logo.visibleWidth#skill-10:after {
-  width: 250px;
-}
-
-@media (min-width: 768px) {
-  .about--section-skills-divs-logo.visibleWidth#skill-2:after {
+  .about--section-skills-divs-logo#skill-2 span {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;
             transform-origin: left;
   }
 
-  .about--section-skills-divs-logo.visibleWidth#skill-4:after {
+  .about--section-skills-divs-logo#skill-2 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-4 span {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;
             transform-origin: left;
   }
 
-  .about--section-skills-divs-logo.visibleWidth#skill-6:after {
+  .about--section-skills-divs-logo#skill-4 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-6 span {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;
             transform-origin: left;
   }
 
-  .about--section-skills-divs-logo.visibleWidth#skill-8:after {
+  .about--section-skills-divs-logo#skill-6 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-8 span {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;
             transform-origin: left;
   }
 
-  .about--section-skills-divs-logo.visibleWidth#skill-10:after {
+  .about--section-skills-divs-logo#skill-8 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-10 span {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: left;
             transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-10 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-12 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-12 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-14 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-14 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-16 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-16 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-18 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-18 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-20 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-20 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-22 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-22 small {
+    left: -7rem;
+    text-align: right;
+  }
+
+  .about--section-skills-divs-logo#skill-24 span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+
+  .about--section-skills-divs-logo#skill-24 small {
+    left: -7rem;
+    text-align: right;
   }
 }
 
