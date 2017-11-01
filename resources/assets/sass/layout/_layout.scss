@@ -250,16 +250,16 @@ footer{
 		border:1px solid $white;
 		color: $white;
 		th{
-			padding:0.2rem;
+			padding:0.3rem;
 			background-color:$blue;
-
+			text-transform: capitalize;
 		}
 		td{
-			padding:0.2rem;
-			background-color:$azure;
+			padding:0.3rem;
+			color: $blue;
+			background-color:$gray;
 		}
 	}
-	
 	
 	.gist{
 		cursor: pointer;

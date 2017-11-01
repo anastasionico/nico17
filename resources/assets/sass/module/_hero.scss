@@ -44,6 +44,9 @@
 		@include skewY(10deg);
 	    text-align: center;
 	    color: $white;
+	    @include media(tabletPortrait){
+	    	width: 768px;
+	    }
 	    h1{
 	    	margin-bottom: 1rem;
 	    	@include media(tabletPortrait){

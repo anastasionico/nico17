@@ -156,7 +156,6 @@ function offsetTop_Hamburger_scrollBalls_home()
 	}	
 }
 
-
 function offsetTop_Hamburger_scrollBalls_whitePage()
 {
 	var scrollPosition = window.scrollY;
@@ -184,7 +183,8 @@ function offsetTop_Hamburger_scrollBalls_whitePage()
 	}
 }
 
-function offsetTop_hero(){
+function offsetTop_hero()
+{
 	var scrollPosition = window.scrollY;
 	var content = document.querySelector(".hero--section-content");
 	var foreground = document.querySelector(".hero--section-foreground");
@@ -198,11 +198,6 @@ function offsetTop_hero(){
 	if(formContact !== null ){
 		formContact.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
 	}
-	
-
-	
-	
-	
 }
 
 function offsetTop_Hamburger_scrollBalls() 
@@ -308,9 +303,7 @@ function offsetTop_AboutSkills()
 	var skillsSection_OffsetTop = skillsSection.offsetTop;
 	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
 	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo') 
-
 	var clientHeight = document.documentElement.clientHeight;
-
 
 	if( scrollPosition > skillsSection_OffsetTop - (clientHeight/1.5)){
 		for (var i = 0; i < skillsDivs.length; i++) {

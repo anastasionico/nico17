@@ -365,7 +365,6 @@ function offsetTop_AboutSkills() {
 	var skillsSection_OffsetTop = skillsSection.offsetTop;
 	var skillsDivs = document.getElementsByClassName('about--section-skills-divs');
 	var skillsDivsLogo = document.getElementsByClassName('about--section-skills-divs-logo');
-
 	var clientHeight = document.documentElement.clientHeight;
 
 	if (scrollPosition > skillsSection_OffsetTop - clientHeight / 1.5) {

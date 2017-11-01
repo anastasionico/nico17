@@ -42,7 +42,14 @@
 .d-block{
 	display:block;
 }
+.d-inline{
+	display:inline;
+}
 
+// float
+.f-right{
+	float:right;
+}
 
 // margin
 .mt-1{
@@ -82,7 +89,10 @@
 .pb-5{
 	padding-bottom:5rem;
 }
-
+.py-3{
+	padding-top:3rem;
+	padding-bottom:3rem;
+}
 
 
 // text alignment

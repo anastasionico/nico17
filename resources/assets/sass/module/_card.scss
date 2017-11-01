@@ -1,0 +1,112 @@
+.card{
+	position:relative;
+	top: -50px;	
+	margin: 1rem auto;
+	overflow:hidden;
+	opacity: 0;
+	@include borderRadius(3px)
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
+	transition: all 0.3s ease-in-out;
+
+	@include media(tabletPortrait){
+		top: 0;	
+	}
+			
+	&--image{
+		height: 150px;
+		background-color:lightblue;		
+		background-position:center;
+		background-size:cover;
+		padding:1.5rem;
+		@include media(tabletPortrait){
+			height: 200px;
+		}
+	}
+	&--caption{
+		padding:1.5rem;
+		p{
+			margin: 0.7rem 0;
+		}
+		em{
+			font-size: 0.7rem;
+			display:block;			
+			margin-bottom:0.7rem; 
+		}
+		&-CatnDate{
+			b, em{
+				font-size: 0.7rem;
+				display: inline-block;
+				float: left;
+			}
+			em{
+				float: right;	
+				margin-bottom: 0;
+				@include media(tabletPortrait){
+					margin-bottom:0.7rem; 
+				}
+
+
+			}
+		}
+	}
+}
+
+.miniCard{
+	position:relative;
+	display:inline-block;
+	margin: 0.5rem auto;
+	width:150px; 
+	overflow:hidden;
+	opacity: 0;
+	@include borderRadius(3px)
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
+	transition: all 0.3s ease-in-out;
+	
+	@include media(tabletPortrait){
+		top: 0;	
+		width:250px;
+		
+	}
+			
+	&--image{
+		height: 100px;
+		background-color:lightblue;		
+		background-position:center;
+		background-size:cover;
+		padding:1rem;
+		@include media(tabletPortrait){
+			height: 150px;
+		}
+	}
+	&--caption{
+		padding:0.5rem;
+		p{
+			margin: 0.5rem 0;
+		}
+		em{
+			font-size: 0.5rem;
+			display:block;			
+			margin-bottom:0.5rem; 
+		}
+		h4{
+			margin-bottom:0.5rem; 		
+		}
+		&-CatnDate{
+			b, em{
+				font-size: 0.7rem;
+				display: inline-block;
+				float: left;
+			}
+			em{
+				float: right;	
+				margin-bottom: 0;
+				@include media(tabletPortrait){
+					margin-bottom:0.5rem; 
+				}
+
+
+			}
+		}
+
+	}
+}

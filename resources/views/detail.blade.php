@@ -10,23 +10,25 @@
 	</div>
 @endsection
 
-@section('work')
+@section('homeAbout')
 
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page skewed">	
+	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h1>Laravel</h1>
+					
+					<span class="my-1 d-block">
+						<h3 class="d-inline">{{ ucfirst('coding') }}</h3>	
+						<em class="f-right clearfix">{{date("d-m-Y")}}</em>	
+					</span>
 					
 					<hr class="border-blue my-1">
 
-					<em class="my-1  d-block">{{date("d-m-Y")}}</em>
-
-					<p>
+					<h5>
 						The Laravel framework has a few system requirements. Of course, all of these requirements are satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
 
 						However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
-					</p>
+					</h5>
 					
 				</div>
 			</div>
@@ -99,9 +101,6 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
-
-		
-		
 
 		<div class="oneThird" >
 			<div class="oneThird--big">
@@ -189,9 +188,206 @@
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
-		</div>		
+		</div>
 
-		
+	</section>
+@endsection
+
+@section('work')
+	<section class="bg-blue c-white ">	
+		<h3 class="text-center py-3">Follow this series</h3>
+		<div class="fullWidth" style="background-color: #35a">
+			
+				
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+			<div class="miniCard is-visible">
+				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
+				<div class="miniCard--caption">
+					<div class="miniCard--caption-CatnDate clearfix">
+						<b>
+							Category
+						</b>	
+						<em>
+							28-09-2017
+						</em>	
+					</div>
+					<h4>Cation Consulting</h4>
+					<a class="btn">See details</a>
+				</div>	
+			</div>
+
+
+			
+ 		</div>
+	</section>
+@endsection
+
+@section('homeTestimonial')
+	<section class="bg-white c-blue detail--page  skewed">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content">
@@ -273,11 +469,10 @@
 
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
-
-
-
 	</section>
 	
+
 @endsection
+
 
 
