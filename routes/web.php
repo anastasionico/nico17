@@ -52,5 +52,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::group(['prefix' => 'about/'], function(){
         Route::resource('skills', 'SkillsController');
     });
-});
 
+    Route::group(['prefix' => 'projects/'], function(){
+         Route::resource('projects', 'ProjectController');
+    });
+
+    
+});

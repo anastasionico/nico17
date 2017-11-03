@@ -23,12 +23,12 @@
           		<i class="icon icon-briefcase"></i> 
           		<span>Project</span>
           		<span class="label label-important">3</span>
-    		</a>
+    		  </a>
         	<ul>
+              <li><a href="/admin/projects/projects">Projects</a></li>
           		<li><a href="#">Home Text</a></li>
           		<li><a href="#">Project Page Text</a></li>
-          		<li><a href="#">Projects list</a></li>
-    		</ul>
+          </ul>
       	</li>
       	<li class="submenu"> 
 	        <a href="#">

@@ -44,7 +44,7 @@
           					Detail
       					</a> 
   					</li>
-  					<li class="bg_lb"> 
+  					<li class="bg_dy"> 
   						<a href="/admin/tasks"> 
   							<i class="icon-check-empty"></i> 
   							<span class="label label-important">{{ count($tasksUndone)}}</span> 
@@ -55,6 +55,12 @@
   						<a href="/admin/about/skills"> 
 							<i class="icon-wrench"></i> 
   							Skills
+						</a> 
+					</li>
+					<li class="bg_lv"> 
+  						<a href="/admin/projects/projects"> 
+							<i class="icon-briefcase"></i> 
+  							Projects
 						</a> 
 					</li>
   				</ul>

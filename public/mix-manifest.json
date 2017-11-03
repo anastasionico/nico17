@@ -1,5 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/main.js": "/js/main.js"
+    "/js/jquery.dataTables.min.js": "/js/jquery.dataTables.min.js",
+    "/js/main.js": "/js/main.js",
+    "/js/select2.min.js": "/js/select2.min.js",
+    "/js/matrix.tables.js": "/js/matrix.tables.js",
+    "/js/matrix.js": "/js/matrix.js",
+    "/js/jquery.uniform.js": "/js/jquery.uniform.js",
+    "/js/jquery.ui.custom.js": "/js/jquery.ui.custom.js",
+    "/js/bootstrap.min.js": "/js/bootstrap.min.js"
 }
