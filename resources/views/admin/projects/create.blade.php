@@ -2,6 +2,10 @@
 
 	@section('title', 'Anastasionico.uk | Dashboard')
 
+  @section('head')
+    <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+  @endsection
+
 	@section('content')
 		<div id="content">
 
@@ -62,7 +66,7 @@
 				            <div class="control-group">
 				              <label class="control-label">Content *</label>
 				              <div class="controls">
-				                <textarea name="content" class="span11" placeholder="content"></textarea>
+				                <textarea name="CKcontent" class="span11" placeholder="content"></textarea>
 				                <span class="help-block">Single or multiple words with at least 5 characters</span>
 				              </div>
 				            </div>
@@ -190,19 +194,32 @@
           							<span class="help-block">Boolean, Do I provide support before and after?</span>
             					</div>
         					</div>
+                  
+                  <textarea name="editor1"></textarea>
+    
+  
 
-            				<div class="form-actions">
-              					<button type="submit" class="btn btn-success">Save</button>
-            				</div>
+          				<div class="form-actions">
+            					<button type="submit" class="btn btn-success">Save</button>
+          				</div>
+
 				        </form>
 			        </div>
 			      </div>
 			    </div>
 			    
 			  </div>	
-	      	</div>
+    	</div>
 
 		</div>
+    <script>
+      CKEDITOR.replace( 'CKcontent' );
+    </script>
 	@endsection
+	
+
+
+	
+
 
 	

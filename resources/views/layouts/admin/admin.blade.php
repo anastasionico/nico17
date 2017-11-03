@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-
+    @yield('head')  
   </head>
 <body>
 
@@ -25,27 +25,27 @@
   
 
 
-  <script src="/matrixAdmin/js/excanvas.min.js"></script> 
-  <script src="/matrixAdmin/js/jquery.min.js"></script> 
-  <script src="/matrixAdmin/js/jquery.ui.custom.js"></script> 
-  <script src="/matrixAdmin/js/bootstrap.min.js"></script> 
-  <script src="/matrixAdmin/js/jquery.flot.min.js"></script> 
-  <script src="/matrixAdmin/js/jquery.flot.resize.min.js"></script> 
-  <script src="/matrixAdmin/js/jquery.peity.min.js"></script> 
-  <script src="/matrixAdmin/js/fullcalendar.min.js"></script> 
-  <script src="/matrixAdmin/js/matrix.js"></script> 
-  <script src="/matrixAdmin/js/matrix.dashboard.js"></script> 
-  <script src="/matrixAdmin/js/jquery.gritter.min.js"></script> 
-  <script src="/matrixAdmin/js/matrix.interface.js"></script> 
-  <script src="/matrixAdmin/js/matrix.chat.js"></script> 
-  <script src="/matrixAdmin/js/jquery.validate.js"></script> 
-  <script src="/matrixAdmin/js/matrix.form_validation.js"></script> 
-  <script src="/matrixAdmin/js/jquery.wizard.js"></script> 
-  <script src="/matrixAdmin/js/jquery.uniform.js"></script> 
-  <script src="/matrixAdmin/js/select2.min.js"></script> 
-  <script src="/matrixAdmin/js/matrix.popover.js"></script> 
-  <script src="/matrixAdmin/js/jquery.dataTables.min.js"></script> 
-  <script src="/matrixAdmin/js/matrix.tables.js"></script> 
+  <script src="{{ asset('/matrixAdmin/js/excanvas.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.ui.custom.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/bootstrap.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.flot.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.flot.resize.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.peity.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/fullcalendar.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.dashboard.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.gritter.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.interface.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.chat.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.validate.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.form_validation.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.wizard.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.uniform.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/select2.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.popover.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.dataTables.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.tables.js')}}"></script> 
 
   <script type="text/javascript">
     // This function is called from the pop-up menus to transfer to
