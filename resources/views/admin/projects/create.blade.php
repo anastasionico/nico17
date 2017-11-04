@@ -195,10 +195,6 @@
             					</div>
         					</div>
                   
-                  <textarea name="editor1"></textarea>
-    
-  
-
           				<div class="form-actions">
             					<button type="submit" class="btn btn-success">Save</button>
           				</div>
@@ -213,7 +209,12 @@
 
 		</div>
     <script>
-      CKEDITOR.replace( 'CKcontent' );
+      CKEDITOR.replace( 'CKcontent', {
+        uiColor: '#3355aa',
+        
+      });
+
+      
     </script>
 	@endsection
 	

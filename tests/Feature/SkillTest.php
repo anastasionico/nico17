@@ -103,4 +103,18 @@ class SkillTest extends TestCase
     
   }
 
+
+  /** @test */ 
+  public function skill_are_visible_on_index_page(){
+    // given a visitor and a skill
+    $this->withoutExceptionHandling();
+    $user = factory('App\User')->create();
+    $skill = factory('App\Skill')->create(['name' => 'cooking', 'value'=> 99]);
+    
+    // when he visits the home page 
+    // then he will see a skill and its value
+    $response = $this->get('/');
+    $response = $this->get('')
+            ->assertSee($skill->name);
+  }
 }
