@@ -27,12 +27,18 @@ class ProjectImage extends TestCase
 		]);
     }
 
-    // /** @test */
-    // public function an_admin_can_see_all_images_of_a_selected_project()
-    // {
-    // 	// given an admin, a project, and images of the project
+    /** @test */
+    public function an_admin_can_see_all_images_of_a_selected_project()
+    {
+    	// given an admin, a project, and images of the project
+ 		$this->withoutExceptionHandling();
+ 		$this->be( $user = factory('App\User')->create());
+		$project = factory('App\Project')->create();  	
+ 		$image = factory('App\ProjectImage')->create(['project_id' => $project->id]);  	
     	
-    // 	// when the admin goes to the images page of the project
-    // 	// he will see the image
-    // }
+    	// when the admin goes to the images page of the project
+    	$this->get('/admin/projects/projects/'. $project->id .'/images')
+    			->assertSee($image->alt);
+    	// he will see the image
+    }
 }

@@ -15,8 +15,10 @@ class ProjectImageController extends Controller
      */
     public function index(Project $project)
     {
-        $project = Project::find($project->id);
-        dd($project);
+        $images = Project::find($project->id)->images;
+        
+        // dd($images->all());
+        return view("admin/projects/images/index", compact('project', 'images'));
     }
 
     /**
