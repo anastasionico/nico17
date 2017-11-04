@@ -76,12 +76,14 @@
 					                  			<td>
 					                  				<a href="{{ $project->cta_link }}" target="_blank"> 
 					                  					{{ ucfirst($project->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
-
-					                  				</a>
+													</a>
 				                  				</td>
 					                  			<td>{{ $project->slug }}</td>
-					                  			<td>{{ $project->created_at }}</td>
+					                  			<td>{{ $project->created_at->diffForHumans() }}</td>
 					                  			<td>
+					                  				<a class="tip" href="projects/{{ $project->id }}/images" title="Images">
+			                  							<i class="icon-picture"></i>
+		                  							</a> 
 					                  				<a class="tip" href="#" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 

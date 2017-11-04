@@ -23,4 +23,6 @@ class ProjectTest extends TestCase
     		->assertSee($project->slug);
     	
     }
+    
+    
 }

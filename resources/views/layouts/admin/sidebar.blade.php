@@ -10,8 +10,7 @@
 	        <a href="#">
           		<i class="icon icon-user"></i> 
           		<span>About</span>
-          		<span class="label label-important">3</span>
-        	</a>
+          </a>
         	<ul>
           		<li><a href="#">Text</a></li>
           		<li><a href="#">Phases</a></li>
@@ -22,7 +21,7 @@
 	        <a href="#">
           		<i class="icon icon-briefcase"></i> 
           		<span>Project</span>
-          		<span class="label label-important">3</span>
+              <span class="label label-important">!</span>		
     		  </a>
         	<ul>
               <li><a href="/admin/projects/projects">Projects</a></li>
@@ -33,9 +32,8 @@
       	<li class="submenu"> 
 	        <a href="#">
     		    <i class="fa fa-file-text" aria-hidden="true"></i>
-          		<span>Blog</span>
-          		<span class="label label-important">3</span>
-    		</a>
+        		<span>Blog</span>
+          </a>
         	<ul>
           		<li><a href="#">Home Text</a></li>
           		<li><a href="#">Blog Page Text</a></li>
