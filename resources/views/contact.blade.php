@@ -3,7 +3,7 @@
 @section('hero')
 	<div class="hero--section flexCenter">
 		
-		{{-- <div class="flexCenter"> --}}
+
 
 			<form class="formContact">
 				<p>Hi, I am</p>
@@ -27,7 +27,7 @@
 				<input class="btn" type="submit" name="send" value="SEND">
 			</form>
 
-		{{-- </div> --}}
+
 
 	</div>
 @endsection

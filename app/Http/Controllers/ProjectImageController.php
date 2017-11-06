@@ -8,16 +8,11 @@ use App\Project;
 
 class ProjectImageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index(Project $project)
     {
         $images = Project::find($project->id)->images;
         
-        // dd($images->all());
         return view("admin/projects/images/index", compact('project', 'images'));
     }
 

@@ -3,7 +3,7 @@
 	@section('title', 'Anastasionico.uk | Dashboard')
 
   @section('head')
-    <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+
   @endsection
 
 	@section('content')
@@ -58,15 +58,17 @@
 				            <div class="control-group">
 				              <label class="control-label">Excerpt *</label>
 				              <div class="controls">
-				                <textarea name="excerpt" class="span11" placeholder="small description"></textarea>
-				                <span class="help-block">Single or multiple words with at least 5 characters</span>
+                        <textarea name="excerpt" class="span11" placeholder="content"></textarea>
+                        <span class="help-block">Single or multiple words with at least 5 characters</span>
 				              </div>
 				            </div>
 
 				            <div class="control-group">
 				              <label class="control-label">Content *</label>
 				              <div class="controls">
-				                <textarea name="CKcontent" class="span11" placeholder="content"></textarea>
+				                <textarea id="my-editor" name="excerpt" class="span11" placeholder="small description">
+                          {!! old('content', 'test editor content') !!}
+                        </textarea>
 				                <span class="help-block">Single or multiple words with at least 5 characters</span>
 				              </div>
 				            </div>
@@ -195,6 +197,8 @@
             					</div>
         					</div>
                   
+                  
+
           				<div class="form-actions">
             					<button type="submit" class="btn btn-success">Save</button>
           				</div>
@@ -208,13 +212,18 @@
     	</div>
 
 		</div>
+    
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script>
-      CKEDITOR.replace( 'CKcontent', {
-        uiColor: '#3355aa',
-        
-      });
-
-      
+      var options = {
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+      };
+    </script>
+    <script>
+      CKEDITOR.replace('my-editor', options);
     </script>
 	@endsection
 	
