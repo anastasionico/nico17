@@ -3,7 +3,8 @@
 	@section('title', 'Anastasionico.uk | Dashboard')
 
   @section('head')
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
   @endsection
 
 	@section('content')
@@ -66,7 +67,7 @@
 				            <div class="control-group">
 				              <label class="control-label">Content *</label>
 				              <div class="controls">
-				                <textarea id="my-editor" name="excerpt" class="span11" placeholder="small description">
+				                <textarea id="ckContent" name="excerpt" class="span11" placeholder="small description">
                           {!! old('content', 'test editor content') !!}
                         </textarea>
 				                <span class="help-block">Single or multiple words with at least 5 characters</span>
@@ -76,7 +77,7 @@
 				              <label class="control-label">Image *</label>
 				              <div class="controls">
 				                <input type="file" name="image" class="span11" placeholder="image" required />
-				                <span class="help-block">file .png, .jpeg</span>
+		                    <span class="help-block">File supported .png, .jpeg, .gif</span>
 				              </div>
 				            </div>
 				            <div class="control-group">
@@ -213,7 +214,6 @@
 
 		</div>
     
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script>
       var options = {
         filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -223,7 +223,7 @@
       };
     </script>
     <script>
-      CKEDITOR.replace('my-editor', options);
+      CKEDITOR.replace('ckContent', options);
     </script>
 	@endsection
 	

@@ -12,7 +12,6 @@ class ProjectImageController extends Controller
     public function index(Project $project)
     {
         $images = Project::find($project->id)->images;
-        
         return view("admin/projects/images/index", compact('project', 'images'));
     }
 
@@ -21,9 +20,10 @@ class ProjectImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Project $project)
     {
-        //
+        $project = Project::find($project->id);
+        return view("admin/projects/images/create", compact('project'));
     }
 
     /**
@@ -34,15 +34,21 @@ class ProjectImageController extends Controller
      */
     public function store(Request $request)
     {
+        
         $img = request()->validate([
-            'img'           => 'required|string',
+            'img'           => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'alt'           => 'required|string',
             'project_id'    => 'required|exists:projects,id'
         ]);
 
-        ProjectImage::create($img);
+
+        $imageName = request()->alt . '.' .request()->img->getClientOriginalExtension();
+        request()->img->move(public_path('img/projects'), $imageName);
+        
+        ProjectImage::create(['img' => $imageName, 'alt' => $request->alt,'project_id' => $request->project_id ]);
         $request->session()->flash('success', 'the image was successful added to the database');
-        return redirect('admin/projects/projects');
+        return redirect("admin/projects/projects/$request->project_id/images");
+        
     }
 
     /**
