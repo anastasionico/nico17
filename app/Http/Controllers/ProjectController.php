@@ -36,7 +36,24 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $project = request()->validate([
+            'name'      => 'required|string',
+            'slug'      => 'required|alpha_dash',
+            'content'   => 'required|min:50|string',
+            'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'cta_link'  => 'url',
+            'excerpt'   => 'required|min:50|string',
+            'seo'       => 'required|boolean',
+            'ecommerce' => 'required|boolean',
+            'responsive'        => 'required|boolean',
+            'social_marketing'  => 'required|boolean',
+            'host_support'      => 'required|boolean',
+        ]);
+
+        Project::create($project);
+
+        $request->session()->flash('success', 'This Project was successful Created');
+        return redirect('/admin/projects/projects');
     }
 
     /**

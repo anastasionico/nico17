@@ -34,7 +34,6 @@ class ProjectImageController extends Controller
      */
     public function store(Request $request)
     {
-        
         $img = request()->validate([
             'img'           => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'alt'           => 'required|string',

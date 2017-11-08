@@ -46,16 +46,33 @@ class ProjectImage extends TestCase
     	$this->withoutExceptionHandling();
     	$this->be( $user = factory('App\User')->create());
     	$project = factory('App\Project')->create();
-    	$image = factory('App\ProjectImage')->create();
+    	$image = factory('App\ProjectImage')->make();
     	
     	// when I upload an image using the project/project/1/image url
     	$this->post('/admin/projects/projects/'. $project->id .'/images', $image->toArray());
     	
     	// then the image as to be in the database and the project_id match the project
     	$this->assertDatabaseHas('project_images',[
-    		'img' => $image->img,
+    		'alt' => $image->alt,
 		]);
     }
+
+    /** @test */
+    public function an_admin_can_create_a_project()
+    {
+    	// given an admin
+    	$this->withoutExceptionHandling();
+    	$this->be(factory('App\User')->create());
+    	$project = factory('App\Project')->make();
+
+    	// when he send a request to store a project
+    	$this->post('admin/projects/projects', $project->toArray() );
+    	// then the project has to appear into the database
+    	$this->assertDatabaseHas('projects', [
+    		'name' => $project->name
+		]);
+    }
+    // THE TEST FOR PROJECT STORE WORKS IMPLEMENT THE FORM NOW
 
 
 }
