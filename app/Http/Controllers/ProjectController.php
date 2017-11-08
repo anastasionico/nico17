@@ -36,19 +36,27 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
+
         $project = request()->validate([
-            'name'      => 'required|string',
-            'slug'      => 'required|alpha_dash',
+            'name'      => 'required|min:5|string',
+            'slug'      => 'required|min:5|alpha_dash',
+            'excerpt'   => 'required|min:50|string|',
             'content'   => 'required|min:50|string',
             'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'cta_link'  => 'url',
-            'excerpt'   => 'required|min:50|string',
-            'seo'       => 'required|boolean',
-            'ecommerce' => 'required|boolean',
-            'responsive'        => 'required|boolean',
-            'social_marketing'  => 'required|boolean',
-            'host_support'      => 'required|boolean',
+            'cta_link'  => 'url|nullable',
+            'seo'       => 'boolean',
+            'ecommerce' => 'boolean',
+            'responsive'        => 'boolean',
+            'social_marketing'  => 'boolean',
+            'host_support'      => 'boolean',
         ]);
+
+        // creating the image beforer the creation of the record into the database
+        $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+        request()->img->move(public_path('img/projects'), $imageName);
+        $project['img'] = $imageName;
+
 
         Project::create($project);
 

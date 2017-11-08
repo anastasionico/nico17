@@ -69,8 +69,8 @@
 				              		<tbody>
 				              			@foreach($projects as $project)
 				              				<tr class="odd gradeX">
-					                  			<td style="width: 50px">
-					                  				<img src="{{ $project->img }}" alt='{{ $project->img }}'>
+					                  			<td style="width: 50px;text-align: center;">
+					                  				<img style='max-height: 75px' src='{{ asset("img/projects/$project->img") }}' alt='{{ $project->img }}'>
 					                  			</td>
 					                  			<td>{{ $project->id }}</td>
 					                  			<td>

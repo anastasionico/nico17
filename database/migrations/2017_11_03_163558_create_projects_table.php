@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('slug')->unique();
             $table->longText('content');
             $table->string('img');
-            $table->string('cta_link');
+            $table->string('cta_link')->nullable();
             $table->text('excerpt');
             $table->boolean('seo');
             $table->boolean('ecommerce');

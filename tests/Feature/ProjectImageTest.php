@@ -63,16 +63,20 @@ class ProjectImage extends TestCase
     	// given an admin
     	$this->withoutExceptionHandling();
     	$this->be(factory('App\User')->create());
-    	$project = factory('App\Project')->make();
+    	$project = factory('App\Project')->make([
+    		'name' 		=> 'this is a project',
+    		'excerpt'	=> 'Distinctio quos consequatur necessitatibus facere expedita cumque facilis exercitationem nihil enim voluptatem consectetur veniam'
+		]);
 
     	// when he send a request to store a project
     	$this->post('admin/projects/projects', $project->toArray() );
     	// then the project has to appear into the database
     	$this->assertDatabaseHas('projects', [
-    		'name' => $project->name
-		]);
+    		'name' 		=> $project->name,
+    	]);
     }
-    // THE TEST FOR PROJECT STORE WORKS IMPLEMENT THE FORM NOW
+    
+    
 
 
 }
