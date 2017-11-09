@@ -125,25 +125,4 @@ class TaskController extends Controller
     }
 
 }
-    
-  // public function update(Request $request, $id)
-  //   {
-  //       //validate
-  //       $this->validate(request(),[
-  //           'name' => 'required',
-  //           'description' => 'nullable',
-  //           'priority' => 'integer',
-  //           'user_id' => 'integer|required'
-  //       ]);
-        
-  //       //save
-  //       $task = Task::find($id);
-  //       $task->name = $request->input('name');
-  //       $task->description = $request->input('description');
-  //       $task->priority = $request->input('priority');
-  //       $task->user_id = $request->input('user_id');
-  //       $task->save();
-        
-  //       //redirect
-  //       return redirect("/tasks");
-  //   }
+   

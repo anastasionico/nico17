@@ -56,6 +56,7 @@
 				          	</div>
 				          	<div class="widget-content nopadding">
 					            <table class="table table-bordered table-striped">
+					              	
 					              	<thead>
 				                		<tr>
 				                  			<th>Image</th>
@@ -66,6 +67,7 @@
 						                	<th></th>
 						                </tr>
 				              		</thead>
+				              		
 				              		<tbody>
 				              			@foreach($projects as $project)
 				              				<tr class="odd gradeX">
@@ -87,26 +89,24 @@
 					                  				<a class="tip" href="#" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-			                  						<a class="tip" href="#" title="Delete">
-		                  								<i class="icon-remove"></i>
-		              								</a> 
+			                  						{{ Form::open([
+		              									'method' => 'DELETE', 
+		              									'action' => ['ProjectController@destroy' , $project->id],
+		              									'style' => 'display:inline-block'
+														]) 
+													}}
+														
+															{{ Form::button('<i class="icon-remove"></i>', 
+																array(
+																	'type' => 'submit', 
+																	'style' => 'color:#aaa;border:0;background:transparent;')) 
+															}}
+														
+													{{ Form::close() }}
+
 					                  			</td>
 					                  		</tr>		
 				              			@endforeach
-				              			{{-- <tr class="odd gradeX">
-				                  			<td>Trident</td>
-				                  			<td>Internet Explorer 4.0</td>
-				                  			<td>Win 95+</td>
-				                  			<td class="center"> 4</td>
-				                  			<td class="center">X</td>
-				                		</tr>
-				                		<tr class="even gradeC">
-				                  			<td>Trident</td>
-				                  			<td>	Internet Explorer 5.0</td>
-				                  			<td>Win 95+</td>
-				                  			<td class="center">5</td>
-				                  			<td class="center">C</td>
-				                		</tr> --}}
 				              		</tbody>
 			            		</table>
 				          	</div>

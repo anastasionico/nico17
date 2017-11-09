@@ -65,8 +65,10 @@
 
 					            	@foreach($skills as $skill)
 					            		<li> 
+					            			
 					            			<span class="icon24 icomoon-icon-arrow-up-2 green"></span> 
 				            				{{$skill->name}}
+				            				
 				            				<span class="pull-right strong">
 				            					
 				            					<a class="tip" href="skills/{{$skill->id}}/edit" title="Edit">
@@ -87,13 +89,9 @@
 														}}
 													
 												{{ Form::close() }}
-			            						
-
-													
-
-
-
+			            					
 			            					</span>
+				            				
 				            				<div class="progress progress-striped ">
 					                  			<div style="width: {{$skill->value}}%;" class="bar">
 					                  				{{$skill->value}}

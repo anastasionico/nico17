@@ -58,9 +58,9 @@ class ProjectController extends Controller
         $project['img'] = $imageName;
 
 
-        Project::create($project);
+        $newProject = Project::create($project);
 
-        $request->session()->flash('success', 'This Project was successful Created');
+        \Session::flash('success', "The project '$$newProject->name' has been created ");
         return redirect('/admin/projects/projects');
     }
 
@@ -106,6 +106,9 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        \Session::flash('success', "The project '$project->name' has been deleted ");
+        return redirect('/admin/projects/projects/');
     }
 }

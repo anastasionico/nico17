@@ -24,5 +24,40 @@ class ProjectTest extends TestCase
     	
     }
     
+    /** @test */
+    public function an_admin_can_create_a_project()
+    {
+        // given an admin
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $project = factory('App\Project')->make([
+            'name'      => 'this is a project',
+            'excerpt'   => 'Distinctio quos consequatur necessitatibus facere expedita cumque facilis exercitationem nihil enim voluptatem consectetur veniam'
+        ]);
+
+        // when he send a request to store a project
+        $this->post('admin/projects/projects', $project->toArray() );
+        // then the project has to appear into the database
+        $this->assertDatabaseHas('projects', [
+            'name'      => $project->name,
+        ]);
+    }
+    
+    /** @test */
+    public function an_admin_can_delete_a_project(){
+        // given an admin and a project
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $project = factory('App\Project')->create();
+        
+        // when the admin delete the project 
+        // $this->call('DELETE', 'admin/about/skills/'. $skill->id, ['_token' => csrf_token()]);
+        $this->call('DELETE', "admin/projects/projects/$project->id");
+        
+        // then the project does not appear in the database anymore
+        $this->assertDatabaseMissing('projects', ['id' => $project->id]);
+
+        
+    }
     
 }

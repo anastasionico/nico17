@@ -232,15 +232,14 @@
 
     <script type="text/javascript">
       var fieldName = document.querySelector('#fieldName');
-      var fieldSlug = document.querySelector('#fieldSlug');
       
-      fieldName.onkeyup = function()
-      {
-        fieldSlug.value = fieldName.value.replace(/\s+/g, '-').toLowerCase();
-        
+      fieldName.addEventListener("keyup", createSlug);
+      fieldName.addEventListener("focusout", createSlug);
 
-      };
-      
+      function createSlug(){
+        var fieldSlug = document.querySelector('#fieldSlug');
+        fieldSlug.value = fieldName.value.replace(/\s+/g, '-').toLowerCase(); 
+      }
       
     </script>
 	@endsection
