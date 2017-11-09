@@ -14,7 +14,7 @@
 	    			<a href="/admin/tasks" class="current">Tasks</a> 
 	    			<a href="/admin/tasks/edit/{{ $task->id }}" class="current">Edit</a> 
     			</div>
-			    <h1>Update this task</h1>
+			    <h1>Edit {{ $task->description }}</h1>
 		  	</div>
 
 			<div class="container-fluid">

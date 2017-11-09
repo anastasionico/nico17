@@ -101,7 +101,7 @@ class TaskTest extends TestCase
 
 		// when the user goes to the update page, then he has to see the admin/edit page
 		$this->get('/admin/tasks/edit/'. $task->id)
-			->assertSee("Update this task");
+			->assertSee("Edit $task->description");
 	}
 
 	/** @test */
@@ -118,7 +118,7 @@ class TaskTest extends TestCase
 		$this->post('/admin/tasks/update/' . $task->id, $taskNew);
 
 		$this->assertDatabaseHas('tasks',[
-				'description' => 'This is a new description',
+				'description' => $taskNew['description'],
 			]);
 
 	}

@@ -83,7 +83,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        $project = Project::findOrFail($project->id);
+        return view('admin/projects/edit', compact('project'));
     }
 
     /**
@@ -95,7 +96,31 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        request()->validate([
+            'name'      => 'min:5|string',
+            'slug'      => 'min:5|alpha_dash',
+            'excerpt'   => 'min:50|string|',
+            'content'   => 'min:50|string',
+            'img'       => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'cta_link'  => 'url|nullable',
+            'seo'       => 'boolean',
+            'ecommerce' => 'boolean',
+            'responsive'        => 'boolean',
+            'social_marketing'  => 'boolean',
+            'host_support'      => 'boolean',
+        ]);
+
+        if($request->img){
+            // creating the image beforer the creation of the record into the database
+            $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+            request()->img->move(public_path('img/projects'), $imageName);
+            $project->img = $imageName;    
+        }
+
+        $project->update($request->all());
+
+        \Session::flash('success', "$project->name has been successfully updated");
+        return back();
     }
 
     /**

@@ -44,7 +44,8 @@ class ProjectTest extends TestCase
     }
     
     /** @test */
-    public function an_admin_can_delete_a_project(){
+    public function an_admin_can_delete_a_project()
+    {
         // given an admin and a project
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
@@ -52,12 +53,30 @@ class ProjectTest extends TestCase
         
         // when the admin delete the project 
         // $this->call('DELETE', 'admin/about/skills/'. $skill->id, ['_token' => csrf_token()]);
-        $this->call('DELETE', "admin/projects/projects/$project->id");
+        $this->call('DELETE', "admin/projects/projects/$project->id", ['_token' => csrf_token()]);
         
         // then the project does not appear in the database anymore
         $this->assertDatabaseMissing('projects', ['id' => $project->id]);
-
-        
     }
+
+    /** @test */
+    public function an_admin_can_update_a_project()
+    {
+        // given a admin and a project
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $project = factory('App\Project')->create();
+        
+        $projectUpdate['name'] = 'anastasioNicoTomHughes';
+        
+        // when the admin update the project
+        $this->call('PUT',  "admin/projects/projects/$project->id", ['name' => $projectUpdate['name']]);
+
+        // then the data in the database has to be updated
+        $this->assertDatabaseHas('projects',[
+            'name' => $projectUpdate['name'],
+            ]);
+    }
+    // need to check the form to update a project
     
 }

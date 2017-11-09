@@ -86,7 +86,7 @@
 					                  				<a class="tip" href="projects/{{ $project->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a> 
-					                  				<a class="tip" href="#" title="Edit">
+					                  				<a class="tip" href="projects/{{ $project->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
 			                  						{{ Form::open([

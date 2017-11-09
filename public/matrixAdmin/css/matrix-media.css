@@ -21,9 +21,9 @@ body {
 }
 #sidebar > ul > li.active a{ color:#fff; text-decoration:none;}
 
-#sidebar > ul > li > a > .label {
+/*#sidebar > ul > li > a > .label {
 	background-color:#F66;
-}
+}*/
 #sidebar > ul > li > a:hover {
 	background-color: #3aa; color:#fff;
 }

@@ -4,7 +4,13 @@
         	<a href="/admin/dashboard"><i class="icon icon-dashboard"></i> <span>Dashboard</span></a> 
       	</li>
       	<li> 
-      		<a href="/admin/tasks"><i class="icon icon-check"></i> <span>Tasks</span></a> 
+      		<a href="/admin/tasks">
+            <i class="icon icon-check"></i> 
+            <span>Tasks</span>
+            <span class="label label-success">
+              <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+            </span>    
+          </a> 
   		</li>
       	<li class="submenu"> 
 	        <a href="#">
@@ -14,17 +20,31 @@
         	<ul>
           		<li><a href="#">Text</a></li>
           		<li><a href="#">Phases</a></li>
-          		<li><a href="/admin/about/skills">Skills</a></li>
+          		<li>
+                <a href="/admin/about/skills">
+                  Skills
+                  <span class="label label-success">
+                    <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                  </span>    
+                </a>
+              </li>
         	</ul>
       	</li>
       	<li class="submenu"> 
 	        <a href="#">
           		<i class="icon icon-briefcase"></i> 
           		<span>Project</span>
-              <span class="label label-important">!</span>		
-    		  </a>
+          </a>
         	<ul>
-              <li><a href="/admin/projects/projects">Projects</a></li>
+              <li>
+                <a href="/admin/projects/projects">
+                  Projects
+                  <span class="label label-important">
+                    <i class="fa fa-hourglass-o" aria-hidden="true"></i>
+
+                  </span>
+                </a>
+              </li>
           		<li><a href="#">Home Text</a></li>
           		<li><a href="#">Project Page Text</a></li>
           </ul>
