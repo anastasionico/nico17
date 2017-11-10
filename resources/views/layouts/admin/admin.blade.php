@@ -3,15 +3,25 @@
   <head>
     <title>@yield('title')</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap-responsive.min.css" />
+      
+    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/colorpicker.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/datepicker.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/uniform.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/select2.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/matrix-style.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/matrix-media.css">
+    <link rel="stylesheet" href="/matrixAdmin/css/bootstrap-wysihtml5.css">
     <link rel="stylesheet" href="/matrixAdmin/css/fullcalendar.css" />
-    <link rel="stylesheet" href="/matrixAdmin/css/matrix-style.css" />
-    <link rel="stylesheet" href="/matrixAdmin/css/matrix-media.css" />
     <link href="/matrixAdmin/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="/matrixAdmin/css/jquery.gritter.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+
+
 
     @yield('head')  
     
@@ -26,15 +36,25 @@
   
 
 
+
   <script src="{{ asset('/matrixAdmin/js/excanvas.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.ui.custom.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/bootstrap.min.js')}}"></script> 
+  <script src="{{ asset('/matrixAdmin/js/bootstrap-colorpicker.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/bootstrap-datepicker.js')}} "></script> 
+  {{-- <script src="{{ asset('/matrixAdmin/js/jquery.toggle.buttons.js')}} "></script>  --}}
+  <script src="{{ asset('/matrixAdmin/js/masked.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.uniform.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/select2.min.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/matrix.form_common.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/wysihtml5-0.3.0.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/jquery.peity.min.js')}} "></script> 
+  <script src="{{ asset('/matrixAdmin/js/bootstrap-wysihtml5.js')}} "></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.flot.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.flot.resize.min.js')}}"></script> 
-  <script src="{{ asset('/matrixAdmin/js/jquery.peity.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/fullcalendar.min.js')}}"></script> 
-  <script src="{{ asset('/matrixAdmin/js/matrix.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.dashboard.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.gritter.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.interface.js')}}"></script> 
@@ -42,8 +62,6 @@
   <script src="{{ asset('/matrixAdmin/js/jquery.validate.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.form_validation.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.wizard.js')}}"></script> 
-  <script src="{{ asset('/matrixAdmin/js/jquery.uniform.js')}}"></script> 
-  <script src="{{ asset('/matrixAdmin/js/select2.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.popover.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.dataTables.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.tables.js')}}"></script> 

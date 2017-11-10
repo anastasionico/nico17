@@ -60,7 +60,7 @@ class ProjectController extends Controller
 
         $newProject = Project::create($project);
 
-        \Session::flash('success', "The project '$$newProject->name' has been created ");
+        \Session::flash('success', "The project '$newProject->name' has been created ");
         return redirect('/admin/projects/projects');
     }
 
@@ -96,7 +96,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        request()->validate([
+        $projectUpdate = request()->validate([
             'name'      => 'min:5|string',
             'slug'      => 'min:5|alpha_dash',
             'excerpt'   => 'min:50|string|',
@@ -109,15 +109,14 @@ class ProjectController extends Controller
             'social_marketing'  => 'boolean',
             'host_support'      => 'boolean',
         ]);
-
         if($request->img){
             // creating the image beforer the creation of the record into the database
             $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
             request()->img->move(public_path('img/projects'), $imageName);
-            $project->img = $imageName;    
+            $projectUpdate['img'] = $imageName;
         }
-
-        $project->update($request->all());
+        $project->update($projectUpdate);
+        // $project->update($project);
 
         \Session::flash('success', "$project->name has been successfully updated");
         return back();

@@ -3,7 +3,6 @@
 	@section('title', 'Anastasionico.uk | Dashboard')
 
   @section('head')
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
   @endsection
 
@@ -80,17 +79,28 @@
 				                <span class="help-block">Single or multiple words with at least 50 characters</span>
 				              </div>
 				            </div>
-				            <div class="control-group">
+				            {{-- <div class="control-group">
 				              <label class="control-label">Image *</label>
 				              <div class="controls">
 				                <input type="file" name="img" class="span11" value="{{ old('img')}}" required />
                         <span class="help-block">File supported: jpeg, png, jpg, gif, svg</span>
 				              </div>
-				            </div>
+				            </div> --}}
+                    <div class="control-group">
+                      <label class="control-label">Image *</label>
+                      <div class="controls">
+                        <div class="uploader" id="uniform-undefined">
+                          <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ old('img')}}" required />
+                          <span class="filename">No file selected</span>
+                          <span class="action">Choose File</span>
+                        </div>
+                        <span class="help-block">File supported: jpeg, png, jpg, gif, svg</span>
+                      </div>
+                    </div>
 				            <div class="control-group">
 				              <label class="control-label">CTA</label>
 				              <div class="controls">
-				                <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.u"k value="{{ old('cta_link')}}" />
+				                <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.uk" value="{{ old('cta_link')}}" />
 				                <span class="help-block">Valid URL, need the protocol: http, https, ftp, etc</span>
 				              </div>
 				            </div>
@@ -216,8 +226,11 @@
     	</div>
 
 		</div>
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/go.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
+
       var options = {
         filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
         filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
