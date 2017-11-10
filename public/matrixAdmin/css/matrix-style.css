@@ -52,18 +52,8 @@ hr{ border-top-color:#1B367A;}
 	width: 100%;
 	z-index: -9;
 }
-#header h1 {
-	background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
-	height: 31px;
-	left: 20px;
-	line-height: 600px;
-	overflow: hidden;
-	position: relative;
-	top: 26px;
-	width: 191px;
-}
-#header h1 a {
-	display: block;
+#header h4 {
+	padding: 2rem;
 }
 /* Search input */
 #search {
@@ -1273,9 +1263,10 @@ form {
 }
 /* Responsive design */
 @media (max-width: 480px) {
-#header h1 {
-	top: 10px; left:5px;
-	margin: 3px auto;
+#header h4 {
+	padding-top: 1rem;
+	margin-left: -2rem;
+	text-align: center;
 }
 #user-nav {
 	position: relative;
@@ -1464,8 +1455,8 @@ form {
 body {
 	background:#49CCED
 }
-#header h1 {
-	top:10px; left:35px;
+#header h4 {
+	padding: 0.5rem;
 }
 #search {
 	top:5px

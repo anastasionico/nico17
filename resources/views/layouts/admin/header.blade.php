@@ -1,6 +1,6 @@
-<div id="header">
-	<h4>
-  		<a style="color: #35a" href="dashboard.html">Anastasio<span style="color:white;">nico.uk</span></a>
+<div id="header" style="">
+	<h4 >
+  		<a style="color: #35a;font-size: 1rem;" href="dashboard.html">Anastasio<span style="color:white;">nico.uk</span></a>
 	</h4>
 </div>
 
@@ -67,7 +67,7 @@
     </ul>
 </div>
 
-<div id="search">
+{{-- <div id="search">
     <input type="text" placeholder="Search here..."/>
     <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
+</div> --}}

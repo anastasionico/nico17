@@ -12,7 +12,7 @@
 
 	  	<div id="content-header">
 		    <div id="breadcrumb"> 
-		    	<a href="/admin/home" title="Go to Home" class="tip-bottom">
+		    	<a href="/admin/dashboard" title="Go to Home" class="tip-bottom">
 		    		<i class="icon-home"></i> Home
 	    		</a> 
     			<a href="/admin/projects/projects" class="current">Projects</a> 
@@ -88,10 +88,10 @@
 		              </div>
 		            </div>
 		            <div class="control-group">
-                      <label class="control-label">Image *</label>
+                      <label class="control-label">Image</label>
                       <div class="controls">
                         <div class="uploader" id="uniform-undefined">
-                          <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ old('img')}}" required />
+                          <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ old('img')}}"/>
                           <span class="filename">No file selected</span>
                           <span class="action">Choose File</span>
                         </div>

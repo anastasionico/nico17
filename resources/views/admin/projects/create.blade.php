@@ -11,7 +11,7 @@
 
 		  	<div id="content-header">
 			    <div id="breadcrumb"> 
-			    	<a href="/admin/home" title="Go to Home" class="tip-bottom">
+			    	<a href="/admin/dashboard" title="Go to Home" class="tip-bottom">
 			    		<i class="icon-home"></i> Home
 		    		</a> 
 	    			<a href="/admin/projects/projects" class="current">Projects</a> 
@@ -79,14 +79,7 @@
 				                <span class="help-block">Single or multiple words with at least 50 characters</span>
 				              </div>
 				            </div>
-				            {{-- <div class="control-group">
-				              <label class="control-label">Image *</label>
-				              <div class="controls">
-				                <input type="file" name="img" class="span11" value="{{ old('img')}}" required />
-                        <span class="help-block">File supported: jpeg, png, jpg, gif, svg</span>
-				              </div>
-				            </div> --}}
-                    <div class="control-group">
+				            <div class="control-group">
                       <label class="control-label">Image *</label>
                       <div class="controls">
                         <div class="uploader" id="uniform-undefined">

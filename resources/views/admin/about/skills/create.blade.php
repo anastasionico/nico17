@@ -7,7 +7,7 @@
 
 		  	<div id="content-header">
 			    <div id="breadcrumb"> 
-			    	<a href="/admin/home" title="Go to Home" class="tip-bottom">
+			    	<a href="/admin/dashboard" title="Go to Home" class="tip-bottom">
 			    		<i class="icon-home"></i> Home
 		    		</a> 
 	    			<a href="/admin/about/skills" class="current">Skills</a> 

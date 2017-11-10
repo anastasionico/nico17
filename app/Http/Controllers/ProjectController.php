@@ -110,16 +110,16 @@ class ProjectController extends Controller
             'host_support'      => 'boolean',
         ]);
         if($request->img){
-            // creating the image beforer the creation of the record into the database
+            // creating the image before the creation of the record into the database
             $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
             request()->img->move(public_path('img/projects'), $imageName);
             $projectUpdate['img'] = $imageName;
         }
         $project->update($projectUpdate);
-        // $project->update($project);
+        
 
-        \Session::flash('success', "$project->name has been successfully updated");
-        return back();
+        \Session::flash('success', "Project '$project->name' has been updated ");
+        return redirect('/admin/projects/projects');
     }
 
     /**

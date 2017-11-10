@@ -6,7 +6,7 @@
 		<div id="content">
 	    <!--breadcrumbs-->
 	    <div id="content-header">
-	      <div id="breadcrumb"> <a href="/admin/home" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+	      <div id="breadcrumb"> <a href="/admin/dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
 	    </div>
 	    <!--End-breadcrumbs-->
 
@@ -15,7 +15,7 @@
 	      	<div class="quick-actions_homepage">
 	        	<ul class="quick-actions">
 		          	<li class="bg_lb span3"> 
-			          	<a href="/" target="_blank"> 
+			          	<a href="/admin/dashboard" target="_blank"> 
 	          				<i class="icon-home"></i> 
           					Home
       					</a> 
@@ -60,6 +60,7 @@
 					<li class="bg_lv"> 
   						<a href="/admin/projects/projects"> 
 							<i class="icon-briefcase"></i> 
+							<span class="label label-important">{{ count($projects) }}</span> 
   							Projects
 						</a> 
 					</li>
@@ -135,7 +136,40 @@
             			</div>
           			</div>
         		</div>
+        		<div class="widget-box">
+		         	<div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-briefcase"></i> </span>
+		            	<h5>Projects</h5>
+		          	</div>
+		          	<div class="widget-content nopadding collapse in" id="collapseG2">
+		            	<ul class="recent-posts">
+		            		@foreach($projects as $project)
+		            			<li>
+			                		<div class="user-thumb"> 
+			                			<img style='max-height: 75px' src='{{ asset("img/projects/$project->img") }}' alt='{{ $project->img }}'>
+		                			</div>
+			                		<div class="article-post"> 
+			                			<span class="user-info"> 
+			                				<a href="/project/{{ $project->slug }}">
+			                					{{ ucfirst($project->name) }}
+			                				</a> 
+			                				<a href="{{ $project->cta_link }}" target="_blank">
+			                					<p>{{ $project->cta_link }}</p>
+			                				</a> 
+			                			</span>
+			                  			<p>
+			                  				<a href="http://nico17.dev/admin/projects/projects/{{ $project->id }}/edit">{{ $project->excerpt }}</a> 
+		                  				</p>
+			                		</div>
+			              		</li>
+		            		@endforeach
+		              		<li>
+		              			<a href="/admin/projects/projects" class="btn btn-warning btn-mini">View All</a>
+		                	</li>
+		            	</ul>
+		          	</div>
+		        </div>
 	        </div>
+
 	        <div class="span6">
 				<div class="widget-box">
 		          	<div class="widget-title"> 
