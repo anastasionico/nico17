@@ -123,94 +123,57 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
-
+		
 		@php
 			$projectsIncrement = 0
 		@endphp			
 		@foreach($projects as $project)
-			@php
-				$projectsIncrement++
-			@endphp		
-			@if( $projectsIncrement %2 != 0 )
-				<div class="oneThird" >
-					<div class="oneThird--big">
-						<div class="oneThird--big--content">
-							<div class="card">
-								<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
-								<div class="card--caption">
-									<h4>{{ $project->name }}</h4>
-									<p>
-										{{ $project->excerpt }}
-									</p>
-									<em>
-										@if($project->seo)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
-										@endif
-										@if($project->ecommerce)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> eCommerce &emsp;
-										@endif
-										@if($project->responsive)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Responsive &emsp;
-										@endif
-										@if($project->social_marketing)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Social Marketing &emsp;
-										@endif
-										@if($project->host_support)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Host & Support &emsp;
-										@endif
-									</em>
-									@if( $project->cta_link)
-										<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
-									@endif
-									<a href="/project/{{ $project->slug }}" class="btn">See details</a>
-								</div>	
-							</div>
-							
-						</div>
-					</div>
+			<div class="oneThird" >
+				@php
+					$projectsIncrement++
+				@endphp		
+				@if( $projectsIncrement %2 == 0 )
 					<div class="oneThird--small">&nbsp;</div>
-				</div>			
-			@else
-				<div class="oneThird" >
-					<div class="oneThird--small">&nbsp;</div>
-					<div class="oneThird--big">
-						<div class="oneThird--big--content">
-							<div class="card">
-								<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
-								<div class="card--caption">
-									<h4>{{ $project->name }}</h4>
-									<p>
-										{{ $project->excerpt }}
-									</p>
-									<em>
-										@if($project->seo)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
-										@endif
-										@if($project->ecommerce)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> eCommerce &emsp;
-										@endif
-										@if($project->responsive)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Responsive &emsp;
-										@endif
-										@if($project->social_marketing)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Social Marketing &emsp;
-										@endif
-										@if($project->host_support)
-											<i class="fa fa-line-chart" aria-hidden="true"></i> Host & Support &emsp;
-										@endif
-									</em>
-									@if( $project->cta_link)
-										<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+				@endif
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
+							<div class="card--caption">
+								<h4>{{ $project->name }}</h4>
+								<p>
+									{{ $project->excerpt }}
+								</p>
+								<em>
+									@if($project->seo)
+										<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
 									@endif
-									<a href="/project/{{ $project->slug }}" class="btn">See details</a>
-								</div>	
-							</div>
-							
+									@if($project->ecommerce)
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i> eCommerce &emsp;
+									@endif
+									@if($project->responsive)
+										<i class="fa fa-mobile" aria-hidden="true"></i> Responsive &emsp;
+									@endif
+									@if($project->social_marketing)
+										<i class="fa fa-commenting-o" aria-hidden="true"></i> Social Marketing &emsp;
+									@endif
+									@if($project->host_support)
+										<i class="fa fa-ambulance" aria-hidden="true"></i> Host & Support &emsp;
+									@endif
+								</em>
+								@if( $project->cta_link)
+									<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+								@endif
+								<a href="/project/{{ $project->slug }}" class="btn">See details</a>
+							</div>	
 						</div>
+						
 					</div>
-				</div>			
-			@endif
+				</div>
+			</div>			
 		@endforeach
+
+
 
 		<div class="sectionCenter mt-5">
 			<div class="sectionCenter--content">
