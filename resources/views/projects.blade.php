@@ -20,9 +20,9 @@
 					<h3>My Projects</h3>
 				
 					<p>
-						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+						I have succesfully completed every of my <b>projects</b> either for companies and individuals.
 						<br>
-						I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+						I create completely personalized <b>websites</b> in which I implement bespoke CMS for a fast and easy usage.
 					</p>
 					
 					<hr class="border-white">
@@ -30,442 +30,55 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
-		
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
 
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
+		@php
+			$projectsIncrement = 0
+		@endphp			
+		@foreach($projects as $project)
+			<div class="oneThird" >
+				@php
+					$projectsIncrement++
+				@endphp		
+				@if( $projectsIncrement %2 == 0 )
+					<div class="oneThird--small">&nbsp;</div>
+				@endif
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
+							<div class="card--caption">
+								<h4>{{ ucfirst($project->name) }}</h4>
+								<p>
+									{{ ucfirst($project->excerpt) }}
+								</p>
+								<em>
+									@if($project->seo)
+										<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
+									@endif
+									@if($project->ecommerce)
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i> eCommerce &emsp;
+									@endif
+									@if($project->responsive)
+										<i class="fa fa-mobile" aria-hidden="true"></i> Responsive &emsp;
+									@endif
+									@if($project->social_marketing)
+										<i class="fa fa-commenting-o" aria-hidden="true"></i> Social Marketing &emsp;
+									@endif
+									@if($project->host_support)
+										<i class="fa fa-ambulance" aria-hidden="true"></i> Host & Support &emsp;
+									@endif
+								</em>
+								@if( $project->cta_link)
+									<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+								@endif
+								<a href="/projects/{{ $project->slug }}" class="btn">See details</a>
+							</div>	
+						</div>
+						
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Cation Consulting</h4>
-							<p>
-								Cation Consulting Limited is a small consultancy providing change management support in the areas
-							</p>
-							<em>
-								Responsive Webdesign and CMS
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-					
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>			
-
-		<div class="oneThird" >
-			<div class="oneThird--small">&nbsp;</div>
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<div class="card">
-						<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-						<div class="card--caption">
-							<h4>Yufash</h4>
-							<p>
-								Yufash believes there is no one better placed to create a woman’s perfect outfit, than the woman herself.
-
-								By engaging women in the design process from start to finish, they can see their own style creations brought to life.
-							</p>
-							<em>
-								Redesign website and CMS update
-							</em>
-
-							<a class="btn btn-ghost">Visit Website</a>
-							<a class="btn">See details</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>			
+			</div>			
+		@endforeach
 		
 
 		

@@ -7,7 +7,9 @@
 			<h1>
 				anastasio<span>nico.uk</span>
 			</h1>
-			<h3>Specialist in <br><b>Web Design</b>  and <br><b>Web Development</b></h3>
+			<h2>Artisan of the Web</h2>
+
+			<h5>Specialist in <b>Web Design</b> and <b>Web Development</b></h5>
 		</div>
 		
 		<div class="hero--section-foreground">
@@ -37,11 +39,11 @@
 				<div class="oneThird--big--content ">
 					<h3>About me</h3>
 				
-					<p>I am Nico.
+					<p>Hi, I am Nico.
 					<br>
-					The Italian speaker, movie and <b>design enthusiast</b>.
+					An Italian speaker, movies and <b>design enthusiast</b>.
 					<br> 
-					The one who can <b>code</b>, draw and make pasta at the same time.
+					I am the one who can <b>code</b>, draw and make pasta at the same time.
 					</p>
 
 					<hr class="border-blue">
@@ -113,9 +115,9 @@
 					<h3>My Projects</h3>
 				
 					<p>
-						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+						I have succesfully completed every of my <b>projects</b> either for companies and individuals.
 						<br>
-						I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+						I create completely personalized <b>websites</b> in which I implement bespoke CMS for a fast and easy usage.
 					</p>
 					
 					<hr class="border-white">
@@ -140,9 +142,9 @@
 						<div class="card">
 							<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
 							<div class="card--caption">
-								<h4>{{ $project->name }}</h4>
+								<h4>{{ ucfirst($project->name) }}</h4>
 								<p>
-									{{ $project->excerpt }}
+									{{ ucfirst($project->excerpt) }}
 								</p>
 								<em>
 									@if($project->seo)
@@ -164,7 +166,7 @@
 								@if( $project->cta_link)
 									<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
 								@endif
-								<a href="/project/{{ $project->slug }}" class="btn">See details</a>
+								<a href="/projects/{{ $project->slug }}" class="btn">See details</a>
 							</div>	
 						</div>
 						

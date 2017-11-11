@@ -16,15 +16,18 @@ Auth::routes();
 
 Route::get('/', function () {
     $skills = \App\Skill::all();
-    $projects = \App\Project::limit(5)->get();
+    $projects = \App\Project::limit(5)->orderBy('created_at', 'desc')->get();
     
                 
                 
     return view('home', compact('skills','projects'));
 });
-Route::get('/projects', function () {
-    return view('projects');
-});
+
+Route::get('/projects', 'ProjectFrontendController@index');
+Route::get('/projects/{param}', 'ProjectFrontendController@show');
+
+
+
 Route::get('/blog', function () {
     return view('blog');
 });

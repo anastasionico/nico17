@@ -1,10 +1,19 @@
 @extends('layouts.master')
 
+@section('head')
+	<style type="text/css">
+		.hero--section:before{
+			background-image: url("/img/projects/{{$content->img}}");
+			background-size: cover;
+		}		
+	</style>
+@endsection
+
 @section('hero')
 	<div class="hero--section">
 		
 		<div class="hero--section-content">
-			<h1>Laravel Promo Post</h1>
+			<h1>{{ ucfirst($content->name) }}</h1>
 		</div>
 		
 	</div>
@@ -12,22 +21,26 @@
 
 @section('homeAbout')
 
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">	
+	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page skewed">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					
 					<span class="my-1 d-block">
-						<h3 class="d-inline">{{ ucfirst('coding') }}</h3>	
-						<em class="f-right clearfix">{{date("d-m-Y")}}</em>	
+						<h3 class="d-inline">
+							@if( $content->category )
+								{{$content->category}}
+							@else
+								Project
+							@endif
+						</h3>	
+						<em class="f-right clearfix">{{ $content->created_at->toFormattedDateString() }}</em>	
 					</span>
 					
 					<hr class="border-blue my-1">
 
 					<h5>
-						The Laravel framework has a few system requirements. Of course, all of these requirements are satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
-
-						However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
+						{{ ucfirst($content->excerpt) }}
 					</h5>
 					
 				</div>
@@ -38,20 +51,7 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content detail--page-index">
-					<ul class="">
-						<li><a href='#'>one</a></li>
-						<li>
-						 	<ul>
-								<li><a href='#'>one</a></li>
-								<li><a href='#'>one</a></li>
-								<li><a href='#'>one</a></li> 		
-						 	</ul>
-						</li>
-						<li><a href='#'>one</a></li>
-						<li><a href='#'>one</a></li>
-						<li><a href='#'>one</a></li>
-					</ul>
-					<hr class="border-blue my-1">
+					{!! $content->content !!}
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
@@ -59,141 +59,42 @@
 
 		<div class="oneThird" >
 			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.		
-					</p>
+				<div class="oneThird--big--content detail--page-index">
+					<em>
+						@if($content->seo)
+							<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
+						@endif
+						@if($content->ecommerce)
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i> eCommerce &emsp;
+						@endif
+						@if($content->responsive)
+							<i class="fa fa-mobile" aria-hidden="true"></i> Responsive &emsp;
+						@endif
+						@if($content->social_marketing)
+							<i class="fa fa-commenting-o" aria-hidden="true"></i> Social Marketing &emsp;
+						@endif
+						@if($content->host_support)
+							<i class="fa fa-ambulance" aria-hidden="true"></i> Host & Support &emsp;
+						@endif
+					</em>
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<img class='clickable' src="img/blog/london.jpg">	
+		@if( $content->cta_link)
+			<div class="sectionCenter mt-5">
+				<div class="sectionCenter--content">
+					<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">Visit</a>
 				</div>
 			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-
-					<div class="alert alert-danger">
-						This is a Danger Alert 
-					</div>
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content clickable">
-					<script src="https://gist.github.com/xfbs/1188092.js"></script>
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content alert alert-danger">
-					This is a Danger Alert 
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content alert alert-warning">
-					This is a Warning Alert 
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content alert alert-success">
-					This is a success Alert 
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content alert alert-primary">
-					This is a primary Alert 
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content alert alert-info">
-					This is a info Alert 
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<img class='clickable' src="img/blog/hatfield.jpg">	
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<table>
-						<tr>
-							<th>Lorem</th>
-							<th>ipsum</th>
-							<th>sit amet</th>
-						</tr>
-						<tr>
-							<td>consectetur adipisicing elit</td>
-							<td>sed do eiusmod</td>
-							<td>tempor incididunt ut</td>
-						</tr>
-						<tr>
-							<td>labore et</td>
-							<td>dolore magna aliqua</td>
-							<td>Ut enim ad minim veniam</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>
-
+		@endif
 	</section>
+
 @endsection
 
-@section('work')
+{{-- @section('work')
+	// this is a div with other projects
 	<section class="bg-blue c-white ">	
 		<h3 class="text-center py-3">Follow this series</h3>
 		<div class="fullWidth" style="background-color: #35a">
@@ -384,9 +285,10 @@
 			
  		</div>
 	</section>
-@endsection
+@endsection --}}
 
-@section('homeTestimonial')
+{{-- @section('homeTestimonial')
+	// this is the section with the comment
 	<section class="bg-white c-blue detail--page  skewed">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
@@ -470,9 +372,74 @@
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 	</section>
-	
-
-@endsection
+@endsection --}}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- 
+#####  USE THIS TEMPLATE TO CREATE HR, SCRIPTS, IMAGES, ALERTS, TABLES AND SO ON.  #####
+
+<hr class="border-blue my-1">
+
+<div class="oneThird--big-- clickable">
+	<script src="https://gist.github.com/xfbs/1188092.js"></script>
+</div>
+
+
+<img class='clickable' src="img/blog/london.jpg">	
+
+
+<p class="alert alert-danger">
+	This is a Danger Alert 
+</p>
+
+<p class="alert alert-warning">
+	This is a Warning Alert 
+</p>
+
+<p class="alert alert-success">
+	This is a success Alert 
+</p>
+
+<p class="alert alert-primary">
+	This is a primary Alert 
+</p>
+
+<p class="alert alert-info">
+	This is a info Alert 
+</p>
+
+
+<table>
+	<tr>
+		<th>Lorem</th>
+		<th>ipsum</th>
+		<th>sit amet</th>
+	</tr>
+	<tr>
+		<td>consectetur adipisicing elit</td>
+		<td>sed do eiusmod</td>
+		<td>tempor incididunt ut</td>
+	</tr>
+	<tr>
+		<td>labore et</td>
+		<td>dolore magna aliqua</td>
+		<td>Ut enim ad minim veniam</td>
+	</tr>
+</table>
+
+ --}}

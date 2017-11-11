@@ -232,9 +232,6 @@ function offsetTop_Hamburger_scrollBalls_whitePage() {
 	var bgWhite = document.querySelectorAll('.mainSection .bg-white');
 	var bgBlue = document.querySelectorAll('.mainSection .bg-blue');
 
-	console.log(heroHeight);
-	console.log(scrollPosition);
-
 	if (scrollPosition > heroHeight) {
 		hamburger.forEach(function (line) {
 			line.classList.add('bg-blue');
