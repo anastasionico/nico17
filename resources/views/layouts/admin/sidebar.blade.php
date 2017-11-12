@@ -39,10 +39,9 @@
               <li>
                 <a href="/admin/projects/projects">
                   Projects
-                  <span class="label label-important">
-                    <i class="fa fa-hourglass-o" aria-hidden="true"></i>
-
-                  </span>
+                  <span class="label label-success">
+                    <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                  </span>              
                 </a>
               </li>
           		<li><a href="#">Home Text</a></li>
@@ -53,6 +52,9 @@
 	        <a href="#">
     		    <i class="fa fa-file-text" aria-hidden="true"></i>
         		<span>Blog</span>
+            <span class="label label-important">
+              <i class="fa fa-hourglass-o" aria-hidden="true"></i>
+            </span>
           </a>
         	<ul>
           		<li><a href="#">Home Text</a></li>

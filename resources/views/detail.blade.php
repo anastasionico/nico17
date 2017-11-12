@@ -97,32 +97,36 @@
 	
 	<section class="bg-blue c-white ">	
 		<h3 class="text-center py-3">
-			See other projects
+			@if( $content->category )
+				{{$content->category}}
+			@else
+				See other projects
+			@endif
 		</h3>
 		<div class="fullWidth bg-blue">
 			
-			@foreach($parents as $parent)
+			@foreach($otherContents as $otherContent)
 				<div class="miniCard is-visible">
-					<div class="miniCard--image" style="background-image:url('/img/projects/{{ $parent->img }}')"></div>
+					<div class="miniCard--image" style="background-image:url('/img/projects/{{ $otherContent->img }}')"></div>
 					<div class="miniCard--caption">
 						<div class="miniCard--caption-CatnDate clearfix">
 							<b>
-								@if( $parent->category )
-									{{$parent->category}}
+								@if( $otherContent->category )
+									{{$otherContent->category}}
 								@else
 									Project
 								@endif
 							</b>	
 							<em>
-								{{ $parent->created_at->toFormattedDateString() }}
+								{{ $otherContent->created_at->toFormattedDateString() }}
 							</em>	
 						</div>
-						<h4>{{$parent->name}}</h4>
-						<a href="/projects/{{ $parent->slug }}" class="btn">See details</a>
-						@if( $parent->cta_link)
-							<a href="{{ $parent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
-						@endif
+						<h4>{{$otherContent->name}}</h4>
 						
+						@if( $otherContent->cta_link)
+							<a href="{{ $otherContent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+						@endif
+						<a href="/projects/{{ $otherContent->slug }}" class="btn">See details</a>
 						
 					</div>	
 				</div>

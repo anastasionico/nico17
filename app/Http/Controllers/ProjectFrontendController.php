@@ -18,11 +18,11 @@ class ProjectFrontendController extends Controller
     	$content = Project::where('id', $param)
             ->orWhere('slug', $param)
             ->firstOrFail();
-        $parents = Project::where('id', '!=', $param)
+        $otherContents = Project::where('id', '!=', $param)
                     ->where('slug', '!=', $param)
-                    ->limit(5)
+                    ->limit(3)
                     ->orderBy('created_at', 'desc')
                     ->get();
-        return view('detail', compact('content', 'parents'));
+        return view('detail', compact('content', 'otherContents'));
     }
 }
