@@ -1939,29 +1939,23 @@ form.formContact input[type=submit] {
 }
 
 .miniCard {
-  position: relative;
   display: inline-block;
-  margin: 0.5rem auto;
-  width: 150px;
-  overflow: hidden;
-  opacity: 0;
+  margin: 2rem auto;
+  width: 75%;
   border-radius: 3px;
   -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
   box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
   .miniCard {
-    top: 0;
-    width: 250px;
+    margin: 1rem;
+    width: 400px;
   }
 }
 
 .miniCard--image {
   height: 100px;
-  background-color: lightblue;
   background-position: center;
   background-size: cover;
   padding: 1rem;
@@ -1974,21 +1968,21 @@ form.formContact input[type=submit] {
 }
 
 .miniCard--caption {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .miniCard--caption p {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .miniCard--caption em {
   font-size: 0.5rem;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .miniCard--caption h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .miniCard--caption-CatnDate b,
@@ -2007,6 +2001,11 @@ form.formContact input[type=submit] {
   .miniCard--caption-CatnDate em {
     margin-bottom: 0.5rem;
   }
+}
+
+.miniCard--caption .btn {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .flexCenter {

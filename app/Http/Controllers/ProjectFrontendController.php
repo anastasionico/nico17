@@ -9,7 +9,7 @@ class ProjectFrontendController extends Controller
 {
     public function index()
     {
-    	$projects = Project::orderBy('created_at', 'desc')->get();
+    	$projects = Project::orderBy('created_at', 'asc')->get();
     	return view('projects', compact('projects'));
     }
 
@@ -18,7 +18,11 @@ class ProjectFrontendController extends Controller
     	$content = Project::where('id', $param)
             ->orWhere('slug', $param)
             ->firstOrFail();
-
-        return view('detail', compact('content'));
+        $parents = Project::where('id', '!=', $param)
+                    ->where('slug', '!=', $param)
+                    ->limit(5)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+        return view('detail', compact('content', 'parents'));
     }
 }

@@ -21,7 +21,7 @@
 
 @section('homeAbout')
 
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page skewed">	
+	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page "> {{-- skewed	 --}}
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
@@ -93,199 +93,44 @@
 
 @endsection
 
-{{-- @section('work')
-	// this is a div with other projects
+@section('work')
+	
 	<section class="bg-blue c-white ">	
-		<h3 class="text-center py-3">Follow this series</h3>
-		<div class="fullWidth" style="background-color: #35a">
+		<h3 class="text-center py-3">
+			See other projects
+		</h3>
+		<div class="fullWidth bg-blue">
 			
-				
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-			<div class="miniCard is-visible">
-				<div class="miniCard--image" style="background-image:url('img/mobile-hero.png')"></div>
-				<div class="miniCard--caption">
-					<div class="miniCard--caption-CatnDate clearfix">
-						<b>
-							Category
-						</b>	
-						<em>
-							28-09-2017
-						</em>	
-					</div>
-					<h4>Cation Consulting</h4>
-					<a class="btn">See details</a>
-				</div>	
-			</div>
-
-
+			@foreach($parents as $parent)
+				<div class="miniCard is-visible">
+					<div class="miniCard--image" style="background-image:url('/img/projects/{{ $parent->img }}')"></div>
+					<div class="miniCard--caption">
+						<div class="miniCard--caption-CatnDate clearfix">
+							<b>
+								@if( $parent->category )
+									{{$parent->category}}
+								@else
+									Project
+								@endif
+							</b>	
+							<em>
+								{{ $parent->created_at->toFormattedDateString() }}
+							</em>	
+						</div>
+						<h4>{{$parent->name}}</h4>
+						<a href="/projects/{{ $parent->slug }}" class="btn">See details</a>
+						@if( $parent->cta_link)
+							<a href="{{ $parent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+						@endif
+						
+						
+					</div>	
+				</div>
+			@endforeach	
 			
  		</div>
 	</section>
-@endsection --}}
+@endsection
 
 {{-- @section('homeTestimonial')
 	// this is the section with the comment
