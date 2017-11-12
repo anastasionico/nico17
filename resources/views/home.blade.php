@@ -41,7 +41,7 @@
 				
 					<p>Hi, I am Nico.
 					<br>
-					An Italian speaker, movies and <b>design enthusiast</b>.
+					An <b>Italian</b> speaker, movies and design <b>enthusiast</b>.
 					<br> 
 					I am the one who can <b>code</b>, draw and make pasta at the same time.
 					</p>
@@ -66,16 +66,16 @@
 				<h5 class="about--section-phasis-caption">Design</h5>	
  			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
-				<span class="about--section-phasis-logo  bigCircle flexCenter">
-					<i class="fa fa-code fa-2x" aria-hidden="true"></i>
-				</span>
-				<h5 class="about--section-phasis-caption">Coding</h5>	
- 			</div>
- 			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">Testing</h5>	
+ 			</div>
+ 			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-phasis-logo  bigCircle flexCenter">
+					<i class="fa fa-code fa-2x" aria-hidden="true"></i>
+				</span>
+				<h5 class="about--section-phasis-caption">Coding</h5>	
  			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
@@ -115,9 +115,9 @@
 					<h3>My Projects</h3>
 				
 					<p>
-						I have succesfully completed every of my <b>projects</b> either for companies and individuals.
+						I have successfully completed every of my <b>projects</b> either for companies and individuals.
 						<br>
-						I create completely personalized <b>websites</b> in which I implement bespoke CMS for a fast and easy usage.
+						I create completely personalized <b>web applications</b> in which I implement bespoke CMS for a fast and easy usage.
 					</p>
 					
 					<hr class="border-white">

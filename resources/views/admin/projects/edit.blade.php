@@ -74,8 +74,11 @@
 		            <div class="control-group">
 		              <label class="control-label">Excerpt *</label>
 		              <div class="controls">
-                    <textarea name="excerpt" class="span11" placeholder="content">{{ $project->excerpt }}</textarea>
-                    <span class="help-block">Single or multiple words with at least 50 characters</span>
+                    <textarea name="excerpt" id='excerpt'  class="span11" placeholder="content">{{ $project->excerpt }}</textarea>
+                    <span class="help-block">
+                      One or multiple sentences with at least 50 characters.
+                      <span id='excerptSpan'></span>
+                    </span>   
 		              </div>
 		            </div>
                 <div class="control-group">
@@ -248,6 +251,16 @@
     function createSlug(){
       var fieldSlug = document.querySelector('#fieldSlug');
       fieldSlug.value = fieldName.value.replace(/\s+/g, '-').toLowerCase(); 
+    }
+
+    var excerpt = document.querySelector('#excerpt');
+    excerpt.onkeyup = function(){
+      var excerptLengthSpan = document.querySelector('#excerptSpan');
+      if(excerpt.value.length < 50){
+        excerptLengthSpan.innerHTML = "<b>" + (50 - excerpt.value.length) + " missing </b>";
+      }else{
+        excerptLengthSpan.innerHTML = "<b> Enough characters </b>";
+      }
     }
     
   </script>
