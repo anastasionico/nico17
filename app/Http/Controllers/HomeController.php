@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Task;
 use App\Skill;
 use App\Project;
+use App\BlogSupercategory;
+
 
 class HomeController extends Controller
 {
@@ -29,6 +31,7 @@ class HomeController extends Controller
         $tasksUndone = Task::where('done', 0)->orderBy('priority','desc')->get();
         $skills = Skill::all();
         $projects = Project::all();
-        return view('/admin/dashboard', compact('tasksUndone','skills','projects'));
+        $blogSupercategories = BlogSupercategory::all();
+        return view('/admin/dashboard', compact('tasksUndone','skills','projects', 'blogSupercategories'));
     }
 }

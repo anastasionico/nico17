@@ -222,6 +222,40 @@
 		            	</ul>
 		          	</div>
 	        	</div>
+
+	        	<div class="widget-box">
+		         	<div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="fa fa-file-text" aria-hidden="true"></i> </span>
+		            	<h5>Blog Supercategories</h5>
+		          	</div>
+		          	<div class="widget-content nopadding collapse in" id="collapseG2">
+		            	<ul class="recent-posts">
+		            		@foreach($blogSupercategories as $blogSupercategory)
+		            			<li>
+			                		<div class="user-thumb"> 
+			                			<img style='max-height: 75px' src='{{ asset("img/blogSupercategories/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
+		                			</div>
+			                		<div class="article-post"> 
+			                			<span class="user-info"> 
+			                				<a href="/blogSupercategory/{{ $blogSupercategory->slug }}">
+			                					{{ ucfirst($blogSupercategory->name) }}
+			                				</a> 
+			                				<a href="{{ $blogSupercategory->cta_link }}" target="_blank">
+			                					<p>{{ $blogSupercategory->cta_link }}</p>
+			                				</a> 
+			                			</span>
+			                  			<p>
+			                  				<a href="http://nico17.dev/admin/blogSupercategories/blogSupercategories/{{ $blogSupercategory->id }}/edit">{{ $blogSupercategory->excerpt }}</a> 
+		                  				</p>
+			                		</div>
+			              		</li>
+		            		@endforeach
+		              		<li>
+		              			<a href="/admin/blogSupercategories/blogSupercategories" class="btn btn-warning btn-mini">View All</a>
+		                	</li>
+		            	</ul>
+		          	</div>
+		        </div>
+
 	        </div>
 	      </div>
 	    </div>
