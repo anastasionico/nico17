@@ -25,7 +25,7 @@ class BlogSupercategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/blog/supercategory/create');
     }
 
     /**
@@ -36,7 +36,23 @@ class BlogSupercategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $superCategory = request()->validate([
+            'name'      => 'required|min:5|string',
+            'slug'      => 'required|min:5|alpha_dash',
+            'excerpt'   => 'required|min:50|string|',
+            'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        // creating the image beforer the creation of the record into the database
+        $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+        request()->img->move(public_path('img/blog'), $imageName);
+        $superCategory['img'] = $imageName;
+
+
+        $newsuperCategory = BlogSuperCategory::create($superCategory);
+
+        \Session::flash('success', "The super category '$newsuperCategory->name' has been created ");
+        return redirect('/admin/blog/supercategory');
     }
 
     /**

@@ -72,20 +72,20 @@
 				              			@foreach($blogSupercategories as $blogSupercategory)
 				              				<tr class="odd gradeX">
 					                  			<td style="width: 50px;text-align: center;">
-					                  				<img style='max-height: 75px' src='{{ asset("img/blogSupercategories/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
+					                  				<img style='max-height: 75px' src='{{ asset("img/blog/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
 					                  			</td>
 					                  			<td>{{ $blogSupercategory->id }}</td>
 					                  			<td>
-					                  				<a href="{{ $blogSupercategory->cta_link }}" target="_blank"> 
+					                  				<a href="{{ $blogSupercategory->slug }}" target="_blank"> 
 					                  					{{ ucfirst($blogSupercategory->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
 					                  			<td>{{ $blogSupercategory->slug }}</td>
 					                  			<td>{{ $blogSupercategory->created_at->diffForHumans() }}</td>
 					                  			<td>
-					                  				<a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/images" title="Images">
+					                  				{{-- <a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
-		                  							</a> 
+		                  							</a>  --}}
 					                  				<a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
