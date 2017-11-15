@@ -63,8 +63,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
     Route::group(['prefix' => 'projects/'], function(){
         Route::resource('projects', 'ProjectController');
-
         Route::resource('/projects/{project}/images', 'ProjectImageController');   
+    });
+
+    Route::group(['prefix' => 'blog/'], function(){
+        Route::resource('supercategory', 'BlogSupercategoryController');
+
     });
 
 

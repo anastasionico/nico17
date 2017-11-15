@@ -14,7 +14,8 @@ class BlogSupercategoryController extends Controller
      */
     public function index()
     {
-        //
+        $blogSupercategories = BlogSupercategory::all();
+        return view('admin/blog/supercategory/index', compact('blogSupercategories'));
     }
 
     /**
