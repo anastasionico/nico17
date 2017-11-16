@@ -66,17 +66,15 @@ class ProjectTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $project = factory('App\Project')->create();
-        
         $projectUpdate['name'] = 'anastasioNicoTomHughes';
         
         // when the admin update the project
         $this->call('PUT',  "admin/projects/projects/$project->id", ['name' => $projectUpdate['name']]);
+
 
         // then the data in the database has to be updated
         $this->assertDatabaseHas('projects',[
             'name' => $projectUpdate['name'],
             ]);
     }
-    // need to check the form to update a project
-    
 }

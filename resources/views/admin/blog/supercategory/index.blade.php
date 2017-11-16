@@ -51,7 +51,7 @@
 		    	<div class="row-fluid">
 		    		<div class="span12">
 		    			<div class="widget-box">
-				          	<div class="widget-title"> <span class="icon"> <i class="icon-briefcase"></i> </span>
+				          	<div class="widget-title"> <span class="icon"> <i class="icon-align-left"></i>  </span>
 					            <h5>Super Category </h5>
 				          	</div>
 				          	<div class="widget-content nopadding">
@@ -86,12 +86,12 @@
 					                  				{{-- <a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}
-					                  				<a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/edit" title="Edit">
+		                  							<a class="tip" href="/admin/blog/supercategory/{{ $blogSupercategory->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-			                  						{{-- {{ Form::open([
+			                  						{{ Form::open([
 		              									'method' => 'DELETE', 
-		              									'action' => ['blogSupercategorieController@destroy' , $blogSupercategory->id],
+		              									'action' => ['BlogsupercategoryController@destroy' , $blogSupercategory->id],
 		              									'style' => 'display:inline-block'
 														]) 
 													}}
@@ -102,7 +102,7 @@
 																	'style' => 'color:#aaa;border:0;background:transparent;')) 
 															}}
 													{{ Form::close() }}
-												</td> --}}
+												</td>
 					                  		</tr>		
 				              			@endforeach
 				              		</tbody>

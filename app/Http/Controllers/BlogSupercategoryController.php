@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\BlogSupercategory;
+use App\Blogsupercategory;
 use Illuminate\Http\Request;
 
-class BlogSupercategoryController extends Controller
+class BlogsupercategoryController extends Controller
 {
-    /**
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $blogSupercategories = BlogSupercategory::all();
+        $blogSupercategories = Blogsupercategory::all();
         return view('admin/blog/supercategory/index', compact('blogSupercategories'));
     }
 
@@ -49,7 +49,7 @@ class BlogSupercategoryController extends Controller
         $superCategory['img'] = $imageName;
 
 
-        $newsuperCategory = BlogSuperCategory::create($superCategory);
+        $newsuperCategory = BlogsuperCategory::create($superCategory);
 
         \Session::flash('success', "The super category '$newsuperCategory->name' has been created ");
         return redirect('/admin/blog/supercategory');
@@ -58,10 +58,10 @@ class BlogSupercategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\BlogSupercategory  $blogSupercategory
+     * @param  \App\Blogsupercategory  $supercategory
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogSupercategory $blogSupercategory)
+    public function show(Blogsupercategory $supercategory)
     {
         //
     }
@@ -69,34 +69,40 @@ class BlogSupercategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\BlogSupercategory  $blogSupercategory
+     * @param  \App\Blogsupercategory  $supercategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogSupercategory $blogSupercategory)
+
+    public function edit($supercategory)
     {
-        //
+        // dd($supercategory->id);
+        $supercategory = Blogsupercategory::findOrFail($supercategory->id);
+        return view('/admin/blog/supercategory/edit', compact('Blogsupercategory'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\BlogSupercategory  $blogSupercategory
+     * @param  \App\Blogsupercategory  $supercategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogSupercategory $blogSupercategory)
+    public function update(Request $request, Blogsupercategory $supercategory)
     {
-        //
+    
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\BlogSupercategory  $blogSupercategory
+     * @param  \App\Blogsupercategory  $supercategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogSupercategory $blogSupercategory)
+    public function destroy(Blogsupercategory $supercategory)
     {
-        //
+        $supercategory = Blogsupercategory::findOrFail($supercategory->id);
+        $supercategory->delete();
+        \Session::flash('success', 'You have delete ' . $supercategory->name);
+        return back();
     }
 }

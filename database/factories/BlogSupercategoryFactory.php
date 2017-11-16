@@ -3,15 +3,12 @@
 use Faker\Generator as Faker;
 use Illuminate\Http\UploadedFile;
 
-/* @var Illuminate\Database\Eloquent\Factory $factory */
-
-$factory->define(App\BlogSupercategory::class, function (Faker $faker) {
+$factory->define(App\Blogsupercategory::class, function (Faker $faker) {
     $img = $faker->word;
     return [
         'name' => $faker->word,
         'slug' => $faker->slug,
-        'excerpt' => $faker->sentence(10),
+        'excerpt' => $faker->sentence(15),
         'img' => UploadedFile::fake()->image("$img.png", 600, 600),
-
-    ];
+	];
 });

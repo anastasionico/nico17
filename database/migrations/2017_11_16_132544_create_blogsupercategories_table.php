@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlogSupercategoriesTable extends Migration
+class CreateBlogsupercategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateBlogSupercategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('blog_supercategories', function (Blueprint $table) {
+        Schema::create('blogsupercategories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('slug')->unique();
@@ -30,6 +30,6 @@ class CreateBlogSupercategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog_supercategories');
+        Schema::dropIfExists('blogsupercategories');
     }
 }

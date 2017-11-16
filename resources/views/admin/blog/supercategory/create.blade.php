@@ -25,7 +25,7 @@
 			    <div class="span12">
 			      <div class="widget-box">
 			        <div class="widget-title"> 
-			        	<span class="icon"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+			        	<span class="icon"><i class="icon-align-left"></i> </span>
 			          	<h5>Super Category Detail</h5>
 			        </div>
 			        
@@ -45,7 +45,7 @@
 			        @endif
 
 			        <div class="widget-content nopadding">
-			          	<form action="/admin/blog/supercategory" method="post" class="form-horizontal" enctype="multipart/form-data">>
+			          	<form action="/admin/blog/supercategory" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 			          		{{ csrf_field() }}
 				            <div class="control-group">

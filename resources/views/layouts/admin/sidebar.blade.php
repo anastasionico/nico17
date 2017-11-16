@@ -50,14 +50,20 @@
       	</li>
       	<li class="submenu"> 
 	        <a href="#">
-    		    <i class="fa fa-file-text" aria-hidden="true"></i>
+    		    <i class="icon-align-left"></i> 
         		<span>Blog</span>
-            <span class="label label-important">
-              <i class="fa fa-hourglass-o" aria-hidden="true"></i>
-            </span>
           </a>
         	<ul>
-          		<li><a href="#">Home Text</a></li>
+          		<li>
+                <a href="/admin/blog/supercategory">
+                  Manage
+                  <span class="label label-important">
+                    <i class="fa fa-hourglass-o" aria-hidden="true"></i>
+                  </span>
+                </a>
+                
+              </li>
+              <li><a href="#">Home Text</a></li>
           		<li><a href="#">Blog Page Text</a></li>
           		<li><a href="#">Posts list</a></li>
         	</ul>

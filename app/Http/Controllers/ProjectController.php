@@ -96,6 +96,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+        // dd($project);
         $projectUpdate = request()->validate([
             'name'      => 'min:5|string',
             'slug'      => 'min:5|alpha_dash',

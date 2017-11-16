@@ -64,6 +64,12 @@
   							Projects
 						</a> 
 					</li>
+					<li class="bg_lr"> 
+  						<a href="/admin/blog/supercategory"> 
+							<i class="icon-align-left"></i> 
+							Blog
+						</a> 
+					</li>
   				</ul>
 	      </div>
 	      <!--End-Action boxes-->    
@@ -224,7 +230,7 @@
 	        	</div>
 
 	        	<div class="widget-box">
-		         	<div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="fa fa-file-text" aria-hidden="true"></i> </span>
+		         	<div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-align-left"></i>  </span>
 		            	<h5>Blog Supercategories</h5>
 		          	</div>
 		          	<div class="widget-content nopadding collapse in" id="collapseG2">

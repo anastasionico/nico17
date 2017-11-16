@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BlogSupercategory extends Model
+class Blogsupercategory extends Model
 {
     protected $guarded = [];
+    protected $table = 'blogsupercategories';
 }
