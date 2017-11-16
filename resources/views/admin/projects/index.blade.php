@@ -76,10 +76,14 @@
 					                  			</td>
 					                  			<td>{{ $project->id }}</td>
 					                  			<td>
-					                  				<a href="{{ $project->cta_link }}" target="_blank"> 
-					                  					{{ ucfirst($project->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
-													</a>
-				                  				</td>
+					                  				@if($project->cta_link)
+						                  				<a href="{{ $project->cta_link }}" target="_blank"> 
+						                  					{{ ucfirst($project->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
+														</a>
+													@else
+														{{ ucfirst($project->name) }}
+					                  				@endif
+					                  			</td>
 					                  			<td>
 					                  				<a href="/projects/{{ $project->slug }}" target="_blank"> 
 					                  					{{ ucfirst($project->slug) }} <i class="fa fa-external-link" aria-hidden="true"></i>

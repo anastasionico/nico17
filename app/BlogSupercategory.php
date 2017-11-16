@@ -8,4 +8,10 @@ class Blogsupercategory extends Model
 {
     protected $guarded = [];
     protected $table = 'blogsupercategories';
+
+
+    public function categories()
+    {
+    	return $this->hasMany('App\Blogcategory');
+    }
 }

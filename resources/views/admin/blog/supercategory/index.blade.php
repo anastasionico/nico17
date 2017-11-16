@@ -62,7 +62,7 @@
 				                  			<th>Image</th>
 				                  			<th>ID</th>
 				                  			<th>Name</th>
-						                	<th>Slug</th>
+						                	<th>Excerpt</th>
 						                	<th>Created</th>
 						                	<th></th>
 						                </tr>
@@ -76,11 +76,11 @@
 					                  			</td>
 					                  			<td>{{ $blogSupercategory->id }}</td>
 					                  			<td>
-					                  				<a href="/blog/{{ $blogSupercategory->slug }}" target="_blank"> 
+					                  				<a href="supercategory/{{ $blogSupercategory->id }}"> 
 					                  					{{ ucfirst($blogSupercategory->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
-					                  			<td>{{ $blogSupercategory->slug }}</td>
+					                  			<td>{{ $blogSupercategory->excerpt }}</td>
 					                  			<td>{{ $blogSupercategory->created_at->diffForHumans() }}</td>
 					                  			<td>
 					                  				{{-- <a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/images" title="Images">

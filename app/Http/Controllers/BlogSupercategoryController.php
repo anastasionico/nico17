@@ -63,7 +63,7 @@ class BlogsupercategoryController extends Controller
      */
     public function show(Blogsupercategory $supercategory)
     {
-        //
+        dd($supercategory);
     }
 
     /**
