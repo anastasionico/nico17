@@ -80,7 +80,10 @@
 					                  					{{ ucfirst($project->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
-					                  			<td>{{ $project->slug }}</td>
+					                  			<td>
+					                  				<a href="/projects/{{ $project->slug }}" target="_blank"> 
+					                  					{{ ucfirst($project->slug) }} <i class="fa fa-external-link" aria-hidden="true"></i>
+													</a>
 					                  			<td>{{ $project->created_at->diffForHumans() }}</td>
 					                  			<td>
 					                  				<a class="tip" href="projects/{{ $project->id }}/images" title="Images">

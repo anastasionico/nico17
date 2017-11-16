@@ -73,11 +73,11 @@ class BlogsupercategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($supercategory)
+    public function edit(Blogsupercategory $supercategory)
     {
-        // dd($supercategory->id);
+        
         $supercategory = Blogsupercategory::findOrFail($supercategory->id);
-        return view('/admin/blog/supercategory/edit', compact('Blogsupercategory'));
+        return view('/admin/blog/supercategory/edit', compact('supercategory'));
     }
 
     /**
@@ -89,7 +89,24 @@ class BlogsupercategoryController extends Controller
      */
     public function update(Request $request, Blogsupercategory $supercategory)
     {
-    
+         $supercategoryUpdate = request()->validate([
+            'name'      => 'min:5|string',
+            'slug'      => 'min:5|alpha_dash',
+            'excerpt'   => 'min:50|string|',
+            'img'       => 'image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+        
+        if($request->img){
+            // creating the image before the creation of the record into the database
+            $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+            request()->img->move(public_path('img/blog'), $imageName);
+            $supercategoryUpdate['img'] = $imageName;
+        }
+        $supercategory->update($supercategoryUpdate);
+        
+
+        \Session::flash('success', "The blog's super category '$supercategory->name' has been updated ");
+        return redirect('/admin/blog/supercategory');
     }
 
     /**

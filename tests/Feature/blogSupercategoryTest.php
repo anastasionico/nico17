@@ -57,4 +57,38 @@ class BlogsupercategoryTest extends TestCase
         // then the supercategory does not appear in the database anymore
         $this->assertDatabaseMissing('blogsupercategories', ['id' => $supercategory->id]);
     }
+
+    /** @test */
+    public function an_admin_can_edit_a_blog_supercategory()
+    {
+        //given an admin and a supercategory
+        // given an admin and a supercategory
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+
+        //when he need to edit it
+        $this->get("admin/blog/supercategory/$supercategory->id/edit")
+            ->assertSee($supercategory->name);
+        // then he will see the form and the name of the supercategory
+    }
+
+    /** @test */
+    public function an_admin_can_update_a_supercategory()
+    {
+        // given a admin and a supercategory
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $supercategoryUpdate['name'] = 'anastasioNicoTomHughes';
+        
+        // when the admin update the supercategory
+        $this->call('PUT',  "admin/blog/supercategory/$supercategory->id", ['name' => $supercategoryUpdate['name']]);
+
+
+        // then the data in the database has to be updated
+        $this->assertDatabaseHas('blogsupercategories',[
+            'name' => $supercategoryUpdate['name'],
+            ]);
+    }
 }

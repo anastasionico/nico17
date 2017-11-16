@@ -76,7 +76,7 @@
 					                  			</td>
 					                  			<td>{{ $blogSupercategory->id }}</td>
 					                  			<td>
-					                  				<a href="{{ $blogSupercategory->slug }}" target="_blank"> 
+					                  				<a href="/blog/{{ $blogSupercategory->slug }}" target="_blank"> 
 					                  					{{ ucfirst($blogSupercategory->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
