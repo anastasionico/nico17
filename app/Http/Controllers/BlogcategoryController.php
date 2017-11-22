@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blogcategory;
+use App\Blogsupercategory;
 use Illuminate\Http\Request;
 
 class BlogcategoryController extends Controller
@@ -22,9 +23,12 @@ class BlogcategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        dd('ello');
+        // $blogsupercategory = Blogsupercategory::find($request->supercategory);
+        
+        // return view('admin.blog.category.create', compact('blogsupercategory'));
     }
 
     /**

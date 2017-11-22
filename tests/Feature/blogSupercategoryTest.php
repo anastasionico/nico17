@@ -68,9 +68,10 @@ class BlogsupercategoryTest extends TestCase
         $supercategory = factory('App\Blogsupercategory')->create();
 
         //when he need to edit it
+        // then he will see the form and the name of the supercategory
         $this->get("admin/blog/supercategory/$supercategory->id/edit")
             ->assertSee($supercategory->name);
-        // then he will see the form and the name of the supercategory
+        
     }
 
     /** @test */
@@ -90,5 +91,19 @@ class BlogsupercategoryTest extends TestCase
         $this->assertDatabaseHas('blogsupercategories',[
             'name' => $supercategoryUpdate['name'],
             ]);
+    }
+
+    /** @test */
+    public function an_admin_can_see_supercategories_detail()
+    {
+        // given an admin and a supercategory
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        // when I hit the show method 
+        // then I see the all the supercategory detail 
+        $this->get("/admin/blog/supercategory/$supercategory->id")
+            ->assertSee($supercategory->name);
+        
     }
 }

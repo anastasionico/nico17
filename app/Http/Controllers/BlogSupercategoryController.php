@@ -63,7 +63,8 @@ class BlogsupercategoryController extends Controller
      */
     public function show(Blogsupercategory $supercategory)
     {
-        dd($supercategory);
+        $categories = $supercategory->categories();
+        return view("admin/blog/supercategory/show", compact('supercategory', 'categories'));
     }
 
     /**

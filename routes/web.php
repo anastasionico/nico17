@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
     Route::group(['prefix' => 'blog/'], function(){
         Route::resource('supercategory', 'BlogsupercategoryController');
+        Route::resource('/{supercategory}/category', 'BlogcategoryController');
     });
     
 

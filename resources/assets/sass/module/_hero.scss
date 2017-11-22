@@ -54,12 +54,16 @@
 	    	}
 	    }
 	    h3{
+    		margin-bottom: 1rem;
+	    }
+	    h3{
     		font-size: 1.3rem;	
 	    	font-weight: 100;
 	    	@include media(tabletPortrait){
 	    		font-size: 2rem;	
 	    	}
 	    }
+
 	    span{
 	    	color:$blue;
 	    }

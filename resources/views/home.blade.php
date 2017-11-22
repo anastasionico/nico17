@@ -7,8 +7,7 @@
 			<h1>
 				anastasio<span>nico.uk</span>
 			</h1>
-			<h2>Artisan of the Web</h2>
-
+			<h3>Artisan of the web</h2>
 			<h5>Specialist in <b>Web Design</b> and <b>Web Development</b></h5>
 		</div>
 		
