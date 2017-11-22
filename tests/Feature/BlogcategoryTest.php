@@ -70,24 +70,23 @@ class BlogcategoryTest extends TestCase
 
         // when he need to edit it
         // then he will see the form and the name of the supercategory
-
         $this->get("admin/blog/$supercategory->id/category/$categoryTwo->id/edit")
             ->assertSee($categoryTwo->name);
-        
     }
 
     /** @test */
-    // public function an_admin_can_update_a_blog_category()
-    // {
-    //     // given an admin a supercategory and a blog category
-    //     $this->withoutExceptionHandling();
-    //     $this->be(factory('App\User')->create());
-    //     $supercategory = factory('App\Blogsupercategory')->create();
-    //     $category = factory('App\Blogcategory')->create(['supercategory_id' => $supercategory->id]);
-    //     $projectUpdate['name'] = 'anastasioNicoTomHughes';
-    //     // when he update the category
-    //     // then the category has to appear different in the database
-    //     $response = $this->post("admin/blog/$supercategory->id/category/$category->id", $category->toArray());
-    //     $this->assertDatabaseHas('blogcategories', ['name' => 'Pinco Pallino']);
-    // }
+    public function an_admin_can_update_a_blog_category()
+    {
+        // given an admin a supercategory and a blog category
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create(['supercategory_id' => $supercategory->id]);
+        $categoryTwo = factory('App\Blogcategory')->create(['name' => 'Pippo', 'supercategory_id' => $supercategory->id]);
+        $categoryUpdate['name'] = 'anastasioNicoTomHughes';
+        // when he update the category
+        // then the category has to appear different in the database
+        $this->call('PATCH', "admin/blog/$supercategory->id/category/$categoryTwo->id", $categoryUpdate);
+        $this->assertDatabaseHas('blogcategories', ['name' => 'anastasioNicoTomHughes']);
+    }
 }

@@ -88,9 +88,28 @@ class BlogcategoryController extends Controller
      * @param  \App\Blogcategory  $blogcategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blogsupercategory $blogsupercategory,  Blogcategory $blogcategory)
+    public function update(Request $request, $blogsupercategory, $blogcategory)
     {
-        dd($request->all());
+        $blogcategory = Blogcategory::findOrFail($blogcategory);
+        $categoryUpdate = request()->validate([
+            'supercategory_id'      => 'integer|exists:blogsupercategories,id',
+            'name'      => 'min:5|string',
+            'slug'      => 'min:5|alpha_dash',
+            'excerpt'   => 'min:50|string|',
+            'img'       => 'image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+        
+        if($request->img){
+            // creating the image before the creation of the record into the database
+            $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+            request()->img->move(public_path('img/blog'), $imageName);
+            $categoryUpdate['img'] = $imageName;
+        }
+        $blogcategory->update($categoryUpdate);
+        
+
+        \Session::flash('success', "The blog's category '$blogcategory->name' has been updated ");
+        return redirect("admin/blog/supercategory/$blogcategory->supercategory_id");
     }
 
     /**
