@@ -118,8 +118,11 @@ class BlogcategoryController extends Controller
      * @param  \App\Blogcategory  $blogcategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blogcategory $blogcategory)
+    public function destroy($blogsupercategory, $blogcategory)
     {
-        //
+        $blogcategory = Blogcategory::findOrFail($blogcategory);
+        $blogcategory->delete();
+        \Session::flash('success', 'You have delete ' . $blogcategory->name);
+        return back();
     }
 }

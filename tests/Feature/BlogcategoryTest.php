@@ -89,4 +89,19 @@ class BlogcategoryTest extends TestCase
         $this->call('PATCH', "admin/blog/$supercategory->id/category/$categoryTwo->id", $categoryUpdate);
         $this->assertDatabaseHas('blogcategories', ['name' => 'anastasioNicoTomHughes']);
     }
+
+    /** @test */
+    public function an_admin_can_delete_a_blog_category()
+    {
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create(['name' => 'Giuseppe Mascara' ,'supercategory_id' => $supercategory->id]);
+        
+        // when the admin delete the supercategory 
+        $this->call('DELETE', "admin/blog/$supercategory->id/category/$category->id", ['_token' => csrf_token()]);
+        
+        // then the supercategory does not appear in the database anymore
+        $this->assertDatabaseMissing('blogcategories', ['id' => $category->id]);
+    }
 }

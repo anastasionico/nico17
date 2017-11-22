@@ -96,9 +96,9 @@
 		                  							<a class="tip" href="/admin/blog/{{ $supercategory->id }}/category/{{ $category->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-			                  						{{-- {{ Form::open([
+		                  							{{ Form::open([
 		              									'method' => 'DELETE', 
-		              									'action' => ['categoryController@destroy' , $category->id],
+		              									'action' => array('BlogcategoryController@destroy', $category->supercategory_id, $category->id),
 		              									'style' => 'display:inline-block'
 														]) 
 													}}
@@ -108,7 +108,7 @@
 																	'type' => 'submit', 
 																	'style' => 'color:#aaa;border:0;background:transparent;')) 
 															}}
-													{{ Form::close() }} --}}
+													{{ Form::close() }}
 												</td>
 					                  		</tr>		
 				              			@endforeach
