@@ -61,7 +61,6 @@ class BlogsupercategoryTest extends TestCase
     /** @test */
     public function an_admin_can_edit_a_blog_supercategory()
     {
-        //given an admin and a supercategory
         // given an admin and a supercategory
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());

@@ -71,7 +71,7 @@
 				              		<tbody>
 				              			@foreach($blogSupercategories as $blogSupercategory)
 				              				<tr class="odd gradeX">
-					                  			<td style="width: 50px;text-align: center;">
+					                  			<td style="max-width: 50px;text-align: center;">
 					                  				<img style='max-height: 75px' src='{{ asset("img/blog/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
 					                  			</td>
 					                  			<td>{{ $blogSupercategory->id }}</td>
@@ -82,7 +82,7 @@
 				                  				</td>
 					                  			<td>{{ $blogSupercategory->excerpt }}</td>
 					                  			<td>{{ $blogSupercategory->created_at->diffForHumans() }}</td>
-					                  			<td>
+					                  			<td style="min-width: 50px;text-align: center;">
 					                  				{{-- <a class="tip" href="blogSupercategories/{{ $blogSupercategory->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}

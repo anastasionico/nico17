@@ -49,7 +49,7 @@ class BlogsupercategoryController extends Controller
         $superCategory['img'] = $imageName;
 
 
-        $newsuperCategory = BlogsuperCategory::create($superCategory);
+        $newsuperCategory = Blogsupercategory::create($superCategory);
 
         \Session::flash('success', "The super category '$newsuperCategory->name' has been created ");
         return redirect('/admin/blog/supercategory');

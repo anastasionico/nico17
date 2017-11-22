@@ -13,7 +13,7 @@
 	    			<a href="/admin/blog/supercategory">Blog Super Category</a> 
 	    			<a href="/admin/blog/supercategory/{{ $supercategory->id }}" class="current">{{ $supercategory->name }}'s Categories</a> 
     			</div>
-			    <h1>{{ ucfirst($supercategory->name) }}</h1>
+			    <h1>{{ ucfirst($supercategory->name) }}'s categories </h1>
 			    
 		  	</div>
 
@@ -66,6 +66,7 @@
 				                  			<th>Image</th>
 				                  			<th>ID</th>
 				                  			<th>Name</th>
+				                  			<th>Slug</th>
 						                	<th>Excerpt</th>
 						                	<th>Created</th>
 						                	<th></th>
@@ -76,7 +77,7 @@
 
 				              			@foreach($supercategory->categories as $category)
 				              				<tr class="odd gradeX">
-					                  			<td style="width: 50px;text-align: center;">
+					                  			<td style="max-width: 50px;text-align: center;">
 					                  				<img style='max-height: 75px' src='{{ asset("img/blog/$category->img") }}' alt='{{ $category->img }}'>
 					                  			</td>
 					                  			<td>{{ $category->id }}</td>
@@ -85,13 +86,14 @@
 					                  					{{ ucfirst($category->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
+					                  			<td>{{ $category->slug }}</td>
 					                  			<td>{{ $category->excerpt }}</td>
 					                  			<td>{{ $category->created_at->diffForHumans() }}</td>
-					                  			<td>
-					                  				<a class="tip" href="blogSupercategories/{{ $category->id }}/images" title="Images">
+					                  			<td style="min-width: 50px;text-align: center;">
+					                  				{{-- <a class="tip" href="blogSupercategories/{{ $category->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
-		                  							</a> 
-		                  							<a class="tip" href="/admin/blog/supercategory/{{ $category->id }}/edit" title="Edit">
+		                  							</a>  --}}
+		                  							<a class="tip" href="/admin/blog/{{ $supercategory->id }}/category/{{ $category->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
 			                  						{{-- {{ Form::open([

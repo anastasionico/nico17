@@ -25,10 +25,10 @@ class BlogcategoryController extends Controller
      */
     public function create(Request $request)
     {
-        dd('ello');
-        // $blogsupercategory = Blogsupercategory::find($request->supercategory);
         
-        // return view('admin.blog.category.create', compact('blogsupercategory'));
+        $blogsupercategory = Blogsupercategory::find($request->supercategory);
+        
+        return view('admin/blog/category/create', compact('blogsupercategory'));
     }
 
     /**
@@ -39,7 +39,23 @@ class BlogcategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blogCategory = request()->validate([
+            'supercategory_id'      => 'required|integer|exists:blogsupercategories,id',
+            'name'      => 'required|min:5|string',
+            'slug'      => 'required|min:5|alpha_dash|unique:blogcategories,slug',
+            'excerpt'   => 'required|min:50|string|',
+            'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        // creating the image beforer the creation of the record into the database
+        $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+        request()->img->move(public_path('img/blog'), $imageName);
+        $blogCategory['img'] = $imageName;
+
+        $newCategory = Blogcategory::create($blogCategory);
+        \Session::flash('success', "The category '$newCategory->name' has been created ");
+        return redirect("admin/blog/supercategory/$newCategory->supercategory_id");
+
     }
 
     /**
@@ -59,9 +75,10 @@ class BlogcategoryController extends Controller
      * @param  \App\Blogcategory  $blogcategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blogcategory $blogcategory)
+    public function edit($blogsupercategory, $blogcategory)
     {
-        //
+        $blogcategory = Blogcategory::find($blogcategory);
+        return view('/admin/blog/category/edit', compact('blogcategory'));
     }
 
     /**
@@ -71,9 +88,9 @@ class BlogcategoryController extends Controller
      * @param  \App\Blogcategory  $blogcategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blogcategory $blogcategory)
+    public function update(Request $request, Blogsupercategory $blogsupercategory,  Blogcategory $blogcategory)
     {
-        //
+        dd($request->all());
     }
 
     /**

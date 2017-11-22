@@ -10,7 +10,7 @@ class Blogcategory extends Model
 
     public function supercategory()
     {
-    	return $this->belongsTo('App\BlogSupercategory');
+    	return $this->belongsTo('App\BlogSupercategory', 'supercategory_id');
     }
 
     
