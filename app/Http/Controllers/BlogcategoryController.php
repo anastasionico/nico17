@@ -64,9 +64,13 @@ class BlogcategoryController extends Controller
      * @param  \App\Blogcategory  $blogcategory
      * @return \Illuminate\Http\Response
      */
-    public function show(Blogcategory $blogcategory)
+    public function show($blogsupercategory, $blogcategory)
     {
-        //
+        
+
+        $blogcategory = Blogcategory::find($blogcategory);   
+        
+        return view("admin/blog/category/show", compact('blogcategory'));
     }
 
     /**

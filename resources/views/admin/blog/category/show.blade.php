@@ -10,9 +10,12 @@
 			    	<a href="/admin/dashboard" title="Go to Home" class="tip-bottom">
 			    		<i class="icon-home"></i> Home
 		    		</a> 
-	    			<a href="/admin/projects/projects" class="current">Projects</a> 
+	    			<a href="/admin/blog/supercategory">Blog Super Category</a> 
+	    			<a href="/admin/blog/supercategory/{{ $blogcategory->supercategory->id }}">{{ $blogcategory->supercategory->name }}'s Posts</a> 
+	    			<a href="/admin/blog/{{ $blogcategory->supercategory->id }}/category/{{ $blogcategory->id }}" class="current">{{ ucfirst($blogcategory->name) }}'s Details</a> 
     			</div>
-			    <h1>Projects</h1>
+			    <h1>{{ ucfirst($blogcategory->name) }}'s category posts </h1>
+			    
 		  	</div>
 
 
@@ -34,25 +37,27 @@
 					@endif
 				@endforeach
 			
-    			<div class="quick-actions_homepage">
+    			 <div class="quick-actions_homepage">
       				<ul class="quick-actions">
 				        <li class="bg_lb"> 
-				        	<a href="/admin/projects/projects/create"> 
+				        	<a href="/admin/blog/{{ $blogcategory->id }}/category/create"> 
 				        		<i class="icon-plus"></i> 
-			        			Create Projects 
+			        			Create Post 
+			        			<br>
+			        			<small>under {{ $blogcategory->name }} </small>
 		        			</a> 
 	        			</li>
-					        
-		      		</ul>
-    			</div>
+					</ul>
+    			</div> 
 		    	
 		    	<hr>
 		    	
+
 		    	<div class="row-fluid">
 		    		<div class="span12">
 		    			<div class="widget-box">
-				          	<div class="widget-title"> <span class="icon"> <i class="icon-briefcase"></i> </span>
-					            <h5>Projects</h5>
+				          	<div class="widget-title"> <span class="icon"> <i class="icon-align-left"></i>  </span>
+					            <h5> Category </h5>
 				          	</div>
 				          	<div class="widget-content nopadding">
 					            <table class="table table-bordered table-striped">
@@ -62,44 +67,51 @@
 				                  			<th>Image</th>
 				                  			<th>ID</th>
 				                  			<th>Name</th>
-						                	<th>Slug</th>
+				                  			<th>Slug</th>
+						                	<th>Excerpt</th>
 						                	<th>Created</th>
+						                	<th>Status</th>
+						                	<th>Order</th>
 						                	<th></th>
 						                </tr>
 				              		</thead>
 				              		
 				              		<tbody>
-				              			@foreach($projects as $project)
-				              				<tr class="odd gradeX">
+				              			@foreach($blogcategory->posts as $post)
+											<tr class="odd gradeX">
 					                  			<td style="max-width: 50px;text-align: center;">
-					                  				<img style='max-height: 75px' src='{{ asset("img/projects/$project->img") }}' alt='{{ $project->img }}'>
+					                  				<img style='max-height: 75px' src='{{ asset("img/blog/$post->img") }}' alt=''>
 					                  			</td>
-					                  			<td>{{ $project->id }}</td>
-					                  			<td>
-					                  				@if($project->cta_link)
-						                  				<a href="{{ $project->cta_link }}" target="_blank"> 
-						                  					{{ ucfirst($project->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
+				                  				<td>{{ $post->id }}</td>
+				                  				<td>
+					                  				@if($post->cta_link)
+						                  				<a href="{{ $post->cta_link }}" target="_blank"> 
+						                  					{{ ucfirst($post->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 														</a>
 													@else
-														{{ ucfirst($project->name) }}
+														{{ ucfirst($post->name) }}
 					                  				@endif
-					                  			</td>
-					                  			<td>
-					                  				<a href="/projects/{{ $project->slug }}" target="_blank"> 
-					                  					{{ ucfirst($project->slug) }} <i class="fa fa-link" aria-hidden="true"></i>
+				                  				</td>
+				                  				<td>
+					                  				<a href="/blog/{{ $post->slug }}" target="_blank"> 
+					                  					{{ ucfirst($post->slug) }} <i class="fa fa-link" aria-hidden="true"></i>
 													</a>
 												</td>
-					                  			<td>{{ $project->created_at->diffForHumans() }}</td>
-					                  			<td style="min-width: 50px;text-align: center;">
-					                  				<a class="tip" href="projects/{{ $project->id }}/images" title="Images">
+												
+					                  			<td>{{ $post->excerpt }}</td>
+					                  			<td>{{ $post->created_at->diffForHumans() }}</td>
+					                  			<td>{{ $post->status }}</td>
+					                  			<td>{{ $post->order }}</td>
+					                  			{{-- <td style="min-width: 50px;text-align: center;">
+					                  				<a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a> 
-					                  				<a class="tip" href="projects/{{ $project->id }}/edit" title="Edit">
+		                  							<a class="tip" href="/admin/blog/{{ $blogcategory->id }}/category/{{ $post->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-			                  						{{ Form::open([
+		                  							{{ Form::open([
 		              									'method' => 'DELETE', 
-		              									'action' => ['ProjectController@destroy' , $project->id],
+		              									'action' => array('BlogcategoryController@destroy', $post->category_id, $post->id),
 		              									'style' => 'display:inline-block'
 														]) 
 													}}
@@ -109,10 +121,8 @@
 																	'type' => 'submit', 
 																	'style' => 'color:#aaa;border:0;background:transparent;')) 
 															}}
-														
 													{{ Form::close() }}
-
-					                  			</td>
+												</td> --}}
 					                  		</tr>		
 				              			@endforeach
 				              		</tbody>

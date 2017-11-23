@@ -82,7 +82,7 @@
 					                  			</td>
 					                  			<td>{{ $category->id }}</td>
 					                  			<td>
-					                  				<a href="supercategory/{{ $category->id }}"> 
+					                  				<a href="/admin/blog/{{$supercategory->id}}/category/{{$category->id}}">
 					                  					{{ ucfirst($category->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
 													</a>
 				                  				</td>
