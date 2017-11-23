@@ -30,8 +30,42 @@ class BlogpostTest extends TestCase
     		->assertStatus(200)
     		->assertSee(ucfirst("$postOne->name"))
     		->assertSee(ucfirst("$postTwo->name"))
-    		->assertSee(ucfirst("$postThree->name"))
-    		;
-    	
+    		->assertSee(ucfirst("$postThree->name"));
+    }
+
+    /** @test */
+    public function an_admin_can_see_the_create_a_new_post_form()
+    {
+        // given an admin, a supercategory, a category
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        // when the admin get the page for creating a new post
+        // then he has to be able to see the form
+        $this->get("admin/blog/$supercategory->id/$category->id/post/create")
+            ->assertStatus(200);
+    }
+
+    /** @test */
+    public function an_admin_can_create_a_post()
+    {
+        // given an admin, a supercategory, a category
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $post = factory('App\Blogpost')->make([
+            'category_id' => $category->id,
+            'name'      => 'this is a project',
+            'excerpt'   => 'Distinctio quos consequatur necessitatibus facere expedita cumque facilis exercitationem nihil enim voluptatem consectetur veniam'
+        ]);
+
+        // when he send a request to store a post
+        $this->post('admin/blog/$supercategory->id/$category->id/post', $post->toArray() );
+        // then the post has to appear into the database
+        $this->assertDatabaseHas('blogposts', [
+            'name'      => $post->name,
+        ]);
     }
 }

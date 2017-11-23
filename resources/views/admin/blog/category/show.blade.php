@@ -40,9 +40,9 @@
     			 <div class="quick-actions_homepage">
       				<ul class="quick-actions">
 				        <li class="bg_lb"> 
-				        	<a href="/admin/blog/{{ $blogcategory->id }}/category/create"> 
+				        	<a href="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post/create"> 
 				        		<i class="icon-plus"></i> 
-			        			Create Post 
+			        			Create Post
 			        			<br>
 			        			<small>under {{ $blogcategory->name }} </small>
 		        			</a> 

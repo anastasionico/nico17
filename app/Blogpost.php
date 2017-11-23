@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Blogpost extends Model
 {
     protected $guarded = [];
-    protected $fillable = ['category_id'];
     protected $table = 'blogposts';
 
     public function category(){

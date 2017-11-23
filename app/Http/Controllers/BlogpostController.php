@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blogpost;
+use App\Blogcategory;
 use Illuminate\Http\Request;
 
 class BlogpostController extends Controller
@@ -22,9 +23,11 @@ class BlogpostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($blogsupercategory, $blogcategory)
     {
-        //
+        $blogcategory = Blogcategory::findOrFail($blogcategory);
+        return view('admin/blog/post/create' , compact('blogcategory'));
+
     }
 
     /**
@@ -35,7 +38,32 @@ class BlogpostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $post = request()->validate([
+            'category_id'      => 'required|integer|exists:blogcategories,id',
+            'name'      => 'required|min:5|string',
+            'slug'      => 'required|min:5|alpha_dash',
+            'excerpt'   => 'required|min:50|string|',
+            'content'   => 'required|min:50|string',
+            'status'    => 'required|numeric',
+            'order'     => 'required|numeric',
+            'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'minutes_to_read'    => 'nullable|numeric',
+            'cta_link'  => 'url|nullable',
+            'published_at'    => 'nullable|date',
+        ]);
+
+        // creating the image beforer the creation of the record into the database
+        $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+        request()->img->move(public_path('img/blog'), $imageName);
+        $post['img'] = $imageName;
+
+        $newPost = Blogpost::create($post);
+
+        
+        \Session::flash('success', "The post '$newPost->name' has been created ");
+        // /admin/blog/$newPost->category_id->/category/$newPost->category_id
+        return redirect("admin/blog/supercategory/$newPost->supercategory_id");
     }
 
     /**
