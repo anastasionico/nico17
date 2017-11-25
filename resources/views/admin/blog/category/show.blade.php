@@ -119,14 +119,16 @@
 					                  			<td>{{ $post->created_at->diffForHumans() }}</td>
 				                  				<td>{{ $post->minutes_to_read }} min </td>
 				                  				<td>{{ $post->order }} &#186; </td>
-					                  			{{-- <td style="min-width: 50px;text-align: center;">
-					                  				<a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
+					                  			<td style="min-width: 50px;text-align: center;">
+					                  				{{-- <a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
-		                  							</a> 
-		                  							<a class="tip" href="/admin/blog/{{ $blogcategory->id }}/category/{{ $post->id }}/edit" title="Edit">
+		                  							</a>  --}}
+
+		                  							
+		                  							<a class="tip" href="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post/{{ $post->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-		                  							{{ Form::open([
+		                  							{{-- {{ Form::open([
 		              									'method' => 'DELETE', 
 		              									'action' => array('BlogcategoryController@destroy', $post->category_id, $post->id),
 		              									'style' => 'display:inline-block'
@@ -138,8 +140,8 @@
 																	'type' => 'submit', 
 																	'style' => 'color:#aaa;border:0;background:transparent;')) 
 															}}
-													{{ Form::close() }}
-												</td> --}}
+													{{ Form::close() }} --}}
+												</td>
 					                  		</tr>		
 				              			@endforeach
 				              		</tbody>

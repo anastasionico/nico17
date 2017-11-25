@@ -82,9 +82,10 @@ class BlogpostController extends Controller
      * @param  \App\Blogpost  $blogpost
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blogpost $blogpost)
+    public function edit($blogsupercategory, $blogcategory, $post)
     {
-        //
+        $post = Blogpost::findOrFail($post);
+        return view('admin/blog/post/edit', compact('post'));
     }
 
     /**
@@ -96,7 +97,7 @@ class BlogpostController extends Controller
      */
     public function update(Request $request, Blogpost $blogpost)
     {
-        //
+        dd("this is the update method of blog post");
     }
 
     /**

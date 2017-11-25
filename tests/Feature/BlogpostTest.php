@@ -68,4 +68,25 @@ class BlogpostTest extends TestCase
             'name'      => $post->name,
         ]);
     }
+
+    /** @tests */
+    public function an_admin_can_see_the_post_edit_form()
+    {
+        // given an admin, a supercategory, a category, and a post
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $post = factory('App\Blogpost')->create([
+            'category_id' => $category->id,
+            'name'      => 'this is a project',
+            'excerpt'   => 'Distinctio quos consequatur necessitatibus facere expedita cumque facilis exercitationem nihil enim voluptatem consectetur veniam'
+        ]);
+        
+        // when the admin goes to the admin/blog/{supercategory}/{category}/post/{post}/edit page
+        $this->get("admin/blog/$supercategory->id/$category->id/post/$post->id/edit")
+            ->assertStatus(200)
+            ->assertSee("Edit " .  ucfirst($post->name));
+        // he can see the form 
+    }
 }

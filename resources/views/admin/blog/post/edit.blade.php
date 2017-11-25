@@ -1,86 +1,89 @@
-	@extends('layouts.admin.admin')
+@extends('layouts.admin.admin')
 
-	@section('title', 'Anastasionico.uk | Dashboard')
+@section('title', 'Anastasionico.uk | Dashboard')
 
-  @section('head')
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-  @endsection
+@section('head')
+  {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script> --}}
+  <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+@endsection
 
-	@section('content')
-		<div id="content">
+@section('content')
+	<div id="content">
 
 	  	<div id="content-header">
 		    <div id="breadcrumb"> 
 		    	<a href="/admin/dashboard" title="Go to Home" class="tip-bottom">
 		    		<i class="icon-home"></i> Home
 	    		</a> 
-    			<a href="/admin/blog/supercategory">Blog Super Category</a> 
-          <a href="/admin/blog/supercategory/{{ $blogcategory->supercategory->id }}">{{ $blogcategory->supercategory->name }}'s Posts</a> 
-          <a href="/admin/blog/{{ $blogcategory->supercategory->id }}/category/{{ $blogcategory->id }}" class="current">{{ ucfirst($blogcategory->name) }}'s Details</a> 
-  			</div>
-		    <h1>
-          Create a new post
-        </h1>
-      </div>
+    			<a href="/admin/blog/supercategory">Blog Super Categories</a> 
+          <a href="/admin/blog/supercategory/{{ $post->category->supercategory->id }}">{{ $post->category->supercategory->name }}'s Posts</a> 
+          <a href="/admin/blog/{{ $post->category->supercategory->id }}/category/{{ $post->category->id }}">{{ ucfirst($post->category->name) }}</a> 
+          <a href="/admin/blog/{{ $post->category->supercategory->id }}/category/{{ $post->category->id }}/post/{{ $post->id }}/edit" class="current">{{ ucfirst($post->name) }}</a> 
+        </div>
+		    <h1>Edit {{ ucfirst($post->name) }}</h1>
+	  	</div>
 
-			<div class="container-fluid">
-				<div class="row-fluid">
-			    <div class="span12">
-			      <div class="widget-box">
-			        <div class="widget-title"> 
-			        	<span class="icon"><i class="icon-align-left"></i> </span>
-			          	<h5>Insert post detail</h5>
-			        </div>
-			        
-			        @if(!empty($errors->all()))
-			        		
-				        <div class="alert alert-error alert-block"> <a class="close" data-dismiss="alert" href="#">×</a>
-	              				<h4 class="alert-heading">Error!</h4>
-	              				<ul>
-			              			@foreach ($errors->all() as $message)
-			              				<li>
-			              					{{$message}}	
-			              				</li>
-			              			@endforeach		
-		              			</ul>
-	          			</div>
-          				
-			        @endif
+		<div class="container-fluid">
+			<div class="row-fluid">
+		    <div class="span12">
+		      <div class="widget-box">
+		        <div class="widget-title"> 
+		        	<span class="icon"> <i class="icon-align-left"></i>  </span>
+		          	<h5>Category Detail</h5>
+		        </div>
+		        
+		        @if(!empty($errors->all()))
+		        		
+			        <div class="alert alert-error alert-block"> <a class="close" data-dismiss="alert" href="#">×</a>
+              				<h4 class="alert-heading">Error!</h4>
+              				<ul>
+		              			@foreach ($errors->all() as $message)
+		              				<li>
+		              					{{$message}}	
+		              				</li>
+		              			@endforeach		
+	              			</ul>
+          			</div>
+        		@endif
 
-			        <div class="widget-content nopadding">
-		          	<form action="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post" method="post" class="form-horizontal" enctype="multipart/form-data">
-                  {{ csrf_field() }}
-                    
-                  {{ Form::hidden('category_id', "$blogcategory->id") }}
-			            <div class="control-group">
-			              <label class="control-label">Name *</label>
-			              <div class="controls">
-			                <input type="text" name="name" class="span11" placeholder="name" id="fieldName" value="{{ old('name') }}" required />
-			                <span class="help-block">Single or multiple words with at least 5 characters</span>
-			              </div>
-			            </div>
+		        <div class="widget-content nopadding">
+	          	{{ Form::open([
+                    'action' => array('BlogpostController@update', $post->category->supercategory->id, $post->category->id, $post->id),
+                    'method'  => 'PUT',
+                    'files'   => true,
+                    'class'   => 'form-horizontal',
+              ]) }}
+            		{{ csrf_field() }}
+                {{ Form::hidden('category_id', "$post->category->id") }}
+                  <div class="control-group">
+                    <label class="control-label">Name *</label>
+                    <div class="controls">
+                      <input type="text" name="name" class="span11" placeholder="name" id="fieldName" value="{{ $post->name }}" required />
+                      <span class="help-block">Single or multiple words with at least 5 characters</span>
+                    </div>
+                  </div>
                   <div class="control-group">
                     <label class="control-label">Slug *</label>
                     <div class="controls">
-                      <input type="text" name="slug" class="span11" placeholder="slug" id="fieldSlug" value="{{ old('slug') }}" required />
+                      <input type="text" name="slug" class="span11" placeholder="slug" id="fieldSlug" value="{{ $post->slug }}" required />
                       <span class="help-block">Single or multiple words with at least 5 characters has to have dash in between the words</span>
                     </div>
                   </div>
-			            <div class="control-group">
-			              <label class="control-label">Excerpt *</label>
-			              <div class="controls">
-                      <textarea name="excerpt" id='excerpt' class="span11" placeholder="content">{{ old('excerpt' )}}</textarea>
+                  <div class="control-group">
+                    <label class="control-label">Excerpt *</label>
+                    <div class="controls">
+                      <textarea name="excerpt" id='excerpt' class="span11" placeholder="content">{{ $post->excerpt }}</textarea>
                       <span class="help-block">
                         One or multiple sentences with at least 50 characters.
                         <span id='excerptSpan'></span>
                       </span>
                     </div>
-			            </div>
+                  </div>
                   <div class="control-group">
                     <label class="control-label">Content *</label>
                     <div class="controls">
                       <textarea id="ckContent" name="content" class="span11" placeholder="small description">
-                        {!! old('content') !!}
+                        {{ $post->content }}
                       </textarea>
                       <span class="help-block">
                         One or multiple sentences with at least 50 characters
@@ -92,64 +95,65 @@
                     <label class="control-label">Status *</label>
                     <div class="controls">
                       <select name='status' id='status' onchange="setPublishedData()">
-                        <option value="0">Empty Content</option>
-                        <option value="1">Graphic Missing</option>
-                        <option value="2">Review Needed</option>
-                        <option value="3">Published</option>
+                        <option value="0" @php echo ($post->status == 0)? "selected" : ""; @endphp >Empty Content</option>
+                        <option value="1" @php echo ($post->status == 1)? "selected" : ""; @endphp >Graphic Missing</option>
+                        <option value="2" @php echo ($post->status == 2)? "selected" : ""; @endphp >Review Needed</option>
+                        <option value="3" @php echo ($post->status == 3)? "selected" : ""; @endphp >Published</option>
                       </select>
                     </div>
                   </div>
                   <div class="control-group">
                     <label class="control-label">Order *</label>
                     <div class="controls">
-                      <input type="text" name="order" id="number" value='{{ $blogcategory->posts->count()+1 }}'/>
+                      <input type="text" name="order" id="number" value='{{ $post->order }}'/>
                     </div>
                   </div>
                   <div class="control-group">
                     <label class="control-label">Image *</label>
                     <div class="controls">
                       <div class="uploader" id="uniform-undefined">
-                        <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ old('img')}}" required />
+                        <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ $post->img }}" required />
                         <span class="filename">No file selected</span>
                         <span class="action">Choose File</span>
                       </div>
+                      {{ $post->img }}
                       <span class="help-block">File supported: jpeg, png, jpg, gif, svg</span>
                     </div>
                   </div>
                   <div class="control-group">
                     <label class="control-label">Minutes to Read</label>
                     <div class="controls">
-                      <input type="range" name="minutes_to_read" id="minutes_to_read" value='15' min="1">
-                      <span id='minutes_to_readSpan'><b>15</b></span>
+                      <input type="range" name="minutes_to_read" id="minutes_to_read" value='{{ $post->minutes_to_read }}' min="1">
+                      <span id='minutes_to_readSpan'><b>{{ $post->minutes_to_read }}</b></span>
                     </div>
                   </div>  
-				          <div class="control-group">
+                  <div class="control-group">
                       <label class="control-label">CTA</label>
                       <div class="controls">
-                        <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.uk" value="{{ old('cta_link')}}" />
+                        <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.uk" value="{{ $post->cta_link }}" />
                         <span class="help-block">Valid URL, need the protocol: http, https, ftp, etc</span>
                       </div>
                   </div>
                   <div class="control-group">
                     <label for="normal" class="control-label">Published at</label>
                     <div class="controls">
-                      <input type="text" id="mask-date" class="span8 mask text" name="published_at" value="{{ old('published_at')}}" />
+                      <input type="text" id="mask-date" class="span8 mask text" name="published_at" value="{{ $post->published_at }}">
                       <span class="help-block ">yyyy-mm-dd</span> 
                     </div>
                   </div>
-          				<div class="form-actions">
-          					<button type="submit" class="btn btn-success">Save</button>
-          				</div>
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-success">Save</button>
+                  </div>
 
-				        </form>
-			        </div>
-			      </div>
-			    </div>
-			    
-			  </div>	
-    	</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+        </div>  
+      </div>
 
-		</div>
+    </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/go.min.js"></script>
     {{-- <script>hljs.initHighlightingOnLoad();</script> --}}
@@ -210,4 +214,4 @@
       }
       
     </script>
-	@endsection
+  @endsection
