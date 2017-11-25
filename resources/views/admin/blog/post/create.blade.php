@@ -90,20 +90,20 @@
                     </div>
                   </div>
                   <div class="control-group">
-                    <label class="control-label">Status</label>
+                    <label class="control-label">Status *</label>
                     <div class="controls">
-                      <select >
-                        <option>Empty Content</option>
-                        <option>Graphic Missing</option>
-                        <option>Review Needed</option>
-                        <option>Published</option>
+                      <select name='status' id='status' onchange="setPublishedData()">
+                        <option value="0">Empty Content</option>
+                        <option value="1">Graphic Missing</option>
+                        <option value="2">Review Needed</option>
+                        <option value="3">Published</option>
                       </select>
                     </div>
                   </div>
                   <div class="control-group">
-                    <label class="control-label">Order</label>
+                    <label class="control-label">Order *</label>
                     <div class="controls">
-                      <input type="text" name="number" id="number" value='{{ $blogcategory->posts->count()+1 }}'/>
+                      <input type="text" name="order" id="number" value='{{ $blogcategory->posts->count()+1 }}'/>
                     </div>
                   </div>
                   <div class="control-group">
@@ -120,7 +120,8 @@
                   <div class="control-group">
                     <label class="control-label">Minutes to Read</label>
                     <div class="controls">
-                      <input type="text" name="number" id="number"/>
+                      <input type="range" name="minutes_to_read" id="minutes_to_read" value='15' min="1">
+                      <span id='minutes_to_readSpan'><b>15</b></span>
                     </div>
                   </div>  
 				          <div class="control-group">
@@ -129,6 +130,13 @@
                         <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.uk" value="{{ old('cta_link')}}" />
                         <span class="help-block">Valid URL, need the protocol: http, https, ftp, etc</span>
                       </div>
+                  </div>
+                  <div class="control-group">
+                    <label for="normal" class="control-label">Published at</label>
+                    <div class="controls">
+                      <input type="text" id="mask-date" class="span8 mask text" name="published_at">
+                      <span class="help-block ">yyyy-mm-dd</span> 
+                    </div>
                   </div>
           				<div class="form-actions">
           					<button type="submit" class="btn btn-success">Save</button>
@@ -161,25 +169,46 @@
 
     <script type="text/javascript">
       var fieldName = document.querySelector('#fieldName');
+      var excerpt = document.querySelector('#excerpt');
+      var excerptLengthSpan = document.querySelector('#excerptSpan');
+      var ckContent = document.querySelector('#ckContent');
+      var ckContentLengthSpan = document.querySelector('#ckContentSpan');
+      var minutes_to_read = document.querySelector('#minutes_to_read');
+      var minutes_to_readSpan = document.querySelector('#minutes_to_readSpan');
       
+
+      // creation of the slug depending of the field name
       fieldName.addEventListener("keyup", createSlug);
       fieldName.addEventListener("focusout", createSlug);
-
       function createSlug(){
         var fieldSlug = document.querySelector('#fieldSlug');
         fieldSlug.value = fieldName.value.replace(/\s+/g, '-').toLowerCase(); 
       }
       
-    
-      var excerpt = document.querySelector('#excerpt');
+      // this function make appear the number of character of the excerpt field
       excerpt.onkeyup = function(){
-        var excerptLengthSpan = document.querySelector('#excerptSpan');
+        
         if(excerpt.value.length < 50){
           excerptLengthSpan.innerHTML = "<b>" + (50 - excerpt.value.length) + " missing </b>";
         }else{
           excerptLengthSpan.innerHTML = "<b> Enough characters </b>";
         }
       }
-
+      
+      // this function make appear the value of the minute to read field      
+      minutes_to_read.onchange = function (){
+        minutes_to_readSpan.innerHTML = "<b>" + minutes_to_read.value + "</b>";
+      }
+      
+      // this function set the publish date according to the status of the post
+      function setPublishedData() {
+        var status = document.querySelector('#status');
+        var statusValue = status.options[status.selectedIndex].value
+        if(statusValue == 3){
+          var maskDate = document.querySelector('#mask-date');
+          maskDate.value = new Date(Date.now()).toLocaleDateString('zh-Hans-CN');
+        }
+      }
+      
     </script>
 	@endsection

@@ -70,7 +70,7 @@
 				                  			<th>Slug</th>
 						                	<th>Excerpt</th>
 						                	<th>Created</th>
-						                	<th>Status</th>
+						                	<th>Length</th>
 						                	<th>Order</th>
 						                	<th></th>
 						                </tr>
@@ -86,22 +86,39 @@
 				                  				<td>
 					                  				@if($post->cta_link)
 						                  				<a href="{{ $post->cta_link }}" target="_blank"> 
-						                  					{{ ucfirst($post->name) }} <i class="fa fa-external-link" aria-hidden="true"></i>
-														</a>
+						                  					{{ ucfirst($post->name) }} 
+						                  					<i class="fa fa-external-link" aria-hidden="true"></i>
+						                  				</a>
 													@else
 														{{ ucfirst($post->name) }}
 					                  				@endif
+					                  				@switch($post->status)
+				                  					    @case(0)
+													    	<span class="label label-important">Empty Content</span>
+													        @break
+													    @case(1)
+													    	<span class="label label-important">Graphic Missing</span>
+													        @break
+														@case(2)
+														<span class="label label-warning">Review Needed</span>
+													        @break
+													    @case(3)
+													    	<span class="label label-success">
+													    	Published
+													    	{{ $post->published_at}}
+													    	</span>
+													        @break
+													@endswitch
 				                  				</td>
 				                  				<td>
 					                  				<a href="/blog/{{ $post->slug }}" target="_blank"> 
 					                  					{{ ucfirst($post->slug) }} <i class="fa fa-link" aria-hidden="true"></i>
 													</a>
 												</td>
-												
-					                  			<td>{{ $post->excerpt }}</td>
+												<td>{{ $post->excerpt }}</td>
 					                  			<td>{{ $post->created_at->diffForHumans() }}</td>
-					                  			<td>{{ $post->status }}</td>
-					                  			<td>{{ $post->order }}</td>
+				                  				<td>{{ $post->minutes_to_read }} min </td>
+				                  				<td>{{ $post->order }} &#186; </td>
 					                  			{{-- <td style="min-width: 50px;text-align: center;">
 					                  				<a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>

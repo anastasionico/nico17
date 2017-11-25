@@ -60,10 +60,9 @@ class BlogpostController extends Controller
 
         $newPost = Blogpost::create($post);
 
-        
+        $category = Blogcategory::findOrFail($newPost->category_id);
         \Session::flash('success', "The post '$newPost->name' has been created ");
-        // /admin/blog/$newPost->category_id->/category/$newPost->category_id
-        return redirect("admin/blog/supercategory/$newPost->supercategory_id");
+        return redirect("admin/blog/$category->supercategory_id/category/$newPost->category_id");
     }
 
     /**
