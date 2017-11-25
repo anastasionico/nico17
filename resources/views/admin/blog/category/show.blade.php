@@ -123,24 +123,21 @@
 					                  				{{-- <a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}
-
-		                  							
-		                  							<a class="tip" href="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post/{{ $post->id }}/edit" title="Edit">
+													<a class="tip" href="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post/{{ $post->id }}/edit" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-		                  							{{-- {{ Form::open([
+													{{ Form::open([
 		              									'method' => 'DELETE', 
-		              									'action' => array('BlogcategoryController@destroy', $post->category_id, $post->id),
+		              									'action' => array('BlogpostController@destroy', $blogcategory->supercategory->id, $blogcategory->id, $post->id),
 		              									'style' => 'display:inline-block'
 														]) 
 													}}
-														
-															{{ Form::button('<i class="icon-remove"></i>', 
-																array(
-																	'type' => 'submit', 
-																	'style' => 'color:#aaa;border:0;background:transparent;')) 
-															}}
-													{{ Form::close() }} --}}
+														{{ Form::button('<i class="icon-remove"></i>', 
+															array(
+																'type' => 'submit', 
+																'style' => 'color:#aaa;border:0;background:transparent;')) 
+														}}
+													{{ Form::close() }}
 												</td>
 					                  		</tr>		
 				              			@endforeach

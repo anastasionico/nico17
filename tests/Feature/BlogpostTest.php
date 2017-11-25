@@ -116,4 +116,27 @@ class BlogpostTest extends TestCase
         ]);
         $response->assertRedirect("admin/blog/$supercategory->id/category/$category->id");
     }
+
+    /** @test */
+    public function an_admin_can_delete_a_post()
+    {
+        // given an admin, a supercategory, a category, and a post
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $post = factory('App\Blogpost')->create([
+            'category_id' => $category->id,
+            'name'      => 'Pinco Pallino',
+            'excerpt'   => 'An adult Frank Walker talks to an unseen group about the future, beginning with his visit to the 1964 New York World'
+        ]);
+        // when the admin delete a post
+        $response = $this->call('DELETE', "admin/blog/$supercategory->id/$category->id/post/$post->id");
+        // the new data has to disappear in the database
+        $this->assertDatabaseMissing('blogposts' ,[
+            'name'      => 'Pinco Pallino',
+            'excerpt'   => 'An adult Frank Walker talks to an unseen group about the future, beginning with his visit to the 1964 New York World'
+        ]);
+        $response->assertRedirect("admin/blog/$supercategory->id/category/$category->id");
+    }
 }

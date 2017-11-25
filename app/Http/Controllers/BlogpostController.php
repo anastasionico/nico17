@@ -130,8 +130,11 @@ class BlogpostController extends Controller
      * @param  \App\Blogpost  $blogpost
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blogpost $blogpost)
+    public function destroy($blogsupercategory, $blogcategory, $post)
     {
-        //
+        $post = Blogpost::findOrFail($post);
+        $post->delete();
+        \Session::flash('success', 'You have delete ' . $post->name);
+        return redirect("admin/blog/$blogsupercategory/category/$blogcategory");
     }
 }
