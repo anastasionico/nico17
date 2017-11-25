@@ -45,8 +45,8 @@
 	              			</ul>
           			</div>
         		@endif
-
-		        <div class="widget-content nopadding">
+            
+            <div class="widget-content nopadding">
 	          	{{ Form::open([
                     'action' => array('BlogpostController@update', $post->category->supercategory->id, $post->category->id, $post->id),
                     'method'  => 'PUT',
@@ -54,7 +54,7 @@
                     'class'   => 'form-horizontal',
               ]) }}
             		{{ csrf_field() }}
-                {{ Form::hidden('category_id', "$post->category->id") }}
+                {{ Form::hidden('category_id', "$post->category_id") }}
                   <div class="control-group">
                     <label class="control-label">Name *</label>
                     <div class="controls">
@@ -109,14 +109,13 @@
                     </div>
                   </div>
                   <div class="control-group">
-                    <label class="control-label">Image *</label>
+                    <label class="control-label">Image</label>
                     <div class="controls">
                       <div class="uploader" id="uniform-undefined">
-                        <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ $post->img }}" required />
+                        <input type="file" name="img" class="span11" style="opacity: 0;" value="{{ old('img')}}"/>
                         <span class="filename">No file selected</span>
                         <span class="action">Choose File</span>
                       </div>
-                      {{ $post->img }}
                       <span class="help-block">File supported: jpeg, png, jpg, gif, svg</span>
                     </div>
                   </div>

@@ -84,9 +84,36 @@ class BlogpostTest extends TestCase
         ]);
         
         // when the admin goes to the admin/blog/{supercategory}/{category}/post/{post}/edit page
+        // he can see the form 
         $this->get("admin/blog/$supercategory->id/$category->id/post/$post->id/edit")
             ->assertStatus(200)
             ->assertSee("Edit " .  ucfirst($post->name));
-        // he can see the form 
+    }
+
+    /** @test */
+    public function an_admin_can_update_a_post()
+    {
+        // given an admin, a supercategory, a category, and a post
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $post = factory('App\Blogpost')->create([
+            'category_id' => $category->id,
+            'name'      => 'this is a project',
+            'excerpt'   => 'Distinctio quos consequatur necessitatibus facere expedita cumque facilis exercitationem nihil enim voluptatem consectetur veniam'
+        ]);
+        $postUpdate = [
+            'name'      => 'Pinco Pallino',
+            'excerpt'   => 'An adult Frank Walker talks to an unseen group about the future, beginning with his visit to the 1964 New York World'
+        ];
+        // when the admin update the post
+        $response = $this->call('PATCH', "admin/blog/$supercategory->id/$category->id/post/$post->id", $postUpdate);
+        // the new data has to appear in the database
+        $this->assertDatabaseHas('blogposts' ,[
+            'name'      => 'Pinco Pallino',
+            'excerpt'   => 'An adult Frank Walker talks to an unseen group about the future, beginning with his visit to the 1964 New York World'
+        ]);
+        $response->assertRedirect("admin/blog/$supercategory->id/category/$category->id");
     }
 }

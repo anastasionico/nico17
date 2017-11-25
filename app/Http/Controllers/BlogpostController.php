@@ -95,9 +95,33 @@ class BlogpostController extends Controller
      * @param  \App\Blogpost  $blogpost
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blogpost $blogpost)
+    public function update(Request $request,$blogsupercategory, $blogcategory, $post)
     {
-        dd("this is the update method of blog post");
+        $post = Blogpost::findOrFail($post);
+        $postUpdate = request()->validate([
+            'category_id'      => 'integer|exists:blogcategories,id',
+            'name'      => 'min:5|string',
+            'slug'      => 'min:5|alpha_dash',
+            'excerpt'   => 'min:50|string|',
+            'content'   => 'min:50|string',
+            'status'    => 'numeric',
+            'order'     => 'numeric',
+            'img'       => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'minutes_to_read'    => 'nullable|numeric',
+            'cta_link'  => 'url|nullable',
+            'published_at'    => 'nullable|date',
+        ]);
+
+        if($request->img){
+            // creating the image beforer the creation of the record into the database
+            $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
+            request()->img->move(public_path('img/blog'), $imageName);
+            $postUpdate['img'] = $imageName;
+        }
+        $post->update($postUpdate);
+        
+        \Session::flash('success', "The post '$post->name' has been updated");
+        return redirect("admin/blog/$blogsupercategory/category/$blogcategory");
     }
 
     /**

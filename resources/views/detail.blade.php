@@ -121,7 +121,9 @@
 								{{ $otherContent->created_at->toFormattedDateString() }}
 							</em>	
 						</div>
-						<h4>{{$otherContent->name}}</h4>
+						<h4>
+					 		{{ ucfirst($otherContent->name) }} 
+				 		</h4>
 						
 						@if( $otherContent->cta_link)
 							<a href="{{ $otherContent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>

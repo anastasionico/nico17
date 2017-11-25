@@ -94,24 +94,24 @@ class Frontend extends TestCase
 
 	/** @test */ 
 	public function otherProjects_are_visible_on_project_page(){
-	    // given a visitor and a project
-	    
+	    // given a visitor and several projects
 	    $user = factory('App\User')->create();
-	    $project = factory('App\Project')->create();
-	    $otherProject = factory('App\Project')->create();
-	    $otherProject2 = factory('App\Project')->create();
-	    $otherProject3 = factory('App\Project')->create(['name'=>'forza milan']);
-	    $otherProject4 = factory('App\Project')->create(['name'=>'forza catania']);
+	    $project = factory('App\Project')->create(['name'=>'This is project one']);
+	    $project2 = factory('App\Project')->create(['name'=>'This is project Two']);
+	    $project3 = factory('App\Project')->create(['name'=>'This is project Three']);
+	    $project4 = factory('App\Project')->create(['name'=>'This is project Four']);
+	    $project5 = factory('App\Project')->create(['name'=>'This is project Five']);
 	    
 	    
-	    // when he visits the home page 
-	    // then he will see a project and its value
+	    // when he visits the por page 
+	    // then he will see three projects and their value
 	   	$response = $this->get("/projects/$project->slug")
 	            ->assertStatus(200)
-	            ->assertSee($otherProject->name)
-	            ->assertSee($otherProject2->name)
-	            ->assertSee($otherProject3->name)
-	            ->assertDontSee($otherProject4->name);
+	            ->assertSee(ucfirst($project->name))
+	            ->assertSee(ucfirst($project2->name))
+	            ->assertSee(ucfirst($project3->name))
+	            ->assertSee(ucfirst($project4->name))
+	            ->assertDontSee(ucfirst($project5->name));
 	            
 	}
 }
