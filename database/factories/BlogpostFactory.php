@@ -13,7 +13,7 @@ $factory->define(App\Blogpost::class, function (Faker $faker) {
         'content' => $faker->text(2000),
         'status' => $faker->numberBetween(1, 5),
         'order' => $faker->numberBetween(1, 50),
-        'img' => UploadedFile::fake()->image("$img.png", 600, 600),
+        'img' => UploadedFile::fake()->image("$img.jpg", 600, 600),
         'minutes_to_read' => $faker->numberBetween(1, 50),
         'cta_link' => $faker->url,
         'published_at' => $faker->date($format = 'Y-m-d H:i:s', $max = 'now'),

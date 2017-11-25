@@ -4,7 +4,6 @@
 
 @section('head')
   {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script> --}}
-  <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 @endsection
 
 @section('content')
@@ -229,17 +228,19 @@
 	</div>
   
   <script>
-    var options = {
-      filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-      filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-      filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-      filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
-      allowedContent: true,
-    };
-  </script>
-  <script>
-    CKEDITOR.replace('ckContent', options);
-  </script>
+      var options = {
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
+        allowedContent: true,
+        extraPlugins : 'syntaxhighlight'
+      };
+    </script>
+    <script>
+      CKEDITOR.plugins.addExternal( 'syntaxhighlight', '/vendor/plugins/syntaxhighlight/', 'plugin.js' );
+      CKEDITOR.replace('ckContent', options);
+    </script>
 
 
   <script type="text/javascript">

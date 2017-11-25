@@ -25,12 +25,10 @@ Route::get('/', function () {
 
 Route::get('/projects', 'ProjectFrontendController@index');
 Route::get('/projects/{param}', 'ProjectFrontendController@show');
+Route::get('/blog', 'BlogFrontendController@index');
+Route::get('/blog/{param}', 'BlogFrontendController@show');
 
 
-
-Route::get('/blog', function () {
-    return view('blog');
-});
 Route::get('/detail', function () {
     return view('detail');
 });

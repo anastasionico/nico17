@@ -3,7 +3,7 @@
 	@section('title', 'Anastasionico.uk | Dashboard')
 
   @section('head')
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+      
   @endsection
 
 	@section('content')
@@ -236,9 +236,11 @@
         filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
         filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
         allowedContent: true,
+        extraPlugins : 'syntaxhighlight'
       };
     </script>
     <script>
+      CKEDITOR.plugins.addExternal( 'syntaxhighlight', '/vendor/plugins/syntaxhighlight/', 'plugin.js' );
       CKEDITOR.replace('ckContent', options);
     </script>
 

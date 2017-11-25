@@ -13,8 +13,9 @@ class ProjectFrontendController extends Controller
     	return view('projects', compact('projects'));
     }
 
-    public function show($param)
+    public function show(Request $request, $param)
     {
+        $segment = $request->segment(1);
     	$content = Project::where('id', $param)
             ->orWhere('slug', $param)
             ->firstOrFail();
@@ -23,6 +24,6 @@ class ProjectFrontendController extends Controller
                     ->limit(3)
                     ->orderBy('created_at', 'desc')
                     ->get();
-        return view('detail', compact('content', 'otherContents'));
+        return view('detail', compact('content', 'otherContents','segment'));
     }
 }

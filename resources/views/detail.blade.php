@@ -3,10 +3,22 @@
 @section('head')
 	<style type="text/css">
 		.hero--section:before{
-			background-image: url("/img/projects/{{$content->img}}");
+			background-image: url("/img/{{$segment}}/{{$content->img}}");
 			background-size: cover;
 		}		
 	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js" type="text/javascript"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.js" type="text/javascript"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js" type="text/javascript"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.js" type="text/javascript"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.js" type="text/javascript"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushSql.js" type="text/javascript"></script> 
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.min.css" rel="stylesheet" type="text/css" />
+
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> 
+	
+	
 @endsection
 
 @section('hero')
@@ -29,7 +41,7 @@
 					<span class="my-1 d-block">
 						<h3 class="d-inline">
 							@if( $content->category )
-								{{$content->category}}
+								{{ ucfirst($content->category->name) }}
 							@else
 								Project
 							@endif
@@ -98,7 +110,7 @@
 	<section class="bg-blue c-white ">	
 		<h3 class="text-center py-3">
 			@if( $content->category )
-				{{$content->category}}
+				{{ ucfirst($content->category->name) }}
 			@else
 				See other projects
 			@endif
@@ -112,7 +124,7 @@
 						<div class="miniCard--caption-CatnDate clearfix">
 							<b>
 								@if( $otherContent->category )
-									{{$otherContent->category}}
+									{{ ucfirst($content->category->name) }}
 								@else
 									Project
 								@endif
@@ -136,6 +148,9 @@
 			
  		</div>
 	</section>
+	<script type="text/javascript">
+     	SyntaxHighlighter.all()
+	</script>
 @endsection
 
 {{-- @section('homeTestimonial')

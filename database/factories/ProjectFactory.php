@@ -11,7 +11,7 @@ $factory->define(App\Project::class, function (Faker $faker) {
         'name' => $faker->word,
         'slug' => $faker->slug,
         'content' => $faker->text(2000),
-        'img' => UploadedFile::fake()->image("$img.png", 600, 600),
+        'img' => UploadedFile::fake()->image("$img.jpg", 600, 600),
         'cta_link' => $faker->url,
         'excerpt' => $faker->sentence(10),
         'seo' => $faker->boolean,

@@ -4,7 +4,6 @@
 
 @section('head')
   {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script> --}}
-  <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 @endsection
 
 @section('content')
