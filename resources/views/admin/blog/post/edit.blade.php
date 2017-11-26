@@ -18,9 +18,14 @@
     			<a href="/admin/blog/supercategory">Blog Super Categories</a> 
           <a href="/admin/blog/supercategory/{{ $post->category->supercategory->id }}">{{ $post->category->supercategory->name }}'s Posts</a> 
           <a href="/admin/blog/{{ $post->category->supercategory->id }}/category/{{ $post->category->id }}">{{ ucfirst($post->category->name) }}</a> 
-          <a href="/admin/blog/{{ $post->category->supercategory->id }}/category/{{ $post->category->id }}/post/{{ $post->id }}/edit" class="current">{{ ucfirst($post->name) }}</a> 
+          <a href="/admin/blog/{{ $post->category->supercategory->id }}/{{ $post->category->id }}/post/{{ $post->id }}/edit" class="current">{{ ucfirst($post->name) }}</a> 
         </div>
-		    <h1>Edit {{ ucfirst($post->name) }}</h1>
+		    <h1>
+          <a href="/blog/{{ $post->slug }}" target="_blank">
+            <i class="fa fa-link" aria-hidden="true"></i>
+          </a>
+          Edit {{ ucfirst($post->name) }}
+        </h1>
 	  	</div>
 
 		<div class="container-fluid">

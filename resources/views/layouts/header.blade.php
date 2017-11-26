@@ -5,7 +5,6 @@
 			<a href="/projects">My Projects</a>
 			<a href="/blog">Articles</a>
 			<a href="/contact">Contact</a>
-			<a href="/detail">detail</a>
 			<a href="#">
 				<i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i>
 			</a>

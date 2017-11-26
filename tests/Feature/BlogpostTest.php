@@ -139,4 +139,34 @@ class BlogpostTest extends TestCase
         ]);
         $response->assertRedirect("admin/blog/$supercategory->id/category/$category->id");
     }
+
+    /** @test */
+    public function an_admin_can_see_all_from_post_list_page()
+    {
+        // Given an admin and several posts
+        $this->withoutExceptionHandling();
+        $this->be(factory('App\User')->create());
+        $supercategory = factory('App\Blogsupercategory')->create();
+        $supercategoryTwo = factory('App\Blogsupercategory')->create();
+        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $categoryTwo = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategoryTwo->id]);
+        $categoryThree = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategoryTwo->id]);
+        $post = factory('App\Blogpost')->create(['category_id' => $category->id]);
+        $postTwo = factory('App\Blogpost')->create(['category_id' => $categoryTwo->id]);
+        $postThree = factory('App\Blogpost')->create(['category_id' => $categoryThree->id]);
+        $postFour = factory('App\Blogpost')->create(['category_id' => $categoryTwo->id]);
+        $postFive = factory('App\Blogpost')->create(['category_id' => $categoryThree->id]);
+        $postSix = factory('App\Blogpost')->create(['category_id' => $category->id]);
+        
+        // when e get the post list page
+        //  then he will see all the posts
+        $this->get('/admin/blog/postlist')
+            ->assertStatus(200)
+            ->assertSee(ucfirst($post->name))
+            ->assertSee(ucfirst($postTwo->name))
+            ->assertSee(ucfirst($postThree->name))
+            ->assertSee(ucfirst($postFour->name))
+            ->assertSee(ucfirst($postFive->name))
+            ->assertSee(ucfirst($postSix->name));
+    }
 }

@@ -137,4 +137,10 @@ class BlogpostController extends Controller
         \Session::flash('success', 'You have delete ' . $post->name);
         return redirect("admin/blog/$blogsupercategory/category/$blogcategory");
     }
+
+    public function postlist()
+    {
+       $posts = Blogpost::all();
+       return view('admin/blog/postlist', compact('posts'));
+    }
 }

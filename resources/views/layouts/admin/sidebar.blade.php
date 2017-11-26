@@ -57,15 +57,21 @@
           		<li>
                 <a href="/admin/blog/supercategory">
                   Manage
-                  <span class="label label-important">
-                    <i class="fa fa-hourglass-o" aria-hidden="true"></i>
-                  </span>
+                  <span class="label label-success">
+                    <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                  </span>              
                 </a>
                 
               </li>
               <li><a href="#">Home Text</a></li>
           		<li><a href="#">Blog Page Text</a></li>
-          		<li><a href="#">Posts list</a></li>
+          		<li>
+                <a href="/admin/blog/postlist">Posts list
+                <span class="label label-success">
+                    <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                  </span>              
+                </a>
+              </li>
         	</ul>
       	</li>
       	<li> 
@@ -78,6 +84,9 @@
       		<a href="#">
       			<i class="fa fa-envelope" aria-hidden="true"></i>
         		<span>Messages</span>
+            <span class="label label-important">
+              <i class="fa fa-hourglass-o" aria-hidden="true"></i>
+            </span>
     		</a> 
   		</li>
       	<li> 

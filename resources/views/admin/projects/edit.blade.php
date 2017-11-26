@@ -17,8 +17,13 @@
     			<a href="/admin/projects/projects" class="current">Projects</a> 
     			<a href="/admin/projects/projects/{{ $project->id }}/edit" class="current">{{ ucfirst($project->name) }}</a> 
   			</div>
-		    <h1>Edit {{ $project->name }}</h1>
-	  	</div>
+		    <h1>
+          <a href="/projects/{{ $project->slug }}" target="_blank">
+            <i class="fa fa-link" aria-hidden="true"></i>
+          </a>
+          Edit {{ $project->name }}
+        </h1>
+      </div>
 
 		<div class="container-fluid">
 			<div class="row-fluid">
@@ -27,6 +32,7 @@
 		        <div class="widget-title"> 
 		        	<span class="icon"> <i class="icon-briefcase"></i> </span>
 		          	<h5>Project Detail</h5>
+
 		        </div>
 		        
 		        @if(!empty($errors->all()))
@@ -64,10 +70,13 @@
 		              </div>
 		            </div>
                 <div class="control-group">
-                  <label class="control-label">Slug *</label>
+                  <label class="control-label">
+                    Slug *
+                  </label>
                   <div class="controls">
                     <input type="text" name="slug" class="span11" placeholder="slug" id="fieldSlug" value="{{ $project->slug }}" required />
                     <span class="help-block">Single or multiple words with at least 5 characters has to have dash in between the words</span>
+                    
                   </div>
                 </div>
 		            <div class="control-group">
