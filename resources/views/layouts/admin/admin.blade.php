@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="/matrixAdmin/css/jquery.gritter.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
     {{-- ckEditor --}}
-    <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
-    {{-- highlight.js --}}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    {{-- <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script> --}}
+    <script src="/vendor/ckeditor/ckeditor.js"></script>
+    
 
 
 
@@ -68,7 +68,7 @@
   <script src="{{ asset('/matrixAdmin/js/matrix.popover.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/jquery.dataTables.min.js')}}"></script> 
   <script src="{{ asset('/matrixAdmin/js/matrix.tables.js')}}"></script> 
-  <script>hljs.initHighlightingOnLoad();</script>
+  
   <script type="text/javascript">
     // This function is called from the pop-up menus to transfer to
     // a different page. Ignore if the value returned is a null string:

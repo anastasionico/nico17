@@ -345,6 +345,18 @@ footer{
 	  	}
 	}	
 
+	.syntaxhighlighter{
+		@include borderRadius(3px);
+	}
+	.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea{
+		line-height: 2rem !important;
+	}
+	.syntaxhighlighter .line.alt1{
+		background-color: #0E0C58 !important;
+	}
+	.syntaxhighlighter .line.alt2{
+		background-color: #0E1C68 !important;
+	}
 	
 	
 }

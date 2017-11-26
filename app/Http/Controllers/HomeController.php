@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Task;
 use App\Skill;
 use App\Project;
-use App\BlogSupercategory;
+use App\Blogsupercategory;
+use App\Blogcategory;
+use App\Blogpost;
 
 
 class HomeController extends Controller
@@ -32,6 +34,9 @@ class HomeController extends Controller
         $skills = Skill::all();
         $projects = Project::all();
         $blogSupercategories = BlogSupercategory::all();
-        return view('/admin/dashboard', compact('tasksUndone','skills','projects', 'blogSupercategories'));
+        $blogcategories = Blogcategory::all();
+        $blogpostsPublished = Blogpost::where('status', '3')->get();
+        $blogpostsOutstanding = Blogpost::where('status','!=', '3')->get();
+        return view('/admin/dashboard', compact('tasksUndone','skills','projects', 'blogSupercategories', 'blogcategories', 'blogpostsPublished', 'blogpostsOutstanding'));
     }
 }

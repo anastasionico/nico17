@@ -13,5 +13,10 @@ class Blogpost extends Model
     	return $this->belongsTo('App\Blogcategory', 'category_id');
     }
 
-    
+	public static function getPostsPublished(){
+		return $blogpostsPublished = Blogpost::where('status', '3')->get();
+	}    
+	public static function getPostsOutstanding(){
+		return $blogpostsOutstanding = Blogpost::where('status','!=', '3')->get();
+	}    
 }

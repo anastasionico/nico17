@@ -481,6 +481,31 @@ footer.menuVisible {
   color: #E8C309 !important;
 }
 
+.detail--page .syntaxhighlighter {
+  border-radius: 3px;
+}
+
+.detail--page .syntaxhighlighter a,
+.detail--page .syntaxhighlighter div,
+.detail--page .syntaxhighlighter code,
+.detail--page .syntaxhighlighter table,
+.detail--page .syntaxhighlighter table td,
+.detail--page .syntaxhighlighter table tr,
+.detail--page .syntaxhighlighter table tbody,
+.detail--page .syntaxhighlighter table thead,
+.detail--page .syntaxhighlighter table caption,
+.detail--page .syntaxhighlighter textarea {
+  line-height: 2rem !important;
+}
+
+.detail--page .syntaxhighlighter .line.alt1 {
+  background-color: #0E0C58 !important;
+}
+
+.detail--page .syntaxhighlighter .line.alt2 {
+  background-color: #0E1C68 !important;
+}
+
 .bg-blue {
   background-color: #35a;
 }

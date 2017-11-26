@@ -21,7 +21,8 @@
           		<li><a href="login"><i class="icon-key"></i> Log Out</a></li>
         	</ul> --}}
       	</li>
-      	{{-- <li class="dropdown" id="menu-messages">
+      	{{-- 
+        <li class="dropdown" id="menu-messages">
       		<a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle">
       			<i class="icon icon-envelope"></i> 
       			<span class="text">Messages</span> 
@@ -44,7 +45,8 @@
 	          		<a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a>
           		</li>
         	</ul>
-      	</li> --}}
+      	</li> 
+        --}}
   			{{-- <li class="">
   				<a title="" href="#">
   					<i class="icon icon-cog"></i> <span class="text">Settings</span>
@@ -64,6 +66,28 @@
             <i class="icon icon-eye-open"></i> <span class="text">FrontEnd</span>
         </a>
       </li>
+      @if(count($blogpostsOutstanding) > 0)
+        <li class="dropdown" id="menu-messages">
+          <a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle">
+            <span style="color: #da542e">
+              <i class="icon-align-left"></i>
+              <span class="label label-important">{{ count($blogpostsOutstanding) }}</span>
+            </span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            @foreach($blogpostsOutstanding as $blogpostOutstanding)
+              <li>
+                <a title="" href="/admin/blog/{{$blogpostOutstanding->category->supercategory->id}}/{{$blogpostOutstanding->category->id}}/post/{{$blogpostOutstanding->id}}/edit">
+                  <i class="icon-align-left"></i> 
+                    {{ ucfirst($blogpostOutstanding->name) }}                    
+                </a>
+              </li>  
+            @endforeach
+          </ul>
+        </li> 
+      @endif
+      
     </ul>
 </div>
 

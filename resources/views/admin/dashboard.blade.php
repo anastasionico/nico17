@@ -14,13 +14,7 @@
 	    <div class="container-fluid">
 	      	<div class="quick-actions_homepage">
 	        	<ul class="quick-actions">
-		          	<li class="bg_lb span3"> 
-			          	<a href="/admin/dashboard" target="_blank"> 
-	          				<i class="icon-home"></i> 
-          					Home
-      					</a> 
-  					</li>
-  					<li class="bg_ly"> 
+		          	<li class="bg_ly"> 
 			          	<a href="/projects"> 
 	          				<i class="icon-fullscreen"></i> 
           					Projects
@@ -36,12 +30,6 @@
 			          	<a href="/contact"> 
 	          				<i class="icon-calendar"></i> 
           					Contacts
-      					</a> 
-  					</li>
-  					<li class="bg_lg"> 
-			          	<a href="/detail"> 
-	          				<i class="icon-info-sign"></i> 
-          					Detail
       					</a> 
   					</li>
   					<li class="bg_dy"> 
@@ -67,6 +55,7 @@
 					<li class="bg_lr"> 
   						<a href="/admin/blog/supercategory"> 
 							<i class="icon-align-left"></i> 
+							<span class="label label-important">{{ count($blogpostsPublished) }}</span> 
 							Blog
 						</a> 
 					</li>

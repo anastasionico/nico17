@@ -9,8 +9,8 @@ class BlogFrontendController extends Controller
 {
     public function index()
     {
-    	$blogs = Blogpost::orderBy('created_at', 'asc')->get();
-    	return view('blog', compact('blogs'));
+    	$posts = Blogpost::where('status', '=', 3)->orderBy('created_at', 'asc')->get();
+    	return view('blog', compact('posts'));
     }
 
     public function show(Request $request, $param)
@@ -21,8 +21,9 @@ class BlogFrontendController extends Controller
             ->firstOrFail();
    		$otherContents = Blogpost::where('id', '!=', $param)
                     ->where('slug', '!=', $param)
+                    ->where('status', '=', 3)
                     ->limit(3)
-                    ->orderBy('created_at', 'desc')
+                    ->orderBy('created_at', 'asc')
                     ->get();
         return view('detail', compact('content', 'otherContents','segment'));
     }

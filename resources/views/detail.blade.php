@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.js" type="text/javascript"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.js" type="text/javascript"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushSql.js" type="text/javascript"></script> 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.css" rel="stylesheet" type="text/css" />
 
 	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> 
 	
@@ -41,7 +41,8 @@
 					<span class="my-1 d-block">
 						<h3 class="d-inline">
 							@if( $content->category )
-								{{ ucfirst($content->category->name) }}
+								{{ ucfirst($content->category->supercategory->name) }}
+								({{ ucfirst($content->category->name) }})
 							@else
 								Project
 							@endif
@@ -107,7 +108,7 @@
 
 @section('work')
 	
-	<section class="bg-blue c-white ">	
+	<section class="bg-blue c-white">	
 		<h3 class="text-center py-3">
 			@if( $content->category )
 				{{ ucfirst($content->category->name) }}
@@ -119,12 +120,13 @@
 			
 			@foreach($otherContents as $otherContent)
 				<div class="miniCard is-visible">
-					<div class="miniCard--image" style="background-image:url('/img/projects/{{ $otherContent->img }}')"></div>
+					<div class="miniCard--image" style="background-image:url('/img/{{ $segment }}/{{ $otherContent->img }}')"></div>
 					<div class="miniCard--caption">
 						<div class="miniCard--caption-CatnDate clearfix">
 							<b>
 								@if( $otherContent->category )
-									{{ ucfirst($content->category->name) }}
+									{{ ucfirst($otherContent->category->supercategory->name) }}
+									({{ ucfirst($otherContent->category->name) }})
 								@else
 									Project
 								@endif
@@ -140,7 +142,8 @@
 						@if( $otherContent->cta_link)
 							<a href="{{ $otherContent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
 						@endif
-						<a href="/projects/{{ $otherContent->slug }}" class="btn">See details</a>
+
+						<a href="/{{ $segment }}/{{ $otherContent->slug }}" class="btn">See details</a>
 						
 					</div>	
 				</div>
@@ -149,6 +152,7 @@
  		</div>
 	</section>
 	<script type="text/javascript">
+     	
      	SyntaxHighlighter.all()
 	</script>
 @endsection

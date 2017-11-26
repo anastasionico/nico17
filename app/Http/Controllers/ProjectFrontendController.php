@@ -22,7 +22,7 @@ class ProjectFrontendController extends Controller
         $otherContents = Project::where('id', '!=', $param)
                     ->where('slug', '!=', $param)
                     ->limit(3)
-                    ->orderBy('created_at', 'desc')
+                    ->orderBy('created_at', 'asc')
                     ->get();
         return view('detail', compact('content', 'otherContents','segment'));
     }

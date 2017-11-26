@@ -174,8 +174,6 @@
 			</div>			
 		@endforeach
 
-
-
 		<div class="sectionCenter mt-5">
 			<div class="sectionCenter--content">
 				<a href='/projects' class="btn-cta">See More</a>
@@ -287,118 +285,49 @@
 				<div class="oneThird--small">&nbsp;</div>
 			</div>		
 			
-			<div class="oneThird" >
-				<div class="oneThird--big">
-					<div class="oneThird--big--content">
-						<div class="card">
-							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-							<div class="card--caption">
-								<div class="card--caption-CatnDate clearfix">
-									<b>
-										Category
-									</b>	
-									<em>
-										28-09-2017
-									</em>	
-								</div>
-								<h4>Cation Consulting</h4>
-								<p>
-									Cation Consulting Limited is a small consultancy providing change management support in the areas
-								</p>
-								
-								<a class="btn">See details</a>
-							</div>	
+			@php
+				$postsIncrement = 0
+			@endphp			
+			@foreach($posts as $post)
+				<div class="oneThird" >
+					@php
+						$postsIncrement++
+					@endphp		
+					@if( $postsIncrement %2 == 0 )
+						<div class="oneThird--small">&nbsp;</div>
+					@endif
+					<div class="oneThird--big">
+						<div class="oneThird--big--content">
+							<div class="card">
+								<div class="card--image" style="background-image:url('/img/blog/{{ $post->img }}')"></div>
+								<div class="card--caption">
+									<div class="card--caption-CatnDate clearfix">
+										<b>
+											{{ ucfirst($post->category->supercategory->name) }}
+											({{ ucfirst($post->category->name) }})
+										</b>	
+										<em>
+											{{ $post->published_at}}
+										</em>	
+									</div>
+									<h4>{{ ucfirst($post->name) }}</h4>
+									<p>
+										{{ ucfirst($post->excerpt) }}
+									</p>
+									@if( $post->cta_link)
+										<a href="{{ $post->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+									@endif
+									<a href="/blog/{{ $post->slug }}" class="btn">See details</a>
+								</div>	
+							</div>
+							
 						</div>
-						
 					</div>
-				</div>
-				<div class="oneThird--small">&nbsp;</div>
-			</div>			
+				</div>			
+			@endforeach
 
-			<div class="oneThird" >
-				<div class="oneThird--small">&nbsp;</div>
-				<div class="oneThird--big">
-					<div class="oneThird--big--content">
-						
-						<div class="card">
-							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-							<div class="card--caption">
-								<div class="card--caption-CatnDate clearfix">
-									<b>
-										Category
-									</b>	
-									<em>
-										28-09-2017
-									</em>	
-								</div>
-								<h4>Cation Consulting</h4>
-								<p>
-									Cation Consulting Limited is a small consultancy providing change management support in the areas
-								</p>
-								
-								<a class="btn">See details</a>
-							</div>	
-						</div>
-						
-					</div>
-				</div>
-			</div>			
 
-			<div class="oneThird" >
-				<div class="oneThird--big">
-					<div class="oneThird--big--content">
-						<div class="card">
-							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-							<div class="card--caption">
-								<div class="card--caption-CatnDate clearfix">
-									<b>
-										Category
-									</b>	
-									<em>
-										28-09-2017
-									</em>	
-								</div>
-								<h4>Cation Consulting</h4>
-								<p>
-									Cation Consulting Limited is a small consultancy providing change management support in the areas
-								</p>
-								
-								<a class="btn">See details</a>
-							</div>	
-						</div>
-						
-					</div>
-				</div>
-				<div class="oneThird--small">&nbsp;</div>
-			</div>			
-
-			<div class="oneThird" >
-				<div class="oneThird--small">&nbsp;</div>
-				<div class="oneThird--big">
-					<div class="oneThird--big--content">
-						<div class="card">
-							<div class="card--image" style="background-image:url('img/mobile-hero.png')"></div>
-							<div class="card--caption">
-								<div class="card--caption-CatnDate clearfix">
-									<b>
-										Category
-									</b>	
-									<em>
-										28-09-2017
-									</em>	
-								</div>
-								<h4>Cation Consulting</h4>
-								<p>
-									Cation Consulting Limited is a small consultancy providing change management support in the areas
-								</p>
-								
-								<a class="btn">See details</a>
-							</div>	
-						</div>
-						
-					</div>
-				</div>
-			</div>			
+				
 			
 			<div class="sectionCenter mt-5">
 				<div class="sectionCenter--content">

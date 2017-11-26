@@ -16,6 +16,12 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.admin.sidebar' , function( $view ){
             $view->with('tasksCount', \App\Task::getAll());
         });
+        view()->composer('layouts.admin.header' , function( $view ){
+            $view->with('blogpostsPublished', \App\Blogpost::getPostsPublished());
+        });
+        view()->composer('layouts.admin.header' , function( $view ){
+            $view->with('blogpostsOutstanding', \App\Blogpost::getPostsOutstanding());
+        });
     }
 
     /**

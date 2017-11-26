@@ -17,10 +17,8 @@ Auth::routes();
 Route::get('/', function () {
     $skills = \App\Skill::all();
     $projects = \App\Project::limit(5)->orderBy('created_at', 'desc')->get();
-    
-                
-                
-    return view('home', compact('skills','projects'));
+    $posts = \App\Blogpost::limit(5)->where('status', 3)->orderBy('created_at', 'desc')->get();
+    return view('home', compact('skills', 'projects', 'posts'));
 });
 
 Route::get('/projects', 'ProjectFrontendController@index');
