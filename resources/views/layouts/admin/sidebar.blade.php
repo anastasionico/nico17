@@ -81,7 +81,7 @@
     		</a> 
   		</li>
       	<li> 
-      		<a href="#">
+      		<a href="/admin/contact">
       			<i class="fa fa-envelope" aria-hidden="true"></i>
         		<span>Messages</span>
             <span class="label label-important">

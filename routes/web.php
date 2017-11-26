@@ -39,7 +39,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     // /admin/dashboard
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
-	   
+    
+    // /admin/contact
+    Route::get('contact', 'ContactController@index');
+    
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()
     {
@@ -68,7 +71,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
         Route::resource('/{supercategory}/category', 'BlogcategoryController');
         Route::resource('/{supercategory}/{category}/post', 'BlogpostController');
     });
-    
+
 
 
     
