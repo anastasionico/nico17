@@ -14,7 +14,6 @@ class ContactController extends Controller
      */
     public function index()
     {
-        
         $lastSeen = Contact::where('seen', null)->orderBy('created_at', 'asc')->first();
         if($lastSeen != null){
             $lastSeen->seen = now();
@@ -47,7 +46,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -58,7 +57,11 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        $lastSeen = Contact::find($contact->id);
+        $lastSeen->seen = now();
+        $lastSeen->save();    
+        $inboxes = Contact::orderBy('created_at', 'desc')->get();
+        return view('admin/contact/index', compact('inboxes', 'lastSeen'));
     }
 
     /**

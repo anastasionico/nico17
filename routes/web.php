@@ -41,7 +41,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
     
     // /admin/contact
-    Route::get('contact', 'ContactController@index');
+    Route::resource('contact', 'ContactController');
+    
     
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()

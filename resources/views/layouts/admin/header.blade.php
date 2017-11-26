@@ -61,7 +61,7 @@
 
 			</li>
       </li>
-        <li class="">
+      <li class="">
           <a title="" href="/" target="_blank">
             <i class="icon icon-eye-open"></i> <span class="text">FrontEnd</span>
         </a>
@@ -86,6 +86,16 @@
             @endforeach
           </ul>
         </li> 
+        @if(count($inboxOutstanding) > 0)
+          <li>
+            <a href="/admin/contact">
+              <span style="color: #da542e">
+                <i class="fa fa-envelope"></i>
+                <span class="label label-important">{{ count($inboxOutstanding) }}</span>
+              </span>
+            </a>
+          </li>
+        @endif
       @endif
       
     </ul>

@@ -28,7 +28,22 @@ class ContactTest extends TestCase
   			->assertSee($messageThree->email)
   			->assertSee($messageFour->message)
   			->assertSee($messageFive->email);
-  			
-    	
+  	}
+
+    /** @test */
+    public function an_admin_can_see_a_single_message_at_a_time()
+    {
+      // given an admin and a message
+      $this->withoutExceptionHandling();
+      $this->be(factory('App\User')->create());
+      $messageOne = factory('App\Contact')->create();
+
+      // when the admin hit the admin/contact/{id} of the message 
+      // then the message become seen and the message is seen in the page
+      $this->get("/admin/contact/$messageOne->id")
+        ->assertSee($messageOne->message);
+      $this->assertDatabaseHas('contacts', [
+        'seen' => date('Y-m-d H:i:s') 
+      ]);
     }
 }

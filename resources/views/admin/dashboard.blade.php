@@ -59,6 +59,12 @@
 							Blog
 						</a> 
 					</li>
+					<li class="bg_lh"> 
+  						<a href="/admin/contact"> 
+							<i class="icon-envelope"></i> 
+  							Contact
+						</a> 
+					</li>
   				</ul>
 	      </div>
 	      <!--End-Action boxes-->    

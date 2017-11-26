@@ -35,7 +35,7 @@
 				                  	<ul class="contact-list">
 				                  		@foreach($inboxes as $inbox)
 				                  			<li>
-					                  			<a href="#">
+					                  			<a href="/admin/contact/{{ $inbox->id}}">
 					                  				<span>
 					                  					<h5>{{ $inbox->name }}</h5>
 					                  					<em>{{ $inbox->email }}</em>
