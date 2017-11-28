@@ -57,35 +57,39 @@
 			            	</div>
 
 				            <div class="chat-content panel-left2">
-				              	<div class="chat-messages" id="chat-messages">
-				                	<div id="chat-messages-inner">
-				                		<h2>{{ $lastSeen->name }}</h2>
-				                		<h4><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{ $lastSeen->email }}</h4>
-				                		<h5><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp; {{ $lastSeen->created_at}}</h5>
-				                		<p>
-				                			<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-				                			&nbsp; {{$lastSeen->seen }}
-				                		</p>
-			                			<p>
-			                				@if( $lastSeen->answered == null )
-			                					<span class="badge badge-important">
-					                				<i class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp; Not Answered
-												</span>	
-											@else
-												<i class="fa fa-paper-plane" aria-hidden="true"></i>
-												&nbsp; {{$lastSeen->answered }}
-		                  					@endif
-			                			</p>
-				                		<hr>
-				                		{{ $lastSeen->message}}
+				            	@if(!$lastSeen)
+				            		<h6>There are no messages yet</h6>
+			            		@else
+			            		  	<div class="chat-messages" id="chat-messages">
+					                	<div id="chat-messages-inner">
+					                		<h2>{{ $lastSeen->name }}</h2>
+					                		<h4><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{ $lastSeen->email }}</h4>
+					                		<h5><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp; {{ $lastSeen->created_at}}</h5>
+					                		<p>
+					                			<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+					                			&nbsp; {{$lastSeen->seen }}
+					                		</p>
+				                			<p>
+				                				@if( $lastSeen->answered == null )
+				                					<span class="badge badge-important">
+						                				<i class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp; Not Answered
+													</span>	
+												@else
+													<i class="fa fa-paper-plane" aria-hidden="true"></i>
+													&nbsp; {{$lastSeen->answered }}
+			                  					@endif
+				                			</p>
+				                			<hr>
+					                		{{ $lastSeen->message}}
+					                	</div>
+					              	</div>
+					              	<div class="chat-message well">
+					                	<button class="btn btn-success">Send</button>
+				                		<span class="input-box">
+				                			<textarea class="span12" rows="1" ></textarea>
+				                		</span> 
 				                	</div>
-				              	</div>
-				              	<div class="chat-message well">
-				                	<button class="btn btn-success">Send</button>
-			                		<span class="input-box">
-			                			<textarea class="span12" rows="1" ></textarea>
-			                		</span> 
-			                	</div>
+			                	@endif
 			            	</div>
 			          	</div>
 			        </div>

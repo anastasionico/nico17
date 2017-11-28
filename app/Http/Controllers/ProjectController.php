@@ -36,8 +36,6 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-
         $project = request()->validate([
             'name'      => 'required|min:5|string',
             'slug'      => 'required|min:5|alpha_dash',

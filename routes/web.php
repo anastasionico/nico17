@@ -34,6 +34,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::post('/admin/contact', 'ContactController@store');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
@@ -41,7 +42,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
     
     // /admin/contact
-    Route::resource('contact', 'ContactController');
+    Route::resource('contact', 'ContactController',['except' => 'store']);
     
     
     // admin/task

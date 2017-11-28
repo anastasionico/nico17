@@ -46,7 +46,15 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $contact = request()->validate([
+            "name" => "required|string",
+            "message" => "required|string|min:10",
+            "email" => "required|email"
+        ]);
+
+        $inbox = Contact::create($contact);
+        \Session::flash("success","Hi $inbox->name, Your message has been sent, I will answer as soon as possible");
+        return back();
     }
 
     /**

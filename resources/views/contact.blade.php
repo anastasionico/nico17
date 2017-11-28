@@ -1,34 +1,51 @@
 @extends('layouts.master')
 
 @section('hero')
-	<div class="hero--section flexCenter">
+
+	@foreach (['danger', 'warning', 'success', 'info'] as $msg)
+		@if(Session::has($msg))
+
+			<div class="alert alert-{{ $msg }} alert-block" style="position: absolute;top:15rem;left:25%;width:50%;z-index: 20">  
+				<a class="close" data-dismiss="alert" href="#" onclick="closeAlert()">
+					×
+	  			</a>
+	      		<h4 class="alert-heading">{{ ucfirst($msg) }}</h4>
+	  			<p>{!! session($msg) !!}</p>
+			</div>
+
+		@endif
+	@endforeach
+
+	<div class="hero--section flexCenter" >
 		
+		{{ Form::open([
+				'method' => 'POST', 
+				'action' => ['ContactController@store'],
+				'class' => 'formContact',
+			]) 
+		}}
+			{{ csrf_field() }}
+			
+			<p>Hi, I am</p>
+			<div class="form-control">
+				<label>Your Name</label>
+				<input type="text" name="name">	
+			</div>
+			
+			<p>and I am contacting you because</p>
+			<div class="form-control">
+				<label>Your message</label>
+				<textarea name='message' rows="1" cols="33"></textarea>
+			</div>
 
+			<p>You can reply back to </p>
+			<div class="form-control">
+				<label>Your email</label>
+				<input type="email" name="email">	
+			</div>
 
-			<form class="formContact">
-				<p>Hi, I am</p>
-				<div class="form-control">
-					<label>Your Name</label>
-					<input type="text" name="name">	
-				</div>
-				
-				<p>and I am contacting you because</p>
-				<div class="form-control">
-					<label>Your message</label>
-					<textarea rows="1" cols="33"></textarea>
-				</div>
-
-				<p>You can reply back to </p>
-				<div class="form-control">
-					<label>Your email</label>
-					<input type="email" name="email">	
-				</div>
-
-				<input class="btn" type="submit" name="send" value="SEND">
-			</form>
-
-
-
+			<input class="btn" type="submit" name="send" value="SEND">
+		{{ Form::close() }}
 	</div>
 @endsection
 
@@ -95,6 +112,13 @@
  			</div>
  		</div>
 	</section>
+
+	<script type="text/javascript">
+		function closeAlert(){
+			var popup = document.querySelector('.alert');
+			popup.style.display='none';
+		}
+	</script>
 @endsection
 
 

@@ -46,4 +46,25 @@ class ContactTest extends TestCase
         'seen' => date('Y-m-d H:i:s') 
       ]);
     }
+
+    /** @test */
+    public function a_visitor_can_send_a_message()
+    {
+      // given a visitor
+      $user = factory('App\User')->create();
+      // when the visitor sent a form request via the contact form
+      $message = [
+        "name" => "This is my name",
+        "message" => "Laravel provides an easy method of protecting your application from cross-site request forgeries. First, a random token is placed in your user's session",
+        "email" => "anastasionico@gmail.com"
+      ];
+      $this->post('/admin/contact', $message);
+      // then the message has to be saved into the database and the email seen in the contact page on the backend
+      $this->assertDatabaseHas('contacts',[
+        "name" => "This is my name",
+        "message" => "Laravel provides an easy method of protecting your application from cross-site request forgeries. First, a random token is placed in your user's session",
+        "email" => "anastasionico@gmail.com"
+      ]);
+    }
+
 }
