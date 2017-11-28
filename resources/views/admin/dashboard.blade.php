@@ -62,7 +62,7 @@
 					<li class="bg_lh"> 
   						<a href="/admin/contact"> 
 							<i class="icon-envelope"></i> 
-  							Contact
+							Contact
 						</a> 
 					</li>
   				</ul>

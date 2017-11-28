@@ -53,7 +53,8 @@ class ContactController extends Controller
         ]);
 
         $inbox = Contact::create($contact);
-        \Session::flash("success","Hi $inbox->name, Your message has been sent, I will answer as soon as possible");
+        $message = "Hi ". ucfirst($inbox->name). ", Your message has been sent, I will answer as soon as possible";
+        \Session::flash("success",$message);
         return back();
     }
 

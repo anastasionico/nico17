@@ -1882,7 +1882,7 @@ form.formContact textarea {
   color: #fff;
   border-bottom: 2px solid #fff;
   font-size: 1.4rem;
-  margin: 0.7rem auto;
+  margin: 0.7rem auto 0rem;
 }
 
 form.formContact input[type=submit] {

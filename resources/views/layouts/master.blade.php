@@ -14,6 +14,31 @@
 		
 		<div id="content">
 			<section class="mainSection">
+				@if ($errors->any())
+					<div class="alert alert-danger alert-block" style="position: absolute;top:15rem;left:25%;width:50%;z-index: 20">  
+						<a class="close" data-dismiss="alert" href="#" onclick="closeAlert()">
+							×
+			  			</a>
+			  			@foreach ($errors->all() as $error)
+			               	<h4 class="alert-heading">Too tired to type?</h4>
+			               	<p>{{ $error }}</p>
+			            @endforeach
+			      	</div>
+				@endif
+
+				@foreach (['danger', 'warning', 'success', 'info'] as $msg)
+					@if(Session::has($msg))
+
+						<div class="alert alert-{{ $msg }} alert-block" style="position: absolute;top:15rem;left:25%;width:50%;z-index: 20">  
+							<a class="close" data-dismiss="alert" href="#" onclick="closeAlert()">
+								×
+				  			</a>
+				      		<h4 class="alert-heading">{{ ucfirst($msg) }}</h4>
+				  			<p>{!! session($msg) !!}</p>
+						</div>
+
+					@endif
+				@endforeach
 
 				@yield('hero')
 				@yield('homeAbout')

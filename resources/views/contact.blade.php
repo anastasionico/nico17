@@ -2,20 +2,6 @@
 
 @section('hero')
 
-	@foreach (['danger', 'warning', 'success', 'info'] as $msg)
-		@if(Session::has($msg))
-
-			<div class="alert alert-{{ $msg }} alert-block" style="position: absolute;top:15rem;left:25%;width:50%;z-index: 20">  
-				<a class="close" data-dismiss="alert" href="#" onclick="closeAlert()">
-					×
-	  			</a>
-	      		<h4 class="alert-heading">{{ ucfirst($msg) }}</h4>
-	  			<p>{!! session($msg) !!}</p>
-			</div>
-
-		@endif
-	@endforeach
-
 	<div class="hero--section flexCenter" >
 		
 		{{ Form::open([
@@ -34,8 +20,12 @@
 			
 			<p>and I am contacting you because</p>
 			<div class="form-control">
-				<label>Your message</label>
-				<textarea name='message' rows="1" cols="33"></textarea>
+				<label>
+					Your message
+					<small class="help-block" id="messageHelpBlock" style="font-size:0.5rem;">At least 10 characters</small>
+				</label>
+				<textarea name='message' id="messageTextarea" rows="1" cols="33"></textarea>
+
 			</div>
 
 			<p>You can reply back to </p>
@@ -112,13 +102,8 @@
  			</div>
  		</div>
 	</section>
+	
 
-	<script type="text/javascript">
-		function closeAlert(){
-			var popup = document.querySelector('.alert');
-			popup.style.display='none';
-		}
-	</script>
 @endsection
 
 

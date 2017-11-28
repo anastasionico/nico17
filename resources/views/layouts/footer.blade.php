@@ -13,21 +13,32 @@
 				</div>
 				<div class="twoThird--big">
 					<div class="twoThird--big-content">
-						<form class="footerForm">
+						{{ Form::open([
+								'method' => 'POST', 
+								'action' => ['ContactController@store'],
+								'class' => 'footerForm',
+							]) 
+						}}
+							{{ csrf_field() }}
+						
 							<div class="form-control">
 								<label>Your Name</label>
 								<input type="text" name="name">	
+								
+							</div>
+							<div class="form-control">
+								<label>
+									Insert your message here
+									<small class="help-block" id="messageHelpBlock" style="font-size:0.5rem;">At least 10 characters</small>
+								</label>
+								<textarea name='message' id="messageTextarea" rows="1" cols="33"></textarea>
 							</div>
 							<div class="form-control">
 								<label>Your Email</label>
 								<input type="text" name="email">
 							</div>
-							<div class="form-control">
-								<label>Insert your message here</label>
-								<textarea rows="1" cols="33"></textarea>
-							</div>
-							<input class="btn" type="submit" name="SEND">
-						</form>
+							<input class="btn" type="submit" name="send" value="SEND">
+						{{ Form::close() }}
 					</div>
 				</div>
 			</div>
@@ -87,4 +98,23 @@
 	
 </footer>
 
+<script type="text/javascript">
+	function closeAlert(){
+		var popup = document.querySelector('.alert');
+		popup.style.display='none';
+	}
+</script>
+<script type="text/javascript">
+		var messageHelpBlock = document.querySelector('#messageHelpBlock');
+		var messageTextarea = document.querySelector('#messageTextarea');
+
+		messageTextarea.onkeyup = function(){
+			var messageTextareaLength = 10 - messageTextarea.value.length;
+			if(messageTextareaLength > -1){
+				messageHelpBlock.textContent = "At least " + messageTextareaLength + " characters more";	
+			}else{
+				messageHelpBlock.textContent = "Message long enough";
+			}
+		}
+	</script>
 <script src="/js/main.js"></script>

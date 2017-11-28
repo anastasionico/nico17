@@ -63,7 +63,7 @@ form.formContact{
 		color: $white;
 		border-bottom: 2px solid $white;
 		font-size: 1.4rem;
-		margin:0.7rem auto;	
+		margin:0.7rem auto 0rem;	
 	}
 	input[type=submit]{
 		background-color:$white;
@@ -74,6 +74,7 @@ form.formContact{
 			float: left;
 		}
 	}
+
 }
 
 
