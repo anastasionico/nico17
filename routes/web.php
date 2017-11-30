@@ -14,6 +14,8 @@
 Auth::routes();
 
 
+
+
 Route::get('/', function () {
     $skills = \App\Skill::all();
     $projects = \App\Project::limit(5)->orderBy('created_at', 'desc')->get();
@@ -43,7 +45,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     
     // /admin/contact
     Route::resource('contact', 'ContactController',['except' => 'store']);
+    Route::post('contact/answer', 'ContactController@answer');    
     
+    Route::get('/mail', function () {
+        return new App\Mail\AnswerContact();
+    });
+
     
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()

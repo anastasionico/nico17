@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AnswerContact;
 
 class ContactController extends Controller
 {
@@ -105,5 +107,16 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         //
+    }
+
+    public function answer(Request $request)
+    {
+        Mail::to($request->senderEmail)->send(new AnswerContact($request->message));
+        $inbox = Contact::find($request->senderId);
+        $inbox->answered = now();
+        $inbox->save();
+        
+        \Session::flash("success", "Message sent successfully");        
+        return back();
     }
 }

@@ -20,7 +20,26 @@
 	    <!--End-breadcrumbs-->
 
 	    <!--Action boxes-->
-	    <div class="container-fluid"><hr>
+	    <div class="container-fluid">
+
+
+	    	@foreach (['danger', 'warning', 'success', 'info'] as $msg)
+				@if(Session::has($msg))
+
+					<div class="alert alert-{{ $msg }} alert-block"> 
+  						<a class="close" data-dismiss="alert" href="#">
+  							×
+			  			</a>
+	              		<h4 class="alert-heading">{{ ucfirst($msg) }}</h4>
+	          			<p>{!! session($msg) !!}</p>
+	          			
+	      			</div>
+
+				@endif
+			@endforeach
+
+			<hr>
+		    
 		    <div class="row-fluid">
 		      	<div class="span12">
 			        <div class="widget-box widget-chat">
@@ -84,10 +103,15 @@
 					                	</div>
 					              	</div>
 					              	<div class="chat-message well">
-					                	<button class="btn btn-success">Send</button>
-				                		<span class="input-box">
-				                			<textarea class="span12" rows="1" ></textarea>
-				                		</span> 
+					              		<form action="/admin/contact/answer" method="post">
+                  							{{ csrf_field() }}
+                    						<button type="submit" class="btn btn-success">Send</button>
+                    						{{ Form::hidden('senderId', "$lastSeen->id") }}
+                    						{{ Form::hidden('senderEmail', "$lastSeen->email") }}
+	                  						<span class="input-box">
+					                			<textarea name="message" class="span12" rows="1">{{ old('message' )}}</textarea>
+					                		</span> 
+				                		</form>
 				                	</div>
 			                	@endif
 			            	</div>
