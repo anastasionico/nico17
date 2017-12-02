@@ -40,7 +40,7 @@ class BlogsupercategoryTest extends TestCase
     	$supercategory = factory('App\Blogsupercategory')->make(['name' => 'Pinco Pallino']);
         
     	$this->post('admin/blog/supercategory', $supercategory->toArray());
-    	$this->assertDatabaseHas('blogsupercategories', ['name' => 'Pinco Pallino']);
+    	$this->assertDatabaseHas('blogsupercat', ['name' => 'Pinco Pallino']);
     }
 
     /** @test */
@@ -55,7 +55,7 @@ class BlogsupercategoryTest extends TestCase
         $this->call('DELETE', "admin/blog/supercategory/$supercategory->id", ['_token' => csrf_token()]);
         
         // then the supercategory does not appear in the database anymore
-        $this->assertDatabaseMissing('blogsupercategories', ['id' => $supercategory->id]);
+        $this->assertDatabaseMissing('blogsupercat', ['id' => $supercategory->id]);
     }
 
     /** @test */
@@ -87,7 +87,7 @@ class BlogsupercategoryTest extends TestCase
 
 
         // then the data in the database has to be updated
-        $this->assertDatabaseHas('blogsupercategories',[
+        $this->assertDatabaseHas('blogsupercat',[
             'name' => $supercategoryUpdate['name'],
             ]);
     }

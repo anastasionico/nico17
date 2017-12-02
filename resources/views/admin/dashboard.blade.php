@@ -230,10 +230,10 @@
 		          	</div>
 		          	<div class="widget-content nopadding collapse in" id="collapseG2">
 		            	<ul class="recent-posts">
-		            		@foreach($blogSupercategories as $blogSupercategory)
+		            		@foreach($blogsupercat as $blogSupercategory)
 		            			<li>
 			                		<div class="user-thumb"> 
-			                			<img style='max-height: 75px' src='{{ asset("img/blogSupercategories/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
+			                			<img style='max-height: 75px' src='{{ asset("img/blogsupercat/$blogSupercategory->img") }}' alt='{{ $blogSupercategory->img }}'>
 		                			</div>
 			                		<div class="article-post"> 
 			                			<span class="user-info"> 
@@ -245,13 +245,13 @@
 			                				</a> 
 			                			</span>
 			                  			<p>
-			                  				<a href="http://nico17.dev/admin/blogSupercategories/blogSupercategories/{{ $blogSupercategory->id }}/edit">{{ $blogSupercategory->excerpt }}</a> 
+			                  				<a href="http://nico17.dev/admin/blogsupercat/blogsupercat/{{ $blogSupercategory->id }}/edit">{{ $blogSupercategory->excerpt }}</a> 
 		                  				</p>
 			                		</div>
 			              		</li>
 		            		@endforeach
 		              		<li>
-		              			<a href="/admin/blogSupercategories/blogSupercategories" class="btn btn-warning btn-mini">View All</a>
+		              			<a href="/admin/blogsupercat/blogsupercat" class="btn btn-warning btn-mini">View All</a>
 		                	</li>
 		            	</ul>
 		          	</div>

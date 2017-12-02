@@ -22,7 +22,10 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/../vendor/autoload.php';
-
+/*
+* server directory 
+* require __DIR__.'/../nico17/vendor/autoload.php';
+*/
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights
@@ -36,6 +39,10 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
+/*
+* server directory 
+* $app = require_once __DIR__.'/../nico17/bootstrap/app.php';
+*/
 
 /*
 |--------------------------------------------------------------------------

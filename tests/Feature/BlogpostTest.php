@@ -16,7 +16,7 @@ class BlogpostTest extends TestCase
     	// give an admin, a supercategory, a category and some posts
     	$this->be(factory('App\User')->create());
     	$supercategory = factory('App\Blogsupercategory')->create();
-    	$category = factory('App\Blogcategory')->create(['supercategory_id' => $supercategory->id]);
+    	$category = factory('App\Blogcategory')->create(['supercat_id' => $supercategory->id]);
     	$postOne = factory('App\Blogpost')->create([
     		'category_id' => $category->id,
     		'name' => "pippo"
@@ -40,7 +40,7 @@ class BlogpostTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
         // when the admin get the page for creating a new post
         // then he has to be able to see the form
         $this->get("admin/blog/$supercategory->id/$category->id/post/create")
@@ -54,7 +54,7 @@ class BlogpostTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
         $post = factory('App\Blogpost')->make([
             'category_id' => $category->id,
             'name'      => 'this is a project',
@@ -76,7 +76,7 @@ class BlogpostTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
         $post = factory('App\Blogpost')->create([
             'category_id' => $category->id,
             'name'      => 'this is a project',
@@ -97,7 +97,7 @@ class BlogpostTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
         $post = factory('App\Blogpost')->create([
             'category_id' => $category->id,
             'name'      => 'this is a project',
@@ -124,7 +124,7 @@ class BlogpostTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
         $post = factory('App\Blogpost')->create([
             'category_id' => $category->id,
             'name'      => 'Pinco Pallino',
@@ -148,9 +148,9 @@ class BlogpostTest extends TestCase
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
         $supercategoryTwo = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategory->id]);
-        $categoryTwo = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategoryTwo->id]);
-        $categoryThree = factory('App\Blogcategory')->create([ 'supercategory_id' => $supercategoryTwo->id]);
+        $category = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategory->id]);
+        $categoryTwo = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategoryTwo->id]);
+        $categoryThree = factory('App\Blogcategory')->create([ 'supercat_id' => $supercategoryTwo->id]);
         $post = factory('App\Blogpost')->create(['category_id' => $category->id]);
         $postTwo = factory('App\Blogpost')->create(['category_id' => $categoryTwo->id]);
         $postThree = factory('App\Blogpost')->create(['category_id' => $categoryThree->id]);

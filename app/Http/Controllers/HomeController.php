@@ -33,10 +33,10 @@ class HomeController extends Controller
         $tasksUndone = Task::where('done', 0)->orderBy('priority','desc')->get();
         $skills = Skill::all();
         $projects = Project::all();
-        $blogSupercategories = BlogSupercategory::all();
-        $blogcategories = Blogcategory::all();
+        $blogsupercat = BlogSupercategory::all();
+        $blogcat = Blogcategory::all();
         $blogpostsPublished = Blogpost::where('status', '3')->get();
         $blogpostsOutstanding = Blogpost::where('status','!=', '3')->get();
-        return view('/admin/dashboard', compact('tasksUndone','skills','projects', 'blogSupercategories', 'blogcategories', 'blogpostsPublished', 'blogpostsOutstanding'));
+        return view('/admin/dashboard', compact('tasksUndone','skills','projects', 'blogsupercat', 'blogcat', 'blogpostsPublished', 'blogpostsOutstanding'));
     }
 }

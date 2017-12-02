@@ -40,7 +40,7 @@ class BlogpostController extends Controller
     {
         
         $post = request()->validate([
-            'category_id'      => 'required|integer|exists:blogcategories,id',
+            'category_id'      => 'required|integer|exists:blogcat,id',
             'name'      => 'required|min:5|string',
             'slug'      => 'required|min:5|alpha_dash',
             'excerpt'   => 'required|min:50|string|',
@@ -62,7 +62,7 @@ class BlogpostController extends Controller
 
         $category = Blogcategory::findOrFail($newPost->category_id);
         \Session::flash('success', "The post '$newPost->name' has been created ");
-        return redirect("admin/blog/$category->supercategory_id/category/$newPost->category_id");
+        return redirect("admin/blog/$category->supercat_id/category/$newPost->category_id");
     }
 
     /**
@@ -99,7 +99,7 @@ class BlogpostController extends Controller
     {
         $post = Blogpost::findOrFail($post);
         $postUpdate = request()->validate([
-            'category_id'      => 'integer|exists:blogcategories,id',
+            'category_id'      => 'integer|exists:blogcat,id',
             'name'      => 'min:5|string',
             'slug'      => 'min:5|alpha_dash',
             'excerpt'   => 'min:50|string|',

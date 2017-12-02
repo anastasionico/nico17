@@ -40,9 +40,9 @@ class BlogcategoryController extends Controller
     public function store(Request $request)
     {
         $blogCategory = request()->validate([
-            'supercategory_id'      => 'required|integer|exists:blogsupercategories,id',
+            'supercat_id'      => 'required|integer|exists:blogsupercat,id',
             'name'      => 'required|min:5|string',
-            'slug'      => 'required|min:5|alpha_dash|unique:blogcategories,slug',
+            'slug'      => 'required|min:5|alpha_dash|unique:blogcat,slug',
             'excerpt'   => 'required|min:50|string|',
             'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
@@ -54,7 +54,7 @@ class BlogcategoryController extends Controller
 
         $newCategory = Blogcategory::create($blogCategory);
         \Session::flash('success', "The category '$newCategory->name' has been created ");
-        return redirect("admin/blog/supercategory/$newCategory->supercategory_id");
+        return redirect("admin/blog/supercategory/$newCategory->supercat_id");
 
     }
 
@@ -96,7 +96,7 @@ class BlogcategoryController extends Controller
     {
         $blogcategory = Blogcategory::findOrFail($blogcategory);
         $categoryUpdate = request()->validate([
-            'supercategory_id'      => 'integer|exists:blogsupercategories,id',
+            'supercat_id'      => 'integer|exists:blogsupercat,id',
             'name'      => 'min:5|string',
             'slug'      => 'min:5|alpha_dash',
             'excerpt'   => 'min:50|string|',
@@ -113,7 +113,7 @@ class BlogcategoryController extends Controller
         
 
         \Session::flash('success', "The blog's category '$blogcategory->name' has been updated ");
-        return redirect("admin/blog/supercategory/$blogcategory->supercategory_id");
+        return redirect("admin/blog/supercategory/$blogcategory->supercat_id");
     }
 
     /**

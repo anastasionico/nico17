@@ -103,7 +103,7 @@
 				                  					({{ ucfirst($post->category->name) }})
 			                  					</td>
 					                  			<td style="min-width: 50px;text-align: center;">
-					                  				{{-- <a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
+					                  				{{-- <a class="tip" href="blogsupercat/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}
 													<a class="tip" href="/admin/blog/{{ $post->category->supercategory->id }}/{{ $post->category->id }}/post/{{ $post->id }}/edit" title="Edit">

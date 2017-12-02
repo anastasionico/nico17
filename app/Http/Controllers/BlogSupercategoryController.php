@@ -14,8 +14,8 @@ class BlogsupercategoryController extends Controller
      */
     public function index()
     {
-        $blogSupercategories = Blogsupercategory::all();
-        return view('admin/blog/supercategory/index', compact('blogSupercategories'));
+        $blogsupercat = Blogsupercategory::all();
+        return view('admin/blog/supercategory/index', compact('blogsupercat'));
     }
 
     /**
@@ -38,7 +38,7 @@ class BlogsupercategoryController extends Controller
     {
         $superCategory = request()->validate([
             'name'      => 'required|min:5|string',
-            'slug'      => 'required|min:5|alpha_dash|unique:blogcategories,slug',
+            'slug'      => 'required|min:5|alpha_dash|unique:blogcat,slug',
             'excerpt'   => 'required|min:50|string|',
             'img'       => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);

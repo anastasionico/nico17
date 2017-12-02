@@ -17,7 +17,7 @@ class CreateBlogpostsTable extends Migration
             $table->increments('id');
             $table->integer('category_id')->unsigned()->nullable();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->text('excerpt');
             $table->longText('content');
             $table->unsignedTinyInteger('status');
@@ -28,10 +28,6 @@ class CreateBlogpostsTable extends Migration
             $table->string('cta_link')->nullable();
             $table->date('published_at')->nullable();
             
-
-            $table->foreign('category_id')
-                ->references('id')->on('blogcategories')
-                ->onDelete('cascade');
         });
     }
 

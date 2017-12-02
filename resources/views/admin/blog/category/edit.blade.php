@@ -16,8 +16,8 @@
 		    		<i class="icon-home"></i> Home
 	    		</a> 
     			<a href="/admin/blog/supercategory">Blog Super Category</a> 
-          <a href="/admin/blog/supercategory/{{ $blogcategory->supercategory_id }}">{{ ucfirst($blogcategory->supercategory->name) }}</a> 
-          <a href="/admin/blog/{{ $blogcategory->supercategory_id }}/category/{{ $blogcategory->id }}/edit" class="current">{{ ucfirst($blogcategory->name) }}</a> 
+          <a href="/admin/blog/supercategory/{{ $blogcategory->supercat_id }}">{{ ucfirst($blogcategory->supercategory->name) }}</a> 
+          <a href="/admin/blog/{{ $blogcategory->supercat_id }}/category/{{ $blogcategory->id }}/edit" class="current">{{ ucfirst($blogcategory->name) }}</a> 
         </div>
 		    <h1>Edit {{ ucfirst($blogcategory->name) }}</h1>
 	  	</div>
@@ -48,13 +48,13 @@
 		        <div class="widget-content nopadding">
 	          	{{-- <form action="/admin/projects/projects" method="post" class="form-horizontal" enctype="multipart/form-data">> --}}
               {{ Form::open([
-                    'action' => array('BlogcategoryController@update', $blogcategory->supercategory_id, $blogcategory->id),
+                    'action' => array('BlogcategoryController@update', $blogcategory->supercat_id, $blogcategory->id),
                     'method'  => 'PUT',
                     'files'   => true,
                     'class'   => 'form-horizontal',
               ]) }}
             		{{ csrf_field() }}
-                {{ Form::hidden('supercategory_id', "$blogcategory->supercategory_id") }}
+                {{ Form::hidden('supercat_id', "$blogcategory->supercat_id") }}
 		            <div class="control-group">
 		              <label class="control-label">Name *</label>
 		              <div class="controls">

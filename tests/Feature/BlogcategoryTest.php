@@ -16,9 +16,9 @@ class BlogcategoryTest extends TestCase
     	$this->withoutExceptionHandling();
     	$this->be(factory('App\User')->create());
   		$supercategory = factory('App\Blogsupercategory')->create();
-  		$category1 = factory('App\Blogcategory')->create(['name'=> 'Pinco Pallino', 'supercategory_id' => $supercategory->id]);
-		$category2 = factory('App\Blogcategory')->create(['name'=> 'Paperino', 'supercategory_id' => $supercategory->id]);
-		$category3 = factory('App\Blogcategory')->create(['name'=> 'Topolino', 'supercategory_id' => $supercategory->id]);
+  		$category1 = factory('App\Blogcategory')->create(['name'=> 'Pinco Pallino', 'supercat_id' => $supercategory->id]);
+		$category2 = factory('App\Blogcategory')->create(['name'=> 'Paperino', 'supercat_id' => $supercategory->id]);
+		$category3 = factory('App\Blogcategory')->create(['name'=> 'Topolino', 'supercat_id' => $supercategory->id]);
 		
 		// when the admin visit admin/blog/supercategory/5
 		// then he have to see the category
@@ -52,9 +52,9 @@ class BlogcategoryTest extends TestCase
     	
     	// when he create a category
     	// then the category has to be in the database and has to have the right supercategory
-    	$category = factory('App\Blogcategory')->make(['name' => 'Pinco Pallino', 'supercategory_id' => $supercategory->id]);
+    	$category = factory('App\Blogcategory')->make(['name' => 'Pinco Pallino', 'supercat_id' => $supercategory->id]);
     	$response = $this->post("admin/blog/$supercategory->id/category", $category->toArray());
-    	$this->assertDatabaseHas('blogcategories', ['name' => 'Pinco Pallino']);
+    	$this->assertDatabaseHas('blogcat', ['name' => 'Pinco Pallino']);
         $response->assertRedirect("/admin/blog/supercategory/$supercategory->id");
     }
 
@@ -65,8 +65,8 @@ class BlogcategoryTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $categoryOne = factory('App\Blogcategory')->create(['name' => 'Pinco Pallino', 'supercategory_id' => $supercategory->id]);
-        $categoryTwo = factory('App\Blogcategory')->create(['name' => 'Topolino Pallino', 'supercategory_id' => $supercategory->id]);
+        $categoryOne = factory('App\Blogcategory')->create(['name' => 'Pinco Pallino', 'supercat_id' => $supercategory->id]);
+        $categoryTwo = factory('App\Blogcategory')->create(['name' => 'Topolino Pallino', 'supercat_id' => $supercategory->id]);
 
         // when he need to edit it
         // then he will see the form and the name of the supercategory
@@ -81,13 +81,13 @@ class BlogcategoryTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create(['supercategory_id' => $supercategory->id]);
-        $categoryTwo = factory('App\Blogcategory')->create(['name' => 'Pippo', 'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create(['supercat_id' => $supercategory->id]);
+        $categoryTwo = factory('App\Blogcategory')->create(['name' => 'Pippo', 'supercat_id' => $supercategory->id]);
         $categoryUpdate['name'] = 'anastasioNicoTomHughes';
         // when he update the category
         // then the category has to appear different in the database
         $this->call('PATCH', "admin/blog/$supercategory->id/category/$categoryTwo->id", $categoryUpdate);
-        $this->assertDatabaseHas('blogcategories', ['name' => 'anastasioNicoTomHughes']);
+        $this->assertDatabaseHas('blogcat', ['name' => 'anastasioNicoTomHughes']);
     }
 
     /** @test */
@@ -96,12 +96,12 @@ class BlogcategoryTest extends TestCase
         $this->withoutExceptionHandling();
         $this->be(factory('App\User')->create());
         $supercategory = factory('App\Blogsupercategory')->create();
-        $category = factory('App\Blogcategory')->create(['name' => 'Giuseppe Mascara' ,'supercategory_id' => $supercategory->id]);
+        $category = factory('App\Blogcategory')->create(['name' => 'Giuseppe Mascara' ,'supercat_id' => $supercategory->id]);
         
         // when the admin delete the supercategory 
         $this->call('DELETE', "admin/blog/$supercategory->id/category/$category->id", ['_token' => csrf_token()]);
         
         // then the supercategory does not appear in the database anymore
-        $this->assertDatabaseMissing('blogcategories', ['id' => $category->id]);
+        $this->assertDatabaseMissing('blogcat', ['id' => $category->id]);
     }
 }

@@ -90,7 +90,7 @@
 					                  			<td>{{ $category->excerpt }}</td>
 					                  			<td>{{ $category->created_at->diffForHumans() }}</td>
 					                  			<td style="min-width: 50px;text-align: center;">
-					                  				{{-- <a class="tip" href="blogSupercategories/{{ $category->id }}/images" title="Images">
+					                  				{{-- <a class="tip" href="blogsupercat/{{ $category->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}
 		                  							<a class="tip" href="/admin/blog/{{ $supercategory->id }}/category/{{ $category->id }}/edit" title="Edit">
@@ -98,7 +98,7 @@
 		                  							</a> 
 		                  							{{ Form::open([
 		              									'method' => 'DELETE', 
-		              									'action' => array('BlogcategoryController@destroy', $category->supercategory_id, $category->id),
+		              									'action' => array('BlogcategoryController@destroy', $category->supercat_id, $category->id),
 		              									'style' => 'display:inline-block'
 														]) 
 													}}

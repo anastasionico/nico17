@@ -120,7 +120,7 @@
 				                  				<td>{{ $post->minutes_to_read }} min </td>
 				                  				<td>{{ $post->order }} &#186; </td>
 					                  			<td style="min-width: 50px;text-align: center;">
-					                  				{{-- <a class="tip" href="blogSupercategories/{{ $post->id }}/images" title="Images">
+					                  				{{-- <a class="tip" href="blogsupercat/{{ $post->id }}/images" title="Images">
 			                  							<i class="icon-picture"></i>
 		                  							</a>  --}}
 													<a class="tip" href="/admin/blog/{{ $blogcategory->supercategory->id }}/{{ $blogcategory->id }}/post/{{ $post->id }}/edit" title="Edit">

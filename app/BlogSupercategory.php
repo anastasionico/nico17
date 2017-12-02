@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Blogsupercategory extends Model
 {
     protected $guarded = [];
-    protected $table = 'blogsupercategories';
+    protected $table = 'blogsupercat';
 
     public function categories()
     {
-    	return $this->hasMany(Blogcategory::class, 'supercategory_id');
+    	return $this->hasMany(Blogcategory::class, 'supercat_id');
     }
 }

@@ -49,7 +49,7 @@
 			        <div class="widget-content nopadding">
 			          	<form action="/admin/blog/{{$blogsupercategory->id}}/category" method="post" class="form-horizontal" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    {{ Form::hidden('supercategory_id', "$blogsupercategory->id") }}
+                    {{ Form::hidden('supercat_id', "$blogsupercategory->id") }}
 				            <div class="control-group">
 				              <label class="control-label">Name *</label>
 				              <div class="controls">

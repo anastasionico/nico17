@@ -6,7 +6,7 @@ use Illuminate\Http\UploadedFile;
 $factory->define(App\Blogcategory::class, function (Faker $faker) {
     $img = $faker->word;
     return [
-    	'supercategory_id' => function() { return factory(App\Blogsupercategory::class)->create()->id; },
+    	'supercat_id' => function() { return factory(App\Blogsupercategory::class)->create()->id; },
     	'name' => $faker->word,
         'slug' => $faker->slug,
         'excerpt' => $faker->sentence(15),
