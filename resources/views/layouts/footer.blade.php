@@ -48,30 +48,38 @@
 		
 		<div class="footer--section-social">
 			<div class="sectionCenter">
-				<div class="sectionCenter--content">
-					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<small>anastasionico@gmail.com</small>
-					</span>
-				</div>
+				<a href="mailto:anastasionico@gmail.com?subject=Mail from Nico17">
+					<div class="sectionCenter--content">
+						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<small>anastasionico@gmail.com</small>
+						</span>
+					</div>
+				</a> 
+				<a href="https://www.facebook.com/anastasionico.uk" target="_blank">
 				<div class="sectionCenter--content">
 					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-2">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
 						<small>/anastasionico.uk</small>
 					</span>
 				</div>
+				</a>
+				<a href="https://www.linkedin.com/in/anastasionico/" target="_blank">
 				<div class="sectionCenter--content">
 					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-3">
 						<i class="fa fa-linkedin" aria-hidden="true"></i>
 						<small>/anastasionico</small>
 					</span>
 				</div>
-				<div class="sectionCenter--content">
-					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-4">
-						<i class="fa fa-github" aria-hidden="true"></i>
-						<small>/anastasionico</small>
-					</span>
-				</div>
+				</a>
+				<a href="https://github.com/anastasionico" target="_blank">
+					<div class="sectionCenter--content">
+						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-4">
+							<i class="fa fa-github" aria-hidden="true"></i>
+							<small>/anastasionico</small>
+						</span>
+					</div>
+				</a>
 			</div>
 		</div>
 			

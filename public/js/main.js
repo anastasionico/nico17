@@ -420,19 +420,20 @@ function offsetTop_testimonial() {
 
 	//if the testimonialsContainer have the class of .photoClicked they do not have to move anymore
 	if (testimonialsContainer.getAttribute('class').indexOf('photoClicked') == -1) {
-
-		if (screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 4300) {
-			testimonialsContainer.style.left = (scrollPosition - 4650) * -1 + 'px';
+		// console.log(screenWidth);
+		// console.log(scrollPosition);
+		if (screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 5300) {
+			testimonialsContainer.style.left = (scrollPosition - 5725) * -1 + 'px';
 		} else if (screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828) {
-			testimonialsContainer.style.left = (scrollPosition - 3225) * -1 + 'px';
+			testimonialsContainer.style.left = (scrollPosition - 4800) * -1 + 'px';
 		} else if (screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100) {
-			testimonialsContainer.style.top = (scrollPosition - 3225) * -1 + 'px';
+			testimonialsContainer.style.top = (scrollPosition - 4750) * -1 + 'px';
 		} else if (screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923) {
-			testimonialsContainer.style.top = (scrollPosition - 2750) * -1 + 'px';
+			testimonialsContainer.style.top = (scrollPosition - 4250) * -1 + 'px';
 		} else if (screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800) {
-			testimonialsContainer.style.top = (scrollPosition - 3300) * -1 + 'px';
+			testimonialsContainer.style.top = (scrollPosition - 4150) * -1 + 'px';
 		} else if (screenWidth >= 1920 && scrollPosition > 2600) {
-			testimonialsContainer.style.top = (scrollPosition - 3550) * -1 + 'px';
+			testimonialsContainer.style.top = (scrollPosition - 3750) * -1 + 'px';
 		}
 	}
 }

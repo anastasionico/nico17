@@ -5,18 +5,17 @@
 			<a href="/projects">My Projects</a>
 			<a href="/blog">Articles</a>
 			<a href="/contact">Contact</a>
-			<a href="#">
+			<a href="mailto:anastasionico@gmail.com?subject=Mail from Nico17">
+				<i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i>
+			</a>
+			<a href="https://www.facebook.com/anastasionico.uk" target="_blank">
 				<i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i>
 			</a>
-			<a href="#">
+			<a href="https://www.linkedin.com/in/anastasionico/" target="_blank">
 				<i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
 			</a>
-			<a href="#">
+			<a href="https://github.com/anastasionico" target="_blank">
 				<i class="fa fa-2x fa-git-square" aria-hidden="true"></i>
-			</a>
-			<a href="#">
-				<i class="fa fa-2x fa-square" aria-hidden="true"></i>
-				{{-- create and add upwork logo here --}}
 			</a>
 		</nav>
 		<small style="font-size: 0.5rem;text-align: center;color: white">

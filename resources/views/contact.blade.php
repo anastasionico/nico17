@@ -55,10 +55,16 @@
 					<hr class="border-blue my-1">
 
 					<p>
-						I am a Web Developer and Graphic Designer based in Hatfield (UK)
+						I am a Web Developer and Graphic Designer based in Hatfield (Hertfordshire).
+						<br>
 						
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+						I have been realizing websites, web applications and digital graphic designs for several years.
+						<br>
+						I provide advice and support for everything concerned the life on the web for both <b>privates</b> and <b>companies</b>.
+						<br>
+						My guidances comprehend design, seo, concepts, functionalities and so on.
+						Send me a <b>message</b> using the form above I will ensure to answer you as soon as possible.
+
 					</p>
 					
 					<img src="img/uk.png" alt="you can find me in Hatfield">
