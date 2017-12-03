@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title', 'anastasionico.uk |  Code, Graphic tutorials and Software guides')
+@section('description', 'Here you find tutorials and step by step guides for coding with programming languages, draw with photoshop and the best tricks using all the softwares you like')
+@section('keywords', 'anastasio, nico, anastasionico, tutorial, tutorials, software, websites, html5 , css, css3, javascript, photoshop,linux, internet,guide,code,graphic,tips')
+
 @section('hero')
 	<div class="hero--section">
 		

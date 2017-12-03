@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title', 'anastasionico.uk | Web Developer, Web designer - contact me for a professional website')
+@section('description', 'Anastasio Nico. Hatfield, Hertfordshire based freelance web designer and developer, I create website, improving SEO and write tutorial in my blog')
+@section('keywords', 'anastasio, nico, anastasionico, Hatfield, web designer, web developer, creation websites')
+
 @section('hero')
 
 	<div class="hero--section flexCenter" >

@@ -19,6 +19,7 @@ class CreateBlogpostsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('excerpt');
+            $table->string('keywords');
             $table->longText('content');
             $table->unsignedTinyInteger('status');
             $table->unsignedTinyInteger('order');

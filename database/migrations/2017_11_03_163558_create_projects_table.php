@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->string('img');
             $table->string('cta_link')->nullable();
             $table->text('excerpt');
+            $table->string('keywords');
             $table->boolean('seo');
             $table->boolean('ecommerce');
             $table->boolean('responsive');

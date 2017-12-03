@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title', 'anastasionico.uk | Portfolio and previous work')
+@section('description', 'A list of some projects that I carried out form my previous work experience')
+@section('keywords', 'web design portfolio, web developer portfolio, web designer, web developer previous job')
+
 @section('hero')
 	<div class="hero--section">
 		

@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title', "anastasionico.uk | ". $content->name )
+@section('description', $content->excerpt )
+@section('keywords', $content->keywords )
+
 @section('head')
 	<style type="text/css">
 		.hero--section:before{

@@ -7,6 +7,8 @@ use Illuminate\Http\UploadedFile;
 
 $factory->define(App\Project::class, function (Faker $faker) {
     $img = $faker->word;
+    $keywords = $faker->words($nb = 10, $asText = false);
+    $keywords = implode(', ', $keywords);
     return [
         'name' => $faker->word,
         'slug' => $faker->slug,
@@ -14,6 +16,7 @@ $factory->define(App\Project::class, function (Faker $faker) {
         'img' => UploadedFile::fake()->image("$img.jpg", 600, 600),
         'cta_link' => $faker->url,
         'excerpt' => $faker->sentence(10),
+        'keywords' => $keywords,
         'seo' => $faker->boolean,
         'ecommerce' => $faker->boolean,
         'responsive' => $faker->boolean,

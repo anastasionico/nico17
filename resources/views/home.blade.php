@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section('title', 'anastasionico.uk | Freelance Web Designer Hatfield, Hertfordshire')
+@section('description', 'Anastasio Nico. Hatfield, Hertfordshire based freelance web designer and developer, I create websites, improving SEO and write tutorial in my blog')
+@section('keywords', 'anastasionico, freelance, website, web designer, web developer, Hatfield, Hertfordshire, wordpress')
+
+
+
 @section('hero')
 	<div class="hero--section ">
 		
