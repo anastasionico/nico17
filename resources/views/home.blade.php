@@ -224,37 +224,32 @@
 					</div>
 					<div class="testimonials--quote" id="quote2">
 						<q>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+							I have worked with Nico as a co-worker over the last year.
+							I have found him to have a practical understanding of the customer needs and forward thinking with his ideas and approach.
 						</q>
 						<h4>Imperial Commercials</h4>
 						<em>Tom Hughes  - Web Development Manager</em>
 					</div>
 					<div class="testimonials--quote active" id="quote3">
 						<q>
-							Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Nico is an excellent developer who uses his considerable knowledge of online and digital trends to realize up to date projects. 
+							He has been influential in creating my most recent website and has made significant efforts to ensure I was kept informed and updated at each stage of the process
 						</q>
 						<h4>Petali di Wedding</h4>
 						<em>Giovanna Leonardi - Execute Manager</em>
 					</div>
 					<div class="testimonials--quote" id="quote4">
 						<q>
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							He is enthusiastic, ambitious and driven with a real thirst for knowledge. 
+							During his time with us, he proved himself to be a great counselor to the other members of the team and pro-active with suggestions and ideas to improve my business.
 						</q>
 						<h4>Kick Fit Academy</h4>
 						<em>Ken Pankiewicz  - Director</em>
 					</div>
 					<div class="testimonials--quote" id="quote5">
 						<q>
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							I worked with Nico on an article and was Iextremely impressed by his intelligence and dedication. 
+							During the course of the project, he demonstrated a keen ability to think outside the box. 
 						</q>
 						<h4>Talk IT Training</h4>
 						<em>David Ringsell - Founder</em>

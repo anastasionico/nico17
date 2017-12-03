@@ -25,6 +25,11 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.admin.header' , function( $view ){
             $view->with('inboxOutstanding', \App\Contact::getInboxOutstanding());
         });
+
+        view()->composer('layouts.footer' , function( $view ){
+            $view->with('blogpostsPublished', \App\Blogpost::getPostsPublished());
+        });
+
     }
 
     /**

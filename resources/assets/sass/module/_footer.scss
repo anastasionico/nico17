@@ -1,5 +1,8 @@
 .footer--section{
-		
+	#footerDescription{
+		font-size: 0.7rem;
+		line-height: 1rem;		
+	}
 	@include media(tabletPortrait){
 		padding-top:15rem;
 	}
@@ -41,6 +44,14 @@
 			    left: 18px;
 			    z-index: -1;	
 			}
+			& small{
+				position: absolute;
+				color: $white;
+			    top: 0;
+			    left: 3rem;
+			    width: 6rem;
+			    text-align: left;
+			}
 			@include media(tabletPortrait){
 				margin: 1rem auto;
 			}
@@ -63,6 +74,10 @@
 						transform: rotate(180deg);
 						transform-origin: left;
 					}	
+					#social-#{$i} small{
+								left: -7rem;
+								text-align: right;
+							}
 			  	}
 			}
 		}		
@@ -77,6 +92,11 @@
 				&:first-child{
 					font-weight: 700;
 					font-size: 1rem;
+					margin-bottom: 0.5rem;
+				}
+				p{
+					font-size: 0.7rem;
+					line-height: 1rem;
 				}
 			}
 		}
@@ -87,6 +107,7 @@
 		bottom:0;
 		left:0;
 		right: 0; */
+		font-size: 0.7rem;
 		padding: 0.3rem;
 		background-color:darken($azure,10%);
 	}

@@ -18,5 +18,6 @@ class Blogpost extends Model
 	}    
 	public static function getPostsOutstanding(){
 		return $blogpostsOutstanding = Blogpost::where('status','!=', '3')->get();
-	}    
+	}
+	
 }

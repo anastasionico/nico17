@@ -1,13 +1,15 @@
 <footer>
+	
 	<div class="footer--section">
 		<div class="footer--section-contact">
 			<div class="twoThird">
 				<div class="twoThird--small">
 					<div class="twoThird--small-content">
 						<h3>Anastasio Nico</h3>
-						<small>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						<small id="footerDescription">
+							I am a Graphic Design and a PHP Developer based in Hatfield (Hertfordshire).
+							<br>
+							Available for creating web applications and graphic projects.
 						</small>
 					</div>
 				</div>
@@ -43,21 +45,31 @@
 				</div>
 			</div>
 		</div>	
+		
 		<div class="footer--section-social">
 			<div class="sectionCenter">
 				<div class="sectionCenter--content">
 					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
-						mail
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<small>anastasionico@gmail.com</small>
 					</span>
 				</div>
 				<div class="sectionCenter--content">
 					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-2">
-						fb
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<small>/anastasionico.uk</small>
 					</span>
 				</div>
 				<div class="sectionCenter--content">
 					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-3">
-						LIn
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+						<small>/anastasionico</small>
+					</span>
+				</div>
+				<div class="sectionCenter--content">
+					<span  class="social-logo mt-1 smallCircle flexCenter" id="social-4">
+						<i class="fa fa-github" aria-hidden="true"></i>
+						<small>/anastasionico</small>
 					</span>
 				</div>
 			</div>
@@ -67,25 +79,37 @@
  			<div class="fullWidth--content">
  				<ul>
 					<li><h4>Coding</h4></li>
-					<li><p>link one</p></li>
-					<li><p>link two</p></li>
-					<li><p>link three</p></li>
+					@foreach($blogpostsPublished as $blogpostPublished)
+						@if( $blogpostPublished->category->id == 1)
+							<li><p>
+								{{ ucfirst($blogpostPublished->name) }}
+							</p></li>
+						@endif
+					@endforeach
 				</ul>
  			</div>
  			<div class="fullWidth--content">
  				<ul>
-					<li><h4>Coding</h4></li>
-					<li><p>link one</p></li>
-					<li><p>link two</p></li>
-					<li><p>link three</p></li>
+					<li><h4>Graphic</h4></li>
+					@foreach($blogpostsPublished as $blogpostPublished)
+						@if( $blogpostPublished->category->id == 2)
+							<li><p>
+								{{ ucfirst($blogpostPublished->name) }}
+							</p></li>
+						@endif
+					@endforeach
 				</ul>
  			</div>
  			<div class="fullWidth--content">
 				<ul>
-					<li><h4>Coding</h4></li>
-					<li><p>link one</p></li>
-					<li><p>link two</p></li>
-					<li><p>link three</p></li>
+					<li><h4>Utility</h4></li>
+					@foreach($blogpostsPublished as $blogpostPublished)
+						@if( $blogpostPublished->category->id == 3)
+							<li><p>
+								{{ ucfirst($blogpostPublished->name) }}
+							</p></li>
+						@endif
+					@endforeach
 				</ul>
  			</div>
  		</div>	
