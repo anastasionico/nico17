@@ -89,9 +89,11 @@
 					<li><h4>Coding</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
 						@if( $blogpostPublished->category->id == 1)
-							<li><p>
-								{{ ucfirst($blogpostPublished->name) }}
-							</p></li>
+							<li>
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
+								</a>
+							</li>
 						@endif
 					@endforeach
 				</ul>
@@ -101,9 +103,11 @@
 					<li><h4>Graphic</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
 						@if( $blogpostPublished->category->id == 2)
-							<li><p>
-								{{ ucfirst($blogpostPublished->name) }}
-							</p></li>
+							<li>
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
+								</a>
+							</li>
 						@endif
 					@endforeach
 				</ul>
@@ -113,9 +117,11 @@
 					<li><h4>Utility</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
 						@if( $blogpostPublished->category->id == 3)
-							<li><p>
-								{{ ucfirst($blogpostPublished->name) }}
-							</p></li>
+							<li>
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
+								</a>
+							</li>
 						@endif
 					@endforeach
 				</ul>

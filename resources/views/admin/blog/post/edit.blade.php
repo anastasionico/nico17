@@ -134,7 +134,7 @@
                   <div class="control-group">
                   <label class="control-label">Keywords *</label>
                   <div class="controls">
-                    <input type="text" name="keywords" class="span11" placeholder="Keywords" value="{{ $project->keywords }}" required />
+                    <input type="text" name="keywords" class="span11" placeholder="Keywords" value="{{ $post->keywords }}" required />
                     <span class="help-block">Multiple words, advised about 8</span>
                   </div>
                 </div>

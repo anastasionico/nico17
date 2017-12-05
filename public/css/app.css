@@ -1664,9 +1664,10 @@ footer.menuVisible {
   margin-bottom: 0.5rem;
 }
 
-.footer--section-blog ul li p {
+.footer--section-blog ul li a {
   font-size: 0.7rem;
   line-height: 1rem;
+  color: #fff;
 }
 
 .footer--section-copyright {
