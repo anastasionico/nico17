@@ -14,8 +14,6 @@
 Auth::routes();
 
 
-
-
 Route::get('/', function () {
     $skills = \App\Skill::all();
     $projects = \App\Project::limit(5)->orderBy('created_at', 'desc')->get();

@@ -57,6 +57,7 @@ CREATE TABLE `blogposts` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keywords` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(3) unsigned NOT NULL,
   `order` tinyint(3) unsigned NOT NULL,
@@ -148,7 +149,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +158,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2017_10_24_205102_create_tasks_table',1),(4,'2017_10_28_163213_create_skills_table',1),(5,'2017_11_03_163558_create_projects_table',1),(6,'2017_11_04_123849_create_project_images_table',1),(7,'2017_11_16_132544_create_blogsupercat_table',1),(8,'2017_11_16_145015_create_blogcat_table',1),(9,'2017_11_23_144436_create_blogposts_table',1),(10,'2017_11_26_151804_create_contacts_table',1);
+INSERT INTO `migrations` VALUES (11,'2014_10_12_000000_create_users_table',1),(12,'2014_10_12_100000_create_password_resets_table',1),(13,'2017_10_24_205102_create_tasks_table',1),(14,'2017_10_28_163213_create_skills_table',1),(15,'2017_11_03_163558_create_projects_table',1),(16,'2017_11_04_123849_create_project_images_table',1),(17,'2017_11_16_132544_create_blogsupercat_table',1),(18,'2017_11_16_145015_create_blogcat_table',1),(19,'2017_11_23_144436_create_blogposts_table',1),(20,'2017_11_26_151804_create_contacts_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -229,6 +230,7 @@ CREATE TABLE `projects` (
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cta_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keywords` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `seo` tinyint(1) NOT NULL,
   `ecommerce` tinyint(1) NOT NULL,
   `responsive` tinyint(1) NOT NULL,
@@ -237,7 +239,7 @@ CREATE TABLE `projects` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -246,6 +248,7 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+INSERT INTO `projects` VALUES (1,'Kick Fit Consult','kick-fit-consult','<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s,&nbsp;</p>','lorem-ipsum.jpg','https://www.lipsum.com/','Kickfit Consult are industry leading consulting experts that help martial arts school owners grow their martial arts business.','catania, milan, inter, arsenal, manchester',0,0,0,0,0,'2017-12-03 11:53:16','2017-12-03 12:40:27'),(2,'Yufash','yufash','<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>','pinco-pallino.jpg','https://www.lipsum.com/','Designer label Yufash. Edgy and sustainable luxury eveningwear for bold and intriguing women. Yufash belongs to you - embrace it!','catania, milan, inter, arsenal, manchester',0,0,0,0,0,'2017-12-03 11:58:24','2017-12-03 12:39:32'),(3,'anastasionico','anastasionico','<p>The last version of my personal website, using technologies up to date and testing all the features for a long-life and healthy project.</p>','anastasionico.jpg','https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html','The last version of my personal website, using technologies up to date and testing all the features for a long-life and healthy project.','catania, milan, inter, arsenal, manchester',0,0,0,0,0,'2017-12-03 12:29:10','2017-12-03 12:29:10'),(4,'Truck Trailer Equipment','truck-trailer-equipment','<p>TTE is one the UK&#39;s leading suppliers of HGV parts for all major European trucks, buses and trailers.&nbsp;<br />\r\nThey have been providing truck parts for over 30 years and believe in providing a first class service to all their customers.</p>','truck-trailer-equipment.jpg','http://www.trucktrailerequip.co.uk/','TTE is one the UK\'s leading suppliers of HGV parts for all major European trucks, buses and trailers. \r\nThey have been providing truck parts for over 30 years and believe in providing a first class service to all their customers.','catania, milan, inter, arsenal, manchester',0,0,0,0,0,'2017-12-03 12:31:38','2017-12-03 12:31:38'),(5,'S&B Commercials','sb-commercials','<p>S &amp; B&nbsp;<em>Commercials</em>&nbsp;- Hatfield Mercedes-Benz&nbsp;<em>Commercials</em>&nbsp;supply a wide range of Mercedes-Benz trucks and vans.</p>','sb-commercials.jpg','https://www.sbcommercials.co.uk/','S & B Commercials - Hatfield Mercedes-Benz Commercials supply a wide range of Mercedes-Benz trucks and vans.','catania, milan, inter, arsenal, manchester',0,0,0,0,0,'2017-12-03 12:35:15','2017-12-03 12:35:15');
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,7 +294,7 @@ CREATE TABLE `tasks` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -300,6 +303,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+INSERT INTO `tasks` VALUES (1,'fix testimonials','frontend',5,0,'2017-12-03 11:57:33','2017-12-03 11:57:33');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -319,7 +323,7 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -328,6 +332,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'nico','anastasionico@gmail.com','$2y$10$uUEJc1aYjGqZHT16sV8s7.IIDmkWMVfUAxvMFhkjKk/8imSnJmAea',NULL,'2017-12-03 11:52:30','2017-12-03 11:52:30');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -340,4 +345,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-01 18:31:50
+-- Dump completed on 2017-12-03 13:13:05
