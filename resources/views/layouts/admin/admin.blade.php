@@ -3,7 +3,7 @@
   <head>
     <title>@yield('title')</title>
     <meta charset="UTF-8" />
-      
+    <link rel="shortcut icon" href="{{ asset('favicon_panel.ico') }}" >
     <link rel="stylesheet" href="/matrixAdmin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/matrixAdmin/css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="/matrixAdmin/css/colorpicker.css">
