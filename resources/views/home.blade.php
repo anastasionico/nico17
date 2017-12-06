@@ -120,7 +120,7 @@
 					<h3>My Projects</h3>
 				
 					<p>
-						I have successfully completed every of my <b>projects</b> either for companies and individuals.
+						I have successfully completed each of my <b>projects</b> either for companies and individuals.
 						<br>
 						I create completely personalized <b>web applications</b> in which I implement bespoke CMS for a fast and easy usage.
 					</p>
@@ -274,12 +274,15 @@
 					<div class="oneThird--big--content ">
 						<h3>Articles</h3>
 					
-						<p>
-							I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+						<p>	
+							Blogging was once used to share a person’s <b>thoughts</b>, 
 							<br>
-							I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+							Nowadays it is a platform that allows to communicate and receive <b>feedback</b> from plenty of people all around the world.
+							<br>
+							Have a look at some of my <b>blog post</b>.
 						</p>
-						
+
+					
 						<hr class="border-white">
 					</div>
 				</div>

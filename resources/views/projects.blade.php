@@ -24,10 +24,12 @@
 					<h3>My Projects</h3>
 				
 					<p>
-						I have succesfully completed every of my <b>projects</b> either for companies and individuals.
+						Here is a list of some of the <b>projects</b> I have been involved in the last few years,
 						<br>
-						I create completely personalized <b>websites</b> in which I implement bespoke CMS for a fast and easy usage.
+						Browse them and discover which one you <b>like the most</b>.
 					</p>
+
+					
 					
 					<hr class="border-white">
 				</div>

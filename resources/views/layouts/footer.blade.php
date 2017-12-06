@@ -52,7 +52,7 @@
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
 							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<small>anastasionico@gmail.com</small>
+							<small>nico@anastasionico.uk</small>
 						</span>
 					</div>
 				</a> 

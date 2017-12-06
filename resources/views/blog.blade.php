@@ -23,10 +23,11 @@
 				<div class="oneThird--big--content ">
 					<h3>Articles</h3>
 				
-					<p>
-						I've succesfully completed every of my <b>projects</b> either for companies and individuals.
+					<p>	
+						In this page, you will find my <b>blog posts</b>, 
+						I write to share my <b>knowledge</b> and my <b>experiences</b>.
 						<br>
-						I create completely personalize <b>websites</b> in which i put bespoke CMS for a fast and easy usage.
+						Skim them and you will find what you are looking for.
 					</p>
 					
 					<hr class="border-white">

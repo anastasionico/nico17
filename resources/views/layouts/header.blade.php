@@ -5,7 +5,7 @@
 			<a href="/projects">My Projects</a>
 			<a href="/blog">Articles</a>
 			<a href="/contact">Contact</a>
-			<a href="mailto:anastasionico@gmail.com?subject=Mail from Nico17">
+			<a href="mailto:nico@anastasionico.uk?subject=Mail from Nico17">
 				<i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i>
 			</a>
 			<a href="https://www.facebook.com/anastasionico.uk" target="_blank">
