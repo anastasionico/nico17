@@ -1,4 +1,3 @@
-
 <div id="header" style="">
 	<h4 >
   		<a style="color: #35a;font-size: 1rem;" href="dashboard.html">Anastasio<span style="color:white;">nico.uk</span></a>
@@ -45,7 +44,7 @@
         </ul>
       </li> 
     @endif  
-    @if(count($inboxOutstanding) > 0)
+    @if($inboxOutstanding > 0)
       <li>
         <a href="/admin/contact">
           <span style="color: #da542e">

@@ -88,7 +88,7 @@
  				<ul>
 					<li><h4>Coding</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( $blogpostPublished->category->id == 1)
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'coding')
 							<li>
 								<a href="/blog/{{$blogpostPublished->slug}}">
 									{{ ucfirst($blogpostPublished->name) }}
@@ -102,7 +102,7 @@
  				<ul>
 					<li><h4>Graphic</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( $blogpostPublished->category->id == 2)
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'graphic')
 							<li>
 								<a href="/blog/{{$blogpostPublished->slug}}">
 									{{ ucfirst($blogpostPublished->name) }}
@@ -116,7 +116,7 @@
 				<ul>
 					<li><h4>Utility</h4></li>
 					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( $blogpostPublished->category->id == 3)
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'utility')
 							<li>
 								<a href="/blog/{{$blogpostPublished->slug}}">
 									{{ ucfirst($blogpostPublished->name) }}

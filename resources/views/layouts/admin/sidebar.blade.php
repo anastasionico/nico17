@@ -95,40 +95,53 @@
         		<span>Social</span>
     		</a> 	
     	</li>
-      <li class="content"> <span>Tasks to Complete</span>
-        <div class="progress progress-mini active progress-striped">
-           
-            @if ($tasksCount['total'] > 0) 
-              @php            
-                $tasksPercentage = ($tasksCount['undone'] / $tasksCount['total'])  * 100; 
-                $tasksPercentage = round($tasksPercentage);
-              @endphp
-            @else
-              @php
-                $tasksPercentage = 0;
-              @endphp
-            @endif
+      <a href="/admin/tasks">
+        <li class="content"> <span>Tasks to Complete</span>
+          <div class="progress progress-mini active progress-striped">
+             
+              @if ($tasksCount['total'] > 0) 
+                @php            
+                  $tasksPercentage = ($tasksCount['undone'] / $tasksCount['total'])  * 100; 
+                  $tasksPercentage = round($tasksPercentage);
+                @endphp
+              @else
+                @php
+                  $tasksPercentage = 0;
+                @endphp
+              @endif
+              
             
+            <div style="width: {{ $tasksPercentage }}%;" class="bar"></div>
+          </div>
+          <span class="percent">{{ $tasksPercentage }}%</span>
+          <div class="stat">{{ $tasksCount['undone'] }} done out of  {{ $tasksCount['total'] }}</div>
+        </li>
+      </a>
+      <a href="/admin/blog/postlist">
+        <li class="content"> <span>Blog post published</span>
+          @php
+            $blogpostTotal = $blogpostsPublished->count() + $blogpostsOutstanding->count();
+          @endphp
           
-          <div style="width: {{ $tasksPercentage }}%;" class="bar"></div>
-        </div>
-        <span class="percent">{{ $tasksPercentage }}%</span>
-        <div class="stat">{{ $tasksCount['undone'] }} done out of  {{ $tasksCount['total'] }}</div>
-      </li>
-      <li class="content"> <span>Time</span>
-        <?php
-          $datetime1 = new DateTime('2017-12-01');
-          $datetime2 = new DateTime();
-          $interval = $datetime1->diff($datetime2);
-          $interval->format('%R%a days');
-          $numeric_interval = $interval->format('%a ');
-          // $percent = $interval->format('%a') *
-        ?>
-        <div class="progress progress-mini active progress-striped">
-          <div style="width: {{ $interval->format('%a') }}%;" class="bar"></div>
-        </div>
-        <span class="percent">{{ $interval->format('%R %a') }}</span>
-        <div class="stat">Days</div>
-      </li>
+          @if ($blogpostTotal > 0) 
+            @php            
+              $blogpostPercentage = ($blogpostsOutstanding->count() / $blogpostTotal)  * 100; 
+              $blogpostPercentage = round($blogpostPercentage);
+            @endphp
+          @else
+            @php
+              $blogpostPercentage = 0;
+            @endphp
+          @endif
+
+          <div class="progress progress-mini active progress-striped">
+            <div style="width: {{ $blogpostPercentage }}%;" class="bar"></div>
+          </div>
+          <span class="percent">{{ $blogpostPercentage }}%</span>
+          <div class="stat">{{$blogpostsPublished->count()}} / {{$blogpostTotal}}</div>
+        </li>  
+      </a>
+      
+      
     </ul>
 </div>

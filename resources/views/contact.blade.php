@@ -83,7 +83,7 @@
 
 		<div class="sectionCenter mt-5">
 			<div class="sectionCenter--content">
-				<a href="file/NicoAnastasio_cv16.pdf" target="_blank" class="btn-cta">My CV</a>
+				<a href="file/NicoAnastasio_cv17.pdf" target="_blank" class="btn-cta">My CV</a>
 			</div>
 		</div>
 	
