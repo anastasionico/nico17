@@ -1,23 +1,35 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Libraries\Gtmetrix;
 class GtmetrixController extends Controller
 {
-    
-    public function maketest(){
-    	$test = resolve('App\Libraries\Gtmetrix');
-    	// dd($test);
+    public function index()
+    {
+    	return view("admin/gtmetrix/index");
+    }
 
-    	$url_to_test = "http://gtmetrix.com/";
-		echo "Testing $url_to_test\n";
+	public function maketest(Request $request){
+    	
+		$data = request()->validate([
+    		'url_to_test' => 'url|required',
+    		'location' => 'integer|required',
+    		'browser' => 'integer|required',
+    		'adblock' => 'integer|required',
+		]);
+		$test = resolve('App\Libraries\Gtmetrix');
+    	
+    	// echo "Testing $data[url_to_test]";
+
 		$testid = $test->test(array(
-		    'url' => $url_to_test
+		    'url' => $data['url_to_test'],
+		    'location' => $data['location'],
+		    'browser' => $data['browser'],
+		    'x-metrix-adblock' => $data['adblock'],
 		));
 		if ($testid) {
-		    echo "Test started with $testid\n";
+		    // echo "Test started with $testid\n";
 		}
 		else {
 		    die("Test failed: " . $test->error() . "\n");
@@ -33,7 +45,7 @@ class GtmetrixController extends Controller
 		// For more information on options, see http://gtmetrix.com/api/
 
 		// After calling the test method, your URL will begin testing. You can call:
-		echo "Waiting for test to finish\n";
+		// echo "Waiting for test to finish\n";
 		$test->get_results();
 
 		// which will block and return once your test finishes. Alternatively, can call:
@@ -48,33 +60,28 @@ class GtmetrixController extends Controller
 		    die($test->error());
 		}
 		$testid = $test->get_test_id();
-		echo "Test completed succesfully with ID $testid\n";
+		// echo "Test completed succesfully with ID $testid\n";
 		$results = $test->results();
-		foreach ($results as $result => $data) {
-		    echo "<br>  $result => $data\n";
-		}
-		echo "\nResources\n";
+		// foreach ($results as $result => $data) {
+		//     echo "<br>  $result => $data\n";
+		// }
+		// echo "\nResources\n";
 		$resources = $test->resources();
-		foreach ($resources as $resource => $url) {
-		    echo "<br>  Resource: $resource $url\n";
-		}
+		// foreach ($resources as $resource => $url) {
+		//     echo "<br>  Resource: $resource $url\n";
+		// }
 
 		// Each test has a unique test id. You can load an existing / old test result using:
-		echo "Loading test id $testid\n";
+		// echo "Loading test id $testid\n";
 		$test->load($testid);
 
 		// If you no longer need a test, you can delete it:
-		echo "Deleting test id $testid\n";
+		// echo "Deleting test id $testid\n";
 		$result = $test->delete();
 		if (! $result) { die("error deleting test: " . $test->error()); }
 
-		// To list possible testing locations, use locations() method:
-		echo "\nLocations GTmetrix can test from:\n";
-		$locations = $test->locations();
-		// Returns an array of associative arrays:
-		foreach ($locations as $location) {
-		    echo "<br> GTmetrix can run tests from: " . $location["name"] . " using id: " . $location["id"] . " default (" . $location["default"] . ")\n";
-		}
+		return view("admin/gtmetrix/show", compact('data', 'test', 'testid', 'results', 'resources'));
+
 
 		/* Sample output:
 

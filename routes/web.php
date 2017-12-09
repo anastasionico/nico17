@@ -84,7 +84,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
         Route::resource('/{supercategory}/{category}/post', 'BlogpostController');
     });
 
-    Route::get('gtmetrix', 'GtmetrixController@maketest');
+    Route::get('gtmetrix', 'GtmetrixController@index');
+    Route::post('gtmetrix', 'GtmetrixController@maketest');
     
         
         

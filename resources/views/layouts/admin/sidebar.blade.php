@@ -100,7 +100,7 @@
     		</a> 	
     	</li>
       <li> 
-        <a href="gtmetrix">
+        <a href="/admin/gtmetrix">
           <i class="fa fa-search" aria-hidden="true"></i>
           <span>GTmetrix API</span>
         </a> 
