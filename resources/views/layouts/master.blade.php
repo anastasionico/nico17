@@ -52,9 +52,9 @@
 				
 			</section>
 		
-			@include('layouts.aside')	
+		@include('layouts.aside')	 
 		
-			@include('layouts.footer')
+		@include('layouts.footer') 
 		
 		</div>
 

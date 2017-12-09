@@ -96,7 +96,7 @@
     		</a> 	
     	</li>
       <a href="/admin/tasks">
-        <li class="content"> <span>Tasks to Complete</span>
+        <li class="content"> <span>Tasks completed</span>
           <div class="progress progress-mini active progress-striped">
              
               @if ($tasksCount['total'] > 0) 
@@ -118,7 +118,7 @@
         </li>
       </a>
       <a href="/admin/blog/postlist">
-        <li class="content"> <span>Blog post published</span>
+        <li class="content"> <span>Blog post outstanding</span>
           @php
             $blogpostTotal = $blogpostsPublished->count() + $blogpostsOutstanding->count();
           @endphp
@@ -138,7 +138,7 @@
             <div style="width: {{ $blogpostPercentage }}%;" class="bar"></div>
           </div>
           <span class="percent">{{ $blogpostPercentage }}%</span>
-          <div class="stat">{{$blogpostsPublished->count()}} / {{$blogpostTotal}}</div>
+          <div class="stat">{{$blogpostsOutstanding->count()}} uncompleted out of {{$blogpostTotal}}</div>
         </li>  
       </a>
       

@@ -27,6 +27,8 @@ Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
 
 
+
+
 Route::get('/detail', function () {
     return view('detail');
 });

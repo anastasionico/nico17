@@ -43,7 +43,9 @@ return [
 
     // Which folder to store files in project, fill in 'public', 'resources', 'storage' and so on.
     // You should create routes to serve images if it is not set to public.
-    'base_directory' => 'public',
+    // 'base_directory' => 'public',  //THIS IS THE ORIGINAL TO USE IN LOCAL 
+    'base_directory' => '../public_html',
+
 
     'images_folder_name' => 'img',
     'files_folder_name'  => 'files',
