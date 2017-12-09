@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +44,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     // /admin/dashboard
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
-    
+
     // /admin/contact
     Route::resource('contact', 'ContactController',['except' => 'store']);
     Route::post('contact/answer', 'ContactController@answer');    
@@ -65,6 +67,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
                 
     });
     
+
     Route::group(['prefix' => 'about/'], function(){
         Route::resource('skills', 'SkillsController');
     });
@@ -81,8 +84,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
         Route::resource('/{supercategory}/{category}/post', 'BlogpostController');
     });
 
+    Route::get('gtmetrix', 'GtmetrixController@maketest');
+    
+        
+        
+        
 
-
+    
     
     
 });

@@ -45,6 +45,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('App\Libraries\Gtmetrix', function ($app) {
+            return new \App\Libraries\Gtmetrix("nico@anastasionico.uk", "5b129a54a7f0cc1bd4652390438d5401");
+        });
+
     }
 }

@@ -78,23 +78,33 @@
       		<a href="#">
       			<i class="fa fa-bullhorn" aria-hidden="true"></i>
         		<span>Testimonials</span>
-    		</a> 
-  		</li>
+    		  </a> 
+  		  </li>
       	<li> 
       		<a href="/admin/contact">
       			<i class="fa fa-envelope" aria-hidden="true"></i>
         		<span>Messages</span>
-            <span class="label label-important">
+            <span class="label label-success">
+              <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+            </span>              
+               
+            {{-- <span class="label label-important">
               <i class="fa fa-hourglass-o" aria-hidden="true"></i>
-            </span>
+            </span> --}}
     		</a> 
   		</li>
-      	<li> 
+    	<li> 
       		<a href="#">
       			<i class="fa fa-share-square" aria-hidden="true"></i>
         		<span>Social</span>
     		</a> 	
     	</li>
+      <li> 
+        <a href="gtmetrix">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>GTmetrix API</span>
+        </a> 
+      </li>  
       <a href="/admin/tasks">
         <li class="content"> <span>Tasks completed</span>
           <div class="progress progress-mini active progress-striped">
