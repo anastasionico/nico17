@@ -3,6 +3,7 @@
 @section('title', 'Anastasionico.uk | Dashboard')
 
 @section('content')
+	
 	<div id="content">
 
 	  	<div id="content-header">
@@ -13,7 +14,7 @@
     			<a href="/admin/gtmetrix" class="current">GTmetrix API</a> 
 			</div>
 		    <h1>GTmetrix API</h1>
-	  	</div>
+		</div>
 
 		<div class="container-fluid">
 	  		

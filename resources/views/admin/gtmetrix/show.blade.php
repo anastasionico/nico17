@@ -35,8 +35,13 @@
 	    	<div class="row-fluid">
 	    		<div class="span12">
 	    			<div class="widget-box">
-	          			<div class="widget-title"> <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-            				<h5>{{$data['url_to_test']}}</h5>
+	          			<div class="widget-title"> 
+	          				<span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+	          				<a href="{{$data['url_to_test']}}" target="_blank">
+								<h5>
+									{{$data['url_to_test']}}
+            					</h5>
+            				</a>
 	          			</div>
           				<div class="widget-content">
           					<h6>Location:</h6>
@@ -72,13 +77,8 @@
 							@endswitch
 							
           					<h6>ADblock:</h6>
-      						{{ ($data['browser'] == 0)? 'disabled': 'enabled' }}
+      						{{ ($data['adblock'] === '0')? 'disabled': 'enabled' }}
           					
-							
-          					<div>
-      						
-          					
-          					</div>
 	          			</div>
 	        		</div>
 	    		</div>
@@ -87,21 +87,44 @@
     		<div class="row-fluid">
       			<div class="span6">
         			<div class="widget-box">
-          				<div class="widget-title"> <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          				<div class="widget-title"> 
+          					<span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
 	        				<h5>Performances</h5>
 	          			</div>
 	      				<div class="widget-content">
 							<h6>Pagespeed Score:</h6>
+							@switch($results['pagespeed_score'])
+								@case($results['pagespeed_score'] < 70)
+									@php $color = "progress-danger"; @endphp
+									@break; 
+								@case($results['pagespeed_score'] < 89)
+									@php $color = "progress-warning"; @endphp
+									@break; 
+								@case($results['pagespeed_score'] > 89)
+									@php $color = "progress-success"; @endphp
+									@break; 		
+							@endswitch
 	  						<span class="icon24 icomoon-icon-arrow-up-2 green"></span> 
 	  						<span class="pull-right strong">{{$results['pagespeed_score']}}</span>
-                			<div class="progress progress-striped ">
+                			<div class="progress progress-striped {{ $color}}">
                   				<div style="width: {{$results['pagespeed_score']}}%;" class="bar"></div>
                 			</div>
       						
 	  						<h6>Yslow Score:</h6>
+	  						@switch($results['yslow_score'])
+								@case($results['yslow_score'] < 70)
+									@php $color = "progress-danger"; @endphp
+									@break; 
+								@case($results['yslow_score'] < 89)
+									@php $color = "progress-warning"; @endphp
+									@break; 
+								@case($results['yslow_score'] > 89)
+									@php $color = "progress-success"; @endphp
+									@break; 		
+							@endswitch
 	  						<span class="icon24 icomoon-icon-arrow-up-2 green"></span> 
 			  				<span class="pull-right strong">{{$results['yslow_score']}}</span>
-                			<div class="progress progress-striped ">
+			  				<div class="progress progress-striped  {{ $color}}">
                   				<div style="width: {{$results['yslow_score']}}%;" class="bar"></div>
                 			</div>
 	  						
@@ -110,7 +133,8 @@
       			</div>
       			<div class="span6">
         			<div class="widget-box">
-          				<div class="widget-title"> <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          				<div class="widget-title"> 
+          					<span class="icon"><i class="fa fa-table" aria-hidden="true"></i></span>
 	        				<h5>Page Details</h5>
 	          			</div>
 	      				<div class="widget-content">
@@ -118,8 +142,20 @@
 	  						{{$results['page_elements']}}
 
 	  						<h6>Fully loaded time:</h6>
-	  						{{$results['fully_loaded_time']}}
-							</div>
+	  						{{$results['fully_loaded_time']/1000}} s
+
+	  						<h6>Total page size:</h6>
+	       					@if ($results['page_bytes'] >= 1073741824)
+        					    {{ number_format($results['page_bytes'] / 1073741824, 2) . ' GB' }}
+        					@elseif ($results['page_bytes'] >= 1048576)
+        					    {{ number_format($results['page_bytes'] / 1048576, 2) . ' MB' }}
+        					@elseif ($results['page_bytes'] >= 1024)
+        					    {{ number_format($results['page_bytes'] / 1024, 2) . ' KB' }}
+        					@endif
+
+        					<h6>GTmetrix report page:</h6>
+	  						<a href="{{$results['report_url']}}" target="_blank">Report</a>
+						</div>
         			</div>
       			</div>
     		</div>
@@ -132,8 +168,7 @@
 	        				<h5>Row data</h5>
 	          			</div>
 	      				<div class="widget-content">
-							{{dump($data)}}
-          					{{dump($test)}}
+							{{-- {{dump($test)}} --}}
           					{{dump($results)}}
           					{{dump($resources)}}	
 	  					</div>
