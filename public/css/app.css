@@ -660,6 +660,10 @@ footer.menuVisible {
   position: absolute;
   -webkit-transform-origin: center;
   transform-origin: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   /* something ridiculously big */
   height: 200vh;
@@ -693,12 +697,9 @@ footer.menuVisible {
 }
 
 .hero--section-content h3 {
-  margin-bottom: 1rem;
-}
-
-.hero--section-content h3 {
   font-size: 1.3rem;
   font-weight: 100;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -707,12 +708,18 @@ footer.menuVisible {
   }
 }
 
+.hero--section-content cite {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .hero--section-content span {
   color: #35a;
 }
 
 .hero--section-foreground {
   position: absolute;
+  opacity: 0.8;
   top: 45%;
   font-size: 5rem;
   line-height: 5rem;

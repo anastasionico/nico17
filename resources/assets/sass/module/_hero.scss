@@ -1,4 +1,5 @@
 .hero--section{
+	// background:green;
 	@include flex(center);
 	margin: -5rem auto 0;
 	width: 100%;  
@@ -21,6 +22,7 @@
 	&:before {
 	    content: "";
 	    @include skewY(10deg);
+	    // background:red;
 	    background: linear-gradient(-50deg, #35a 5%, #3aa 50%), url("/img/heroBW.jpg");
 		background-blend-mode: multiply;
 		background-size:cover;
@@ -28,13 +30,15 @@
 	    background-repeat: no-repeat; 
 	    background-attachment:fixed;
 
-
-	    
 		/* new styles */
 	    position: absolute;
 	    -webkit-transform-origin: center;
 	    -ms-transform-origin: center;
 	    transform-origin: center;
+	    top:0;
+	    right:0;
+	    bottom:0;
+	    left:0;
 	    width: 100%; /* something ridiculously big */
 	    height: 200vh; /* something ridiculously big */
 	}
@@ -54,23 +58,24 @@
 	    	}
 	    }
 	    h3{
-    		margin-bottom: 1rem;
-	    }
-	    h3{
     		font-size: 1.3rem;	
 	    	font-weight: 100;
+	    	margin-bottom: 1rem;
 	    	@include media(tabletPortrait){
 	    		font-size: 2rem;	
 	    	}
 	    }
-
+	    cite{
+	    	display: block;
+	    	margin-bottom: 1rem;
+	    }
 	    span{
 	    	color:$blue;
 	    }
 	}
 	&-foreground{
 		position:absolute;
-		// opacity: 0.8;
+		opacity: 0.8;
 		top:45%;
 
 		font-size: 5rem;
