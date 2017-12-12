@@ -182,7 +182,7 @@
 
 		<div class="sectionCenter mt-5">
 			<div class="sectionCenter--content">
-				<a href='/projects' class="btn-cta">See More</a>
+				<a href='/projects' class="btn-cta">Browse {{ $projectsCount - 5 }} More</a>
 			</div>
 		</div>
 		
@@ -330,18 +330,12 @@
 				</div>			
 			@endforeach
 
-
-				
-			
 			<div class="sectionCenter mt-5">
 				<div class="sectionCenter--content">
-					<a href='/blog' class="btn-cta">Browse Articles</a>
+					<a href='/blog' class="btn-cta">Read {{ $postsCount - 5 }} more</a>
 				</div>
 			</div>
-	
 		</div>	
-		
 
-		
 	</section>
 @endsection

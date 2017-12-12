@@ -16,20 +16,20 @@
 	        	<ul class="quick-actions">
 		          	<li class="bg_ly"> 
 			          	<a href="/projects"> 
-	          				<i class="icon-fullscreen"></i> 
-          					Projects
+	          				<i class="icon icon-briefcase"></i> 
+          					Projects <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
   					<li class="bg_lo"> 
 			          	<a href="/blog"> 
-	          				<i class="icon-tint"></i> 
-          					Articles
+	          				<i class="icon-align-left"></i> 
+          					Articles <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
   					<li class="bg_ls"> 
 			          	<a href="/contact"> 
-	          				<i class="icon-calendar"></i> 
-          					Contacts
+	          				<i class="icon-envelope"></i> 
+          					Contacts <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
   					<li class="bg_dy"> 

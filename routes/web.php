@@ -1,7 +1,6 @@
 <?php
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +18,10 @@ Auth::routes();
 Route::get('/', function () {
     $skills = \App\Skill::all();
     $projects = \App\Project::limit(5)->orderBy('created_at', 'desc')->get();
+    $projectsCount = \App\Project::count();
     $posts = \App\Blogpost::limit(5)->where('status', 3)->orderBy('created_at', 'desc')->get();
-    return view('home', compact('skills', 'projects', 'posts'));
+    $postsCount = \App\Blogpost::count();
+    return view('home', compact('skills', 'projects', 'projectsCount', 'posts', 'postsCount'));
 });
 
 Route::get('/projects', 'ProjectFrontendController@index');
