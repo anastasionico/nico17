@@ -82,50 +82,70 @@
 				</a>
 			</div>
 		</div>
-{{-- 		{{ dd($blogpostsPublished )}} --}}
+
 		<div class="fullWidth footer--section-blog">
  			<div class="fullWidth--content">
  				<ul>
 					<li><h4>Coding</h4></li>
-					@for ($i = 0; $i < 5; $i++)
-    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'coding')
+					@php 
+						$codingPostsNumber = 0;
+					@endphp
+					@foreach($blogpostsPublished as $blogpostPublished)
+
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'coding' && $codingPostsNumber < 3)
+							
 							<li>
-								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
-									{{ ucfirst($blogpostsPublished[$i]->name) }}
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
+
 								</a>
 							</li>
+							@php
+								$codingPostsNumber++;
+							@endphp
 						@endif
-					@endfor
+					@endforeach
 				</ul>
  			</div>
-
  			<div class="fullWidth--content">
-
  				<ul>
 					<li><h4>Graphic</h4></li>
-					@for ($i = 0; $i < 5; $i++)
-    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'graphic')
+					@php 
+						$graphicPostsNumber = 0;
+					@endphp
+					@foreach($blogpostsPublished as $blogpostPublished)
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'graphic' && $graphicPostsNumber < 3)
 							<li>
-								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
-									{{ ucfirst($blogpostsPublished[$i]->name) }}
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
 								</a>
 							</li>
+							@php
+								$graphicPostsNumber++;
+							@endphp	
 						@endif
-					@endfor
+					@endforeach
 				</ul>
  			</div>
  			<div class="fullWidth--content">
 				<ul>
 					<li><h4>Utility</h4></li>
-					@for ($i = 0; $i < 5; $i++)
-    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'utility')
+					@php 
+						$utilityPostsNumber = 0;
+					@endphp
+					@foreach($blogpostsPublished as $blogpostPublished)
+						@if( strtolower($blogpostPublished->category->supercategory->name) == 'utility' && $utilityPostsNumber < 3)
 							<li>
-								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
-									{{ ucfirst($blogpostsPublished[$i]->name) }}
+
+								<a href="/blog/{{$blogpostPublished->slug}}">
+									{{ ucfirst($blogpostPublished->name) }}
 								</a>
 							</li>
+							@php
+								$utilityPostsNumber++;
+							@endphp
 						@endif
-					@endfor
+					@endforeach					
 				</ul>
  			</div>
  		</div>	
