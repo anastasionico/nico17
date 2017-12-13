@@ -82,48 +82,50 @@
 				</a>
 			</div>
 		</div>
-			
+{{-- 		{{ dd($blogpostsPublished )}} --}}
 		<div class="fullWidth footer--section-blog">
  			<div class="fullWidth--content">
  				<ul>
 					<li><h4>Coding</h4></li>
-					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( strtolower($blogpostPublished->category->supercategory->name) == 'coding')
+					@for ($i = 0; $i < 5; $i++)
+    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'coding')
 							<li>
-								<a href="/blog/{{$blogpostPublished->slug}}">
-									{{ ucfirst($blogpostPublished->name) }}
+								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
+									{{ ucfirst($blogpostsPublished[$i]->name) }}
 								</a>
 							</li>
 						@endif
-					@endforeach
+					@endfor
 				</ul>
  			</div>
+
  			<div class="fullWidth--content">
+
  				<ul>
 					<li><h4>Graphic</h4></li>
-					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( strtolower($blogpostPublished->category->supercategory->name) == 'graphic')
+					@for ($i = 0; $i < 5; $i++)
+    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'graphic')
 							<li>
-								<a href="/blog/{{$blogpostPublished->slug}}">
-									{{ ucfirst($blogpostPublished->name) }}
+								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
+									{{ ucfirst($blogpostsPublished[$i]->name) }}
 								</a>
 							</li>
 						@endif
-					@endforeach
+					@endfor
 				</ul>
  			</div>
  			<div class="fullWidth--content">
 				<ul>
 					<li><h4>Utility</h4></li>
-					@foreach($blogpostsPublished as $blogpostPublished)
-						@if( strtolower($blogpostPublished->category->supercategory->name) == 'utility')
+					@for ($i = 0; $i < 5; $i++)
+    					@if( strtolower($blogpostsPublished[$i]->category->supercategory->name) == 'utility')
 							<li>
-								<a href="/blog/{{$blogpostPublished->slug}}">
-									{{ ucfirst($blogpostPublished->name) }}
+								<a href="/blog/{{$blogpostsPublished[$i]->slug}}">
+									{{ ucfirst($blogpostsPublished[$i]->name) }}
 								</a>
 							</li>
 						@endif
-					@endforeach
+					@endfor
 				</ul>
  			</div>
  		</div>	

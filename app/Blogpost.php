@@ -14,7 +14,7 @@ class Blogpost extends Model
     }
 
 	public static function getPostsPublished(){
-		return $blogpostsPublished = Blogpost::where('status', '3')->get();
+		return $blogpostsPublished = Blogpost::where('status', '3')->orderBy('id','desc')->get();
 	}    
 	public static function getPostsOutstanding(){
 		return $blogpostsOutstanding = Blogpost::where('status','!=', '3')->get();
