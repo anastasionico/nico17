@@ -51,7 +51,7 @@
 								Project
 							@endif
 						</h3>	
-						<em class="f-right clearfix">{{ $content->created_at->toFormattedDateString() }}</em>	
+						<em class="f-right clearfix">{{ $content->published_at->toFormattedDateString() }}</em>	
 					</span>
 					
 					<hr class="border-blue my-1">

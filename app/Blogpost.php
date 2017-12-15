@@ -8,6 +8,7 @@ class Blogpost extends Model
 {
     protected $guarded = [];
     protected $table = 'blogposts';
+    protected $dates = ['published_at'];
 
     public function category(){
     	return $this->belongsTo('App\Blogcategory', 'category_id');

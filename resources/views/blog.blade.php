@@ -58,7 +58,7 @@
 										({{ ucfirst($post->category->name) }})
 									</b>	
 									<em>
-										{{ $post->published_at}}
+										{{ $post->published_at->toFormattedDateString() }}
 									</em>	
 								</div>
 								<h4>{{ ucfirst($post->name) }}</h4>
