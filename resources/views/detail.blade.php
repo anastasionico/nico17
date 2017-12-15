@@ -115,13 +115,12 @@
 	<section class="bg-blue c-white">	
 		<h3 class="text-center py-3">
 			@if( $content->category )
-				{{ ucfirst($content->category->name) }}
+				Other posts that might interest you
 			@else
 				See other projects
 			@endif
 		</h3>
 		<div class="fullWidth bg-blue">
-			
 			@foreach($otherContents as $otherContent)
 				<div class="miniCard is-visible">
 					<div class="miniCard--image" style="background-image:url('/img/{{ $segment }}/{{ $otherContent->img }}')"></div>
@@ -161,92 +160,7 @@
 	</script>
 @endsection
 
-{{-- @section('homeTestimonial')
-	// this is the section with the comment
-	<section class="bg-white c-blue detail--page  skewed">	
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content">
-					<form>
-						<div class="form-control">
-							<label>Insert your comment here</label>
-							<textarea rows="1"></textarea>
-						</div>
-						<input class="btn" type="submit" name="COMMENT" value="COMMENT">
-					</form>
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
 
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content commentPosts">
-					<b>Nico Anastasio</b>
-					<em class="clearfix">
-						<small>
-							{{ date('d-m-Y')}}
-						</small>
-					</em>
-					<p>
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<hr>
-				</div>
-				<div class="oneThird--big--content commentPosts">
-					<b>Nico Anastasio</b>
-					<em class="clearfix">
-						<small>
-							{{ date('d-m-Y')}}
-						</small>
-					</em>
-					<p>
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<hr>
-				</div>
-				<div class="oneThird--big--content commentPosts">
-					<b>Nico Anastasio</b>
-					<em class="clearfix">
-						<small>
-							{{ date('d-m-Y')}}
-						</small>
-					</em>
-					<p>
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<hr>
-				</div>
-				<div class="oneThird--big--content commentPosts">
-					<b>Nico Anastasio</b>
-					<em class="clearfix">
-						<small>
-							{{ date('d-m-Y')}}
-						</small>
-					</em>
-					<p>
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<hr>
-				</div>
-			</div>
-
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-	</section>
-@endsection --}}
 
 
 
