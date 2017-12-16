@@ -106,6 +106,7 @@
 															{{ Form::button('<i class="icon-remove"></i>', 
 																array(
 																	'type' => 'submit', 
+																	'class' => 'deleteItem',
 																	'style' => 'color:#aaa;border:0;background:transparent;')) 
 															}}
 													{{ Form::close() }}

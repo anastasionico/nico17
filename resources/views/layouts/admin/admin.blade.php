@@ -93,5 +93,6 @@
      document.gomenu.selector.selectedIndex = 2;
   }
   </script>
+  <script src="/js/mainBackend.js"></script>
 </body>
 </html>

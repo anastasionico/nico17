@@ -108,7 +108,7 @@
 		                  							<a class="tip" href="{{ $editUrl}}" title="Edit">
 			                  							<i class="icon-pencil"></i>
 		                  							</a> 
-			                  						<a class="tip" href="{{ $deleteUrl }}" title="Delete">
+			                  						<a class="tip deleteItem" href="{{ $deleteUrl }}" title="Delete">
 		                  								<i class="icon-remove"></i>
 	                  								</a> 
 			                  					</div>

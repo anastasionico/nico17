@@ -105,7 +105,7 @@
 													    @case(3)
 													    	<span class="label label-success">
 													    	Published
-													    	{{ $post->published_at}}
+													    	{{ $post->published_at->formatLocalized('%d %b %Y')}}
 													    	</span>
 													        @break
 													@endswitch
@@ -135,6 +135,7 @@
 														{{ Form::button('<i class="icon-remove"></i>', 
 															array(
 																'type' => 'submit', 
+																'class' => 'deleteItem',
 																'style' => 'color:#aaa;border:0;background:transparent;')) 
 														}}
 													{{ Form::close() }}

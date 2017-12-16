@@ -91,6 +91,7 @@
 		                  							</a> 
 			                  						{{ Form::open([
 		              									'method' => 'DELETE', 
+		              									'class' => 'deleteItem',
 		              									'action' => ['BlogsupercategoryController@destroy' , $blogSupercategory->id],
 		              									'style' => 'display:inline-block'
 														]) 

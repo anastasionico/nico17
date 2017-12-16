@@ -512,13 +512,10 @@ function enlargeClickable(){
 			}else{
 				clickable.classList.add('is-enlarged');
 			}
-			
-			
-			
 		}
+
 	})
 }
-
 
 window.onload = function () {
 	menuVisible();
@@ -526,7 +523,7 @@ window.onload = function () {
 	formBehaviour();
 	// enlargeGist();
 	enlargeClickable();
-
+	
 	//retrieve the page name 
 	var path = window.location.pathname;
 	var page = path.split("/").pop();

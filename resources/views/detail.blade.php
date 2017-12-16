@@ -37,7 +37,7 @@
 
 @section('homeAbout')
 
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page "> {{-- skewed	 --}}
+	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
@@ -51,7 +51,13 @@
 								Project
 							@endif
 						</h3>	
-						<em class="f-right clearfix">{{ $content->published_at->toFormattedDateString() }}</em>	
+						<em class="f-right clearfix">
+							@if( $content->category )
+								{{ $content->published_at->toFormattedDateString() }}
+							@else
+								{{ $content->created_at->toFormattedDateString() }}
+							@endif
+						</em>	
 					</span>
 					
 					<hr class="border-blue my-1">
@@ -112,7 +118,7 @@
 
 @section('work')
 	
-	<section class="bg-blue c-white">	
+	<section class="bg-blue c-white ">	{{-- skewed --}}
 		<h3 class="text-center py-3">
 			@if( $content->category )
 				Other posts that might interest you
