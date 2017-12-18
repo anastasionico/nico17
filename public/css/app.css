@@ -1656,6 +1656,10 @@ footer.menuVisible {
   }
 }
 
+.footer--section-blog {
+  padding: 0;
+}
+
 .footer--section-blog ul {
   list-style-type: none;
   margin-bottom: 1rem;
