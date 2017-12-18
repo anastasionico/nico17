@@ -19,10 +19,11 @@ class ProjectFrontendController extends Controller
     	$content = Project::where('id', $param)
             ->orWhere('slug', $param)
             ->firstOrFail();
-        $otherContents = Project::where('id', '!=', $param)
+        $otherContents = Project::select('img', 'created_at', 'name', 'cta_link', 'slug')
+                    ->where('id', '!=', $param)
                     ->where('slug', '!=', $param)
                     ->limit(3)
-                    ->orderBy('created_at', 'asc')
+                    ->orderBy('created_at', 'desc')
                     ->get();
         return view('detail', compact('content', 'otherContents','segment'));
     }
