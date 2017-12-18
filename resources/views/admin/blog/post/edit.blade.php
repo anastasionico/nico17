@@ -34,8 +34,12 @@
 		      <div class="widget-box">
 		        <div class="widget-title"> 
 		        	<span class="icon"> <i class="icon-align-left"></i>  </span>
-		          	<h5>Category Detail</h5>
-		        </div>
+		          	<h5>Post Detail - 
+                  <a href="/blog/{{ $post->slug }}" target="_blank"> 
+                    {{ ucfirst($post->slug) }} <i class="fa fa-link" aria-hidden="true"></i>
+                  </a>
+                </h5>
+            </div>
 		        
 		        @if(!empty($errors->all()))
 		        		

@@ -142,7 +142,7 @@ class BlogpostController extends Controller
 
     public function postlist()
     {
-       $posts = Blogpost::all();
+       $posts = Blogpost::orderBy('id', 'desc')->get();
        return view('admin/blog/postlist', compact('posts'));
     }
 }

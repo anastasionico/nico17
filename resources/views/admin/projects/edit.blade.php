@@ -31,8 +31,12 @@
 		      <div class="widget-box">
 		        <div class="widget-title"> 
 		        	<span class="icon"> <i class="icon-briefcase"></i> </span>
-		          	<h5>Project Detail</h5>
-
+	          	<h5>Project Detail -
+                <a href="/projects/{{ $project->slug }}" target="_blank"> 
+                  {{ ucfirst($project->slug) }} <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </h5>
+              
 		        </div>
 		        
 		        @if(!empty($errors->all()))
