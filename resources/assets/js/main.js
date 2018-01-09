@@ -184,14 +184,17 @@ function offsetTop_hero()
 	var content = document.querySelector(".hero--section-content");
 	var foreground = document.querySelector(".hero--section-foreground");
 	var formContact = document.querySelector(".formContact");
-	if(content !== null ){
-		content.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
-	}
-	if(foreground !== null ){
-		foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition/10 + "%)";
-	}
-	if(formContact !== null ){
-		formContact.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+	
+	if (screen.width >= 1024) {
+		if(content !== null ){
+			content.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+		}
+		if(foreground !== null ){
+			foreground.style.transform = "skewY(10deg) translateY(-" + scrollPosition/10 + "%)";
+		}
+		if(formContact !== null ){
+			formContact.style.transform = "skewY(10deg) translateY(" + scrollPosition/3 + "%)";
+		}
 	}
 }
 
@@ -361,8 +364,7 @@ function offsetTop_testimonial()
 
 	//if the testimonialsContainer have the class of .photoClicked they do not have to move anymore
 	if( testimonialsContainer.getAttribute('class').indexOf('photoClicked') == -1 ){
-		// console.log(screenWidth);
-		console.log(scrollPosition);
+		
 		if( screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 5300){
 			testimonialsContainer.style.left = ((scrollPosition - 6100)* -1) + 'px';	
 		}else if( screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828){
