@@ -100,7 +100,7 @@
 
 
 	            				<div class="form-actions">
-	              					<button type="submit" class="btn btn-success">Save</button>
+	              					<button type="submit" class="btn btn-success">Run Test</button>
 	            				</div>
 					        </form>
 	          			</div>
