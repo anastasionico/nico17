@@ -9,7 +9,7 @@ class ProjectFrontendController extends Controller
 {
     public function index()
     {
-    	$projects = Project::orderBy('created_at', 'desc')->get();
+    	$projects = Project::select('img','name','excerpt','seo','ecommerce','responsive','social_marketing','host_support','cta_link','slug')->orderBy('created_at', 'desc')->get();
     	return view('projects', compact('projects'));
     }
 
