@@ -9,7 +9,7 @@ class BlogFrontendController extends Controller
 {
     public function index()
     {
-    	$posts = Blogpost::where('status', '=', 3)->orderBy('created_at', 'desc')->get();
+    	$posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug')->where('status', '=', 3)->orderBy('created_at', 'desc')->get();
     	return view('blog', compact('posts'));
     }
 
