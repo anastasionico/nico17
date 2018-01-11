@@ -19,7 +19,7 @@
 			<p>Hi, I am</p>
 			<div class="form-control">
 				<label>Your Name</label>
-				<input type="text" name="name">	
+				<input type="text" name="name" id='nameField' {{-- onfocusin="centerFieldName(this)" --}}>	
 			</div>
 			
 			<p>and I am contacting you because</p>
@@ -28,14 +28,14 @@
 					Your message
 					<small class="help-block" id="messageHelpBlock" style="font-size:0.5rem;">At least 10 characters</small>
 				</label>
-				<textarea name='message' id="messageTextarea" rows="1" cols="33"></textarea>
+				<textarea name='message' id="messageTextarea" rows="1" cols="33" onfocusin="centerFieldMessage(this)"></textarea>
 
 			</div>
 
 			<p>You can reply back to </p>
 			<div class="form-control">
 				<label>Your email</label>
-				<input type="email" name="email">	
+				<input type="email" name="email" onfocusin="centerFieldEmail(this)">	
 			</div>
 
 			<input class="btn" type="submit" name="send" value="SEND">
@@ -116,4 +116,25 @@
 
 @endsection
 
+@section('blog')
+	
+	<script type="text/javascript">
+		let nameField = document.querySelector('#nameField')
+		nameField.addEventListener('focusin',function (){
+			let parentFormControl = nameField.parentElement;
+			parentFormControl.style.marginTop = '50%';
+		});
+		nameField.addEventListener('focusout',function (){
+			let parentFormControl = nameField.parentElement;
+			parentFormControl.style.marginTop = '0%';
+		});
+
+
+		
+
+
+	</script>
+	
+
+@endsection
 
