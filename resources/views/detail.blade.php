@@ -117,8 +117,8 @@
 @endsection
 
 @section('work')
-	
-	<section class="bg-blue c-white ">	{{-- skewed --}}
+	{{-- <section class=" pt-15 pb-5 Nmt-10 skewed bg-blue c-white">	 --}}
+	<section class="pb-1 bg-blue c-white skewed">
 		<h3 class="text-center py-3">
 			@if( $content->category )
 				Other posts that might interest you

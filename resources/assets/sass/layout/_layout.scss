@@ -360,3 +360,9 @@ footer{
 	
 	
 }
+.detail--page + .skewed{
+	&:after{
+		background-color:$blue;
+	}
+}
+

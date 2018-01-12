@@ -506,6 +506,10 @@ footer.menuVisible {
   background-color: #0E1C68 !important;
 }
 
+.detail--page + .skewed:after {
+  background-color: #35a;
+}
+
 .bg-blue {
   background-color: #35a;
 }
