@@ -20,6 +20,7 @@
                 {{ csrf_field() }}
 				<div class="control-group normal_text"> 
                     <h3>Anastasio<span>nico.uk</span></h3>
+                    <a href="/"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></a>
                 </div>
 
 
