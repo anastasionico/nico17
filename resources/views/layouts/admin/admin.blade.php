@@ -23,7 +23,7 @@
     {{-- <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script> --}}
     <script src="/vendor/ckeditor/ckeditor.js"></script>
     
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     @yield('head')  
