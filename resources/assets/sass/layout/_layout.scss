@@ -201,6 +201,10 @@ footer{
 	&--content{
 		width: 75%;
 		text-align:center;
+		a{
+			display:inline-block;
+			margin-bottom: 1rem;
+		}
 		
 	}
 }

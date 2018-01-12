@@ -317,6 +317,11 @@ footer.menuVisible {
   text-align: center;
 }
 
+.fullWidth--content a {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
 .sectionCenter {
   padding-top: 2rem;
   padding-bottom: 2rem;
