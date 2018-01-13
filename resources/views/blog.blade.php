@@ -35,7 +35,34 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>	
+		
+		<div class="fullWidth bg-blue">
 			
+			@foreach($supercategories as $supercategory)
+				<div class="miniCard is-visible">
+				
+					<div class="miniCard--image" style="background-image:url('/img/blog/{{ $supercategory->img }}')"></div>
+					<div class="miniCard--caption">
+						<h4>
+					 		{{ ucfirst($supercategory->name) }}
+				 		</h4>
+				 		<div class="miniCard--caption-CatnDate clearfix">
+							<p>
+								{{substr($supercategory->excerpt, 0, 75)}}
+								@if(strlen($supercategory->excerpt) > 75)
+									...
+								@endif
+								
+							</p>	
+						</div>
+						<a href="/blogCat/{{ $supercategory->slug }}" class="btn">Filter</a>
+						
+					</div>	
+				</div>
+			@endforeach
+
+		</div>
+
 		@php
 			$postsIncrement = 0
 		@endphp			

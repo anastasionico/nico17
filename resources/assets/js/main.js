@@ -539,11 +539,11 @@ window.onload = function () {
 			offsetTop_homeWork()
 			offsetTop_testimonial();
 			offsetTop_homeBlog();
-			
 		}else if(page == 'projects'){
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
-		}else if(page == 'blog'){
+		}else if(page == 'blog' || path.includes('blogCat')){
+			// if the name of the page is 'page' or the path includes blogCat call the method offsetTop_homeBlog()
 			offsetTop_homeBlog();
 			offsetTop_Hamburger_scrollBalls();
 		}else{

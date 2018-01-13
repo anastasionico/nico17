@@ -25,11 +25,11 @@ Route::get('/', function () {
     $postsCount = \App\Blogpost::count();
     return view('home', compact('skills', 'projects', 'projectsCount', 'posts', 'postsCount'));
 });
-
 Route::get('/projects', 'ProjectFrontendController@index');
 Route::get('/projects/{param}', 'ProjectFrontendController@show');
 Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
+Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
 
 
@@ -89,12 +89,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
     Route::get('gtmetrix', 'GtmetrixController@index');
     Route::post('gtmetrix', 'GtmetrixController@maketest');
-    
-        
-        
-        
-
-    
-    
-    
 });
