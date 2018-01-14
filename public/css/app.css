@@ -2104,6 +2104,11 @@ form.formContact input[type=submit] {
   margin-bottom: 0.5rem;
 }
 
+.miniCard.blogCategory {
+  background-color: #bbb;
+  color: #35a;
+}
+
 .flexCenter {
   display: -webkit-box;
   display: -ms-flexbox;

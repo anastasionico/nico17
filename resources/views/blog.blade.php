@@ -39,7 +39,7 @@
 		<div class="fullWidth bg-blue">
 			
 			@foreach($supercategories as $supercategory)
-				<div class="miniCard is-visible">
+				<div class="miniCard is-visible blogCategory">
 				
 					<div class="miniCard--image" style="background-image:url('/img/blog/{{ $supercategory->img }}')"></div>
 					<div class="miniCard--caption">
@@ -48,8 +48,8 @@
 				 		</h4>
 				 		<div class="miniCard--caption-CatnDate clearfix">
 							<p>
-								{{substr($supercategory->excerpt, 0, 75)}}
-								@if(strlen($supercategory->excerpt) > 75)
+								{{substr($supercategory->excerpt, 0, 150)}}
+								@if(strlen($supercategory->excerpt) > 150)
 									...
 								@endif
 								
