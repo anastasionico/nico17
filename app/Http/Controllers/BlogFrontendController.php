@@ -12,7 +12,7 @@ class BlogFrontendController extends Controller
     {
     	$posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug')->where('status', '=', 3)->orderBy('created_at', 'desc')->get();
         $supercategories = BlogSupercategory::all();
-
+        
         return view('blog', compact('posts','supercategories'));
     }
 
@@ -47,7 +47,7 @@ class BlogFrontendController extends Controller
 
     public function filterCategory(Request $request, $param)
     {
-        
+        $segment = $request->segment(2);
         $posts = Blogpost::join('blogcat', 'blogposts.category_id', '=', 'blogcat.id')
             ->join('blogsupercat', 'blogcat.supercat_id', '=', 'blogsupercat.id')
             ->select('blogposts.img','blogposts.category_id','blogposts.published_at','blogposts.name','blogposts.excerpt','blogposts.cta_link','blogposts.slug')
@@ -56,7 +56,7 @@ class BlogFrontendController extends Controller
             ->get();
         $supercategories = BlogSupercategory::all();
 
-        return view('blog', compact('posts','supercategories'));        
+        return view('blog', compact('posts','supercategories','segment'));        
 
         
         

@@ -21,8 +21,7 @@
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>Articles</h3>
-				
+					<h3>{{ ucfirst($segment ?? 'Articles')}}</h3>
 					<p>	
 						In this page, you will find my <b>blog posts</b>, 
 						I write to share my <b>knowledge</b> and my <b>experiences</b>.
