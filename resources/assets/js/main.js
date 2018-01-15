@@ -346,7 +346,7 @@ function offsetTop_homeWork()
 							cards[i].className = 'card is-visible is-translatedXReverse';		
 						}
 					}
-				}, i * 700);							
+				}, i * 200);							
 			})(i);
 		}
 	}
@@ -478,7 +478,7 @@ function offsetTop_homeBlog()
 							cards[i].className = 'card is-visible is-translatedXReverse';		
 						}
 					}
-				}, i * 700);							
+				}, i * 200);							
 			})(i);
 		}
 	}
