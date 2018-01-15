@@ -435,7 +435,7 @@ function offsetTop_testimonial() {
 		} else if (screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800) {
 			testimonialsContainer.style.top = (scrollPosition - 4550) * -1 + 'px';
 		} else if (screenWidth >= 1920 && scrollPosition > 2600) {
-			testimonialsContainer.style.top = (scrollPosition - 8050) * -1 + 'px';
+			testimonialsContainer.style.top = (scrollPosition - 4650) * -1 + 'px';
 		}
 	}
 }
