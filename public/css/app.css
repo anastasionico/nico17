@@ -2197,8 +2197,8 @@ form.formContact input[type=submit] {
 
 @media (min-width: 1920px) {
   .skewed:after {
-    margin: 2rem auto -25rem;
-    height: 600px;
+    margin: 8rem auto -25rem;
+    height: 570px;
   }
 }
 

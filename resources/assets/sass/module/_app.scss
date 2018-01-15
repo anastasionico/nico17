@@ -72,14 +72,12 @@
 			height: 260px; 
 		}
 		@include media(desktop){
-
 			margin: 1rem auto -11rem;
 			height: 315px; 
 		}
 		@include media(bigscreen){
-			
-			margin: 2rem auto -25rem;
-			height: 600px; 
+			margin: 8rem auto -25rem;
+			height: 570px; 
 		}
 	}
 }
