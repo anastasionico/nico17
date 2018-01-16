@@ -97,10 +97,10 @@
 								@case($results['pagespeed_score'] < 70)
 									@php $color = "progress-danger"; @endphp
 									@break; 
-								@case($results['pagespeed_score'] < 89)
+								@case($results['pagespeed_score'] >= 70 && $results['pagespeed_score'] < 80)
 									@php $color = "progress-warning"; @endphp
 									@break; 
-								@case($results['pagespeed_score'] > 89)
+								@case($results['pagespeed_score'] >= 80)
 									@php $color = "progress-success"; @endphp
 									@break; 		
 							@endswitch
@@ -115,10 +115,10 @@
 								@case($results['yslow_score'] < 70)
 									@php $color = "progress-danger"; @endphp
 									@break; 
-								@case($results['yslow_score'] < 89)
+								@case($results['yslow_score'] >= 70 && $results['yslow_score'] < 80)
 									@php $color = "progress-warning"; @endphp
 									@break; 
-								@case($results['yslow_score'] > 89)
+								@case($results['yslow_score'] >= 80)
 									@php $color = "progress-success"; @endphp
 									@break; 		
 							@endswitch
