@@ -119,6 +119,15 @@ class BlogpostController extends Controller
             $imageName = request()->slug . '.' .request()->img->getClientOriginalExtension();
             request()->img->move(public_path('img/blog'), $imageName);
             $postUpdate['img'] = $imageName;
+
+            // // Create new imagick object
+            // $im = new \Imagick(public_path('img/blog/') . $imageName);
+            // // Compression and quality
+            // $im->setImageCompression(\Imagick::COMPRESSION_JPEG);
+            // $im->setImageCompressionQuality(75);
+
+            // // Write the image back
+            // $im->writeImages(public_path('img/blog/') . $imageName, true);
         }
         $post->update($postUpdate);
         

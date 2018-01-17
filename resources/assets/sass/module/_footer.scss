@@ -9,8 +9,10 @@
 
 	
 	.footerForm{
-		padding:0 5rem;
-
+		padding:0;
+		@include media(tabletPortrait){
+			padding:0 5rem;
+		}
 		input, textarea{
 			color: $white;
 			border-bottom: 2px solid $white;
@@ -23,6 +25,12 @@
 		input[type=submit]{
 			background-color:$white;
 			color: $azure;
+			width: 100%;
+    		margin: 0;
+    		@include media(tabletPortrait){
+				width: auto;
+    			margin: auto;
+			}	
 		}
 	}
 
@@ -60,7 +68,7 @@
 			#social-#{$i}:after{
 				width: 250px;
 				@include media(phoneLandscape){
-					width: 340px;
+					width: 440px;
 				}
 				@include media(tabletPortrait){
 					width: 250px;
