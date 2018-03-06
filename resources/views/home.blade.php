@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'anastasionico.uk | Freelance Web Designer Hatfield, Hertfordshire')
-@section('description', 'Anastasio Nico. Hatfield, Hertfordshire based freelance web designer and developer, I create websites, improving SEO and write tutorial in my blog')
-@section('keywords', 'anastasionico, freelance, website, web designer, web developer, Hatfield, Hertfordshire, wordpress')
+@section('title', 'anastasionico.uk | Freelance Web Developer Designer London, Hertfordshire UK')
+@section('description', 'I am a freelance Web Developer and Web Designer working in London and Hertfordshire UK, Expert in building bespoke responsive websites, Online Marketing Services and SEO')
+@section('keywords', 'anastasionico, freelance, website, web designer, web developer, London, Hertfordshire, seo, marketing')
 
 
 
@@ -46,9 +46,11 @@
 				
 					<p>Hi, I am Nico.
 					<br>
-					An <b>Italian</b> speaker, movies and design <b>enthusiast</b>.
+					An <b>Italian</b> speaker, code and design <b>enthusiast</b>.
 					<br> 
-					I am the one who can <b>code</b>, draw and make pasta at the same time.
+					I am working in London and Hertfordshire as a <b>Web Developer</b> and <b>Web Designer</b>.
+					<br>
+					I help businesses by creating websites and web applications that are designed to fulfill their purpose, whether it is to simply <b>provide information</b> or convert visitors into <b>customers</b>.
 					</p>
 
 					<hr class="border-blue">

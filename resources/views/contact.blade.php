@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'anastasionico.uk | Web Developer, Web designer - contact me for a professional website')
-@section('description', 'Anastasio Nico. Hatfield, Hertfordshire based freelance web designer and developer, I create website, improving SEO and write tutorial in my blog')
-@section('keywords', 'anastasio, nico, anastasionico, Hatfield, web designer, web developer, creation websites')
+@section('title', 'anastasionico.uk | Freelance Web Developer, Web Designer in London, contact me for professional website')
+@section('description', 'Anastasio Nico. London & Hertfordshire based freelance Web Designer and Developer, I create website, improve SEO and Online Marketing Services')
+@section('keywords', 'anastasio, nico, anastasionico, London, web designer, web developer, creation websites')
 
 @section('hero')
 
@@ -55,15 +55,16 @@
 					<hr class="border-blue my-1">
 
 					<p>
-						I am a Web Developer and Graphic Designer based in Hatfield (Hertfordshire).
+						I am a Web Developer and Graphic Designer working in London and Hertfordshire.
 						<br>
 						
 						I have been realizing websites, web applications and digital graphic designs for several years.
 						<br>
 						I provide advice and support for everything concerned the life on the web for both <b>privates</b> and <b>companies</b>.
 						<br>
-						My guidances comprehend design, seo, concepts, functionalities and so on.
-						Send me a <b>message</b> using the form above I will ensure to answer you as soon as possible.
+						My guidances comprehend Graphic Design, S.E.O., Online Marketing Services and consulting.
+						<br>
+						<b>Contact me</b> using the form above and I will ensure to answer you as soon as possible.
 
 					</p>
 					
@@ -72,10 +73,10 @@
 					<br><br><br>
 					<h3>
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						Hatfield, Hertfordshire
+						London and Hertfordshire (UK)
 					</h3>
 					<i class="fa fa-phone" aria-hidden="true"></i>
-					<a href="tel:07932902473">07932902473</a>
+					<a href="tel:04407932902473">+44 07932902473</a>
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>

@@ -7,9 +7,9 @@
 					<div class="twoThird--small-content">
 						<h3>Anastasio Nico</h3>
 						<small id="footerDescription">
-							I am a Graphic Design and a PHP Developer based in Hatfield (Hertfordshire).
+							I am a Web Designer and Web Developer working in London and Hertfordshire.
 							<br>
-							Available for creating web applications and graphic projects.
+							Available for creating Web Applications and Graphic Projects.
 						</small>
 					</div>
 				</div>
