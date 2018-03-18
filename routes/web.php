@@ -31,7 +31,7 @@ Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
 Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
-Route::get('/hireme', function () {
+Route::get('/freelance', function () {
     // $skills = \App\Skill::all();
     // $projects = \App\Project::select('img','name','excerpt','seo','ecommerce','responsive','social_marketing','host_support','cta_link','slug')->limit(5)->orderBy('created_at', 'desc')->get();
     // $projectsCount = \App\Project::count();
@@ -39,7 +39,7 @@ Route::get('/hireme', function () {
     // $posts = \App\Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug')->limit(5)->where('status', 3)->orderBy('created_at', 'desc')->get();
 
     // $postsCount = \App\Blogpost::count();
-    return view('hireme');
+    return view('freelance');
 });
 
 
