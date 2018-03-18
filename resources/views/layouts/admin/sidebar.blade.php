@@ -105,6 +105,12 @@
           <span>GTmetrix API</span>
         </a> 
       </li>  
+      <li> 
+        <a href="/admin/newsletter">
+          <i class="fa fa-users"></i>
+          <span>MailChimp API</span>
+        </a> 
+      </li>  
       <a href="/admin/tasks">
         <li class="content"> <span>Tasks completed</span>
           <div class="progress progress-mini active progress-striped">

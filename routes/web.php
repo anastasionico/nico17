@@ -32,17 +32,8 @@ Route::get('/blog/{param}', 'BlogFrontendController@show');
 Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
 Route::get('/freelance', function () {
-    // $skills = \App\Skill::all();
-    // $projects = \App\Project::select('img','name','excerpt','seo','ecommerce','responsive','social_marketing','host_support','cta_link','slug')->limit(5)->orderBy('created_at', 'desc')->get();
-    // $projectsCount = \App\Project::count();
-    // // $posts = \App\Blogpost::limit(5)->where('status', 3)->orderBy('created_at', 'desc')->get();
-    // $posts = \App\Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug')->limit(5)->where('status', 3)->orderBy('created_at', 'desc')->get();
-
-    // $postsCount = \App\Blogpost::count();
     return view('freelance');
 });
-
-
 
 Route::get('/detail', function () {
     return view('detail');
@@ -50,7 +41,14 @@ Route::get('/detail', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::group(['prefix' => "/newsletter"], function(){
+    Route::post('', 'NewsLetterController@subscribe');
+}); 
 
+
+
+
+// ADMIN
 Route::post('/admin/contact', 'ContactController@store');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
@@ -66,7 +64,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
         return new App\Mail\AnswerContact();
     });
 
-    
     // admin/task
     Route::group(['prefix' => 'tasks/'], function()
     {
@@ -99,4 +96,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
     Route::get('gtmetrix', 'GtmetrixController@index');
     Route::post('gtmetrix', 'GtmetrixController@maketest');
+
+    // admin/task
+    Route::group(['prefix' => 'newsletter/'], function()
+    {
+        Route::get('', 'NewsLetterController@getMembers');
+        Route::get('issubscribed', 'NewsLetterController@isSubscribed');
+        Route::get('unsubscribe/{email}', 'NewsLetterController@unsubscribe');
+    });
 });

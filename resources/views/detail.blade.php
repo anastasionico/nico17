@@ -114,6 +114,27 @@
 		@endif
 	</section>
 
+	<div class="sectionCenter pt-15 pb-5 Nmt-10 bg-white c-blue">
+		<div class="sectionCenter--content">
+			{{-- {{ Form::open(array('url' => '/newsletter')) }} --}}
+			{{ Form::open([
+					'method' => 'POST', 
+					'action' => ['NewsLetterController@subscribe'],
+					'class' => '',
+				]) 
+			}}
+				{{ csrf_field() }}
+				<p>Enter your email below to get access to my <br> <b>coding</b> and <b>design tips</b></p>
+				<div class="form-control">
+					<label>Enter your email address...</label>
+					<input type="email" name="email" onfocusin="centerFieldEmail(this)">	
+				</div>
+
+				<input class="btn" type="submit" name="send" value="SIGN UP">
+			{{ Form::close() }}	
+		</div>
+	</div>
+
 @endsection
 
 @section('work')
