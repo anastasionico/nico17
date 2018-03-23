@@ -52,7 +52,17 @@
 		&:hover{
 			@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
 		}
-		
+		&-success{
+			background-color:$success;
+			color:$white;
+			padding:1rem 3rem;
+			@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
+			transition: all 0.3s ease-in-out;
+			
+			&:hover{
+				@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
+			}
+		}
 	}
 }
 

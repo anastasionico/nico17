@@ -7,7 +7,8 @@
 @section('head')
 	<style type="text/css">
 		.hero--section:before{
-			background: linear-gradient(-50deg, #35a 5%, #3aa 50%), url(/img/upwork.jpg);
+			/*background: url(/img/upwork.jpg);*/
+			background: linear-gradient(-50deg, #35a 50%, #3aa 100%)/*, url(/img/upwork.jpg)*/;
 		    background-blend-mode: multiply;
 		    background-size: cover;
 		    background-position: center center;
@@ -26,7 +27,7 @@
 			<b>Specialist in </b>
 			<h4><b>Web Design</b> and <b>Web Development</b></h4>
 			<br><br>
-			<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta">Hire me</a>
+			<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta-success">Visit my Upwork</a>
 		</div>
 		
 		
@@ -120,7 +121,7 @@
 			<h3>Look forward to chatting with you.</h3>
 			<br><br>
 			<div class="sectionCenter--content">
-				<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta">
+				<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta-success">
 					Hire me
 				</a>
 			</div>
