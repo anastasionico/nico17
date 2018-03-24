@@ -204,7 +204,7 @@
 							<img src="img/testimonials/peter.jpg">	
 						</div>							
 						<div data-quote="quote2" class="testimonials--container-photo photo-prev bigCircle">
-							<img src="img/testimonials/tom.jpg">	
+							<img src="img/testimonials/jigar.jpg">	
 						</div>							
 						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle ">
 							<img src="img/testimonials/giovanna.jpg">	
@@ -232,15 +232,17 @@
 					</div>
 					<div class="testimonials--quote" id="quote2">
 						<q>
-							I have worked with Nico as a co-worker over the last year.
-							I have found him to have a practical understanding of the customer needs and forward thinking with his ideas and approach.
+							One of the most dedicated and passionate professional I have come across and his commitment to the field of web development is highly commendable. 
+							<br>
+							I would have no hesitation in recommending Nico in any organisation.
 						</q>
 						<h4>Imperial Commercials</h4>
-						<em>Tom Hughes  - Web Development Manager</em>
+						<em>Jigar N. Mehta  - Software Engineering</em>
 					</div>
 					<div class="testimonials--quote active" id="quote3">
 						<q>
 							Nico is an excellent developer who uses his considerable knowledge of online and digital trends to realize up to date projects. 
+							<br>
 							He has been influential in creating my most recent website and has made significant efforts to ensure I was kept informed and updated at each stage of the process
 						</q>
 						<h4>Petali di Wedding</h4>
@@ -249,6 +251,7 @@
 					<div class="testimonials--quote" id="quote4">
 						<q>
 							He is enthusiastic, ambitious and driven with a real thirst for knowledge. 
+							<br>
 							During his time with us, he proved himself to be a great counselor to the other members of the team and pro-active with suggestions and ideas to improve my business.
 						</q>
 						<h4>Kick Fit Academy</h4>
@@ -257,6 +260,7 @@
 					<div class="testimonials--quote" id="quote5">
 						<q>
 							I worked with Nico on an article and was Iextremely impressed by his intelligence and dedication. 
+							<br>
 							During the course of the project, he demonstrated a keen ability to think outside the box. 
 						</q>
 						<h4>Talk IT Training</h4>
