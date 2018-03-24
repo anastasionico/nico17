@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('title', 'anastasionico.uk | UpWork, Freelance Web Developer,Web Designer London, Hertfordshire UK')
@@ -8,7 +9,7 @@
 	<style type="text/css">
 		.hero--section:before{
 			/*background: url(/img/upwork.jpg);*/
-			background: linear-gradient(-50deg, #35a 50%, #3aa 100%)/*, url(/img/upwork.jpg)*/;
+			background: linear-gradient(-50deg, #777 50%, #ccc 100%)/*, url(/img/upwork.jpg)*/;
 		    background-blend-mode: multiply;
 		    background-size: cover;
 		    background-position: center center;
@@ -24,10 +25,10 @@
 		
 		<div class="hero--section-content">
 			<h1>I am a Freelancer</h1>
-			<b>Specialist in </b>
-			<h4><b>Web Design</b> and <b>Web Development</b></h4>
+			<b>I specialize in building</b>
+			<h4><b>PHP Websites</b> and <b>Web Applications</b></h4>
 			<br><br>
-			<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta-success">Visit my Upwork</a>
+			<a href="https://www.upwork.com/o/profiles/users/_~014900a8e33f3d8ce8/" target='_blank' class="btn-cta-success">Visit my UpWork</a>
 		</div>
 		
 		
@@ -51,7 +52,7 @@
 						<br>
 						<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
 						<br>
-						<img class='clickable' src="http://www.anastasionico.uk/img/blog/what-is-web-design.jpg">
+						<img class='' src="/img/upwork.png">
 						<br><br><br>
 						<b>I believe in very few fundamentals ...</b>
 						<br><br>
@@ -73,7 +74,7 @@
 						<p>That means that we will spend our initial time together studying and designing the perfect service for you.</p>
 						<p>Once you are happy, the development step will begin.</p>
 						<br>
-						<img class='clickable' src="http://www.anastasionico.uk/img/blog/the-list-in-html.jpeg">
+						<img class='clickable' src="/img/blog/the-list-in-html.jpeg">
 						<br><br><br>
 						<b>As far as payment terms</b>
 						<br><br>

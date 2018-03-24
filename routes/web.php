@@ -31,8 +31,8 @@ Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
 Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
-Route::get('/freelance', function () {
-    return view('freelance');
+Route::get('/freelance-web-developer-london', function () {
+    return view('freelance-web-developer-london');
 });
 
 Route::get('/detail', function () {
