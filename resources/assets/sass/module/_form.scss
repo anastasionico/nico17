@@ -74,9 +74,15 @@ form.formContact{
 			float: left;
 		}
 	}
-
 }
+.newsLetter{
+	background-color:$success;
 
+	&-input[type='email']{
+		border-bottom:2px solid $white;
+	}
+	
+}
 
 
 	

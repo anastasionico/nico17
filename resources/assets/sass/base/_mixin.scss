@@ -18,6 +18,11 @@
   box-shadow:         #{$hShadow}px #{$vShadow}px #{$blur}px #{$spread}px $color;
 }
 
+@mixin scale($x, $y){
+  -ms-transform: scale($x, $y); /* IE 9 */
+  -webkit-transform: scale($x, $y); /* Safari */
+  transform: scale($x, $y);
+}
 
 
 @mixin rotateZ($deg) {

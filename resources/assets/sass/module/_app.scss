@@ -51,6 +51,7 @@
 		
 		&:hover{
 			@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
+			@include scale(1.01,1.01);
 		}
 		&-success{
 			background-color:$success;

@@ -33,10 +33,13 @@
 		</div>
 		
 	</div>
-@endsection
+
+	
+@
+endsection
 
 @section('homeAbout')
-
+	
 	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">
 		<div class="oneThird" >
 			<div class="oneThird--big">
@@ -114,9 +117,9 @@
 		@endif
 	</section>
 
-	<div class="sectionCenter pt-15 pb-5 Nmt-10 bg-white c-blue">
-		<div class="sectionCenter--content">
-			{{-- {{ Form::open(array('url' => '/newsletter')) }} --}}
+	<div class="sectionCenter pt-15 pb-5 Nmt-10  bg-white c-white">
+		<div class="sectionCenter--content newsLetter  clearfix p-3">
+			<h3>Sign up for the Free to get access to my <br> <b>coding</b> and <b>design tips</b></h3>
 			{{ Form::open([
 					'method' => 'POST', 
 					'action' => ['NewsLetterController@subscribe'],
@@ -124,16 +127,19 @@
 				]) 
 			}}
 				{{ csrf_field() }}
-				<p>Enter your email below to get access to my <br> <b>coding</b> and <b>design tips</b></p>
-				<div class="form-control">
+				
+				
+				<div class="form-control ">
 					<label>Enter your email address...</label>
-					<input type="email" name="email" onfocusin="centerFieldEmail(this)">	
+					<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
 				</div>
 
-				<input class="btn" type="submit" name="send" value="SIGN UP">
+				<input class="btn btn-cta" type="submit" name="send" value="SIGN UP">
 			{{ Form::close() }}	
 		</div>
 	</div>
+
+	
 
 @endsection
 
