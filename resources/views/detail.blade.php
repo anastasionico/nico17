@@ -187,10 +187,11 @@ endsection
 			
  		</div>
 	</section>
+	
 	<script type="text/javascript">
-     	
      	SyntaxHighlighter.all()
 	</script>
+	
 @endsection
 
 
