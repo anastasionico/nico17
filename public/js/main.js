@@ -275,7 +275,6 @@ function offsetTop_shareButtons() {
 	var bodyHeight = document.body.offsetHeight;
 	var scrollDistanceFromBottom = Math.max(bodyHeight - (scrollPosition + windowSize), 0);
 
-	console.log(shareButtons.length);
 	if (scrollPosition > 400 && scrollDistanceFromBottom > 700) {
 		for (var i = 0; i < shareButtons.length; i++) {
 
@@ -298,7 +297,7 @@ function offsetTop_shareButtons() {
 }
 
 function offsetTop_Hamburger_scrollBalls() {
-
+	console.log('hdhdhd');
 	var scrollHeight = document.body.scrollHeight;
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
@@ -617,15 +616,16 @@ window.onload = function () {
 			offsetTop_homeWork();
 			offsetTop_testimonial();
 			offsetTop_homeBlog();
-		} else if (path.includes('blog/')) {
-			offsetTop_shareButtons();
 		} else if (page == 'projects') {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
 		} else if (page == 'blog' || path.includes('blogCat')) {
-			// if the name of the page is 'page' or the path includes blogCat call the method offsetTop_homeBlog()
+			// if the name of the page is 'blog' or the path includes blogCat call the method offsetTop_homeBlog()
 			offsetTop_homeBlog();
 			offsetTop_Hamburger_scrollBalls();
+		} else if (path.includes('blog/')) {
+			offsetTop_Hamburger_scrollBalls();
+			offsetTop_shareButtons();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();

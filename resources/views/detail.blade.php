@@ -34,9 +34,7 @@
 		
 	</div>
 
-	
-@
-endsection
+@endsection
 
 @section('homeAbout')
 	
@@ -115,9 +113,29 @@ endsection
 				</div>
 			</div>
 		@endif
+
+		
+		<div class="sectionCenter pt-5  Nmt-10">
+			@php $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']; @endphp
+			
+			@if(strpos($actual_link, "blog/"))
+				<div class="sectionCenter--content  shareButton-div-mobile clearfix p-3">
+						<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
+						<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url={{$actual_link}}&title={{ ucfirst($content->name) }}&summary={{ ucfirst($content->excerpt) }}&source=anastasionico.uk" title="Share on LinkedIn" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
+						<i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+					</a>	
+				</div>
+			@endif
+		</div>
+
+
 	</section>
 
-	<div class="sectionCenter pt-15 pb-5 Nmt-10  bg-white c-white">
+
+
+	<div class="sectionCenter pt-10 pb-5 Nmt-10  bg-white c-white">
 		<div class="sectionCenter--content newsLetter  clearfix p-3">
 			<h3>Sign up for the Free to get access to my <br> <b>coding</b> and <b>design tips</b></h3>
 			{{ Form::open([

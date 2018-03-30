@@ -36,9 +36,11 @@ aside{
 	}
 
 	.shareButton-div{
-		
+		@include media(phonePortrait){
+			opacity:0;
+		}
 		@include media(tabletPortrait){
-			
+			opacity:1;	
 			position:absolute;
 			z-index:10;
 			right:75px;
@@ -59,6 +61,7 @@ aside{
 				}
 			}
 		}
+	  	
 	  	@include media(bigscreen) {
 	  		right:125px;
 	  	}

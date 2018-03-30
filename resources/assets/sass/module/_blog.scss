@@ -10,3 +10,20 @@
 	}
 }
 
+.shareButton-div-mobile{
+	&-circle{
+		margin:1rem auto;
+		color:$gray;
+		transition: all 0.3s ease-in-out;
+		@include lightShadow(0, 3, 15, 3, rgba($black,0.4));
+		&:hover{
+			color:$blue;
+			@include lightShadow(0, 5, 13, 3, rgba($black,0.2));
+			@include scale(1.01,1.01);
+		}
+	}
+	@include media(tabletPortrait){
+		display:none;
+	}
+}
+
