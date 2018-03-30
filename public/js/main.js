@@ -265,6 +265,38 @@ function offsetTop_hero() {
 	}
 }
 
+function offsetTop_shareButtons() {
+	var scrollHeight = document.body.scrollHeight;
+	var scrollPosition = window.scrollY;
+	var shareButtons = document.getElementsByClassName('shareButton-div-circle');
+	var percentageScrolled = (scrollPosition + 200) / scrollHeight * 100;
+	var scrollPosition = window.pageYOffset;
+	var windowSize = window.innerHeight;
+	var bodyHeight = document.body.offsetHeight;
+	var scrollDistanceFromBottom = Math.max(bodyHeight - (scrollPosition + windowSize), 0);
+
+	console.log(shareButtons.length);
+	if (scrollPosition > 400 && scrollDistanceFromBottom > 700) {
+		for (var i = 0; i < shareButtons.length; i++) {
+
+			(function (i) {
+				setTimeout(function () {
+					shareButtons[i].className = 'bigCircle flexCenter bg-white my-1 shareButton-div-circle visible';
+				}, i * 300);
+			})(i);
+		}
+	} else if (scrollPosition < 400 || scrollDistanceFromBottom < 700) {
+		for (var i = 0; i < shareButtons.length; i++) {
+
+			(function (i) {
+				setTimeout(function () {
+					shareButtons[i].className = 'bigCircle flexCenter bg-white my-1 shareButton-div-circle';
+				}, i * 300);
+			})(i);
+		}
+	}
+}
+
 function offsetTop_Hamburger_scrollBalls() {
 
 	var scrollHeight = document.body.scrollHeight;
@@ -585,6 +617,8 @@ window.onload = function () {
 			offsetTop_homeWork();
 			offsetTop_testimonial();
 			offsetTop_homeBlog();
+		} else if (path.includes('blog/')) {
+			offsetTop_shareButtons();
 		} else if (page == 'projects') {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
