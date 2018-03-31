@@ -233,7 +233,6 @@ function offsetTop_shareButtons()
 
 function offsetTop_Hamburger_scrollBalls() 
 {
-	console.log('hdhdhd');
 	var scrollHeight = document.body.scrollHeight;
 	var scrollPosition = window.scrollY;
 	var scrollBall = document.getElementsByClassName('scroll--ball');
@@ -576,12 +575,15 @@ window.onload = function () {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
 		} else if (page == 'blog' || path.includes('blogCat')) {
+			console.log('this is blog');
 			// if the name of the page is 'blog' or the path includes blogCat call the method offsetTop_homeBlog()
 			offsetTop_homeBlog();
 			offsetTop_Hamburger_scrollBalls();
 		} else if (path.includes('blog/')) {
+			console.log('this is detail');
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_shareButtons();
+			offsetTop_Hamburger_scrollBalls();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();

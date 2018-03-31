@@ -46,22 +46,22 @@
 		color:$blue;
 		padding:1rem 3rem;
 		
-		@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
+		@include lightShadow(0, 3, 13, 3, rgba($black,0.3));
 		transition: all 0.3s ease-in-out;
 		
 		&:hover{
-			@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
+			@include lightShadow(0, 10, 13, 3, rgba($black,0.2));
 			@include scale(1.01,1.01);
 		}
 		&-success{
 			background-color:$success;
 			color:$white;
 			padding:1rem 3rem;
-			@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
+			@include lightShadow(0, 3, 13, 3, rgba($black,0.3));
 			transition: all 0.3s ease-in-out;
 			
 			&:hover{
-				@include lightShadow(0, 10, 13, 3, rgba($black,0.6));
+				@include lightShadow(0, 10, 13, 3, rgba($black,0.2));
 			}
 		}
 	}
@@ -99,7 +99,7 @@
 	color:$white;
 	text-align:right;
 	position:relative;
-	@include lightShadow(0, 3, 13, 3, rgba($black,0.4));
+	@include lightShadow(0, 3, 13, 3, rgba($black,0.3));
 }
 
 
@@ -183,13 +183,13 @@
 
 .clickable{
 
-	@include lightShadow(0, 3, 13, 3, rgba($black,0.5));
+	@include lightShadow(0, 3, 13, 3, rgba($black,0.3));
 	transition: transform 0.3s ease-in-out;
 	cursor: pointer;
 
 	&:hover{
 		transform: translateY(-2px);
-		@include lightShadow(0, 5, 13, 3, rgba($black,0.6));
+		@include lightShadow(0, 5, 13, 3, rgba($black,0.2));
 	}
 
 }

@@ -38,7 +38,7 @@
 		position:relative;
 		z-index: 1;
 		.social-logo{
-			@include lightShadow(0, 3, 5, 3, rgba($gray,0.5));
+			@include lightShadow(0, 3, 5, 3, rgba($gray,0.3));
 			@include borderRadius(50%);
 			position:relative;
 			background-color:$white;

@@ -107,7 +107,7 @@
 		</div>		
 
 		@if( $content->cta_link)
-			<div class="sectionCenter mt-5">
+			<div class="sectionCenter">
 				<div class="sectionCenter--content">
 					<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">Visit</a>
 				</div>
@@ -115,9 +115,9 @@
 		@endif
 
 		
-		<div class="sectionCenter pt-5  Nmt-10">
-			@php $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']; @endphp
-			
+		<div class="sectionCenter ">
+			@php $actual_link = "$_SERVER[REQUEST_URI]"; @endphp
+			{{-- {{ $actual_link }} --}}
 			@if(strpos($actual_link, "blog/"))
 				<div class="sectionCenter--content  shareButton-div-mobile clearfix p-3">
 						<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
@@ -135,7 +135,7 @@
 
 
 
-	<div class="sectionCenter pt-10 pb-5 Nmt-10  bg-white c-white">
+	<div class="sectionCenter py-5 Nmt-10  bg-white c-white">
 		<div class="sectionCenter--content newsLetter  clearfix p-3">
 			<h3>Sign up for the Free to get access to my <br> <b>coding</b> and <b>design tips</b></h3>
 			{{ Form::open([

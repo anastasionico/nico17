@@ -42,14 +42,14 @@
 		@include rotateZ(-45deg);
 		transition: all 0.3s ease-in-out;
 		&:hover{
-			@include lightShadow(-2, 3, 5, 3, $gray);
+			@include lightShadow(0, 3, 13, 3, rgba($black,0.2));
 		}
 		@include media(tabletPortrait){
 			display: block;
 			margin:2rem auto;
 			@include rotateZ(45deg);
 			&:hover{
-				@include lightShadow(3, 3, 5, 3, $gray);
+				@include lightShadow(0, 3, 13, 3, rgba($black,0.2));
 			}
 		}
 		img{
@@ -82,14 +82,14 @@
 		@include rotateZ(-225deg);
 		transition: all 0.3s ease-in-out;
 		&:hover{
-			@include lightShadow(2, -2, 5, 3, $gray);
+			@include lightShadow(0, 3, 13, 3, rgba($black,0.2));
 		}
 		@include media(tabletPortrait){
 			display: block;
 			margin:2rem auto;
 			@include rotateZ(225deg);
 			&:hover{
-				@include lightShadow(-3, -3, 5, 3, $gray);
+				@include lightShadow(0, 3, 13, 3, rgba($black,0.2));
 			}
 		}
 		img{

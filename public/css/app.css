@@ -133,8 +133,8 @@ footer.menuVisible {
           transform: scale(0.75);
   -webkit-transform-origin: top right;
           transform-origin: top right;
-  -webkit-box-shadow: 5px 5px 15px 5px #bbb;
-  box-shadow: 5px 5px 15px 5px #bbb;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
 }
 
 .mainSection {
@@ -802,8 +802,8 @@ footer.menuVisible {
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
   background: #fff;
-  -webkit-box-shadow: 3px 3px 5px 3px #bbb;
-  box-shadow: 3px 3px 5px 3px #bbb;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
 }
 
 .about--section-phasis-logo i {
@@ -815,8 +815,8 @@ footer.menuVisible {
   .about--section-phasis-logo {
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
-    -webkit-box-shadow: -2px 3px 5px 3px #bbb;
-    box-shadow: -2px 3px 5px 3px #bbb;
+    -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+    box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
     -webkit-border-radius: 50%;
     -webkit-border-bottom-right-radius: 0px;
     -moz-border-radius: 50%;
@@ -1117,8 +1117,8 @@ footer.menuVisible {
 }
 
 .testimonials--container .photo-prev:hover {
-  -webkit-box-shadow: -2px 3px 5px 3px #bbb;
-  box-shadow: -2px 3px 5px 3px #bbb;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -1142,8 +1142,8 @@ footer.menuVisible {
   }
 
   .testimonials--container .photo-prev:hover {
-    -webkit-box-shadow: 3px 3px 5px 3px #bbb;
-    box-shadow: 3px 3px 5px 3px #bbb;
+    -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
+    box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
   }
 }
 
@@ -1229,8 +1229,8 @@ footer.menuVisible {
 }
 
 .testimonials--container .photo-next:hover {
-  -webkit-box-shadow: 2px -2px 5px 3px #bbb;
-  box-shadow: 2px -2px 5px 3px #bbb;
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -1254,8 +1254,8 @@ footer.menuVisible {
   }
 
   .testimonials--container .photo-next:hover {
-    -webkit-box-shadow: -3px -3px 5px 3px #bbb;
-    box-shadow: -3px -3px 5px 3px #bbb;
+    -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
+    box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.2);
   }
 }
 
@@ -1371,8 +1371,8 @@ footer.menuVisible {
   color: #bbb;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.4);
-  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.4);
+  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
 }
 
 .shareButton-div-mobile-circle:hover {
@@ -1458,8 +1458,8 @@ footer.menuVisible {
 }
 
 .footer--section-social .social-logo {
-  -webkit-box-shadow: 0px 3px 5px 3px rgba(187, 187, 187, 0.5);
-  box-shadow: 0px 3px 5px 3px rgba(187, 187, 187, 0.5);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(187, 187, 187, 0.3);
+  box-shadow: 0px 3px 5px 3px rgba(187, 187, 187, 0.3);
   border-radius: 50%;
   position: relative;
   background-color: #fff;
@@ -1917,6 +1917,9 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
 @media (min-width: 0px) {
   aside .shareButton-div {
     opacity: 0;
+    position: absolute;
+    right: -75px;
+    top: 38%;
   }
 }
 
@@ -1934,8 +1937,8 @@ aside .scroll--ball-Div .scroll--balls .scroll--ball.active {
     color: #bbb;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.4);
-    box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.4);
+    -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+    box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
   }
 
   aside .shareButton-div-circle:hover {
@@ -2077,8 +2080,8 @@ form.formContact input[type=submit] {
   overflow: hidden;
   opacity: 0;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
-  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -2140,8 +2143,8 @@ form.formContact input[type=submit] {
   margin: 2rem auto;
   width: 75%;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
-  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -2254,15 +2257,15 @@ form.formContact input[type=submit] {
   background-color: #fff;
   color: #35a;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
-  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-cta:hover {
-  -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
-  box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
+  -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.2);
+  box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.2);
   /* IE 9 */
   -webkit-transform: scale(1.01, 1.01);
   /* Safari */
@@ -2273,15 +2276,15 @@ form.formContact input[type=submit] {
   background-color: #28B959;
   color: #fff;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
-  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-cta-success:hover {
-  -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
-  box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.6);
+  -webkit-box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.2);
+  box-shadow: 0px 10px 13px 3px rgba(17, 17, 17, 0.2);
 }
 
 .skewed:after {
@@ -2328,8 +2331,8 @@ form.formContact input[type=submit] {
   color: #fff;
   text-align: right;
   position: relative;
-  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.4);
-  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.4);
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
 }
 
 .alert-danger {
@@ -2428,8 +2431,8 @@ form.formContact input[type=submit] {
 }
 
 .clickable {
-  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
-  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.5);
+  -webkit-box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 13px 3px rgba(17, 17, 17, 0.3);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -2440,8 +2443,8 @@ form.formContact input[type=submit] {
 .clickable:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  -webkit-box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.6);
-  box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.6);
+  -webkit-box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.2);
+  box-shadow: 0px 5px 13px 3px rgba(17, 17, 17, 0.2);
 }
 
 .commentPosts {

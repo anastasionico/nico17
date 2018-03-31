@@ -5,7 +5,7 @@
 	overflow:hidden;
 	opacity: 0;
 	@include borderRadius(3px)
-	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.3));
 	transition: all 0.3s ease-in-out;
 
 	@include media(tabletPortrait){
@@ -56,7 +56,7 @@
 	margin: 2rem auto;
 	width:75%; 
 	@include borderRadius(3px)
-	@include lightShadow(0, 3, 15, 3, rgba($black,0.5));
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.3));
 	
 	@include media(tabletPortrait){
 		margin: 1rem;
