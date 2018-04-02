@@ -116,8 +116,9 @@
 
 		
 		<div class="sectionCenter ">
-			@php $actual_link = "$_SERVER[REQUEST_URI]"; @endphp
-			{{-- {{ $actual_link }} --}}
+
+			@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
+			
 			@if(strpos($actual_link, "blog/"))
 				<div class="sectionCenter--content  shareButton-div-mobile clearfix p-3">
 						<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
