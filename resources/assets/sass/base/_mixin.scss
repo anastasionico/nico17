@@ -12,6 +12,16 @@
   border-radius: $percentage;
 }
 
+@mixin textShadow($hShadow, $vShadow, $blur, $color){
+  -webkit-text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for chrome */
+  -text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for all browser*/
+  text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* same as above*/
+  -moz-text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for firefox */
+  -o-text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for opera */
+  -ms-text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for ie 9+ */
+  -khtml-text-shadow:#{$hShadow}px #{$vShadow}px #{$blur}px  $color; /* for gecko based browser*/
+}
+
 @mixin lightShadow($hShadow, $vShadow, $blur, $spread, $color){
   -webkit-box-shadow: #{$hShadow}px #{$vShadow}px #{$blur}px #{$spread}px $color;
   -moz-box-shadow:    #{$hShadow}px #{$vShadow}px #{$blur}px #{$spread}px $color;

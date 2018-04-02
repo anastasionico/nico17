@@ -705,6 +705,20 @@ footer.menuVisible {
 
 .hero--section-content h1 {
   margin-bottom: 1rem;
+  -webkit-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for chrome */
+  -text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for all browser*/
+  text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* same as above*/
+  -moz-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for firefox */
+  -o-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for opera */
+  -ms-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for ie 9+ */
+  -khtml-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for gecko based browser*/
 }
 
 @media (min-width: 768px) {
@@ -717,6 +731,20 @@ footer.menuVisible {
   font-size: 1.3rem;
   font-weight: 100;
   margin-bottom: 1rem;
+  -webkit-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for chrome */
+  -text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for all browser*/
+  text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* same as above*/
+  -moz-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for firefox */
+  -o-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for opera */
+  -ms-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for ie 9+ */
+  -khtml-text-shadow: 0px 3px 15px rgba(17, 17, 17, 0.3);
+  /* for gecko based browser*/
 }
 
 @media (min-width: 768px) {
