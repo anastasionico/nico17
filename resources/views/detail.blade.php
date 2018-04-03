@@ -121,7 +121,8 @@
 			
 			@if(strpos($actual_link, "blog/"))
 				<div class="sectionCenter--content  shareButton-div-mobile clearfix p-3">
-						<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
+					
+					<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
 					</a>
 					<a href="https://www.linkedin.com/shareArticle?mini=true&url={{$actual_link}}&title={{ ucfirst($content->name) }}&summary={{ ucfirst($content->excerpt) }}&source=anastasionico.uk" title="Share on LinkedIn" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white shareButton-div-mobile-circle">

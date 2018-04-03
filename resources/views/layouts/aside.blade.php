@@ -12,8 +12,7 @@
 
 	<div class="shareButton-div">
 		@if(isset($content))
-
-			@php $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']; @endphp
+			@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
 			
 			<a href="https://www.facebook.com/sharer/sharer.php?u={{$actual_link}}" title="Share on Facebook" rel="nofollow" target="_blank" class="bigCircle flexCenter bg-white my-1 shareButton-div-circle">
 				<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
