@@ -8,7 +8,9 @@
 .bg-azure{
 	background-color:$azure;	
 }
-
+.bg-gray{
+	background-color:$gray;	
+}
 // border
 .border-blue{
 	border-color:$blue;
@@ -27,6 +29,9 @@
 }
 .c-white{
 	color:$white;
+}
+.c-gray{
+	color:$gray;
 }
 
 //clearfix

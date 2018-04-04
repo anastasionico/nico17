@@ -448,25 +448,41 @@ function offsetTop_homeWork() {
 function offsetTop_testimonial() {
 	var scrollPosition = window.scrollY;
 	var screenWidth = screen.width;
+	var testimonialsSection = document.querySelector('.testimonial--section');
 	var testimonialsContainer = document.querySelector('.testimonials--container');
 	var photos = document.querySelectorAll('.testimonials--container-photo');
-
+	var distanceFromTop = testimonialsSection.getBoundingClientRect().top;
 	//if the testimonialsContainer have the class of .photoClicked they do not have to move anymore
 	if (testimonialsContainer.getAttribute('class').indexOf('photoClicked') == -1) {
+		console.log('dis ' + distanceFromTop);
 
-		if (screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 5300) {
-			testimonialsContainer.style.left = (scrollPosition - 6100) * -1 + 'px';
-		} else if (screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828) {
-			testimonialsContainer.style.left = (scrollPosition - 5250) * -1 + 'px';
-		} else if (screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100) {
-			testimonialsContainer.style.top = (scrollPosition - 5150) * -1 + 'px';
-		} else if (screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923) {
-			testimonialsContainer.style.top = (scrollPosition - 4750) * -1 + 'px';
-		} else if (screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800) {
-			testimonialsContainer.style.top = (scrollPosition - 4550) * -1 + 'px';
-		} else if (screenWidth >= 1920 && scrollPosition > 2600) {
-			testimonialsContainer.style.top = (scrollPosition - 4650) * -1 + 'px';
+		if (screenWidth >= 0 && screenWidth <= 479 && distanceFromTop < 500) {
+			testimonialsContainer.style.left = distanceFromTop * -1 + 'px';
+		} else if (screenWidth >= 480 && screenWidth <= 767 && distanceFromTop < 250) {
+			testimonialsContainer.style.left = distanceFromTop * -1.5 + 'px';
+		} else if (screenWidth >= 768 && screenWidth <= 1023 && distanceFromTop < 1000) {
+			testimonialsContainer.style.top = distanceFromTop * -0.5 + 'px';
+		} else if (screenWidth >= 1024 && screenWidth <= 1365 && distanceFromTop < 750) {
+			testimonialsContainer.style.top = distanceFromTop * -0.5 + 'px';
+		} else if (screenWidth >= 1366 && screenWidth <= 1919 && distanceFromTop < 800) {
+			testimonialsContainer.style.top = distanceFromTop * -1 + 'px';
+		} else if (screenWidth >= 1920 && scrollPosition > 2600 && distanceFromTop < 1000) {
+			testimonialsContainer.style.top = distanceFromTop * -0.5 + 'px';
 		}
+
+		// if( screenWidth >= 0 && screenWidth <= 479 && scrollPosition > 5300){
+		// 	testimonialsContainer.style.left = ((scrollPosition - 6100)* -1) + 'px';	
+		// }else if( screenWidth >= 480 && screenWidth <= 767 && scrollPosition > 3828){
+		// 	testimonialsContainer.style.left = ((scrollPosition - 5250)* -1) + 'px';	
+		// }else if( screenWidth >= 768 && screenWidth <= 1023 && scrollPosition > 3100){
+		// 	testimonialsContainer.style.top = ((scrollPosition - 5150)* -1) + 'px';	
+		// }else if( screenWidth >= 1024 && screenWidth <= 1365 && scrollPosition > 2923){
+		// 	testimonialsContainer.style.top = ((scrollPosition - 4750)* -1) + 'px';	
+		// }else if( screenWidth >= 1366 && screenWidth <= 1919 && scrollPosition > 2800){
+		// 	testimonialsContainer.style.top = ((scrollPosition - 4550)* -1) + 'px';	
+		// }else if( screenWidth >= 1920 && scrollPosition > 2600){
+		// 	testimonialsContainer.style.top = ((scrollPosition - 4650)* -1) + 'px';	
+		// }		
 	}
 }
 
@@ -619,15 +635,16 @@ window.onload = function () {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_homeWork();
 		} else if (page == 'blog' || path.includes('blogCat')) {
-			console.log('this is blog');
 			// if the name of the page is 'blog' or the path includes blogCat call the method offsetTop_homeBlog()
 			offsetTop_homeBlog();
 			offsetTop_Hamburger_scrollBalls();
 		} else if (path.includes('blog/')) {
-			console.log('this is detail');
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_shareButtons();
 			offsetTop_Hamburger_scrollBalls();
+		} else if (page == 'freelance-web-developer-london') {
+			offsetTop_Hamburger_scrollBalls();
+			offsetTop_testimonial();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();

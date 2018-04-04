@@ -527,6 +527,10 @@ footer.menuVisible {
   background-color: #3aa;
 }
 
+.bg-gray {
+  background-color: #bbb;
+}
+
 .border-blue {
   border-color: #35a;
 }
@@ -545,6 +549,10 @@ footer.menuVisible {
 
 .c-white {
   color: #fff;
+}
+
+.c-gray {
+  color: #bbb;
 }
 
 .clearfix:after {
