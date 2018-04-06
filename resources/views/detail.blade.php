@@ -160,6 +160,34 @@
 	</div>
 
 	
+	<div class="oneThird bg-white c-blue">
+		<div class="oneThird--big">
+			<div class="oneThird--big--content detail--page-index">
+				<div id="disqus_thread"></div>
+
+				<script>
+					/**
+					*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+					*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+					
+					var disqus_config = function () {
+						this.page.url =  "{{ $actual_link }}" ;  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = "{{ $_SERVER['REQUEST_URI'] }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://anastasionico-uk.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					                            
+			</div>
+		</div>
+		<div class="oneThird--small">&nbsp;</div>
+	</div>		
 
 @endsection
 
@@ -211,7 +239,7 @@
 	<script type="text/javascript">
      	SyntaxHighlighter.all()
 	</script>
-	
+	<script id="dsq-count-scr" src="//anastasionico-uk.disqus.com/count.js" async></script>
 @endsection
 
 
