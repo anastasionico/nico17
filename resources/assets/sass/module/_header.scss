@@ -31,20 +31,26 @@ header{
 		}
 		.hamburgerLine-1{
 			width: 25px;
+			@include lightShadow(0, 3, 5, 3, rgba($black,0.3));
 			&.menuVisible{
 				transform: rotate(157deg);
+				@include lightShadow(0, 3, 5, 3, rgba($black,0));
 			}
 		}
 		.hamburgerLine-2{
 			width: 40px;
+			@include lightShadow(0, 3, 5, 3, rgba($black,0.3));
 			&.menuVisible{
 				transform: translate(8px,2px) rotate(10deg);
+				@include lightShadow(0, 3, 5, 3, rgba($black,0));
 			}
 		}
 		.hamburgerLine-3{
 			width: 25px;
+			@include lightShadow(0, 3, 5, 3, rgba($black,0.3));
 			&.menuVisible{
 				transform: rotate(-147deg);
+				@include lightShadow(0, 3, 5, 3, rgba($black,0));
 			}
 		}
 	}

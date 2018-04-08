@@ -1857,29 +1857,41 @@ header .hamburger .hamburgerLine-1.menuVisible {
 
 header .hamburger .hamburgerLine-1 {
   width: 25px;
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
 }
 
 header .hamburger .hamburgerLine-1.menuVisible {
   -webkit-transform: rotate(157deg);
           transform: rotate(157deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
 }
 
 header .hamburger .hamburgerLine-2 {
   width: 40px;
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
 }
 
 header .hamburger .hamburgerLine-2.menuVisible {
   -webkit-transform: translate(8px, 2px) rotate(10deg);
           transform: translate(8px, 2px) rotate(10deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
 }
 
 header .hamburger .hamburgerLine-3 {
   width: 25px;
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0.3);
 }
 
 header .hamburger .hamburgerLine-3.menuVisible {
   -webkit-transform: rotate(-147deg);
           transform: rotate(-147deg);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
+  box-shadow: 0px 3px 5px 3px rgba(17, 17, 17, 0);
 }
 
 header nav a {
