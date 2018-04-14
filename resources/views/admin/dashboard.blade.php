@@ -14,52 +14,52 @@
 	    <div class="container-fluid">
 	      	<div class="quick-actions_homepage">
 	        	<ul class="quick-actions">
-		          	<li class="bg_ly"> 
+		          	<li class="bg_lb"> 
 			          	<a href="/projects"> 
 	          				<i class="icon icon-briefcase"></i> 
           					Projects <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
-  					<li class="bg_lo"> 
+  					<li class="bg_lb"> 
 			          	<a href="/blog"> 
 	          				<i class="icon-align-left"></i> 
           					Articles <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
-  					<li class="bg_ls"> 
+  					<li class="bg_lb"> 
 			          	<a href="/contact"> 
 	          				<i class="icon-envelope"></i> 
           					Contacts <i class="fa fa-eye" aria-hidden="true"></i>
       					</a> 
   					</li>
-  					<li class="bg_dy"> 
+  					<li class="bg_lb"> 
   						<a href="/admin/tasks"> 
   							<i class="icon-check-empty"></i> 
   							<span class="label label-important">{{ count($tasksUndone)}}</span> 
   							Pending Tasks
 						</a> 
 					</li>
-					<li class="bg_lh"> 
+					<li class="bg_lb"> 
   						<a href="/admin/about/skills"> 
 							<i class="icon-wrench"></i> 
   							Skills
 						</a> 
 					</li>
-					<li class="bg_lv"> 
+					<li class="bg_lb"> 
   						<a href="/admin/projects/projects"> 
 							<i class="icon-briefcase"></i> 
 							<span class="label label-important">{{ count($projects) }}</span> 
   							Projects
 						</a> 
 					</li>
-					<li class="bg_lr"> 
+					<li class="bg_lb"> 
   						<a href="/admin/blog/supercategory"> 
 							<i class="icon-align-left"></i> 
 							<span class="label label-important">{{ count($blogpostsPublished) }}</span> 
 							Blog
 						</a> 
 					</li>
-					<li class="bg_lh"> 
+					<li class="bg_lb"> 
   						<a href="/admin/contact"> 
 							<i class="icon-envelope"></i> 
 							Contact

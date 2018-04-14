@@ -33,7 +33,8 @@ hr{ border-top-color:#1B367A;}
 .label-important, .badge-important{ background:#E87009;}
 
 /*Metro Background color class*/
-.bg_lb{ background:#27a9e3;}
+
+.bg_lb{ background:#2255a4;}
 .bg_db{ background:#2295c9;}
 .bg_lg{ background:#28b779;}
 .bg_dg{ background:#28b779;}
@@ -289,6 +290,7 @@ hr{ border-top-color:#1B367A;}
 	text-align:center; position:relative;
 	float:left;
 	margin-top:10px;
+
 }
 .stat-boxes, .quick-actions, .quick-actions-horizontal, .stats-plain {
 	display: block;
@@ -336,19 +338,32 @@ hr{ border-top-color:#1B367A;}
 	margin-bottom: 3px;
 	margin-top: 6px;
 }
-.quick-actions_homepage .quick-actions li{ position:relative;}
+.quick-actions_homepage .quick-actions li{ 
+		position:relative; 
+		border-radius: 5px;
+		box-shadow: 0px 7px 15px  #081626; 
+		transition: all 0.3s ease-in-out;
+	}
+.quick-actions_homepage:hover .quick-actions li:hover{ 
+	border-radius: 10px;
+	background: #3aa;
+}
 .quick-actions_homepage .quick-actions li .label{ position:absolute; padding:5px; top:-10px; right:-5px;}
 .stats-plain {
 	width: 100%;
+
+
 }
 .stat-boxes li, .quick-actions li, .quick-actions-horizontal li {
 	float: left;
 	line-height: 18px;
 	margin: 0 10px 10px 0px;
 	padding: 0 10px;
+	border-radius: 50px;
 }
+
 .stat-boxes li a:hover, .quick-actions li a:hover, .quick-actions-horizontal li a:hover, .stat-boxes li:hover, .quick-actions li:hover, .quick-actions-horizontal li:hover {
-	background: #3aa;
+	
 }
 .quick-actions li {
 	min-width:14%;
@@ -362,6 +377,7 @@ hr{ border-top-color:#1B367A;}
 	padding: 0 30px;
 	display: inline-block;
 	margin: 0 10px 20px;
+
 }
 .quick-actions li a {
 	padding:10px 30px; 
@@ -509,6 +525,8 @@ hr{ border-top-color:#1B367A;}
 	margin-top: 16px;
 	margin-bottom: 16px;
 	position: relative;
+	border-radius: 10px;
+	box-shadow: 0px 7px 15px  #081626;
 }
 .widget-box.widget-calendar, .widget-box.widget-chat {
 	overflow:hidden !important;
@@ -525,9 +543,13 @@ hr{ border-top-color:#1B367A;}
 	margin-bottom: 0;
 }
 .widget-title, .modal-header, .table th, div.dataTables_wrapper .ui-widget-header {
-	 background:#0D1A3A;
+ 	background:#0D1A3A;
 	border-bottom: 1px solid #1B367A;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
 	height: 36px;  
+
+
 }
 .widget-title .nav-tabs {
 	border-bottom: 0 none; 
