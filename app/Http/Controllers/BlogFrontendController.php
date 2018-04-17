@@ -27,7 +27,7 @@ class BlogFrontendController extends Controller
                 ->where('slug', '!=', $param)
                 ->where('category_id', '=', $content->category_id)
                 ->where('status', '=', 3)
-                ->offset($content->order-1)
+                ->offset($content->order-2)
                 ->limit(3)
                 ->orderBy('order', 'asc')
                 ->get();

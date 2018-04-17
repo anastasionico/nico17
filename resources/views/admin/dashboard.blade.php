@@ -214,7 +214,7 @@
 
 
 	            					</span>
-		            				<div class="progress progress-striped ">
+		            				<div class="progress">
 			                  			<div style="width: {{$skill->value}}%;" class="bar">
 			                  				{{$skill->value}}
 			                  			</div>
