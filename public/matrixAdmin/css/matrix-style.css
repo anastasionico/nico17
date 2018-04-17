@@ -518,9 +518,7 @@ hr{ border-top-color:#1B367A;}
 /* Widgets */
 .widget-box {
 	background: none repeat scroll 0 0 #F9F9F9;
-	border-left: 1px solid #1B367A;
-	border-top: 1px solid #1B367A;
-	border-right: 1px solid #1B367A;
+	
 	clear: both;
 	margin-top: 16px;
 	margin-bottom: 16px;
@@ -542,14 +540,19 @@ hr{ border-top-color:#1B367A;}
 	margin-top: 0;
 	margin-bottom: 0;
 }
-.widget-title, .modal-header, .table th, div.dataTables_wrapper .ui-widget-header {
+.widget-title, .modal-header, div.dataTables_wrapper .ui-widget-header {
  	background:#0D1A3A;
 	border-bottom: 1px solid #1B367A;
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 	height: 36px;  
-
-
+	padding: 5px;
+}
+.table th{
+ 	background:#0D1A3A;
+	border-bottom: 1px solid #1B367A;
+	padding: 5px;
+	border-left:0px;
 }
 .widget-title .nav-tabs {
 	border-bottom: 0 none; 
@@ -582,7 +585,7 @@ hr{ border-top-color:#1B367A;}
 }
 .widget-title span.icon {
 	padding: 9px 10px 7px 11px;
-	float: left; border-right:1px solid #1B367A;
+	float: left;
 }
 .widget-title h5 {
 	color: #aaa;
