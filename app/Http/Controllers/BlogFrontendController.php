@@ -22,13 +22,14 @@ class BlogFrontendController extends Controller
     	$content = Blogpost::where('id', $param)
             ->orWhere('slug', $param)
             ->firstOrFail();
-
+        // dd($content->order);
    		$otherContents = Blogpost::where('id', '!=', $param)
                 ->where('slug', '!=', $param)
                 ->where('category_id', '=', $content->category_id)
                 ->where('status', '=', 3)
+                ->offset($content->order-1)
                 ->limit(3)
-                ->orderBy('created_at', 'asc')
+                ->orderBy('order', 'asc')
                 ->get();
         
         if($otherContents->count() === 0){
@@ -39,8 +40,6 @@ class BlogFrontendController extends Controller
                 ->orderBy('created_at', 'asc')
                 ->get();    
         }
-
-
         
         return view('detail', compact('content', 'otherContents','segment'));
     }
