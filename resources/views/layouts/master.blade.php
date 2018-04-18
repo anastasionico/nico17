@@ -5,7 +5,8 @@
 			//if the ip of the user is one of those two do no call google analytics
 			$blacklist = [
 			    '127.0.0.1',
-			    '77.103.11.21'
+			    '77.103.11.21',
+			    '83.244.197.114'
 			];
 
 			if(!in_array($_SERVER['REMOTE_ADDR'], $blacklist)):

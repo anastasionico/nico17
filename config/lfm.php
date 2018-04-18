@@ -1,4 +1,5 @@
 <?php
+    
 
 return [
     /*
@@ -15,8 +16,8 @@ return [
     'middlewares' => ['web', 'auth'],
 
     // The url to this package. Change it if necessary.
-    'url_prefix' => 'laravel-filemanager',
-
+    'url_prefix' => 'laravel-filemanager', //THIS WAS THE ORIGINAL PREFIX
+    
     /*
     |--------------------------------------------------------------------------
     | Multi-User Mode
@@ -43,8 +44,10 @@ return [
 
     // Which folder to store files in project, fill in 'public', 'resources', 'storage' and so on.
     // You should create routes to serve images if it is not set to public.
-    // 'base_directory' => 'public',  //THIS IS THE ORIGINAL TO USE IN LOCAL 
-    'base_directory' => '../public_html',
+
+    
+    'base_directory' => 'public',        
+
 
 
     'images_folder_name' => 'img',
