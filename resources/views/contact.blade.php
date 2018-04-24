@@ -38,6 +38,14 @@
 				<input type="email" name="email" onfocusin="centerFieldEmail(this)">	
 			</div>
 
+			<br>
+			<div class="form-control">
+				{!! NoCaptcha::display() !!}
+				
+			</div>
+
+			
+
 			<input class="btn" type="submit" name="send" value="SEND">
 		{{ Form::close() }}
 	</div>

@@ -39,6 +39,11 @@
 								<label>Your Email</label>
 								<input type="text" name="email">
 							</div>
+							<br>
+							<div class="form-control">
+								{!! NoCaptcha::display() !!}
+							</div>
+							<br>
 							<input class="btn" type="submit" name="send" value="SEND">
 						{{ Form::close() }}
 					</div>
@@ -157,7 +162,7 @@
 	</div>
 	
 </footer>
-
+{!! NoCaptcha::renderJs() !!}
 <script type="text/javascript">
 	function closeAlert(){
 		var popup = document.querySelector('.alert');

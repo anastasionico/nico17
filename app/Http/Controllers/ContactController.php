@@ -51,8 +51,10 @@ class ContactController extends Controller
         $contact = request()->validate([
             "name" => "required|string",
             "message" => "required|string|min:10",
-            "email" => "required|email"
+            "email" => "required|email",
+            'g-recaptcha-response' => 'required|captcha'
         ]);
+        
 
         $inbox = Contact::create($contact);
         $message = "Hi ". ucfirst($inbox->name). ", Your message has been sent, I will answer as soon as possible";
