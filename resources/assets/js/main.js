@@ -397,7 +397,7 @@ function offsetTop_testimonial()
 	var distanceFromTop = testimonialsSection.getBoundingClientRect().top
 	//if the testimonialsContainer have the class of .photoClicked they do not have to move anymore
 	if( testimonialsContainer.getAttribute('class').indexOf('photoClicked') == -1 ){
-		console.log('dis ' + distanceFromTop);
+		
 		
 		if( screenWidth >= 0 && screenWidth <= 479 && distanceFromTop < 500){
 			testimonialsContainer.style.left = (distanceFromTop * -1) + 'px';
@@ -542,7 +542,7 @@ function formBehaviour()
 		var label = form.children[0];
 		var input = form.children[1];
 		
-		console.log(input);
+		
 		
 		input.onfocus = function(){
 			var label = form.children[0];
@@ -609,6 +609,9 @@ window.onload = function () {
 			offsetTop_shareButtons();
 			offsetTop_Hamburger_scrollBalls();
 		} else if (page == 'freelance-web-developer-london') {
+			offsetTop_Hamburger_scrollBalls();
+			offsetTop_testimonial();
+		} else if (page == 'web-developer-upwork') {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_testimonial();
 		} else {

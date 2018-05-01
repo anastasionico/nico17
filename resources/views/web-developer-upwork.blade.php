@@ -41,13 +41,46 @@
 @section('homeAbout')
 	<section class="about--section bg-white c-blue skewed pt-5 pb-5">
 		<div class="skewReverse">
+			
+			<div class="fullWidth about--section-phasis">
+	 			<div class="fullWidth--content">
+					<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">2<br>Countries</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-suitcase fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">6+<br> Years of experience</h5>
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">30+<br> Happy Clients</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">46<br> Blog posts written</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-code fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">500k+<br> line of codes</h5>	
+	 			</div>
+	 		</div>
 
 			<div class="oneThird">
 				<div class="oneThird--big">
 					<div class="oneThird--big--content ">
 						<b>Hi,<br> I am Nico Anastasio, </b>
 						<br><br><br>
-						<p>A London based, freelancer Web Developer.</p>
+						<p>A London based, freelancer PHP Web Developer.</p>
 						<p>I have 6+ years of projects successfully deployed in my background.</p>
 						<br>
 						<p>Not enough?</p>
@@ -59,6 +92,7 @@
 						<b>I believe in very few fundamentals ...</b>
 						<br><br>
 						<p>I am an expert in the design and building of websites and web application.</p>
+						<p>I use PHP on daily basis mastering several frameworks such as Laravel, CakePHP and CodeIgniter</p>
 						<br>
 						<p>I am among the <b>top 20%</b> of freelancers on UpWork regarding the knowledge of PHP</p>
 						<br>
@@ -101,7 +135,6 @@
 						<p>Upwork will walk you through the process of setting everything up.</p>
 					</div>
 				</div>
-				
 			</div>		
 			
 		</div>	

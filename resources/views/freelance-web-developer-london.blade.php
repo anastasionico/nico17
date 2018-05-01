@@ -39,6 +39,39 @@
 @section('homeAbout')
 	<section class="about--section bg-white c-blue skewed pt-5 pb-5">
 		<div class="skewReverse">
+			
+			<div class="fullWidth about--section-phasis">
+	 			<div class="fullWidth--content">
+					<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">2<br>Countries</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-suitcase fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">6+<br> Years of experience</h5>
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">30+<br> Happy Clients</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">46<br> Blog posts written</h5>	
+	 			</div>
+	 			<div class="fullWidth--content">
+	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
+						<i class="fa fa-code fa-2x" aria-hidden="true"></i>
+					</span>
+					<h5 class="about--section-phasis-caption">500k+<br> line of codes</h5>	
+	 			</div>
+	 		</div>
 
 			<div class="oneThird">
 				<div class="oneThird--big">
@@ -99,7 +132,6 @@
 						<p>Upwork will walk you through the process of setting everything up.</p>
 					</div>
 				</div>
-				
 			</div>		
 			
 		</div>	
