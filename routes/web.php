@@ -34,6 +34,9 @@ Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 Route::get('/freelance-web-developer-london', function () {
     return view('freelance-web-developer-london');
 });
+Route::get('/web-developer-upwork', function () {
+    return view('web-developer-upwork');
+});
 
 Route::get('/detail', function () {
     return view('detail');

@@ -9,7 +9,7 @@
 	<style type="text/css">
 		.hero--section:before{
 			/*background: url(/img/upwork.jpg);*/
-			background: linear-gradient(-50deg, #777 50%, #ccc 100%)/*, url(/img/upwork.jpg)*/;
+			background: linear-gradient(-50deg, #3aa 50%, #35a 100%)/*, url(/img/upwork.jpg)*/;
 		    background-blend-mode: multiply;
 		    background-size: cover;
 		    background-position: center center;
@@ -24,7 +24,9 @@
 	<div class="hero--section">
 		
 		<div class="hero--section-content">
-			<h1>I am a Freelancer</h1>
+			<h1>Anastasio Nico</h1>
+			<h2>I am a Freelancer</h2>
+			<br>
 			<b>I specialize in building</b>
 			<h4><b>PHP Websites</b> and <b>Web Applications</b></h4>
 			<br><br>
@@ -66,7 +68,7 @@
 						<br>
 						<p>How do I do that?</p>
 						<br>
-						<p>To do that I have learned high-level techniques of S.E.O. placing myself among the top 20% expert in the field in the whole UpWork platform.</p>
+						<p>To do that I have learned high-level techniques of <b>S.E.O.</b> placing myself among the top 20% expert in the field in the whole UpWork platform.</p>
 						<br><br><br>
 						<b>How would we interact?</b>
 						<br><br>

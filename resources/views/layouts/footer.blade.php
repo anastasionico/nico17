@@ -40,9 +40,9 @@
 								<input type="text" name="email">
 							</div>
 							<br>
-							<div class="form-control">
-								{!! NoCaptcha::display() !!}
-							</div>
+							
+							{!! NoCaptcha::display() !!}
+							
 							<br>
 							<input class="btn" type="submit" name="send" value="SEND">
 						{{ Form::close() }}
