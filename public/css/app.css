@@ -2021,8 +2021,13 @@ form .form-control label {
   position: absolute;
   text-align: left;
   top: 1rem;
+  left: 1rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+form .form-control label:hover {
+  cursor: pointer;
 }
 
 form .form-control input,
@@ -2038,6 +2043,11 @@ form .form-control textarea {
   background-color: transparent;
   border: 0;
   border-bottom: 2px solid #35a;
+}
+
+form .form-control input:hover,
+form .form-control textarea:hover {
+  cursor: pointer;
 }
 
 form input[type=submit] {

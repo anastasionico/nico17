@@ -587,10 +587,18 @@ function formBehaviour() {
 	formControl.forEach(function (form) {
 		var label = form.children[0];
 		var input = form.children[1];
-
+		console.log(input);
 		input.onfocus = function () {
 			var label = form.children[0];
 			label.style.top = 0;
+			label.style.left = 0;
+			label.style.fontSize = "0.5rem";
+		};
+		label.onclick = function () {
+			var label = form.children[0];
+			label.style.top = 0;
+			label.style.left = 0;
+			label.style.fontSize = "0.5rem";
 		};
 	});
 }

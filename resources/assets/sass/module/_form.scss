@@ -9,7 +9,11 @@ form{
 			position: absolute;
 			text-align: left;
 			top: 1rem;
+			left: 1rem;
 			transition: all 0.3s ease-in-out;
+			&:hover{
+				cursor:pointer;
+			}
 		}
 
 		input, textarea{
@@ -24,7 +28,11 @@ form{
 			background-color:transparent;
 			border:0;
 			border-bottom: 2px solid $blue;
+			&:hover{
+				cursor:pointer;
+			}
 		}
+
 	}
 
 	input[type=submit]{
@@ -37,6 +45,7 @@ form{
 			float: right;
 		}
 	}
+
 }
 form.formContact{
 	@include skewY(10deg);

@@ -28,21 +28,20 @@
 					Your message
 					<small class="help-block" id="messageHelpBlock" style="font-size:0.5rem;">At least 10 characters</small>
 				</label>
-				<textarea name='message' id="messageTextarea" rows="1" cols="33" onfocusin="centerFieldMessage(this)"></textarea>
+				<textarea name='message' id="messageTextarea" rows="1" cols="33" {{-- onfocusin="centerFieldMessage(this)" --}}></textarea>
 
 			</div>
 
 			<p>You can reply back to </p>
 			<div class="form-control">
 				<label>Your email</label>
-				<input type="email" name="email" onfocusin="centerFieldEmail(this)">	
+				<input type="email" name="email" {{-- onfocusin="centerFieldEmail(this)" --}}>	
 			</div>
 
 			<br>
-			<div class="form-control">
-				{!! NoCaptcha::display() !!}
-				
-			</div>
+			{!! NoCaptcha::display(['data-size' => 'compact']) !!}
+			
+			
 
 			
 
@@ -127,7 +126,7 @@
 
 @section('blog')
 	
-	<script type="text/javascript">
+	{{-- <script type="text/javascript">
 		let nameField = document.querySelector('#nameField')
 		nameField.addEventListener('focusin',function (){
 			let parentFormControl = nameField.parentElement;
@@ -137,13 +136,8 @@
 			let parentFormControl = nameField.parentElement;
 			parentFormControl.style.marginTop = '0%';
 		});
-
-
-		
-
-
 	</script>
-	
+	 --}}
 
 @endsection
 
