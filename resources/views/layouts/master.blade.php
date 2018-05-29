@@ -40,6 +40,7 @@
 		
 		<div id="content">
 			<section class="mainSection">
+				{{-- {{ dd($errors)}} --}}
 				@if ($errors->any())
 					<div class="alert alert-danger alert-block" style="position: absolute;top:15rem;left:25%;width:50%;z-index: 20">  
 						<a class="close" data-dismiss="alert" href="#" onclick="closeAlert()">
@@ -74,9 +75,9 @@
 				
 			</section>
 		
-		@include('layouts.aside')	 
-		
-		@include('layouts.footer') 
+			@include('layouts.aside')	 
+			
+			@include('layouts.footer') 
 		
 		</div>
 
