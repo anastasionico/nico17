@@ -649,12 +649,10 @@ window.onload = function () {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_shareButtons();
 			offsetTop_Hamburger_scrollBalls();
-		} else if (page == 'freelance-web-developer-london') {
+		} else if (page == 'freelance-web-developer-london' || page == 'web-developer-upwork') {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_testimonial();
-		} else if (page == 'web-developer-upwork') {
-			offsetTop_Hamburger_scrollBalls();
-			offsetTop_testimonial();
+			offsetTop_AboutPhases();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();

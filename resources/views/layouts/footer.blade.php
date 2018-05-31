@@ -7,9 +7,11 @@
 					<div class="twoThird--small-content">
 						<h3>Anastasio Nico</h3>
 						<small id="footerDescription">
-							I am a Web Designer and Web Developer working in London and Hertfordshire.
+							I'm a Web Designer | Developer Aiming to help businesses grow. 
 							<br>
-							Available for creating Web Applications and Graphic Projects.
+							I’d love to connect and help you convert your website visitors into customers. 
+							<br>
+							I specialize in enhancing online visibility of business using high-quality solutions. 
 						</small>
 					</div>
 				</div>
@@ -100,7 +102,7 @@
 						@if( strtolower($blogpostPublished->category->supercategory->name) == 'coding' && $codingPostsNumber < 3)
 							
 							<li>
-								<a href="/blog/{{$blogpostPublished->slug}}">
+								<a class="footer--section-blog-link" href="/blog/{{$blogpostPublished->slug}}">
 									{{ ucfirst($blogpostPublished->name) }}
 
 								</a>

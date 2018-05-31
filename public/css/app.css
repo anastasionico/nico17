@@ -1456,6 +1456,7 @@ footer.menuVisible {
 .footer--section .footerForm textarea {
   color: #fff;
   border-bottom: 2px solid #fff;
+  margin: 0.6rem auto 0rem;
 }
 
 .footer--section .footerForm input::-webkit-input-placeholder,
@@ -1527,7 +1528,7 @@ footer.menuVisible {
 
 @media (min-width: 768px) {
   .footer--section-social .social-logo {
-    margin: 1rem auto;
+    margin: 0.3rem auto;
   }
 }
 
@@ -1759,7 +1760,7 @@ footer.menuVisible {
 
 .footer--section-blog ul {
   list-style-type: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer--section-blog ul li {
@@ -1769,10 +1770,11 @@ footer.menuVisible {
 .footer--section-blog ul li:first-child {
   font-weight: 700;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .footer--section-blog ul li a {
+  margin-bottom: 0rem;
   font-size: 0.7rem;
   line-height: 1rem;
   color: #fff;
@@ -1784,7 +1786,7 @@ footer.menuVisible {
 		left:0;
 		right: 0; */
   font-size: 0.7rem;
-  padding: 0.3rem;
+  padding: 0.2rem;
   background-color: #278383;
 }
 

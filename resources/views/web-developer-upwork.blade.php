@@ -43,31 +43,31 @@
 		<div class="skewReverse">
 			
 			<div class="fullWidth about--section-phasis">
-	 			<div class="fullWidth--content">
+	 			<div class="fullWidth--content about--section-phasisDivs">
 					<span class="about--section-phasis-logo  bigCircle flexCenter">
 						<i class="fa fa-globe fa-2x" aria-hidden="true"></i>
 					</span>
 					<h5 class="about--section-phasis-caption">2<br>Countries</h5>	
 	 			</div>
-	 			<div class="fullWidth--content">
+	 			<div class="fullWidth--content about--section-phasisDivs">
 	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
 						<i class="fa fa-suitcase fa-2x" aria-hidden="true"></i>
 					</span>
 					<h5 class="about--section-phasis-caption">6+<br> Years of experience</h5>
 	 			</div>
-	 			<div class="fullWidth--content">
+	 			<div class="fullWidth--content about--section-phasisDivs">
 	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
 						<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
 					</span>
 					<h5 class="about--section-phasis-caption">30+<br> Happy Clients</h5>	
 	 			</div>
-	 			<div class="fullWidth--content">
+	 			<div class="fullWidth--content about--section-phasisDivs">
 	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
 						<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
 					</span>
 					<h5 class="about--section-phasis-caption">46<br> Blog posts written</h5>	
 	 			</div>
-	 			<div class="fullWidth--content">
+	 			<div class="fullWidth--content about--section-phasisDivs">
 	 				<span class="about--section-phasis-logo  bigCircle flexCenter">
 						<i class="fa fa-code fa-2x" aria-hidden="true"></i>
 					</span>
@@ -148,7 +148,7 @@
 
 @section('homeTestimonial')
 	
-	<section class="testimonial--section bg-gray c-blue">	
+	<section class="testimonial--section  c-blue" style="background: linear-gradient(-50deg, #aaa 0%, #fff 100%)">	
 		<div class="twoThird">
 			<div class="twoThird--small">
 				<div class="twoThird--small-content">
