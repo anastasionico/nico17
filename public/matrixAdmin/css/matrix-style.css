@@ -264,9 +264,9 @@ hr{ border-top-color:#1B367A;}
     margin: 0;
 }
 .todo li {
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid #0d1a3a;
     margin-bottom: 0;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 .todo li:hover {
     /*background: none repeat scroll 0 0 #FCFCFC;*/
@@ -736,8 +736,7 @@ hr{ border-top-color:#1B367A;}
 }
 .panel-right2 {
 	width: 100%;
-	background-color: #fff;
-	border-right: 1px solid #dddddd;
+	background-color: #0d1a3a;
 	position: absolute;
 	left: 0;
 	overflow:auto;
@@ -747,8 +746,9 @@ hr{ border-top-color:#1B367A;}
 }
 .panel-right .panel-title, .panel-right2 .panel-title {
 	width: 100%;
-	background-color: #ececec;
-	border-bottom: 1px solid #dddddd;
+	height: 40px;
+	background-color: #0d1a3a;
+	border-bottom: 1px solid #0d1a3a;
 }
 .panel-right .panel-title h5, .panel-right2 .panel-title h5 {
 	font-size: 12px;
@@ -850,18 +850,24 @@ hr{ border-top-color:#1B367A;}
 	font-size: 10px;
 }
 .chat-users .contact-list li {
-	border: 1px solid #1B367A;
+	background-color: #263967;
 	margin:5px 5px;
 	padding: 1px;
 	position: relative;
+	transition: 0.3s all linear;
 }
 .chat-users .contact-list li:hover {
-	background-color: #0D1A3A;
+	background-color: #364977;
+	
 }
 .chat-users .contact-list li a {
 	color: #666666;
 	display: block;
 	padding: 8px 5px;
+	transition: 0.3s all linear;
+}
+.chat-users .contact-list li a:hover {
+	color: #fff;
 }
 .chat-users .contact-list li.online a {
 	font-weight: bold;
@@ -1140,7 +1146,6 @@ form {
 	margin-bottom: 0;
 }
 .form-horizontal .control-group {
-	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #152A5F;
 	margin-bottom: 0;
 }
@@ -1163,6 +1168,7 @@ form {
 .form-horizontal .form-actions {
 	margin-top: 0;
 	margin-bottom: 0;
+	border-radius: 15px;
 }
 .help-block, .help-inline {
 	color: #aaa;
