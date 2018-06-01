@@ -141,9 +141,84 @@
 	</section>
 @endsection
 
-{{-- @section('work')
-	
-@endsection --}}
+@section('work')
+	<section class="work--section bg-blue c-white pt-5 pb-5">	
+		<div class="fullWidth">
+			<div class="fullWidth--content pricing-sections">
+				<div class="pricing-sections-namePlan">
+					<small>BASIC PLAN</small>
+				</div>	
+				<div class="pricing-sections-price">
+					<strong>£ 1399</strong>
+				</div>	
+				<div class="pricing-sections-features">
+					<ul>
+						<li>GDPR <span class="included">Conform</span></li>
+						<li>Domain <span class="included">Included*</span></li>
+						<li>Hosting <span>Not Included</span></li>
+						<li>Back-end <span class="included">Bespoke</span></li>
+						<li>Front-end <span>Theme</span></li>
+						<li>S.E.O. <span>Google Analytics</span></li>
+						<li>Support <span>Not Included</span></li>
+					</ul>
+				</div>	
+				<div class="pricing-sections-cta">
+					<a href="/contact" class="btn">Contact Me</a>
+				</div>	
+			</div>
+			<div class="fullWidth--content pricing-sections">
+				<div class="pricing-sections-namePlan">
+					<small>STANDARD PLAN</small>
+				</div>	
+				<div class="pricing-sections-price">
+					<strong>£ 1699</strong>
+
+				</div>	
+				<div class="pricing-sections-features">
+					<ul>
+						<li>GDPR <span class="included">Conform</span></li>
+						<li>Domain <span class="included">Included*</span></li>
+						<li>Hosting <span class="included">Included*</span></li>
+						<li>Back-end <span class="included">Bespoke</span></li>
+						<li>Front-end <span class="included">Bespoke</span></li>
+						<li>S.E.O. <span>Google Analytics</span></li>
+						<li>Support <span>Not Included</span></li>
+					</ul>
+				</div>	
+				<div class="pricing-sections-cta">
+					<a href="/contact" class="btn">Contact Me</a>
+				</div>	
+			</div>
+			<div class="fullWidth--content pricing-sections">
+				<div class="pricing-sections-namePlan">
+					<small>PREMIUM PLAN</small>
+				</div>	
+				<div class="pricing-sections-price">
+					<strong>£ 2100</strong>
+				</div>	
+				<div class="pricing-sections-features">
+					<ul>
+						<li>GDPR <span class="included">Conform</span></li>
+						<li>Domain <span class="included">Included*</span></li>
+						<li>Hosting <span class="included">Included*</span></li>
+						<li>Back-end <span class="included">Bespoke</span></li>
+						<li>Front-end <span class="included">Bespoke</span></li>
+						<li>S.E.O. <span class="included">Long Term</span></li>
+						<li>Support <span class="included">1 year free</span></li>
+					</ul>
+				</div>	
+				<div class="pricing-sections-cta">
+					<a href="/contact" class="btn">Contact Me</a>
+				</div>	
+			</div>
+		</div>
+		<div class="fullWidth">
+			<small class="pricing-disclaimer">
+				* Domain and hosting prices are meant for the first year. Prices could vary depending on features requested.
+			</small>
+		</div>	
+	</section>
+@endsection
 
 @section('homeTestimonial')
 	
