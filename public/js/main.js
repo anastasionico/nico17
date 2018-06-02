@@ -442,6 +442,83 @@ function offsetTop_homeWork() {
 	}
 }
 
+function offsetTop_PricingDivs() {
+	var screenWidth = screen.width;
+	var scrollPosition = window.scrollY;
+	var pricingSectionsBasic = document.querySelectorAll('.pricing-sections')[0];
+	var pricingSectionsStandard = document.querySelectorAll('.pricing-sections')[1];
+	var pricingSectionsPremium = document.querySelectorAll('.pricing-sections')[2];
+
+	var pricingSectionsFeaturesBasic = pricingSectionsBasic.querySelectorAll('ul *');
+	var pricingSectionsFeaturesStandard = pricingSectionsStandard.querySelectorAll('ul *');
+	var pricingSectionsFeaturesPremium = pricingSectionsPremium.querySelectorAll('ul *');
+	var distanceFromTop = pricingSectionsBasic.getBoundingClientRect().top;
+
+	// console.log(pricingSectionsFeaturesBasic);
+
+	if (screenWidth >= 0 && screenWidth <= 479 && distanceFromTop < 250) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	} else if (screenWidth >= 480 && screenWidth <= 767 && distanceFromTop < 60) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	} else if (screenWidth >= 768 && screenWidth <= 1023 && distanceFromTop < 390) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	} else if (screenWidth >= 1024 && screenWidth <= 1365 && distanceFromTop < 250) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	} else if (screenWidth >= 1366 && screenWidth <= 1919 && distanceFromTop < 345) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	} else if (screenWidth >= 1920 && scrollPosition > 2600 && distanceFromTop < 350) {
+		for (var i = 0; i < pricingSectionsFeaturesPremium.length; i++) {
+			(function (i) {
+				setTimeout(function () {
+					pricingSectionsFeaturesBasic[i].style.opacity = 1;
+					pricingSectionsFeaturesStandard[i].style.opacity = 1;
+					pricingSectionsFeaturesPremium[i].style.opacity = 1;
+				}, i * 150);
+			})(i);
+		}
+	}
+}
+
 /*
  * The function below takes care of the scroll of the testimonials' photo during scrolling
 */
@@ -653,6 +730,7 @@ window.onload = function () {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_testimonial();
 			offsetTop_AboutPhases();
+			offsetTop_PricingDivs();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();

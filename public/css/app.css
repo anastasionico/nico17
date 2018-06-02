@@ -2306,13 +2306,23 @@ form.formContact input[type=submit] {
   padding: 2rem 1rem;
 }
 
+.pricing-sections-features ul * {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .pricing-sections-features ul li {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 0.7rem;
   color: #bbb;
   font-size: 0.7rem;
 }
 
 .pricing-sections-features ul li span {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 0 0.5rem;
   font-size: 1rem;
 }
