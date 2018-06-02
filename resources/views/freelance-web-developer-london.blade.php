@@ -87,7 +87,7 @@
 						<br>
 						<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
 						<br>
-						<img class='' src="/img/upwork.png">
+						<img src="/img/upwork.png">
 						<br><br><br>
 						<b>I believe in very few fundamentals ...</b>
 						<br><br>
@@ -109,10 +109,13 @@
 						<p>That means that we will spend our initial time together studying and designing the perfect service for you.</p>
 						<p>Once you are happy, the development step will begin.</p>
 						<br>
-						<img class='clickable' src="/img/blog/the-list-in-html.jpeg">
+						<img class='clickable' src="/img/adminPhoto.jpg">
 						<br><br><br>
 						<b>As far as payment terms</b>
 						<br><br>
+						<p>It works in two ways</p>
+						<p>hourly or by project</p>
+						<br>
 						<p>I charge 60 £/hr.</p>
 						<p>Usually, the payment is split into two phases.</p>
 						<p>The first just after the preview is ready (I won't charge for that).</p>
