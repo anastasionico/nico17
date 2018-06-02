@@ -80,19 +80,18 @@
 					<div class="oneThird--big--content ">
 						<b>Hi,<br> I am Nico Anastasio, </b>
 						<br><br><br>
-						<p>A London based, freelancer PHP Web Developer.</p>
+						<p>A London based, freelancer Web Developer.</p>
 						<p>I have 6+ years of projects successfully deployed in my background.</p>
 						<br>
 						<p>Not enough?</p>
 						<br>
 						<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
 						<br>
-						<img class='' src="/img/upwork.png">
+						<img src="/img/upwork.png">
 						<br><br><br>
 						<b>I believe in very few fundamentals ...</b>
 						<br><br>
 						<p>I am an expert in the design and building of websites and web application.</p>
-						<p>I use PHP on daily basis mastering several frameworks such as Laravel, CakePHP and CodeIgniter</p>
 						<br>
 						<p>I am among the <b>top 20%</b> of freelancers on UpWork regarding the knowledge of PHP</p>
 						<br>
@@ -102,8 +101,116 @@
 						<br>
 						<p>How do I do that?</p>
 						<br>
-						<p>To do that I have learned high-level techniques of <b>S.E.O.</b> placing myself among the top 20% expert in the field in the whole UpWork platform.</p>
-						<br><br><br>
+						<p>To do that I have learned high-level techniques of S.E.O. placing myself among the top 20% expert in the field in the whole UpWork platform.</p>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="sectionCenter">
+				<div class="sectionCenter--content" id="map" style="width:78%;height: 500px"></div>
+				<script>
+					function initMap() {
+					  // The location of Uluru
+					  var London = {lat: 51.563, lng: -0.092};
+					  // The map, centered at Uluru
+					  var map = new google.maps.Map(
+					      document.getElementById('map'), {
+					      	zoom: 13, 
+					      	center: London,
+					      	styles: [
+					            {elementType: 'geometry', stylers: [{color: '#3355aa'}]},
+					            {elementType: 'labels.text.stroke', stylers: [{color: '#3355aa'}]},
+					            {elementType: 'labels.text.fill', stylers: [{color: '#33aaaa'}]},
+					            {
+					              featureType: 'administrative.locality',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#7A74A9'}]
+					            },
+					            {
+					              featureType: 'poi',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#7A74A9'}]
+					            },
+					            {
+					              featureType: 'poi.park',
+					              elementType: 'geometry',
+					              stylers: [{color: '#239a9a'}]
+					            },
+					            {
+					              featureType: 'poi.park',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#43baba'}]
+					            },
+					            {
+					              featureType: 'road',
+					              elementType: 'geometry',
+					              stylers: [{color: '#4365Ba'}]
+					            },
+					            {
+					              featureType: 'road',
+					              elementType: 'geometry.stroke',
+					              stylers: [{color: '#3050a0'}]
+					            },
+					            {
+					              featureType: 'road',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#7987aA'}]
+					            },
+					            {
+					              featureType: 'road.highway',
+					              elementType: 'geometry',
+					              stylers: [{color: '#33aaaa'}]
+					            },
+					            {
+					              featureType: 'road.highway',
+					              elementType: 'geometry.stroke',
+					              stylers: [{color: '#204090'}]
+					            },
+					            {
+					              featureType: 'road.highway',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#aAa4d9'}]
+					            },
+					            {
+					              featureType: 'transit',
+					              elementType: 'geometry',
+					              stylers: [{color: '#3f5faf'}]
+					            },
+					            {
+					              featureType: 'transit.station',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#7A74A9'}]
+					            },
+					            {
+					              featureType: 'water',
+					              elementType: 'geometry',
+					              stylers: [{color: '#23459a'}]
+					            },
+					            {
+					              featureType: 'water',
+					              elementType: 'labels.text.fill',
+					              stylers: [{color: '#39476A'}]
+					            },
+					            {
+					              featureType: 'water',
+					              elementType: 'labels.text.stroke',
+					              stylers: [{color: '#23459a'}]
+					            }
+				         	]
+					      });
+					  // The marker, positioned at Uluru
+					  var marker = new google.maps.Marker({position: London, map: map});
+					}
+					
+			    </script>
+			     <script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYumPQubu3rHmqIg233v1F9e-WZL1huQs&callback=initMap">
+	    		</script>
+			</div>
+
+			<div class="oneThird">
+				<div class="oneThird--big">
+					<div class="oneThird--big--content ">
 						<b>How would we interact?</b>
 						<br><br>
 						<p>I want to be sure that I can completely fulfill your desires.</p>
@@ -139,7 +246,6 @@
 					</div>
 				</div>
 			</div>		
-			
 		</div>	
 
 	</section>
