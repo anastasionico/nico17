@@ -235,7 +235,7 @@
 						<p>Simple as that.</p>
 						<br>
 						<p class="alert alert-info">
-							If you have any question, feel fre to ask.
+							If you have any question, feel free to ask.
 						</p>
 						<br>
 						<p>Do you want more?</p>
