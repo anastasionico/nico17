@@ -183,13 +183,26 @@
 		<section class="bg-white c-blue">	
 			<div class="oneThird pb-1" >
 				<div class="oneThird--big">
-					<div class="oneThird--big--content ">
-						<h3>
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							London and Hertfordshire (UK)
-						</h3>
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						<a href="tel:04407932902473">+44 07932902473</a>
+					<div class="oneThird--big--content">	
+						<ul class="contact-details">
+							<li>
+								<h3>
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									London and Hertfordshire (UK)
+								</h3>
+							</li>
+							<li>
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<a href="tel:04407932902473">+44 079 3290 2473</a>
+							</li>
+							<li>
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<a href = "mailto:nico@anastasionico.uk">nico@anastasionico.uk</a>
+							</li>
+						</ul>
+						
+						
+
 					</div>
 				</div>
 				<div class="oneThird--small">&nbsp;</div>

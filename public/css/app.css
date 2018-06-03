@@ -2137,6 +2137,22 @@ form.formContact input[type=submit] {
   background-color: #35a;
 }
 
+.contact-details {
+  list-style: none;
+}
+
+.contact-details li {
+  margin: 0.7rem 0;
+}
+
+.contact-details li i {
+  margin-right: 1rem;
+}
+
+.contact-details li a {
+  color: #35a;
+}
+
 .card {
   position: relative;
   top: -50px;
