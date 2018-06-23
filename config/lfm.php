@@ -18,6 +18,7 @@ return [
     // The url to this package. Change it if necessary.
     'url_prefix' => 'laravel-filemanager', //THIS WAS THE ORIGINAL PREFIX
     
+    
     /*
     |--------------------------------------------------------------------------
     | Multi-User Mode
@@ -46,7 +47,7 @@ return [
     // You should create routes to serve images if it is not set to public.
 
     
-    'base_directory' => 'public',        
+    'base_directory' => '../public_html',        
 
 
 
