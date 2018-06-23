@@ -111,7 +111,7 @@
 				<script>
 					function initMap() {
 					  // The location of Uluru
-					  var London = {lat: 51.563, lng: -0.092};
+					  var London = {lat: 51.58205, lng: -0.098705};
 					  // The map, centered at Uluru
 					  var map = new google.maps.Map(
 					      document.getElementById('map'), {
@@ -200,6 +200,7 @@
 					      });
 					  // The marker, positioned at Uluru
 					  var marker = new google.maps.Marker({position: London, map: map});
+				  		marker.setIcon('img/marker-google.png');
 					}
 					
 			    </script>
