@@ -55,6 +55,11 @@ ExpiresDefault "access 1 month"
 
     RewriteEngine On
 
+    RewriteRule ^arts/(.*)$ / [R=301,NC,L]
+    RewriteRule ^feeds/(.*)$ /blog/ [R=301,NC,L]
+    RewriteRule ^works/(.*)$ /projects/ [R=301,NC,L]
+
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
