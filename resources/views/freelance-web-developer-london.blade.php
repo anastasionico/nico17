@@ -282,7 +282,7 @@
 					<small>STANDARD PLAN</small>
 				</div>	
 				<div class="pricing-sections-price">
-					<strong>£ 1699</strong>
+					<strong>£ 1999</strong>
 
 				</div>	
 				<div class="pricing-sections-features">
@@ -305,7 +305,7 @@
 					<small>PREMIUM PLAN</small>
 				</div>	
 				<div class="pricing-sections-price">
-					<strong>£ 2100</strong>
+					<strong>£ 2499</strong>
 				</div>	
 				<div class="pricing-sections-features">
 					<ul>
