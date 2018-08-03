@@ -5,6 +5,14 @@
 @section('keywords', $content->keywords )
 
 @section('head')
+	<meta property="og:title" content="{{ ucfirst($content->name) }}">
+	<meta property="og:description" content="{{ ucfirst($content->excerpt) }}">
+	<meta property="og:image" content="www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
+	<meta property="og:url" content="{{ $_SERVER['PHP_SELF']}}">
+	
+
+
+
 	<style type="text/css">
 		.hero--section:before{
 			background-image: url("/img/{{$segment}}/{{$content->img}}");
