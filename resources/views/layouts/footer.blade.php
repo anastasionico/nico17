@@ -164,24 +164,45 @@
 	</div>
 	
 </footer>
+
+<div id="popUpDelayed" class="is-translatedX">
+	<img src="{{asset('img/fullBookPopUp.jpg')}}">	
+	<p>
+		Read the review of <b>24 PHP framework</b> to choose from
+	</p>
+	<a href="https://www.amazon.co.uk/dp/B07G1YDL1L" class="btn" target="_blank">Get the Ebook now</a>
+	<a class="btn btn-ghost" onclick="popUpDelayedClose()">Continue</a>
+</div>
+
+
+
+
+
+
+
 {!! NoCaptcha::renderJs() !!}
 <script type="text/javascript">
 	function closeAlert(){
 		var popup = document.querySelector('.alert');
 		popup.style.display='none';
 	}
+	function popUpDelayedClose(){
+		var popUpDelayed = document.querySelector('#popUpDelayed');
+		popUpDelayed.style.display='none'; 
+	}
+	
 </script>
 <script type="text/javascript">
-		var messageHelpBlock = document.querySelector('#messageHelpBlock');
-		var messageTextarea = document.querySelector('#messageTextarea');
+	var messageHelpBlock = document.querySelector('#messageHelpBlock');
+	var messageTextarea = document.querySelector('#messageTextarea');
 
-		messageTextarea.onkeyup = function(){
-			var messageTextareaLength = 10 - messageTextarea.value.length;
-			if(messageTextareaLength > -1){
-				messageHelpBlock.textContent = "At least " + messageTextareaLength + " characters more";	
-			}else{
-				messageHelpBlock.textContent = "Message long enough";
-			}
+	messageTextarea.onkeyup = function(){
+		var messageTextareaLength = 10 - messageTextarea.value.length;
+		if(messageTextareaLength > -1){
+			messageHelpBlock.textContent = "At least " + messageTextareaLength + " characters more";	
+		}else{
+			messageHelpBlock.textContent = "Message long enough";
 		}
-	</script>
+		}
+</script>
 <script src="/js/main.js"></script>

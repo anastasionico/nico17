@@ -40,6 +40,7 @@
 		
 		
 		<div id="content">
+			
 			<section class="mainSection">
 				{{-- {{ dd($errors)}} --}}
 				@if ($errors->any())
