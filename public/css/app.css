@@ -2361,8 +2361,8 @@ form.formContact input[type=submit] {
   z-index: 100;
   position: fixed;
   top: -500px;
-  left: 5%;
-  width: 90%;
+  left: 10%;
+  width: 80%;
   background: #35a;
   color: #fff;
   text-align: center;
@@ -2382,8 +2382,8 @@ form.formContact input[type=submit] {
 
 @media (min-width: 768px) {
   #popUpDelayed {
-    left: 20%;
-    width: 60%;
+    left: 35%;
+    width: 30%;
   }
 }
 
@@ -2395,6 +2395,13 @@ form.formContact input[type=submit] {
 }
 
 @media (min-width: 1366px) {
+  #popUpDelayed {
+    left: 20%;
+    width: 60%;
+  }
+}
+
+@media (min-width: 1920px) {
   #popUpDelayed {
     left: 20%;
     width: 60%;

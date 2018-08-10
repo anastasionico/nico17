@@ -696,6 +696,7 @@ function enlargeClickable() {
 }
 
 function showPopUp() {
+
 	var screenWidth = screen.width;
 	var popUp = document.getElementById('popUpDelayed');
 	var popUpOffSetTop = popUp.offsetTop;
@@ -707,15 +708,15 @@ function showPopUp() {
 		} else if (screenWidth >= 480 && screenWidth <= 767) {
 			popUp.style.top = '5%';
 		} else if (screenWidth >= 768 && screenWidth <= 1023) {
-			popUp.style.top = '25%';
+			popUp.style.top = '10%';
 		} else if (screenWidth >= 1024 && screenWidth <= 1365) {
 			popUp.style.top = '10%';
 		} else if (screenWidth >= 1366 && screenWidth <= 1919) {
 			popUp.style.top = '10%';
-		} else if (screenWidth >= 1920 && scrollPosition > 2600) {
+		} else if (screenWidth >= 1920) {
 			popUp.style.top = '10%';
 		}
-	}, 50000);
+	}, 50);
 }
 
 window.onload = function () {

@@ -165,14 +165,17 @@
 	
 </footer>
 
-<div id="popUpDelayed" class="is-translatedX">
+
+<div id="popUpDelayed">
 	<img src="{{asset('img/fullBookPopUp.jpg')}}">	
 	<p>
 		Read the review of <b>24 PHP framework</b> to choose from
 	</p>
 	<a href="https://www.amazon.co.uk/dp/B07G1YDL1L" class="btn" target="_blank">Get the Ebook now</a>
 	<a class="btn btn-ghost" onclick="popUpDelayedClose()">Continue</a>
-</div>
+</div>	
+
+
 
 
 
