@@ -7,10 +7,11 @@
 @section('head')
 	<meta property="og:title" content="{{ ucfirst($content->name) }}">
 	<meta property="og:description" content="{{ ucfirst($content->excerpt) }}">
-	<meta property="og:image" content="www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
-	<meta property="og:url" content="{{ $_SERVER['PHP_SELF']}}">
-	
+	<meta property="og:image" content="http://www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
+	<meta property="og:url" content="{{ url()->current() }}">
+	<meta property="og:type"               content="article" />
 
+	
 
 
 	<style type="text/css">
@@ -84,6 +85,7 @@
 			<div class="oneThird--big">
 				<div class="oneThird--big--content detail--page-index">
 					{!! $content->content !!}
+					<img src="http://www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
