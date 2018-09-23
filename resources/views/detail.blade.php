@@ -98,56 +98,6 @@
 		</div>		
 	</section>
 	
-	<div class="oneThird bg-white">
-		<div class="oneThird--big">
-			<div class="oneThird--big--content">
-				<div class="faq bg-white c-blue ">
-					<div class="faq-question">
-						<div  class="faq-question-text">
-							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
-						</div>
-						<div class="faq-question-sign">+</div>
-					</div>
-					<div class="faq-answer">
-						this is a very long question and you do not need to repeat it,
-						this is a very long question and you do not need to repeat it,
-						this is a very long question and you do not need to repeat it,
-						this is a very long question and you do not need to repeat it,
-					</div>
-				</div>
-
-				<div class="faq bg-white c-blue ">
-					<div class="faq-question">
-						<div  class="faq-question-text">
-							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
-						</div>
-						<div class="faq-question-sign">+</div>
-					</div>
-					<div class="faq-answer">
-						this is a very long question and you do not need to repeat it,
-					</div>
-				</div>
-
-				<div class="faq bg-white c-blue ">
-					<div class="faq-question">
-						<div  class="faq-question-text">
-							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
-						</div>
-						<div class="faq-question-sign">+</div>
-					</div>
-					<div class="faq-answer">
-						this is a very long question and you do not need to repeat it,
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="oneThird--small"></div>
-	</div>		
-
-	
-
-
-
 	{{-- Detail and CTA --}}
 	<section class="bg-white c-blue detail--page">
 		<div class="oneThird" >
@@ -381,5 +331,24 @@
 		<td>Ut enim ad minim veniam</td>
 	</tr>
 </table>
+
+
+<div class="faq bg-white c-blue ">
+	<div class="faq-question">
+		<div  class="faq-question-text">
+			Is this a question? if yedivs this is a very long questing and you do not need to repeat it
+		</div>
+		<div class="faq-question-sign">+</div>
+	</div>
+	<div class="faq-answer">
+		this is a very long question and you do not need to repeat it,
+		this is a very long question and you do not need to repeat it,
+		this is a very long question and you do not need to repeat it,
+		this is a very long question and you do not need to repeat it,
+	</div>
+</div>
+
+
+
 
  --}}
