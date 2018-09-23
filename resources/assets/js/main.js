@@ -653,7 +653,6 @@ function enlargeClickable(){
 }
 
 function showPopUp(){
-	
 	var screenWidth = screen.width;
 	var popUp = document.getElementById('popUpDelayed');
 	var popUpOffSetTop = popUp.offsetTop;
@@ -674,7 +673,6 @@ function showPopUp(){
 			popUp.style.top= '10%'; 
 		}
 	}, 50000);
-	
 }
 
 function faqActiveQuestion(){

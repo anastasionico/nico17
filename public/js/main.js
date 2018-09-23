@@ -696,7 +696,6 @@ function enlargeClickable() {
 }
 
 function showPopUp() {
-
 	var screenWidth = screen.width;
 	var popUp = document.getElementById('popUpDelayed');
 	var popUpOffSetTop = popUp.offsetTop;

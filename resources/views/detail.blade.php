@@ -155,7 +155,7 @@
 	</section>
 
 	{{-- Subscribe Section --}}
-	<div class="sectionCenter py-5 Nmt-10  bg-white c-white">
+	<div class="sectionCenter py-5 Nmt-10 bg-white c-white">
 		<div class="sectionCenter--content newsLetter clearfix p-3">
 			<h3>
 				Subscribe to get notified when new <b>free resources</b> are published

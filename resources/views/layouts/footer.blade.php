@@ -166,12 +166,27 @@
 </footer>
 
 
-<div id="popUpDelayed">
-	<img src="{{asset('img/fullBookPopUp.jpg')}}">	
-	<p>
-		Read the review of <b>24 PHP framework</b> to choose from
-	</p>
-	<a href="https://www.amazon.co.uk/dp/B07G1YDL1L" class="btn" target="_blank">Get the Ebook now</a>
+<div id="popUpDelayed" class="newsLetter bg-white c-white p-3">
+	<h3>
+		Want the inside scoop?
+	</h3>
+	{{ Form::open([
+			'method' => 'POST', 
+			'action' => ['NewsLetterController@subscribe'],
+			'class' => '',
+		]) 
+	}}
+	{{ csrf_field() }}
+		
+		
+	<div class="form-control ">
+		<label>Enter your email address...</label>
+		<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
+	</div>
+	
+	<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
+	{{ Form::close() }}	
+
 	<a class="btn btn-ghost" onclick="popUpDelayedClose()">Continue</a>
 </div>	
 
