@@ -654,27 +654,52 @@ function enlargeClickable(){
 
 function showPopUp(){
 	
-	var screenWidth = screen.width;
-	var popUp = document.getElementById('popUpDelayed');
-	var popUpOffSetTop = popUp.offsetTop;
+	// var screenWidth = screen.width;
+	// var popUp = document.getElementById('popUpDelayed');
+	// var popUpOffSetTop = popUp.offsetTop;
 	
-	setInterval(function(){ 
-		popUp.style.opacity='1'; 
-		if( screenWidth >= 0 && screenWidth <= 479){
-			popUp.style.top= '25%'; 
-		}else if( screenWidth >= 480 && screenWidth <= 767){
-			popUp.style.top= '5%'; 
-		}else if( screenWidth >= 768 && screenWidth <= 1023){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1024 && screenWidth <= 1365){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1366 && screenWidth <= 1919){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1920){
-			popUp.style.top= '10%'; 
-		}
-	}, 50000);
+	// setInterval(function(){ 
+	// 	popUp.style.opacity='1'; 
+	// 	if( screenWidth >= 0 && screenWidth <= 479){
+	// 		popUp.style.top= '25%'; 
+	// 	}else if( screenWidth >= 480 && screenWidth <= 767){
+	// 		popUp.style.top= '5%'; 
+	// 	}else if( screenWidth >= 768 && screenWidth <= 1023){
+	// 		popUp.style.top= '10%'; 
+	// 	}else if( screenWidth >= 1024 && screenWidth <= 1365){
+	// 		popUp.style.top= '10%'; 
+	// 	}else if( screenWidth >= 1366 && screenWidth <= 1919){
+	// 		popUp.style.top= '10%'; 
+	// 	}else if( screenWidth >= 1920){
+	// 		popUp.style.top= '10%'; 
+	// 	}
+	// }, 50000);
 	
+}
+
+function faqActiveQuestion(){
+	var questions = document.querySelectorAll('.faq-question');
+	
+	questions.forEach(function(question){
+		console.log(question);
+		// question.onclick = function () {
+		question.addEventListener('click', function() {
+			var sign = question.childNodes[3];
+			var answer = question.parentNode.children[1];
+	
+			if (question.className == 'faq-question'){
+				question.className = 'faq-question active';
+				answer.style.display = 'inline-block';
+				answer.style.padding = '1rem';
+				sign.innerHTML = '-';
+			} else {
+				question.className = 'faq-question';
+				answer.style.display = 'none';
+				answer.style.padding = '0';
+				sign.innerHTML = '+';
+			}
+		})
+	})
 }
 
 window.onload = function () {
@@ -684,6 +709,7 @@ window.onload = function () {
 	formBehaviour();
 	// enlargeGist();
 	enlargeClickable();
+	faqActiveQuestion();
 	
 	//retrieve the page name 
 	var path = window.location.pathname;

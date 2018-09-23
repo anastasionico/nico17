@@ -27,3 +27,37 @@
 	}
 }
 
+.faq{
+	// background-color:red;
+	margin:0rem 0 4rem;
+	transition: all 0.3s ease-in-out;
+	@include borderRadius(3px)	
+	@include lightShadow(0, 3, 15, 3, rgba($black,0.3));
+	transition: all 0.3s ease-in-out;
+	&-question{
+		z-index:1;
+		padding:1rem;
+		border-bottom: 3px solid rgba($black,0.3);
+		cursor:pointer;
+		&-text{
+			display:inline-block;
+			width:85%;	
+			font-weight:bold;
+		}
+		&-sign{
+			text-shadow: 0 1px rgba($black,0.3);
+			display:inline-block;
+			width:10%;	
+			text-align:right;
+			vertical-align: top;
+			
+		}
+
+	}
+	&-answer{
+		display:none;
+		transition: all 0.1s ease-in-out;;
+		font-style:italic;
+		
+	}
+}

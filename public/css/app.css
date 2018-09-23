@@ -173,7 +173,6 @@ footer.menuVisible {
 .oneThird {
   position: relative;
   margin: 0rem auto 0rem;
-  padding-top: 5rem;
   overflow: hidden;
 }
 
@@ -334,6 +333,10 @@ footer.menuVisible {
   margin: 0 auto;
   width: 75%;
   text-align: center;
+}
+
+.sectionCenter--content img {
+  width: 100%;
 }
 
 .rotatedDivHome {
@@ -1429,6 +1432,44 @@ footer.menuVisible {
   .shareButton-div-mobile {
     display: none;
   }
+}
+
+.faq {
+  margin: 0rem 0 4rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+  box-shadow: 0px 3px 15px 3px rgba(17, 17, 17, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  z-index: 1;
+  padding: 1rem;
+  border-bottom: 3px solid rgba(17, 17, 17, 0.3);
+  cursor: pointer;
+}
+
+.faq-question-text {
+  display: inline-block;
+  width: 85%;
+  font-weight: bold;
+}
+
+.faq-question-sign {
+  text-shadow: 0 1px rgba(17, 17, 17, 0.3);
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+  vertical-align: top;
+}
+
+.faq-answer {
+  display: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  font-style: italic;
 }
 
 .footer--section #footerDescription {

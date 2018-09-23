@@ -18,7 +18,7 @@
 
 @section('blog')
 	<section class="blog--section bg-blue c-white pt-15 Nmt-10 skewed">	
-		<div class="oneThird" >
+		<div class="oneThird pt-5" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					<h3>{{ ucfirst($segment ?? 'Articles')}}</h3>

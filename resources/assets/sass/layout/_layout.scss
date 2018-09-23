@@ -85,7 +85,6 @@ footer{
 .oneThird{
 	position:relative;
 	margin:0rem auto 0rem;
-	padding-top:5rem;
 	overflow:hidden;
 	
 	&--big{
@@ -220,7 +219,9 @@ footer{
 		width: 75%;
 		text-align: center;
 
-
+		& img {
+			width:100%;
+		}
 	}
 }
 

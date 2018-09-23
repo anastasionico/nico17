@@ -1,4 +1,4 @@
-@extends('layouts.master')
+	@extends('layouts.master')
 
 @section('title', "anastasionico.uk | ". $content->name )
 @section('description', $content->excerpt )
@@ -34,7 +34,8 @@
 	
 @endsection
 
-@section('hero')
+{{-- @section('hero')
+
 	<div class="hero--section">
 		
 		<div class="hero--section-content">
@@ -42,16 +43,15 @@
 		</div>
 		
 	</div>
-
-@endsection
+@endsection --}}
 
 @section('homeAbout')
-	
-	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue detail--page">
-		<div class="oneThird" >
+	{{-- Title and Excerpt --}}
+	<section class="bg-white c-blue detail--page">
+		<div class="oneThird pt-1">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					
+					<h1>{{ ucfirst($content->name) }}</h1>
 					<span class="my-1 d-block">
 						<h3 class="d-inline">
 							@if( $content->category )
@@ -72,25 +72,84 @@
 					
 					<hr class="border-blue my-1">
 
-					<h5>
-						{{ ucfirst($content->excerpt) }}
-					</h5>
-					
+					{{ ucfirst($content->excerpt) }}
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
+	</section>	
 
+	{{-- Image --}}
+	<div class="sectionCenter bg-white">
+		<div class="sectionCenter--content">
+			<img src="/img/{{$segment}}/{{$content->img}}" alt="/img/{{$segment}}/{{$content->img}}">
+		</div>
+	</div>
+
+	{{-- Content --}}
+	<section class="bg-white c-blue detail--page">
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content detail--page-index">
 					{!! $content->content !!}
-					<img src="http://www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
+	</section>
+	
+	<div class="oneThird bg-white">
+		<div class="oneThird--big">
+			<div class="oneThird--big--content">
+				<div class="faq bg-white c-blue ">
+					<div class="faq-question">
+						<div  class="faq-question-text">
+							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
+						</div>
+						<div class="faq-question-sign">+</div>
+					</div>
+					<div class="faq-answer">
+						this is a very long question and you do not need to repeat it,
+						this is a very long question and you do not need to repeat it,
+						this is a very long question and you do not need to repeat it,
+						this is a very long question and you do not need to repeat it,
+					</div>
+				</div>
 
+				<div class="faq bg-white c-blue ">
+					<div class="faq-question">
+						<div  class="faq-question-text">
+							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
+						</div>
+						<div class="faq-question-sign">+</div>
+					</div>
+					<div class="faq-answer">
+						this is a very long question and you do not need to repeat it,
+					</div>
+				</div>
+
+				<div class="faq bg-white c-blue ">
+					<div class="faq-question">
+						<div  class="faq-question-text">
+							Is this a question? if yedivs this is a very long questing and you do not need to repeat it
+						</div>
+						<div class="faq-question-sign">+</div>
+					</div>
+					<div class="faq-answer">
+						this is a very long question and you do not need to repeat it,
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="oneThird--small"></div>
+	</div>		
+
+	
+
+
+
+	{{-- Detail and CTA --}}
+	<section class="bg-white c-blue detail--page">
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content detail--page-index">
@@ -115,16 +174,18 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
+	</section>
 
-		@if( $content->cta_link)
-			<div class="sectionCenter">
-				<div class="sectionCenter--content">
-					<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">Visit</a>
-				</div>
+	@if( $content->cta_link)
+		<div class="sectionCenter bg-white pt-5 pb-5">
+			<div class="sectionCenter--content">
+				<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">Visit</a>
 			</div>
-		@endif
+		</div>
+	@endif
 
-		
+	{{-- Mobile facebook and Linkedin share buttons --}}
+	<section class="bg-white c-blue detail--page pb-5">
 		<div class="sectionCenter ">
 
 			@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
@@ -141,15 +202,14 @@
 				</div>
 			@endif
 		</div>
-
-
 	</section>
 
-
-
+	{{-- Subscribe Section --}}
 	<div class="sectionCenter py-5 Nmt-10  bg-white c-white">
-		<div class="sectionCenter--content newsLetter  clearfix p-3">
-			<h3>Sign up for the Free to get access to my <br> <b>coding</b> and <b>design tips</b></h3>
+		<div class="sectionCenter--content newsLetter clearfix p-3">
+			<h3>
+				Subscribe to get notified when new <b>free resources</b> are published
+			</h3>
 			{{ Form::open([
 					'method' => 'POST', 
 					'action' => ['NewsLetterController@subscribe'],
@@ -163,13 +223,13 @@
 					<label>Enter your email address...</label>
 					<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
 				</div>
-
-				<input class="btn btn-cta" type="submit" name="send" value="SIGN UP">
+				
+				<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
 			{{ Form::close() }}	
 		</div>
 	</div>
-
 	
+	{{-- Similar Content --}}
 	<div class="oneThird bg-white c-blue">
 		<div class="oneThird--big">
 			<div class="oneThird--big--content detail--page-index">
@@ -198,7 +258,6 @@
 		</div>
 		<div class="oneThird--small">&nbsp;</div>
 	</div>		
-
 @endsection
 
 @section('work')
@@ -278,6 +337,7 @@
 <div class="oneThird--big-- clickable">
 	<script src="https://gist.github.com/xfbs/1188092.js"></script>
 </div>
+
 
 
 <img class='clickable' src="img/blog/london.jpg">	

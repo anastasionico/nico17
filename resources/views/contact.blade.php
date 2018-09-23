@@ -53,8 +53,7 @@
 @section('work')
 
 	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue">	
-	
-		<div class="oneThird pb-1" >
+		<div class="oneThird pt-5 pb-1">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					<h3>Where to find me</h3>
