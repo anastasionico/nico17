@@ -715,7 +715,8 @@ function showPopUp() {
 		} else if (screenWidth >= 1920) {
 			popUp.style.top = '10%';
 		}
-	}, 50000);
+	}, 5);
+	// }, 50000);
 }
 
 function faqActiveQuestion() {

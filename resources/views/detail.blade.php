@@ -134,6 +134,18 @@
 		</div>
 	@endif
 
+	<div class="oneThird  bg-white c-blue">
+		<div class="oneThird--big">
+			<div class="oneThird--big--content">
+				<em>
+					If you like this content and you are hungry for some more <a href="https://www.facebook.com/anastasionico.uk/" target="_blank" >join the Facebook's community</a> in which we share info and news just like this one!
+				</em>
+			</div>
+		</div>
+		<div class="oneThird--small"></div>
+	</div>		
+
+
 	{{-- Mobile facebook and Linkedin share buttons --}}
 	<section class="bg-white c-blue detail--page pb-5">
 		<div class="sectionCenter ">
@@ -154,11 +166,13 @@
 		</div>
 	</section>
 
+	
 	{{-- Subscribe Section --}}
 	<div class="sectionCenter py-5 Nmt-10 bg-white c-white">
 		<div class="sectionCenter--content newsLetter clearfix p-3">
+			<img class="newsLetter-image" src="/img/book-email-review.jpg" alt="get the weekly book's review">	
 			<h3>
-				Subscribe to get notified when new <b>free resources</b> are published
+				Get my reviews of must-read books that will increase your skills.
 			</h3>
 			{{ Form::open([
 					'method' => 'POST', 
@@ -179,6 +193,8 @@
 		</div>
 	</div>
 	
+	
+
 	{{-- Similar Content --}}
 	<div class="oneThird bg-white c-blue">
 		<div class="oneThird--big">

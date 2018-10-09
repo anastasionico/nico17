@@ -167,9 +167,11 @@
 
 
 <div id="popUpDelayed" class="newsLetter bg-white c-white p-3">
-	<h3>
-		Want the inside scoop?
-	</h3>
+	<img class="newsLetter-image" src="/img/book-email-review.jpg" alt="get the weekly book's review">	
+	<h6>
+		Get my free books' review to improve your skill now!
+	</h6>
+
 	{{ Form::open([
 			'method' => 'POST', 
 			'action' => ['NewsLetterController@subscribe'],
@@ -187,7 +189,7 @@
 	<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
 	{{ Form::close() }}	
 
-	<a class="btn btn-ghost" onclick="popUpDelayedClose()">Continue</a>
+	<a class="btn btn-ghost" onclick="popUpDelayedClose()">I don't want to improve</a>
 </div>	
 
 

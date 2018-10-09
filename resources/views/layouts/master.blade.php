@@ -74,6 +74,7 @@
 				@yield('homeAbout')
 				@yield('work')
 				@yield('homeTestimonial')
+				@yield('subscribe')
 				@yield('blog')
 				
 			</section>

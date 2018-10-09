@@ -1,9 +1,9 @@
 
 @extends('layouts.master')
 
-@section('title', 'anastasionico.uk | UpWork, Freelance Web Developer,Web Designer London, Hertfordshire UK')
-@section('description', 'I am a freelancer Web Developer and Web Designer working in London and Hertfordshire UK, review my profile and visit my Upwork page')
-@section('keywords', 'anastasionico, freelance, website, web designer, web developer, London, Hertfordshire, Upwork, build website')
+@section('title', 'anastasionico.uk | UpWork, Freelance Web Developer & Web Designer in London & Hertfordshire')
+@section('description', 'I am a freelancer Web Developer and Web Designer working in London and Hertfordshire UK, Hire me for complete you project')
+@section('keywords', 'anastasionico, freelance, website, web designer, web developer, London, Hertfordshire, Upwork, build website', 'php', 'php developer')
 
 @section('head')
 	<style type="text/css">

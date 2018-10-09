@@ -1,13 +1,19 @@
 #popUpDelayed{
+	text-align:center;
 	opacity:0;
 	z-index:100;
 	position:fixed;			
 	left:13%;
 	width:74%;
 	transition: all 0.3s ease-in-out;
+	padding:0.5rem;
 
 	@include lightShadow(0, 3, 15, 3, rgba($black,0.3));
 	@include borderRadius(3px)
+
+	img{
+		width:33%;
+	}
 
 	.btn-cta {
 		width:100%;
@@ -18,5 +24,12 @@
 	.btn-ghost {
 		float:right;
 	}
-
+	@include media(tabletPortrait){
+		img{
+			width:33%;
+		}
+		h6{
+			font-size:1.5rem;
+		}
+	}
 }

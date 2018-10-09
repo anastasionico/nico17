@@ -50,28 +50,30 @@
 	</div>
 @endsection
 
-@section('work')
+@section('homeAbout')
 
 	<section class="pt-15 pb-5 Nmt-10 bg-white c-blue">	
 		<div class="oneThird pt-5 pb-1">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>Where to find me</h3>
+					<h3>About me </h3>
 					
 					<hr class="border-blue my-1">
-
-					<p>
-						I am a Web Developer and Graphic Designer working in London and Hertfordshire.
-						<br>
-						
-						I have been realizing websites, web applications and digital graphic designs for several years.
-						<br>
-						I provide advice and support for everything concerned the life on the web for both <b>privates</b> and <b>companies</b>.
-						<br>
-						My guidances comprehend Graphic Design, S.E.O., Online Marketing Services and consulting.
-						<br>
-						<b>Contact me</b> using the form above and I will ensure to answer you as soon as possible.
-					</p>
+					<p>Hi,<br> I am Nico Anastasio,</p>
+					<br>
+					<strong>A London based, Web Developer.</strong>
+					<p>I have 6+ years of projects successfully deployed in my background.</p>
+					<br>
+					<p>Not enough?</p>
+					<br>
+					<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
+					<br>
+					<p>I do several things like write content for my blog and online magazines and help businesses build their presence online</p>
+					<br>
+					<em>
+						For whatever reason you landed here, why don't you join the 
+						<a href="https://www.facebook.com/anastasionico.uk/" target="_blank" >community we are building on Facebook?</a>
+					</em>
 				</div>
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
@@ -217,7 +219,34 @@
 		</div>
 	
 	</section>
-	
+@endsection
+
+@section('work')
+	{{-- Subscribe Section --}}
+	<div class="sectionCenter py-5 bg-azure c-white">
+		<div class="sectionCenter--content newsLetter clearfix p-3">
+			<img class="newsLetter-image" src="/img/book-email-review.jpg" alt="get the weekly book's review">	
+			<h3>
+				Get my reviews of must-read books that will increase your skills.
+			</h3>
+			{{ Form::open([
+					'method' => 'POST', 
+					'action' => ['NewsLetterController@subscribe'],
+					'class' => '',
+				]) 
+			}}
+				{{ csrf_field() }}
+				
+				
+				<div class="form-control ">
+					<label>Enter your email address...</label>
+					<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
+				</div>
+				
+				<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
+			{{ Form::close() }}	
+		</div>
+	</div>
 @endsection
 
 @section('homeTestimonial')
@@ -241,9 +270,9 @@
  			</div>
  		</div>
 	</section>
-	
-
 @endsection
+
+
 
 @section('blog')
 	

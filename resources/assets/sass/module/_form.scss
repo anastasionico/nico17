@@ -90,7 +90,28 @@ form.formContact{
 	&-input[type='email']{
 		border-bottom:2px solid $white;
 	}
-	
+
+	img{
+		@include borderRadius(3px)
+		@include lightShadow(0, 3, 15, 3, rgba($black,0.3));
+		
+		@include media(phonePortrait){
+			width:100%;
+			margin-bottom:2rem;
+		}
+		@include media(phoneLandscape){
+			width:50%;
+			margin-bottom:1rem;
+		}
+		@include media(tabletPortrait){
+			width:100%;
+			margin-bottom:2rem;
+		}
+		@include media(tabletPortrait){
+			width:50%;
+			margin-bottom:2rem;
+		}
+	}
 }
 
 

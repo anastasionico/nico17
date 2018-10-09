@@ -34,6 +34,7 @@ Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 Route::get('/freelance-web-developer-london', function () {
     return view('freelance-web-developer-london');
 });
+
 Route::get('/web-developer-upwork', function () {
     return view('web-developer-upwork');
 });
@@ -47,7 +48,9 @@ Route::get('/contact', function () {
 Route::group(['prefix' => "/newsletter"], function(){
     Route::post('', 'NewsLetterController@subscribe');
 }); 
-
+Route::get('community', function () {
+    return redirect('https://www.facebook.com/anastasionico.uk');
+});
 
 
 

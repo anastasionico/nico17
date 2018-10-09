@@ -13,8 +13,9 @@
 			<h1>
 				anastasio<span>nico.uk</span>
 			</h1>
-			<h3>Artisan of the web</h2>
-			<h5>Specialist in <b>Web Design</b> and <b>Web Development</b></h5>
+			<h4>Artisan of the web</h4>
+			<br>
+			<h2>Specialist in <b>Web Design</b> and <b>Web Development</b></h2>
 		</div>
 		
 		<div class="hero--section-foreground">
@@ -43,15 +44,21 @@
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
 					<h3>About me</h3>
-				
-					<p>Hi, I am Nico.
+					<p>Hi, I am Nico.</p>
 					<br>
-					An <b>Italian</b> speaker, code and design <b>enthusiast</b>.
-					<br> 
-					I am working in London and Hertfordshire as a <b>Web Developer</b> and <b>Web Designer</b>.
+					<p>An Italian speaker, code and design enthusiast.</p>
 					<br>
-					I help businesses by creating websites and web applications that are designed to fulfill their purpose, whether it is to simply <b>provide information</b> or convert visitors into <b>customers</b>.
-					</p>
+					<p>I am working in <strong>London and Hertfordshire</strong> as a <strong>Web Developer</strong> and <strong>Web Designer</strong>.</p>
+					<br>
+					<p>I do two things:</p>
+					<p>I <strong>publish content on my blog</strong> that helps web developers improve their skills and share knowledge,</p>
+					<p>and</p>
+					<p>I help businesses by creating websites and web applications that are designed to fulfill their purpose, whether it is to <b>provide information</b> or convert visitors into <b>customers</b>.</p>
+					<br>
+					<em>
+						For whatever reason you landed here, why don't you join the 
+						<a href="https://www.facebook.com/anastasionico.uk/" target="_blank" >community we are building on Facebook?</a>
+					</em>
 
 					<hr class="border-blue">
 				</div>
@@ -272,6 +279,33 @@
 	</section>
 @endsection
 
+@section('subscribe')
+	{{-- Subscribe Section --}}
+	<div class="sectionCenter py-5 bg-azure c-white">
+		<div class="sectionCenter--content newsLetter clearfix p-3">
+			<img class="newsLetter-image" src="/img/book-email-review.jpg" alt="get the weekly book's review">	
+			<h3>
+				Get my reviews of must-read books that will increase your skills.
+			</h3>
+			{{ Form::open([
+					'method' => 'POST', 
+					'action' => ['NewsLetterController@subscribe'],
+					'class' => '',
+				]) 
+			}}
+				{{ csrf_field() }}
+				
+				
+				<div class="form-control ">
+					<label>Enter your email address...</label>
+					<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
+				</div>
+				
+				<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
+			{{ Form::close() }}	
+		</div>
+	</div>
+@endsection
 @section('blog')
 	<section class="blog--section bg-blue c-white skewed pt-5 pb-5">
 		<div class="skewReverse">
