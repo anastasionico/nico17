@@ -183,7 +183,7 @@ footer.menuVisible {
 }
 
 .oneThird--big--content {
-  text-align: justify;
+  text-align: left;
 }
 
 .oneThird--big--content h3 {
@@ -203,7 +203,6 @@ footer.menuVisible {
   }
 
   .oneThird--big--content {
-    text-align: left;
     width: 66%;
     margin: 0 auto;
   }
@@ -1340,14 +1339,13 @@ footer.menuVisible {
 
 .testimonials--quote {
   padding: 0rem;
-  text-align: justify;
+  text-align: left;
   display: none;
 }
 
 @media (min-width: 768px) {
   .testimonials--quote {
     padding: 5rem;
-    text-align: left;
   }
 }
 

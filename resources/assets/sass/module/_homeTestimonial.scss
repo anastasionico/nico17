@@ -104,12 +104,10 @@
 
 .testimonials--quote{
 	padding:0rem;
-	text-align: justify;
+	text-align: left;
 	display: none;
 	@include media(tabletPortrait){
-		
 		padding:5rem;
-		text-align: left;
 	}
 	&.active{
 		@include flex(center);
