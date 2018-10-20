@@ -46,7 +46,31 @@
   background-image: none !important;
   background-position: 0% 0%;
   background-repeat: repeat;
+  display: inline-block;
+
 }
+.todo .icon-check, .icon-picture {
+  padding: 10px;
+  margin: 2px 3px;
+  background:#28b779;
+  color: #1B367A;
+  border-radius: 5px;
+}
+.icon-pencil {
+  padding: 10px;
+  margin: 2px 3px;
+  background:#2295c9;
+  color: #1B367A;
+  border-radius: 5px;
+}
+.icon-remove {
+  padding: 10px;
+  margin: 2px 3px;
+  background:#da542e;
+  color: #1B367A;
+  border-radius: 5px;
+}
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: inherit;
