@@ -2285,10 +2285,44 @@ form.formContact input[type=submit] {
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-  .card--caption-CatnDate em {
-    margin-bottom: 0.7rem;
-  }
+.card--caption-CatnDate-minutesToRead-bg {
+  display: block;
+  margin: 0.2rem 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #3aa;
+}
+
+.card--caption-CatnDate-minutesToRead-bg small {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #35a;
+  font-size: 0.4rem;
+  z-index: 10;
+  padding-right: 0.5rem;
+}
+
+.card--caption-CatnDate-minutesToRead-bg small b {
+  margin-right: 0.2rem;
+  font-size: 0.4rem;
+  font-weight: 900;
+}
+
+.card--caption-CatnDate-minutesToRead-fg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 5%;
+  height: 0.5rem;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: all ease-in-out;
+  transition: all ease-in-out;
 }
 
 .miniCard {

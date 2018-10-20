@@ -631,15 +631,22 @@ function offsetTop_homeBlog() {
 	var blogSection = document.getElementsByClassName('blog--section')[0];
 	var blogSectionOffsetTop = blogSection.offsetTop;
 	var cards = document.querySelectorAll('.blog--section .card');
+	var minutesToReads = document.getElementsByClassName('card--caption-CatnDate-minutesToRead-fg');
+	var clientHeight = document.documentElement.clientHeight;
 
 	if (scrollPosition > blogSectionOffsetTop - clientHeight / 2) {
 		for (var i = 0; i < cards.length; i++) {
 
 			(function (i) {
 				setTimeout(function () {
+					// get the minutes that any blog post need to be read and with the number chage the style.transition in second
+					minutesToReadsClassName = minutesToReads[i].className;
+					var minutes = parseInt(minutesToReadsClassName, 10);
 
 					if (screen.width <= 480) {
 						cards[i].className = 'card is-visible is-translatedY';
+						minutesToReads[i].transitionDuration = minutes + "s";
+						minutesToReads[i].style.width = '100%';
 					} else {
 						if (i % 2 == 0) {
 							cards[i].style.left = '-50px';
@@ -648,6 +655,8 @@ function offsetTop_homeBlog() {
 							cards[i].style.left = '50px';
 							cards[i].className = 'card is-visible is-translatedXReverse';
 						}
+						minutesToReads[i].style.transitionDuration = minutes + "s";
+						minutesToReads[i].style.width = '100%';
 					}
 				}, i * 200);
 			})(i);

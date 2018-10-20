@@ -349,10 +349,15 @@
 										<b>
 											{{ ucfirst($post->category->supercategory->name) }}
 											({{ ucfirst($post->category->name) }})
+											
 										</b>	
 										<em>
 											{{ $post->published_at->toFormattedDateString() }}
-										</em>	
+										</em>
+										<span class="card--caption-CatnDate-minutesToRead-bg">
+					 						<span class="{{$post->minutes_to_read}}-minutes_to_read card--caption-CatnDate-minutesToRead-fg"></span>
+					 						<small><b>{{$post->minutes_to_read}} </b>Minutes to read</small>
+										</span>	
 									</div>
 									<h4>{{ ucfirst($post->name) }}</h4>
 									<p>
