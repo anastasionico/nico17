@@ -22,7 +22,6 @@
 	&:before {
 	    content: "";
 	    @include skewY(10deg);
-	    // background:red;
 	    background: linear-gradient(-50deg, #35a 5%, #3aa 50%), url("/img/heroBW.jpg");
 		background-blend-mode: multiply;
 		background-size:cover;
@@ -40,7 +39,10 @@
 	    bottom:0;
 	    left:0;
 	    width: 100%; /* something ridiculously big */
-	    height: 140vh; /* something ridiculously big */
+	    height: 105%; /* something ridiculously big */
+	    @include media(tabletLandscape){
+	    	height: 140vh; /* something ridiculously big */
+	    }
 	}
 
 	&-content{

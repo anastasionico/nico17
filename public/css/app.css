@@ -697,8 +697,15 @@ footer.menuVisible {
   left: 0;
   width: 100%;
   /* something ridiculously big */
-  height: 140vh;
+  height: 105%;
   /* something ridiculously big */
+}
+
+@media (min-width: 1024px) {
+  .hero--section:before {
+    height: 140vh;
+    /* something ridiculously big */
+  }
 }
 
 .hero--section-content {
@@ -793,7 +800,7 @@ footer.menuVisible {
 }
 
 .about--section {
-  margin-top: -5rem;
+  margin-top: -3rem;
   padding-top: 7rem;
 }
 
