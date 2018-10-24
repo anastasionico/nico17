@@ -825,6 +825,11 @@ footer.menuVisible {
   }
 }
 
+.about--section .videoCommercial {
+  width: 77%;
+  height: auto;
+}
+
 .about--section-phasisDivs {
   opacity: 0;
   position: relative;

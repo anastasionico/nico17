@@ -65,7 +65,14 @@
 			</div>
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
-
+		
+		<div class="sectionCenter">
+			<video class="videoCommercial" controls>
+				<source src="video/commercial.mp4" type="video/mp4">
+			</video>
+		</div>
+		
+ 		
  		<div class="fullWidth about--section-phasis">
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
