@@ -96,7 +96,9 @@
 									{{ ucfirst($post->excerpt) }}
 								</p>
 								@if( $post->cta_link)
-									<a href="{{ $post->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+									<a href="{{ $post->cta_link }}" target="_blank" class="btn btn-ghost">
+										{{ $post->cta_text }}
+									</a>
 								@endif
 								<a href="/blog/{{ $post->slug }}" class="btn">See details</a>
 							</div>	

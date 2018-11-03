@@ -51,6 +51,7 @@ class BlogpostController extends Controller
             'img'       => 'required|image|mimes:jpeg,jpg,gif,svg',
             'minutes_to_read'    => 'nullable|numeric',
             'cta_link'  => 'url|nullable',
+            'cta_text'  => 'string|nullable|required_if:cta_link,',
             'published_at'    => 'nullable|date',
         ]);
 
@@ -111,7 +112,9 @@ class BlogpostController extends Controller
             'img'       => 'image|mimes:jpeg,jpg,gif,svg',
             'minutes_to_read'    => 'nullable|numeric',
             'cta_link'  => 'url|nullable',
+            'cta_text'  => 'string|nullable|required_if:cta_link,',
             'published_at'    => 'nullable|date',
+
         ]);
 
         if($request->img){

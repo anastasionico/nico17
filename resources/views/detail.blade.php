@@ -129,7 +129,7 @@
 	@if( $content->cta_link)
 		<div class="sectionCenter bg-white pt-5 pb-5">
 			<div class="sectionCenter--content">
-				<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">Visit</a>
+				<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">{{ $content->cta_text }}</a>
 			</div>
 		</div>
 	@endif
@@ -259,7 +259,9 @@
 				 		</h4>
 						
 						@if( $otherContent->cta_link)
-							<a href="{{ $otherContent->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+							<a href="{{ $otherContent->cta_link }}" target="_blank" class="btn btn-ghost">
+								{{ $otherContent->cta_text }}
+							</a>
 						@endif
 
 						<a href="/{{ $segment }}/{{ $otherContent->slug }}" class="btn">See details</a>

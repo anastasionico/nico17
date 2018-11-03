@@ -136,17 +136,24 @@
                     </div>
                   </div>  
                   <div class="control-group">
-                  <label class="control-label">Keywords *</label>
-                  <div class="controls">
-                    <input type="text" name="keywords" class="span11" placeholder="Keywords" value="{{ $post->keywords }}" required />
-                    <span class="help-block">Multiple words, advised about 8</span>
+                    <label class="control-label">Keywords *</label>
+                      <div class="controls">
+                        <input type="text" name="keywords" class="span11" placeholder="Keywords" value="{{ $post->keywords }}" required />
+                        <span class="help-block">Multiple words, advised about 8</span>
+                      </div>
                   </div>
-                </div>
                   <div class="control-group">
-                      <label class="control-label">CTA</label>
+                      <label class="control-label">CTA link</label>
                       <div class="controls">
                         <input type="text" name="cta_link" class="span11" placeholder="http://www.anastasionico.uk" value="{{ $post->cta_link }}" />
                         <span class="help-block">Valid URL, need the protocol: http, https, ftp, etc</span>
+                      </div>
+                  </div>
+                  <div class="control-group">
+                      <label class="control-label">CTA text</label>
+                      <div class="controls">
+                        <input type="text" name="cta_text" class="span11" placeholder="visit" value="{{ $post->cta_text }}" />
+                        <span class="help-block">The text that needs to be see inside the button</span>
                       </div>
                   </div>
                   <div class="control-group">
