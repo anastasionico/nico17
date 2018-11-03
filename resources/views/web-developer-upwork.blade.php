@@ -84,8 +84,25 @@
 						<p>I have 6+ years of projects successfully deployed in my background.</p>
 						<br>
 						<p>Not enough?</p>
-						<br>
-						<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
+				</div>
+			</div>
+		</div>
+
+	<section class="about--section pb-5">
+		<div class="sectionCenter">
+			<video class="videoCommercial" controls>
+				<source src="video/commercial.mp4" type="video/mp4">
+			</video>
+		</div>
+	</section>
+
+	<section class="pt-5 pb-5 Nmt-10 bg-white c-blue">	
+		<div class="oneThird pt-5 pb-1">
+			<div class="oneThird--big">
+				<div class="oneThird--big--content ">
+					<br>
+					<p>I have professional experiences with a global franchise of <b>Mercedes Benz</b> and an <b>award-winning</b> marketing agency with worldwide partnerships situated in the heart of London.</p>
+					<br>
 						<br>
 						<img src="/img/upwork.png">
 						<br><br><br>
