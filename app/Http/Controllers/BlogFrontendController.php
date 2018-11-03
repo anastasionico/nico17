@@ -10,7 +10,7 @@ class BlogFrontendController extends Controller
 {
     public function index()
     {
-    	$posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug','minutes_to_read')->where('status', '=', 3)->orderBy('created_at', 'desc')->get();
+    	$posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','slug','minutes_to_read')->where('status', '=', 3)->orderBy('published_at', 'desc')->get();
         $supercategories = BlogSupercategory::all();
         
         return view('blog', compact('posts','supercategories'));
@@ -37,7 +37,7 @@ class BlogFrontendController extends Controller
                 ->where('slug', '!=', $param)
                 ->where('status', '=', 3)
                 ->limit(3)
-                ->orderBy('created_at', 'asc')
+                ->orderBy('published_at', 'asc')
                 ->get();    
         }
         
@@ -52,6 +52,7 @@ class BlogFrontendController extends Controller
             ->select('blogposts.img','blogposts.category_id','blogposts.published_at','blogposts.name','blogposts.excerpt','blogposts.cta_link','blogposts.slug', 'blogposts.minutes_to_read')
             ->where('status', '=', 3)
             ->where('blogsupercat.name', '=', $param)
+            ->orderBy('blogposts.published_at', 'desc')
             ->get();
         $supercategories = BlogSupercategory::all();
 
