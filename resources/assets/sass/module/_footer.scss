@@ -44,6 +44,7 @@
 			position:relative;
 			background-color:$white;
 			color: $azure;
+			transition: all 0.3s ease-in-out;
 			&:after{
 				content: "";
 			    background-color: $white;
@@ -52,6 +53,8 @@
 			    top:45%;
 			    left: 18px;
 			    z-index: -1;	
+			    transition: all 0.3s ease-in-out;
+
 			}
 			& small{
 				position: absolute;
@@ -61,6 +64,14 @@
 			    width: 6rem;
 			    text-align: left;
 			}
+			&:hover{
+				background-color:$blue;
+				color:$white;
+				&:after{
+					background-color:$blue;
+				}
+			}
+
 			@include media(tabletPortrait){
 				margin: 0.3rem auto;
 			}

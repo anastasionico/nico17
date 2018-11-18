@@ -14,6 +14,9 @@
 			<a href="https://www.linkedin.com/in/anastasionico/" target="_blank">
 				<i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
 			</a>
+			<a href="https://twitter.com/anastasio_nico" target="_blank">
+				<i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i>
+			</a>
 			<a href="https://github.com/anastasionico" target="_blank">
 				<i class="fa fa-2x fa-git-square" aria-hidden="true"></i>
 			</a>
