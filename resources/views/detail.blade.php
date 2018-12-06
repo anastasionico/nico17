@@ -1,4 +1,6 @@
-	@extends('layouts.master')
+@extends('layouts.master')
+
+@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
 
 @section('title', "anastasionico.uk | ". $content->name )
 @section('description', $content->excerpt )
@@ -44,6 +46,9 @@
 		
 	</div>
 @endsection --}}
+
+
+
 
 @section('homeAbout')
 	{{-- Title and Excerpt --}}
@@ -126,10 +131,19 @@
 		</div>		
 	</section>
 
-	@if( $content->cta_link)
+	@if( $content->cta_link )
+
 		<div class="sectionCenter bg-white pt-5 pb-5">
 			<div class="sectionCenter--content">
-				<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">{{ $content->cta_text }}</a>
+				<a href="{{ $content->cta_link }}" target="_blank" class="btn btn-cta">
+					@if(strpos($actual_link, "blog/"))
+						{{ $content->cta_text }}
+					@else
+						Visit
+					@endif
+				</a>
+
+				
 			</div>
 		</div>
 	@endif
@@ -150,7 +164,7 @@
 	<section class="bg-white c-blue detail--page pb-5">
 		<div class="sectionCenter ">
 
-			@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
+			
 			
 			@if(strpos($actual_link, "blog/"))
 				<div class="sectionCenter--content  shareButton-div-mobile clearfix p-3">
@@ -199,7 +213,7 @@
 	
 
 	{{-- Similar Content --}}
-	<div class="oneThird bg-white c-blue">
+	{{-- <div class="oneThird bg-white c-blue">
 		<div class="oneThird--big">
 			<div class="oneThird--big--content detail--page-index">
 				<div id="disqus_thread"></div>
@@ -226,7 +240,7 @@
 			</div>
 		</div>
 		<div class="oneThird--small">&nbsp;</div>
-	</div>		
+	</div>		 --}}
 @endsection
 
 @section('work')
@@ -279,7 +293,7 @@
 	<script type="text/javascript">
      	SyntaxHighlighter.all()
 	</script>
-	<script id="dsq-count-scr" src="//anastasionico-uk.disqus.com/count.js" async></script>
+	{{-- <script id="dsq-count-scr" src="//anastasionico-uk.disqus.com/count.js" async></script> --}}
 @endsection
 
 
