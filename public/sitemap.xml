@@ -1,407 +1,470 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--
+ created with Free Online Sitemap Generator www.xml-sitemaps.com 
+-->
 <url>
-  <loc>http://anastasionico.uk/</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>http://anastasionico.uk/</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/peru-travel-training</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>
+http://anastasionico.uk/projects/peru-travel-training
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/black-diamond</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/projects/black-diamond</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/viceroy-hotels-and-resorts</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>
+http://anastasionico.uk/projects/viceroy-hotels-and-resorts
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/silversea</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/projects/silversea</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/visit-california</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/projects/visit-california</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/projects</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/object-oriented-programming-in-php</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>
+http://anastasionico.uk/blog/frequently-asked-questions-php-7-3
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/frequently-asked-questions-about-php-frameworks</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>
+http://anastasionico.uk/blog/php-7-3-deprecations-changes
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-4</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/php-7-3-new-features</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-3</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>
+http://anastasionico.uk/blog/object-oriented-programming
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-2</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/php-73</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/ui-design</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/ui-design</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/what-is-web-design</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/what-is-web-design</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/what-is-ux-design</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/what-is-ux-design</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/how-to-watch-the-super-bowl-2017</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/avg-antivirus</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/microsoft-surface-book-i7</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/open-office</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/avg-antivirus</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/blog/git-and-github</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/contact</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>http://anastasionico.uk/contact</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/anastasionico</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/anastasionico</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/truck-trailer-equipment</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/projects/truck-trailer-equipment
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/kick-fit-consult</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/kick-fit-consult</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/sb-commercials</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/sb-commercials</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/yufash</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/yufash</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/best-van-deals</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/best-van-deals</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/atelier-gruppo-fasino</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/projects/atelier-gruppo-fasino
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/criscione-catering</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/projects/criscione-catering
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/casa-su-misura</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/casa-su-misura</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/baglio-rakali</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/baglio-rakali</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/scuola-pizzaioli-europei</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/projects/scuola-pizzaioli-europei
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/soleventietour</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/soleventietour</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/biscotti-tumminello</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/projects/biscotti-tumminello
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/projects/pb-profumerie</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/projects/pb-profumerie</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/guide-to-php-frameworks-part-1</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/the-complete-guide-to-object-oriented-programming
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blogCat/coding</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/inheritance-and-interfaces-in-php
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blogCat/graphic</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/interfaces-and-polymorphism-in-php
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blogCat/utility</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/visibility-and-static-keyword-in-php
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/history-of-web-layouts</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/php-magic-methods</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/build-your-foundation</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/abstract-classes-and-oop-extras
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/insert-images-in-your-document</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blogCat/coding</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/hyperlinks-tags</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blogCat/graphic</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-table</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blogCat/utility</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-list-in-html</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/frequently-asked-questions-about-php-frameworks
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/other-elements-for-text-in-html</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-4
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/blank-vulnerability</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-3
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/selectors-and-sintax</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/guide-to-24-php-frameworks-part-2
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/open-office</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/guide-to-php-frameworks-part-1
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-marquee-tool</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/opening-images-in-photoshop
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-navigator-panel</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/history-of-web-layouts
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/paragraph-bold-and-italic</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/build-your-foundation</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/git-and-github</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/file-information-in-photoshop
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/semantics-of-html</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/insert-images-in-your-document
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/html-tag-and-attributes</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-front-end</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/euro-2016</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/hyperlinks-tags</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/fourth-solutions</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-view-in-photoshop</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/photoshop-zoom-hand</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-colors</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-colors</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-table</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-view-in-photoshop</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/photoshop-zoom-hand</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-front-end</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-list-in-html</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/file-information-in-photoshop</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/other-elements-for-text-in-html
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/opening-images-in-photoshop</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/blank-vulnerability</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/how-to-download-free-music</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/selectors-and-sintax</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/tor-browser</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-marquee-tool</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/p2p-search-engines-2016</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-navigator-panel</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/how-to-use-utorrent</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/paragraph-bold-and-italic
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/choose-a-notebook-2016</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/semantics-of-html</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/dns-server</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/tor-browser</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/introduction-to-javascript</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/html-tag-and-attributes
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/introduction-to-css</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/html-elements</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/the-terminal-of-linux</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/photoshop---interface</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/photoshop---interface</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/the-terminal-of-linux</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/avast</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/introduction-to-css</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/html-elements</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/introduction-to-javascript
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/history-of-adobe-systems</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/computer-graphics</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/first-look-at-html</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/introduction-to-linux</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/introduction-to-linux</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/first-look-at-html</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/blog/computer-graphics</loc>
-  <lastmod>2018-10-04T21:18:33+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>
+http://anastasionico.uk/blog/history-of-adobe-systems
+</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://anastasionico.uk/file/NicoAnastasio_cv18.pdf</loc>
-  <lastmod>2018-08-09T22:17:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>http://anastasionico.uk/blog/dns-server</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
 </url>
-
-
+<url>
+<loc>http://anastasionico.uk/blog/avast</loc>
+<lastmod>2018-12-08T14:29:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>
+http://anastasionico.uk/file/NicoAnastasio_cv18.pdf
+</loc>
+<lastmod>2018-11-18T10:08:57+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
