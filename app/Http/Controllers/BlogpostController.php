@@ -112,7 +112,7 @@ class BlogpostController extends Controller
             'img'       => 'image|mimes:jpeg,jpg,gif,svg',
             'minutes_to_read'    => 'nullable|numeric',
             'cta_link'  => 'url|nullable',
-            'cta_text'  => 'string|nullable|required_if:cta_link,',
+            'cta_text'  => 'string|nullable',
             'published_at'    => 'nullable|date',
 
         ]);
