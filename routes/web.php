@@ -39,6 +39,10 @@ Route::get('/web-developer-upwork', function () {
     return view('web-developer-upwork');
 });
 
+Route::get('/learn-php', function () {
+    return view('learn-php');
+});
+
 Route::get('/detail', function () {
     return view('detail');
 });
