@@ -6,7 +6,6 @@
 
 @php
 	$ip = $_SERVER['REMOTE_ADDR'];
-	$ip = '2.31.135.100';
 	$visitorLocation = json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
 @endphp
 
@@ -15,7 +14,14 @@
 		
 		<div class="hero--section-content">
 			<h2>
-				Never been so many web developer in <span>{{ $visitorLocation->region }}</span>
+				Never been so many web developer
+				@if(!property_exists($visitorLocation, "region"))
+					like nowadays
+				@else 
+					in <span>{{ $visitorLocation->region }}</span>
+				@endif
+				 
+				
 			</h2>
 			<br>
 			<h4>It is time to beat you competition</h4>
