@@ -194,7 +194,7 @@
 		<input type="email" name="email" onfocusin="centerFieldEmail(this)" class="newsLetter-input">	
 	</div>
 	
-	<input class="btn btn-cta" type="submit" name="send" value="Subscribe">
+	<input class="btn btn-cta" type="submit" name="send" value="I'm in">
 	{{ Form::close() }}	
 
 	<a class="btn btn-ghost" onclick="popUpDelayedClose()">I don't want to improve</a>
