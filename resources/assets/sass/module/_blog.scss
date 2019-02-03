@@ -61,3 +61,27 @@
 		
 	}
 }
+
+.pagination {
+	li {
+		display: inline-block;
+		text-decoration:none;
+		text-transform: uppercase;	
+		padding:0.3rem 1rem;
+		font-size: 0.7rem;
+		background-color:transparent;
+		color:$white;
+		border:1px solid $white;
+		margin:1rem;
+		text-align:center;
+		font-weight:700;
+		a {
+			color:$white;
+		}
+
+	}
+	.active{
+		background-color:$white;
+		color:$blue;
+	}
+}

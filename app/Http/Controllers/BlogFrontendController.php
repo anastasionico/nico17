@@ -10,7 +10,11 @@ class BlogFrontendController extends Controller
 {
     public function index()
     {
-    	$posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','cta_text','slug','minutes_to_read')->where('status', '=', 3)->orderBy('published_at', 'desc')->get();
+    	// $posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','cta_text','slug','minutes_to_read')->where('status', '=', 3)->orderBy('published_at', 'desc')->get();
+
+        $posts = Blogpost::select('img','category_id','published_at','name','excerpt','cta_link','cta_text','slug','minutes_to_read')->where('status', '=', 3)->orderBy('published_at', 'desc')->paginate(10);
+
+        
         $supercategories = BlogSupercategory::all();
         
         return view('blog', compact('posts','supercategories'));

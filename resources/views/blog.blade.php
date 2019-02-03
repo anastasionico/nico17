@@ -59,9 +59,12 @@
 					</div>	
 				</div>
 			@endforeach
-
 		</div>
 
+		<div class="sectionCenter">
+			{{ $posts->links() }}
+		</div>
+		
 		@php
 			$postsIncrement = 0
 		@endphp			
@@ -108,7 +111,7 @@
 				</div>
 			</div>			
 		@endforeach
-			
+		
 	</section>
 @endsection
 

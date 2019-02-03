@@ -1482,6 +1482,29 @@ footer.menuVisible {
   font-style: italic;
 }
 
+.pagination li {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pagination li a {
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: #fff;
+  color: #35a;
+}
+
 .footer--section #footerDescription {
   font-size: 0.7rem;
   line-height: 1rem;
