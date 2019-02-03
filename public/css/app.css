@@ -624,6 +624,18 @@ footer.menuVisible {
   padding-bottom: 1rem;
 }
 
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
 .pb-5 {
   padding-bottom: 5rem;
 }

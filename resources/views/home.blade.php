@@ -316,7 +316,7 @@
 @endsection
 
 @section('blog')
-	<section class="work--section bg-blue c-white skewed pt-5 pb-5">	
+	<section class="work--section bg-blue c-white skewed pt-5 pb-2">	
 		<div class="oneThird" >
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
