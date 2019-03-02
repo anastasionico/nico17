@@ -62,7 +62,10 @@
 		</div>
 
 		<div class="sectionCenter">
-			{{ $posts->links() }}
+			@if($posts->links())
+				{{ $posts->links() }}
+			@endif
+			
 		</div>
 		
 		@php

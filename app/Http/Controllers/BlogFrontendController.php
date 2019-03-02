@@ -58,7 +58,7 @@ class BlogFrontendController extends Controller
             ->where('status', '=', 3)
             ->where('blogsupercat.name', '=', $param)
             ->orderBy('blogposts.published_at', 'desc')
-            ->get();
+            ->paginate(1);;
         $supercategories = BlogSupercategory::all();
 
         return view('blog', compact('posts','supercategories','segment'));        
