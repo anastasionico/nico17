@@ -7,7 +7,7 @@
 					<div class="twoThird--small-content">
 						<h3>Anastasio Nico</h3>
 						<small id="footerDescription">
-							I'm a Web Designer | Developer Aiming to help businesses grow. 
+							I'm a Web Designer |  web Developer based in London UK. 
 							<br>
 							I’d love to connect and help you convert your website visitors into customers. 
 							<br>
@@ -43,7 +43,7 @@
 							</div>
 							<br>
 							
-							{!! NoCaptcha::display() !!}
+							{{-- {!! NoCaptcha::display() !!} --}}
 							
 							<br>
 							<input class="btn" type="submit" name="send" value="SEND">
@@ -208,7 +208,7 @@
 
 
 
-{!! NoCaptcha::renderJs() !!}
+{{-- {!! NoCaptcha::renderJs() !!} --}}
 <script type="text/javascript">
 	function closeAlert(){
 		var popup = document.querySelector('.alert');

@@ -50,7 +50,7 @@
 							×
 			  			</a>
 			  			@foreach ($errors->all() as $error)
-			               	<h4 class="alert-heading">Too tired to type?</h4>
+			               	<h4 class="alert-heading">Error Occured!</h4>
 			               	<p>{{ $error }}</p>
 			            @endforeach
 			      	</div>

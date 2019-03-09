@@ -52,7 +52,7 @@ class ContactController extends Controller
             "name" => "required|string",
             "message" => "required|string|min:10",
             "email" => "required|email",
-            'g-recaptcha-response' => 'required|captcha'
+            // 'g-recaptcha-response' => 'required|captcha'
         ]);
         
 
