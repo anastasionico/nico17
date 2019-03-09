@@ -128,82 +128,80 @@
 @endsection
 
 @section('work')
-	<section class="blog--section   bg-blue c-white pt-5 pb-5">
-		<div class="skewReverse">
-			<div class="oneThird" >
-				<div class="oneThird--big">
-					<div class="oneThird--big--content ">
-						<h3>Articles</h3>
+	<section class="work--section bg-blue c-white pt-5 pb-2">	
+		<div class="oneThird" >
+			<div class="oneThird--big">
+				<div class="oneThird--big--content ">
+					<h3>My Projects</h3>
+				
+					<p>
+						I have successfully completed each of my <b>projects</b> either for companies and individuals.
+						<br>
+						I create completely personalized <b>web applications</b> in which I implement bespoke CMS for a fast and easy usage.
+					</p>
 					
-						<p>	
-							Blogging was once used to share a person’s <b>thoughts</b>, 
-							<br>
-							Nowadays it is a platform that allows to communicate and receive <b>feedback</b> from plenty of people all around the world.
-							<br>
-							Have a look at some of my <b>blog post</b>.
-						</p>
-
-					
-						<hr class="border-white">
-					</div>
-				</div>
-				<div class="oneThird--small">&nbsp;</div>
-			</div>		
-			
-			@php
-				$postsIncrement = 0
-			@endphp			
-			@foreach($posts as $post)
-				<div class="oneThird" >
-					@php
-						$postsIncrement++
-					@endphp		
-					@if( $postsIncrement %2 == 0 )
-						<div class="oneThird--small">&nbsp;</div>
-					@endif
-					<div class="oneThird--big">
-						<div class="oneThird--big--content">
-							<div class="card">
-								<div class="card--image" style="background-image:url('/img/blog/{{ $post->img }}')"></div>
-								<div class="card--caption">
-									<div class="card--caption-CatnDate clearfix">
-										<b>
-											{{ ucfirst($post->category->supercategory->name) }}
-											({{ ucfirst($post->category->name) }})
-											
-										</b>	
-										<em>
-											{{ $post->published_at->toFormattedDateString() }}
-										</em>
-										<span class="card--caption-CatnDate-minutesToRead-bg">
-					 						<span class="{{$post->minutes_to_read}}-minutes_to_read card--caption-CatnDate-minutesToRead-fg"></span>
-					 						<small><b>{{$post->minutes_to_read}} </b>Minutes to read</small>
-										</span>	
-									</div>
-									<h4>{{ ucfirst($post->name) }}</h4>
-									<p>
-										{{ ucfirst($post->excerpt) }}
-									</p>
-									@if( $post->cta_link)
-										<a href="{{ $post->cta_link }}" target="_blank" class="btn btn-ghost">{{ $post->cta_text }}</a>
-									@endif
-									<a href="/blog/{{ $post->slug }}" class="btn">See details</a>
-								</div>	
-							</div>
-							
-						</div>
-					</div>
-				</div>			
-			@endforeach
-
-			<div class="sectionCenter mt-5">
-				<div class="sectionCenter--content">
-					<a href='/blog' class="btn-cta">Read {{ $postsCount - 5 }} more</a>
+					<hr class="border-white">
 				</div>
 			</div>
-		</div>	
+			<div class="oneThird--small">&nbsp;</div>
+		</div>		
+		
+		@php
+			$projectsIncrement = 0
+		@endphp			
+		@foreach($projects as $project)
+			<div class="oneThird" >
+				@php
+					$projectsIncrement++
+				@endphp		
+				@if( $projectsIncrement %2 == 0 )
+					<div class="oneThird--small">&nbsp;</div>
+				@endif
+				<div class="oneThird--big">
+					<div class="oneThird--big--content">
+						<div class="card">
+							<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
+							<div class="card--caption">
+								<h4>{{ ucfirst($project->name) }}</h4>
+								<p>
+									{{ ucfirst($project->excerpt) }}
+								</p>
+								<em>
+									@if($project->seo)
+										<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
+									@endif
+									@if($project->ecommerce)
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i> eCommerce &emsp;
+									@endif
+									@if($project->responsive)
+										<i class="fa fa-mobile" aria-hidden="true"></i> Responsive &emsp;
+									@endif
+									@if($project->social_marketing)
+										<i class="fa fa-commenting-o" aria-hidden="true"></i> Social Marketing &emsp;
+									@endif
+									@if($project->host_support)
+										<i class="fa fa-ambulance" aria-hidden="true"></i> Host & Support &emsp;
+									@endif
+								</em>
+								@if( $project->cta_link)
+									<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
+								@endif
+								<a href="/projects/{{ $project->slug }}" class="btn">See details</a>
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+			</div>			
+		@endforeach
 
-	</section>
+		<div class="sectionCenter mt-5">
+			<div class="sectionCenter--content">
+				<a href='/projects' class="btn-cta">Browse {{ $projectsCount - 5 }} More</a>
+			</div>
+		</div>
+		
+	</section>	
 @endsection
 
 @section('homeTestimonial')
@@ -316,78 +314,79 @@
 @endsection
 
 @section('blog')
-	<section class="work--section bg-blue c-white skewed pt-5 pb-2">	
-		<div class="oneThird" >
-			<div class="oneThird--big">
-				<div class="oneThird--big--content ">
-					<h3>My Projects</h3>
-				
-					<p>
-						I have successfully completed each of my <b>projects</b> either for companies and individuals.
-						<br>
-						I create completely personalized <b>web applications</b> in which I implement bespoke CMS for a fast and easy usage.
-					</p>
-					
-					<hr class="border-white">
-				</div>
-			</div>
-			<div class="oneThird--small">&nbsp;</div>
-		</div>		
-		
-		@php
-			$projectsIncrement = 0
-		@endphp			
-		@foreach($projects as $project)
+	<section class="blog--section skewed bg-blue c-white pt-5">
+		<div class="skewReverse">
 			<div class="oneThird" >
-				@php
-					$projectsIncrement++
-				@endphp		
-				@if( $projectsIncrement %2 == 0 )
-					<div class="oneThird--small">&nbsp;</div>
-				@endif
 				<div class="oneThird--big">
-					<div class="oneThird--big--content">
-						<div class="card">
-							<div class="card--image" style="background-image:url('/img/projects/{{ $project->img }}')"></div>
-							<div class="card--caption">
-								<h4>{{ ucfirst($project->name) }}</h4>
-								<p>
-									{{ ucfirst($project->excerpt) }}
-								</p>
-								<em>
-									@if($project->seo)
-										<i class="fa fa-line-chart" aria-hidden="true"></i> S.E.O. &emsp;
-									@endif
-									@if($project->ecommerce)
-										<i class="fa fa-shopping-cart" aria-hidden="true"></i> eCommerce &emsp;
-									@endif
-									@if($project->responsive)
-										<i class="fa fa-mobile" aria-hidden="true"></i> Responsive &emsp;
-									@endif
-									@if($project->social_marketing)
-										<i class="fa fa-commenting-o" aria-hidden="true"></i> Social Marketing &emsp;
-									@endif
-									@if($project->host_support)
-										<i class="fa fa-ambulance" aria-hidden="true"></i> Host & Support &emsp;
-									@endif
-								</em>
-								@if( $project->cta_link)
-									<a href="{{ $project->cta_link }}" target="_blank" class="btn btn-ghost">Visit</a>
-								@endif
-								<a href="/projects/{{ $project->slug }}" class="btn">See details</a>
-							</div>	
-						</div>
-						
+					<div class="oneThird--big--content ">
+						<h3>Articles</h3>
+					
+						<p>	
+							Blogging was once used to share a person’s <b>thoughts</b>, 
+							<br>
+							Nowadays it is a platform that allows to communicate and receive <b>feedback</b> from plenty of people all around the world.
+							<br>
+							Have a look at some of my <b>blog post</b>.
+						</p>
+
+					
+						<hr class="border-white">
 					</div>
 				</div>
-			</div>			
-		@endforeach
+				<div class="oneThird--small">&nbsp;</div>
+			</div>		
+			
+			@php
+				$postsIncrement = 0
+			@endphp			
+			@foreach($posts as $post)
+				<div class="oneThird" >
+					@php
+						$postsIncrement++
+					@endphp		
+					@if( $postsIncrement %2 == 0 )
+						<div class="oneThird--small">&nbsp;</div>
+					@endif
+					<div class="oneThird--big">
+						<div class="oneThird--big--content">
+							<div class="card">
+								<div class="card--image" style="background-image:url('/img/blog/{{ $post->img }}')"></div>
+								<div class="card--caption">
+									<div class="card--caption-CatnDate clearfix">
+										<b>
+											{{ ucfirst($post->category->supercategory->name) }}
+											({{ ucfirst($post->category->name) }})
+											
+										</b>	
+										<em>
+											{{ $post->published_at->toFormattedDateString() }}
+										</em>
+										<span class="card--caption-CatnDate-minutesToRead-bg">
+					 						<span class="{{$post->minutes_to_read}}-minutes_to_read card--caption-CatnDate-minutesToRead-fg"></span>
+					 						<small><b>{{$post->minutes_to_read}} </b>Minutes to read</small>
+										</span>	
+									</div>
+									<h4>{{ ucfirst($post->name) }}</h4>
+									<p>
+										{{ ucfirst($post->excerpt) }}
+									</p>
+									@if( $post->cta_link)
+										<a href="{{ $post->cta_link }}" target="_blank" class="btn btn-ghost">{{ $post->cta_text }}</a>
+									@endif
+									<a href="/blog/{{ $post->slug }}" class="btn">See details</a>
+								</div>	
+							</div>
+							
+						</div>
+					</div>
+				</div>			
+			@endforeach
 
-		<div class="sectionCenter mt-5">
-			<div class="sectionCenter--content">
-				<a href='/projects' class="btn-cta">Browse {{ $projectsCount - 5 }} More</a>
+			<div class="sectionCenter mt-5">
+				<div class="sectionCenter--content">
+					<a href='/blog' class="btn-cta">Read {{ $postsCount - 5 }} more</a>
+				</div>
 			</div>
-		</div>
-		
-	</section>	
+		</div>	
+	</section>
 @endsection
