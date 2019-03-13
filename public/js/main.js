@@ -785,7 +785,7 @@ window.onload = function () {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_shareButtons();
 			offsetTop_Hamburger_scrollBalls();
-		} else if (page == 'freelance-web-developer-london' || page == 'web-developer-upwork') {
+		} else if (page == 'freelance-web-developer-london' || page == 'web-developer-upwork' || page == 'london-web-design-companyweb-development') {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_testimonial();
 			offsetTop_AboutPhases();

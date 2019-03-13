@@ -43,6 +43,10 @@ Route::get('/learn-php', function () {
     return view('learn-php');
 });
 
+Route::get('/london-web-design-companyweb-development', function () {
+    return view('london-companyweb');
+});
+
 Route::get('/detail', function () {
     return view('detail');
 });
