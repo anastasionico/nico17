@@ -31,21 +31,7 @@ Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
 Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
-Route::get('/freelance-web-developer-london', function () {
-    return view('freelance-web-developer-london');
-});
 
-Route::get('/web-developer-upwork', function () {
-    return view('web-developer-upwork');
-});
-
-Route::get('/learn-php', function () {
-    return view('learn-php');
-});
-
-Route::get('/london-web-design-companyweb-development', function () {
-    return view('london-companyweb');
-});
 
 Route::get('/detail', function () {
     return view('detail');
@@ -59,6 +45,8 @@ Route::group(['prefix' => "/newsletter"], function(){
 Route::get('community', function () {
     return redirect('https://www.facebook.com/anastasionico.uk');
 });
+
+
 
 
 
@@ -118,4 +106,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
         Route::get('issubscribed', 'NewsLetterController@isSubscribed');
         Route::get('unsubscribe/{email}', 'NewsLetterController@unsubscribe');
     });
+});
+
+
+// LANDING PAGE
+Route::get('/freelance-web-developer-london', function () {
+    return view('freelance-web-developer-london');
+});
+Route::get('/web-developer-upwork', function () {
+    return view('web-developer-upwork');
+});
+Route::get('/learn-php', function () {
+    return view('learn-php');
+});
+Route::get('/web-designer-london', function () {
+    return view('landingPage/web-designer-london');
 });
