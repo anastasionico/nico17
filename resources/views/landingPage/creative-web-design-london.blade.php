@@ -10,8 +10,8 @@
 	<div class="hero--section ">
 		
 		<div class="hero--section-content">
-			<h1>Web Designer in London</h1>
-			<h4>SEO & Web Design</h4>
+			<h1>Creative Web Design <br>in London</h1>
+			<h4>Give your Business the creativity it deserves</h4>
 			<br>
 			<h2>anastasio<span>nico.uk</span></h2>
 		</div>
@@ -42,16 +42,16 @@
 		<div class="oneThird py-5">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>Web Designer</h3>
-					<p>We are an experienced London based <b>website design and digital marketing company</b> </p>
+					<h3>Creative Web Design</h3>
+					<p>We are an experienced London based <b>creative website design and digital marketing company</b> </p>
 					<br>
 					<p>Our goal is to create attractive and effective websites that attract more clients and boost your bottom line.</p>
 					<br>
 					<p>We are pride to create the <b>highest quality solutions</b> that deliver powerful results.</p>
 					<br>
-					<p>We specialize in landing pages creation, website design and development, and search engine optimization, SEO</p>
+					<p>We specialize in landing pages creation, creative design and development, and search engine optimization, SEO</p>
 					<br>
-					<p>We tackle website projects head-on, implementing the <b>latest technology tools and techniques</b> in the industry and put you ahead of your online competition.
+					<p>We tackle creative projects head-on, implementing the <b>latest technology tools and techniques</b> in the industry and put you ahead of your online competition.
 					</p>
 					<br>
 					<p>Whether you sell products or provide services, <b>we can help you do more of it</b>. Explore our portfolio to get a better idea of what we can do for you.

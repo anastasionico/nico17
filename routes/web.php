@@ -122,3 +122,9 @@ Route::get('/learn-php', function () {
 Route::get('/web-designer-london', function () {
     return view('landingPage/web-designer-london');
 });
+Route::get('/web-design-london', function () {
+    return view('landingPage/web-design-london');
+});
+Route::get('/creative-web-design-london', function () {
+    return view('landingPage/creative-web-design-london');
+});

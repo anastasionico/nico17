@@ -748,7 +748,10 @@ window.onload = function () {
 		} else if (
 			page == 'freelance-web-developer-london'
 			|| page == 'web-developer-upwork'
-			|| page == 'web-designer-london') {
+			|| page == 'web-designer-london'
+			|| page == 'web-design-london'
+			|| page == 'creative-web-design-london'
+			) {
 			offsetTop_Hamburger_scrollBalls();
 			offsetTop_testimonial();
 			offsetTop_AboutPhases();

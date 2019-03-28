@@ -10,8 +10,8 @@
 	<div class="hero--section ">
 		
 		<div class="hero--section-content">
-			<h1>Web Designer in London</h1>
-			<h4>SEO & Web Design</h4>
+			<h1>Web Design in London</h1>
+			<h4>your expert in SEO & Web Design</h4>
 			<br>
 			<h2>anastasio<span>nico.uk</span></h2>
 		</div>
@@ -42,7 +42,7 @@
 		<div class="oneThird py-5">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>Web Designer</h3>
+					<h3>Web Design</h3>
 					<p>We are an experienced London based <b>website design and digital marketing company</b> </p>
 					<br>
 					<p>Our goal is to create attractive and effective websites that attract more clients and boost your bottom line.</p>
