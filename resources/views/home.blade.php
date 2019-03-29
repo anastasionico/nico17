@@ -43,22 +43,29 @@
 		<div class="oneThird">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
-					<h3>About me</h3>
-					<p>Hi, I am Nico.</p>
+					<h2>Website Design Agency in London</h2>
 					<br>
-					<p>An Italian speaker, code and design enthusiast.</p>
+					<h4>anastasionico.uk</h4>
 					<br>
-					<p>I am working in <strong>London and Hertfordshire</strong> as a <strong>Web Developer</strong> and <strong>Web Designer</strong>.</p>
+					<p>A Digital Agency working in <b>London & Hertfordshire</b> with years of experience at your service,</p>
 					<br>
-					<p>I do two things:</p>
-					<p>I <strong>publish content on my blog</strong> that helps web developers improve their skills and share knowledge,</p>
-					<p>and</p>
-					<p>I help businesses by creating websites and web applications that are designed to fulfill their purpose, whether it is to <b>provide information</b> or convert visitors into <b>customers</b>.</p>
+					<p>The Goal is to use our creativity to help your business, whether <b>you need more customers or more visibility</b>.</p>
 					<br>
-					<em>
-						For whatever reason you landed here, why don't you join the 
-						<a href="https://www.facebook.com/anastasionico.uk/" target="_blank" >community we are building on Facebook?</a>
-					</em>
+					
+					<p>Over time, we’ve become experts with skills in Website Design, Web Development, SEO, Graphics Design and Online Marketing.</p>
+					<br>
+					<p>We are involved, and successfully delivered, in a wide range of industry sectors (learning, tourism, B2B), with clients from all around the world.</p>
+					
+					<br>
+					<small>
+						<em>
+							For whatever reason, you landed here, Join the 
+							<a href="https://www.facebook.com/anastasionico.uk/" target="_blank" >
+								community to see the latest about the trend on the web.
+								<i class="fab fa-facebook"></i>
+							</a>
+						</em>	
+					</small>
 
 					<hr class="border-blue">
 				</div>
@@ -71,7 +78,7 @@
 				<source src="video/commercial.mp4" type="video/mp4">
 			</video>
 		</div>
-		 		
+		
  		<div class="fullWidth about--section-phasis">
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
@@ -87,16 +94,16 @@
  			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
-					<i class="fa fa-check-square-o  fa-2x" aria-hidden="true"></i>
+					<i class="fas fa-mobile-alt fa-2x"></i>
 				</span>
-				<h5 class="about--section-phasis-caption">Testing</h5>	
+				<h5 class="about--section-phasis-caption">Mobile</h5>		
  			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
 				<span class="about--section-phasis-logo  bigCircle flexCenter">
-					<i class="fa fa-code fa-2x" aria-hidden="true"></i>
+ 					<i class="fas fa-chart-line fa-2x"></i>
 				</span>
-				<h5 class="about--section-phasis-caption">Coding</h5>	
- 			</div>
+				<h5 class="about--section-phasis-caption">SEO</h5>	
+			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>

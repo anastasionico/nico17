@@ -1,5 +1,4 @@
 <footer>
-	
 	<div class="footer--section">
 		<div class="footer--section-contact">
 			<div class="twoThird">
@@ -58,7 +57,7 @@
 				<a href="mailto:anastasionico@gmail.com?subject=Mail from Nico17">
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-1">
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<i class="far fa-envelope"></i>
 							<small>nico@anastasionico.uk</small>
 						</span>
 					</div>
@@ -66,7 +65,7 @@
 				<a href="https://www.facebook.com/anastasionico.uk" target="_blank">
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-2">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
+							<i class="fab fa-facebook-f"></i>
 							<small>/anastasionico.uk</small>
 						</span>
 					</div>
@@ -74,7 +73,7 @@
 				<a href="https://www.linkedin.com/in/anastasionico/" target="_blank">
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-3">
-							<i class="fa fa-linkedin" aria-hidden="true"></i>
+							<i class="fab fa-linkedin-in"></i>
 							<small>/anastasionico</small>
 						</span>
 					</div>
@@ -82,7 +81,7 @@
 				<a href="https://twitter.com/anastasio_nico" target="_blank">
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-4">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
+							<i class="fab fa-twitter"></i>
 							<small>/anastasio_nico</small>
 						</span>
 					</div>
@@ -90,7 +89,7 @@
 				<a href="https://github.com/anastasionico" target="_blank">
 					<div class="sectionCenter--content">
 						<span  class="social-logo mt-1 smallCircle flexCenter" id="social-5">
-							<i class="fa fa-github" aria-hidden="true"></i>
+							<i class="fab fa-github"></i>
 							<small>/anastasionico</small>
 						</span>
 					</div>
