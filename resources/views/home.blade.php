@@ -227,7 +227,7 @@
 							<img src="img/testimonials/jigar.jpg">	
 						</div>							
 						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle ">
-							<img src="img/testimonials/giovanna.jpg">	
+							<img src="img/testimonials/tom.jpg">	
 						</div>							
 						<div data-quote="quote4" class="testimonials--container-photo photo-next bigCircle">
 							<img src="img/testimonials/ken.jpg">	
@@ -242,7 +242,6 @@
 			</div>
 			<div class="twoThird--big">
 				<div class="twoThird--big-content">
-					
 					<div class="testimonials--quote" id="quote1">
 						<q>
 							This guy is a badass!!!
@@ -261,12 +260,12 @@
 					</div>
 					<div class="testimonials--quote active" id="quote3">
 						<q>
-							Nico is an excellent developer who uses his considerable knowledge of online and digital trends to realize up to date projects. 
+							I worked with Nico as a web developer in-house at Motus UK Mercedes-Benz division. 
 							<br>
-							He has been influential in creating my most recent website and has made significant efforts to ensure I was kept informed and updated at each stage of the process
+							He works hard and shows real grit & determination. When he commits to something he sees it through - Never sick or late
 						</q>
-						<h4>Petali di Wedding</h4>
-						<em>Giovanna Leonardi - Execute Manager</em>
+						<h4>Motus, Mercedes Benz</h4>
+						<em>Tom Hughes - Senior IT</em>
 					</div>
 					<div class="testimonials--quote" id="quote4">
 						<q>

@@ -11,6 +11,7 @@
 		{{ Form::open([
 				'method' => 'POST', 
 				'action' => ['ContactController@store'],
+				'class' => 'formContact',
 			]) 
 		}}
 			{{ csrf_field() }}
