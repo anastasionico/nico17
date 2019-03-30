@@ -80,7 +80,7 @@
 		</div>
 		
  		<div class="fullWidth about--section-phasis">
- 			<div class="fullWidth--content about--section-phasisDivs">
+	 		<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-binoculars fa-2x" aria-hidden="true"></i>
 				</span>
