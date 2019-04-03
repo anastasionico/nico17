@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
-@section('title', 'anastasionico.uk | Freelance Web Developer Designer London, Hertfordshire UK')
-@section('description', 'I am a freelance Web Developer and Web Designer working in London and Hertfordshire UK, Expert in building bespoke responsive websites, Online Marketing Services and SEO')
+@section('title', 'anastasionico.uk | Creative Web services London, Hertfordshire UK')
+@section('description', 'I am a freelance Web Developer and Creative Web Designer working in London and Hertfordshire UK, Expert in building websites, Online Marketing Services and SEO')
 @section('keywords', 'anastasionico, freelance, website, web designer, web developer, London, Hertfordshire, seo, marketing')
 
 

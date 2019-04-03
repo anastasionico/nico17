@@ -92,7 +92,7 @@
  			</div>
  			<div class="fullWidth--content about--section-phasisDivs">
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
-					<i class="c-blue fa fa-pencil fa-2x" aria-hidden="true"></i>
+					<i class="c-blue fas fa-brain fa-2x"></i>
 				</span>
 				<h5 class="about--section-phasis-caption">50+<br>Experieces shared</h5>	
  			</div>

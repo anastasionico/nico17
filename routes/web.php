@@ -125,6 +125,9 @@ Route::get('/web-designer-london', function () {
 Route::get('/web-design-london', function () {
     return view('landingPage/web-design-london');
 });
+Route::get('/web-design-haringey', function () {
+    return view('landingPage/web-design-haringey');
+});
 Route::get('/creative-web-design-london', function () {
     return view('landingPage/creative-web-design-london');
 });

@@ -750,6 +750,7 @@ window.onload = function () {
 			|| page == 'web-developer-upwork'
 			|| page == 'web-designer-london'
 			|| page == 'web-design-london'
+			|| page == 'web-design-haringey'
 			|| page == 'creative-web-design-london'
 			) {
 			offsetTop_Hamburger_scrollBalls();
