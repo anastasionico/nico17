@@ -7,4 +7,27 @@
 			background-color:yellow;
 		}
 	}
+
+	.about--section-workwith{
+		&-logo{
+			transition: all 0.3s ease-in-out;
+			margin: 0rem auto 2rem;
+			@include borderArrow;
+			transform: rotateZ(0);
+			overflow:hidden;
+			background: $white; 	
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat:no-repeat;
+			border-radius:50%;
+			@include lightShadow(0, 3, 13, 3, rgba($black,0.3));
+			&:hover{
+				transform: scale(1.4);
+				background-size: 50% 50%;
+				background-position: center;
+				background-repeat:no-repeat;
+			}	
+		}
+	}
 }
+

@@ -153,6 +153,49 @@
 			<div class="oneThird--small">&nbsp;</div>
 		</div>		
 		
+		{{-- WORK ON THE MARGIN TOP OF THE SPAN HERE --}}
+		<div class="sectionCenter pb-0">
+			Worked With
+		</div>
+		<div class="fullWidth about--section-workwith pt-0">
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter mt-1" 
+					style="background-image: url('http://pngimg.com/uploads/mercedes_logos/mercedes_logos_PNG3.png');">">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://i.pinimg.com/originals/a2/d8/9e/a2d89ec93a2d01f10f02de09aafd5245.jpg');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://www.prweekjobs.co.uk/getasset/f1e80c72-c6bb-49d7-98ce-13218f97c128/');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://i.pinimg.com/originals/10/45/55/104555ca337c6c04e83504b46a3a04da.png');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://www.cruisemapper.com/images/lines/19.jpg');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('http://www.calarvc.org/wp-content/uploads/2015/11/visit-california.png');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://www.villacriscione.com/wp-content/uploads/2019/02/logo.svg');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://yt3.ggpht.com/a-/AAuE7mDq880ujx1AXU3QvNtJYyk6nY9W2T2Jt3hxiQ=s900-mo-c-c0xffffffff-rj-k-no');">
+			</div>
+			<div class="fullWidth--content about--section-phasisDivs">
+				<span class="about--section-workwith-logo  bigCircle flexCenter" 
+					style="background-image: url('https://static1.squarespace.com/static/595d69672e69cf27605f00ba/t/5b2bce9e0e2e720a2438886d/1529597613347/better-ba-logo.png');">
+			</div>
+		</div>
+
 		@php
 			$projectsIncrement = 0
 		@endphp			
