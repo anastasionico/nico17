@@ -108,7 +108,7 @@
  				<span class="about--section-phasis-logo  bigCircle flexCenter">
 					<i class="fa fa-ambulance  fa-2x" aria-hidden="true"></i>
 				</span>
-				<h5 class="about--section-phasis-caption">Assistence</h5>	
+				<h5 class="about--section-phasis-caption">Assistance</h5>	
  			</div>
  		</div>
 
