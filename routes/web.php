@@ -31,8 +31,6 @@ Route::get('/blog', 'BlogFrontendController@index');
 Route::get('/blog/{param}', 'BlogFrontendController@show');
 Route::get('/blogCat/{param}', 'BlogFrontendController@filterCategory');
 
-
-
 Route::get('/detail', function () {
     return view('detail');
 });
@@ -45,7 +43,9 @@ Route::group(['prefix' => "/newsletter"], function(){
 Route::get('community', function () {
     return redirect('https://www.facebook.com/anastasionico.uk');
 });
-
+Route::get('/resources', function () {
+    return view('resources');
+});
 
 
 

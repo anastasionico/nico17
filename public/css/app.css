@@ -2800,6 +2800,13 @@ form.formContact input[type=submit] {
   border-radius: 50%;
 }
 
+.mediumCircle {
+  width: 66px;
+  height: 66px;
+  font-size: 0.75rem;
+  border-radius: 50%;
+}
+
 .bigCircle {
   width: 100px;
   height: 100px;
