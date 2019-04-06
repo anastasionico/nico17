@@ -43,8 +43,8 @@ Route::group(['prefix' => "/newsletter"], function(){
 Route::get('community', function () {
     return redirect('https://www.facebook.com/anastasionico.uk');
 });
-Route::get('/resources', function () {
-    return view('resources');
+Route::get('/web-development-resources', function () {
+    return view('web-development-resources');
 });
 
 

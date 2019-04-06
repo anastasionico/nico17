@@ -790,6 +790,10 @@ window.onload = function () {
 			offsetTop_testimonial();
 			offsetTop_AboutPhases();
 			offsetTop_PricingDivs();
+		} else if (page == 'web-development-resources') {
+			offsetTop_homeWork();
+			offsetTop_homeBlog();
+			offsetTop_Hamburger_scrollBalls_home();
 		} else {
 			offsetTop_Hamburger_scrollBalls_whitePage();
 			offsetTop_Hamburger_scrollBalls();
