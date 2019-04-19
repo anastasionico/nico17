@@ -1,7 +1,12 @@
 .footer--section{
 	#footerDescription{
 		font-size: 0.7rem;
-		line-height: 1rem;		
+		line-height: 1rem;
+	}
+	#useful-link{
+		a {
+			font-size: 0.75rem;
+		}
 	}
 	@include media(tabletPortrait){
 		padding-top:15rem;

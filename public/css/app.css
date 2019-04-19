@@ -689,6 +689,14 @@ footer.menuVisible {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .hero--section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1590,6 +1598,10 @@ footer.menuVisible {
 .footer--section #footerDescription {
   font-size: 0.7rem;
   line-height: 1rem;
+}
+
+.footer--section #useful-link a {
+  font-size: 0.75rem;
 }
 
 @media (min-width: 768px) {

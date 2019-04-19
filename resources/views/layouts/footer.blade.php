@@ -2,51 +2,27 @@
 	<div class="footer--section">
 		<div class="footer--section-contact">
 			<div class="twoThird">
-				<div class="twoThird--small">
-					<div class="twoThird--small-content">
-						<h3>Anastasio Nico</h3>
-						<small id="footerDescription">
-							I'm a Web Designer |  web Developer based in London UK. 
-							<br>
-							I’d love to connect and help you convert your website visitors into customers. 
-							<br>
-							I specialize in enhancing online visibility of business using high-quality solutions. 
-						</small>
+				<div class="twoThird--small text-left">
+					<div class="twoThird--small-content" id='useful-link'>
+						<h3>Useful links</34>
+
+						<p><a href="/web-development-resources">Resources</a></p>
+						<p><a href="/learn-php">Learn PHP</a></p>
+						<p><a href="/creative-web-design-london">Creative Designer</a></p>
+						<p><a href="/contact">Contact</a></p>
 					</div>
 				</div>
 				<div class="twoThird--big">
 					<div class="twoThird--big-content">
-						{{ Form::open([
-								'method' => 'POST', 
-								'action' => ['ContactController@store'],
-								'class' => 'footerForm',
-							]) 
-						}}
-							{{ csrf_field() }}
-						
-							<div class="form-control">
-								<label>Your Name</label>
-								<input type="text" name="name">	
-								
-							</div>
-							<div class="form-control">
-								<label>
-									Insert your message here
-									<small class="help-block" id="messageHelpBlock" style="font-size:0.5rem;">At least 10 characters</small>
-								</label>
-								<textarea name='message' id="messageTextarea" rows="1" cols="33"></textarea>
-							</div>
-							<div class="form-control">
-								<label>Your Email</label>
-								<input type="text" name="email">
-							</div>
+						<h3>Anastasio Nico</h3>
+						<br>
+						<small id="footerDescription">
+							Web Designer / Web Developer based in London UK. 
 							<br>
-							
-							{{-- {!! NoCaptcha::display() !!} --}}
-							
+							I help buiness convert website's visitors into customers. 
 							<br>
-							<input class="btn" type="submit" name="send" value="SEND">
-						{{ Form::close() }}
+							I specialize in enhancing online visibility of business using high-quality solutions. 
+						</small>
 					</div>
 				</div>
 			</div>
@@ -218,8 +194,7 @@
 		popUpDelayed.style.display='none'; 
 	}
 	
-</script>
-<script type="text/javascript">
+
 	var messageHelpBlock = document.querySelector('#messageHelpBlock');
 	var messageTextarea = document.querySelector('#messageTextarea');
 
