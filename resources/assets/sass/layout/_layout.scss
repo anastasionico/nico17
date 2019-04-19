@@ -251,8 +251,16 @@ footer{
 				text-decoration: none;
 			}
 		}
-		a {
+		a{
+			transition: all 0.3s ease-in-out;
 			color:$azure;
+			text-decoration-line: underline; 
+			&:visited, &:active {
+				color:$azure;
+			}
+			&:hover{
+				color:$blue;
+			}
 		}
 	}
 	table{

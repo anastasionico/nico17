@@ -382,7 +382,20 @@ footer.menuVisible {
 }
 
 .detail--page-index a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #3aa;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.detail--page-index a:visited,
+.detail--page-index a:active {
+  color: #3aa;
+}
+
+.detail--page-index a:hover {
+  color: #35a;
 }
 
 .detail--page table {
@@ -2753,6 +2766,21 @@ form.formContact input[type=submit] {
   left: 1rem;
 }
 
+.alert-danger > a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #35a;
+}
+
+.alert-danger > a:visited,
+.alert-danger > a:active {
+  color: #35a;
+}
+
+.alert-danger > a:hover {
+  color: #fff;
+}
+
 .alert-warning {
   background-color: #E8C309;
 }
@@ -2777,6 +2805,21 @@ form.formContact input[type=submit] {
   left: 1rem;
 }
 
+.alert-success > a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #E87009;
+}
+
+.alert-success > a:visited,
+.alert-success > a:active {
+  color: #E87009;
+}
+
+.alert-success > a:hover {
+  color: #fff;
+}
+
 .alert-primary {
   background-color: #35a;
 }
@@ -2789,6 +2832,21 @@ form.formContact input[type=submit] {
   left: 1rem;
 }
 
+.alert-primary > a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #3aa;
+}
+
+.alert-primary > a:visited,
+.alert-primary > a:active {
+  color: #3aa;
+}
+
+.alert-primary > a:hover {
+  color: #fff;
+}
+
 .alert-info {
   background-color: #3aa;
 }
@@ -2799,6 +2857,21 @@ form.formContact input[type=submit] {
   display: inline-block;
   position: absolute;
   left: 1rem;
+}
+
+.alert-info > a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #35a;
+}
+
+.alert-info > a:visited,
+.alert-info > a:active {
+  color: #35a;
+}
+
+.alert-info > a:hover {
+  color: #fff;
 }
 
 .smallCircle {
