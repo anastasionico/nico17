@@ -360,6 +360,10 @@ footer.menuVisible {
   background-color: #35a;
 }
 
+.detail--page p {
+  line-height: 180%;
+}
+
 .detail--page:after {
   background-color: #fff;
 }
@@ -375,6 +379,10 @@ footer.menuVisible {
 .detail--page-index ul a {
   color: #3aa;
   text-decoration: none;
+}
+
+.detail--page-index a {
+  color: #3aa;
 }
 
 .detail--page table {

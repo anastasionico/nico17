@@ -234,6 +234,9 @@ footer{
 }
 
 .detail--page{
+	p {
+		line-height: 180%;
+	}
 	&:after{
 		background-color:$white;
 	}
@@ -247,6 +250,9 @@ footer{
 				color:$azure;
 				text-decoration: none;
 			}
+		}
+		a {
+			color:$azure;
 		}
 	}
 	table{
