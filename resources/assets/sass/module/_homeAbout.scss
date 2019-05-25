@@ -15,10 +15,17 @@
 		padding-top:27rem;
 	}
 	
+	& .imageProfile{
+		@include borderRadius(50%);
+		width: 7rem;
+	}
+
 	& .videoCommercial{
 		width:77%;
 		height:auto;
 	}
+
+
 	&-phasis{
 		&Divs{
 			opacity: 0;

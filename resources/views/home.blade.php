@@ -43,6 +43,7 @@
 		<div class="oneThird">
 			<div class="oneThird--big">
 				<div class="oneThird--big--content ">
+					<img class="imageProfile" src="/img/profile.jpg">
 					<h2>Website Design Agency in London</h2>
 					<br>
 					<h4>anastasionico.uk</h4>
@@ -282,13 +283,13 @@
 					<div class="testimonials--container clearfix">
 						
 						<div data-quote="quote1" class="testimonials--container-photo bigCircle">
-							<img src="img/testimonials/peter.jpg">	
+							<img src="img/testimonials/tom.jpg">	
 						</div>							
 						<div data-quote="quote2" class="testimonials--container-photo photo-prev bigCircle">
-							<img src="img/testimonials/jigar.jpg">	
+							<img src="img/testimonials/peter.jpg">	
 						</div>							
 						<div data-quote="quote3" class="testimonials--container-photo photo-active bigCircle ">
-							<img src="img/testimonials/tom.jpg">	
+							<img src="img/testimonials/jigar.jpg">		
 						</div>							
 						<div data-quote="quote4" class="testimonials--container-photo photo-next bigCircle">
 							<img src="img/testimonials/ken.jpg">	
@@ -305,28 +306,28 @@
 				<div class="twoThird--big-content">
 					<div class="testimonials--quote" id="quote1">
 						<q>
-							This guy is a badass!!!
-						</q>
-						<h4>F.I.P.E Web Design</h4>
-						<em>Peter Azea  - C.E.O.</em>
-					</div>
-					<div class="testimonials--quote" id="quote2">
-						<q>
-							One of the most dedicated and passionate professional I have come across and his commitment to the field of web development is highly commendable. 
-							<br>
-							I would have no hesitation in recommending Nico in any organisation.
-						</q>
-						<h4>Imperial Commercials</h4>
-						<em>Jigar N. Mehta  - Software Engineering</em>
-					</div>
-					<div class="testimonials--quote active" id="quote3">
-						<q>
 							I worked with Nico as a web developer in-house at Motus UK Mercedes-Benz division. 
 							<br>
 							He works hard and shows real grit & determination. When he commits to something he sees it through - Never sick or late
 						</q>
 						<h4>Motus, Mercedes Benz</h4>
 						<em>Tom Hughes - Senior IT</em>
+					</div>
+					<div class="testimonials--quote" id="quote2">
+						<q>
+							This guy is a badass!!!
+						</q>
+						<h4>F.I.P.E Web Design</h4>
+						<em>Peter Azea  - C.E.O.</em>
+					</div>
+					<div class="testimonials--quote active" id="quote3">
+						<q>
+							One of the most dedicated and passionate professional I have come across and his commitment to the field of web development is highly commendable. 
+							<br>
+							I would have no hesitation in recommending Nico in any organisation.
+						</q>
+						<h4>Imperial Commercials</h4>
+						<em>Jigar N. Mehta  - Software Engineering</em>	
 					</div>
 					<div class="testimonials--quote" id="quote4">
 						<q>

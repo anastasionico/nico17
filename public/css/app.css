@@ -885,6 +885,11 @@ footer.menuVisible {
   }
 }
 
+.about--section .imageProfile {
+  border-radius: 50%;
+  width: 7rem;
+}
+
 .about--section .videoCommercial {
   width: 77%;
   height: auto;
