@@ -381,6 +381,11 @@ footer.menuVisible {
   text-decoration: none;
 }
 
+.detail--page-index ul li {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .detail--page-index a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

@@ -250,6 +250,10 @@ footer{
 				color:$azure;
 				text-decoration: none;
 			}
+			li{
+				font-size: 16px;
+    			font-weight: 300;
+			}
 		}
 		a{
 			transition: all 0.3s ease-in-out;
