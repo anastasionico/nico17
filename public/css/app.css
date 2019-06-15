@@ -369,7 +369,8 @@ footer.menuVisible {
 }
 
 .detail--page-index ul {
-  list-style-type: none;
+  list-style-type: circle;
+  margin-left: 1rem;
 }
 
 .detail--page-index ul ul {
@@ -384,6 +385,7 @@ footer.menuVisible {
 .detail--page-index ul li {
   font-size: 16px;
   font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
 .detail--page-index a {

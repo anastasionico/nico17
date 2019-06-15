@@ -242,7 +242,8 @@ footer{
 	}
 	&-index{
 		ul{
-			list-style-type: none;
+			list-style-type: circle;
+    		margin-left: 1rem;
 			ul{
 				padding-left:5rem;
 			}
@@ -253,6 +254,7 @@ footer{
 			li{
 				font-size: 16px;
     			font-weight: 300;
+    			margin-bottom: 1.5rem;
 			}
 		}
 		a{
