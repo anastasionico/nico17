@@ -425,10 +425,12 @@
 											{{ ucfirst($post->category->supercategory->name) }}
 											({{ ucfirst($post->category->name) }})
 											
-										</b>	
-										<em>
-											{{ $post->published_at->toFormattedDateString() }}
-										</em>
+										</b>
+										@if($post->published_at > date('Y-m-d', strtotime("-6 months")))	
+											<em>
+												{{ $post->published_at->toFormattedDateString() }}
+											</em>
+										@endif
 										<span class="card--caption-CatnDate-minutesToRead-bg">
 					 						<span class="{{$post->minutes_to_read}}-minutes_to_read card--caption-CatnDate-minutesToRead-fg"></span>
 					 						<small><b>{{$post->minutes_to_read}} </b>Minutes to read</small>

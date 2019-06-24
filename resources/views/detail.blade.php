@@ -68,9 +68,13 @@
 						</h3>	
 						<em class="f-right clearfix">
 							@if( $content->category )
-								{{ $content->published_at->toFormattedDateString() }}
+								@if($content->published_at > date('Y-m-d', strtotime("-6 months")))
+									{{ $content->published_at->toFormattedDateString() }}
+								@endif
 							@else
-								{{ $content->created_at->toFormattedDateString() }}
+								@if($content->created_at > date('Y-m-d', strtotime("-6 months")))
+									{{ $content->created_at->toFormattedDateString() }}
+								@endif
 							@endif
 						</em>	
 					</span>
