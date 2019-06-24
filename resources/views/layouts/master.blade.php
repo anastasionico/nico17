@@ -36,6 +36,11 @@
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<meta property="og:image" content="http://anastasionico.uk//img/heroBW.jpg" />
+		<meta property="og:type" content="image/jpeg" />
+		<meta property="og:url" content="http://anastasionico.uk" />
+		<meta property="og:title" content="anastasionico.uk | Freelance Web Developer Designer London, Hertfordshire UK" />
+		<meta property="og:description" content="I am a freelance Web Developer and Web Designer working in London and Hertfordshire UK, Expert in building bespoke responsive websites, Online Marketing Services and SEO" />
 
 		@yield('head')
 
