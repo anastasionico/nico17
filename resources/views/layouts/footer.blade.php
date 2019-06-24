@@ -149,7 +149,7 @@
 </footer>
 
 
-<div id="popUpDelayed" class="newsLetter bg-white c-white p-3">
+{{-- <div id="popUpDelayed" class="newsLetter bg-white c-white p-3">
 	<img class="newsLetter-image" src="/img/book-email-review.jpg" alt="get the weekly book's review">	
 	<h6>
 		Get my free books' review to improve your skill now!
@@ -173,7 +173,7 @@
 	{{ Form::close() }}	
 
 	<a class="btn btn-ghost" onclick="popUpDelayedClose()">I don't want to improve</a>
-</div>	
+</div>	 --}}
 
 
 
@@ -184,15 +184,16 @@
 
 
 {{-- {!! NoCaptcha::renderJs() !!} --}}
+
 <script type="text/javascript">
 	function closeAlert(){
 		var popup = document.querySelector('.alert');
 		popup.style.display='none';
 	}
-	function popUpDelayedClose(){
-		var popUpDelayed = document.querySelector('#popUpDelayed');
-		popUpDelayed.style.display='none'; 
-	}
+	// function popUpDelayedClose(){
+	// 	var popUpDelayed = document.querySelector('#popUpDelayed');
+	// 	popUpDelayed.style.display='none'; 
+	// }
 	
 
 	var messageHelpBlock = document.querySelector('#messageHelpBlock');

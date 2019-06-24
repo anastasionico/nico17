@@ -664,28 +664,28 @@ function enlargeClickable(){
 	})
 }
 
-function showPopUp(){
-	var screenWidth = screen.width;
-	var popUp = document.getElementById('popUpDelayed');
-	var popUpOffSetTop = popUp.offsetTop;
+// function showPopUp(){
+// 	var screenWidth = screen.width;
+// 	var popUp = document.getElementById('popUpDelayed');
+// 	var popUpOffSetTop = popUp.offsetTop;
 	
-	setInterval(function(){ 
-		popUp.style.opacity='1'; 
-		if( screenWidth >= 0 && screenWidth <= 479){
-			popUp.style.top= '25%'; 
-		}else if( screenWidth >= 480 && screenWidth <= 767){
-			popUp.style.top= '5%'; 
-		}else if( screenWidth >= 768 && screenWidth <= 1023){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1024 && screenWidth <= 1365){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1366 && screenWidth <= 1919){
-			popUp.style.top= '10%'; 
-		}else if( screenWidth >= 1920){
-			popUp.style.top= '10%'; 
-		}
-	}, 50000);
-}
+// 	setInterval(function(){ 
+// 		popUp.style.opacity='1'; 
+// 		if( screenWidth >= 0 && screenWidth <= 479){
+// 			popUp.style.top= '25%'; 
+// 		}else if( screenWidth >= 480 && screenWidth <= 767){
+// 			popUp.style.top= '5%'; 
+// 		}else if( screenWidth >= 768 && screenWidth <= 1023){
+// 			popUp.style.top= '10%'; 
+// 		}else if( screenWidth >= 1024 && screenWidth <= 1365){
+// 			popUp.style.top= '10%'; 
+// 		}else if( screenWidth >= 1366 && screenWidth <= 1919){
+// 			popUp.style.top= '10%'; 
+// 		}else if( screenWidth >= 1920){
+// 			popUp.style.top= '10%'; 
+// 		}
+// 	}, 50000);
+// }
 
 function faqActiveQuestion(){
 	var questions = document.querySelectorAll('.faq-question');
@@ -714,7 +714,7 @@ function faqActiveQuestion(){
 
 window.onload = function () {
 	menuVisible();
-	showPopUp();
+	// showPopUp();
 	click_testimonial_photos();
 	formBehaviour();
 	// enlargeGist();
