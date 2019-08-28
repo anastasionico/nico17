@@ -1,5 +1,8 @@
 <aside>
+	@if(isset($content))
+		<p id='popUpDelayedCountDown'></p>
 
+	@endif
 	<div class="scroll--ball-Div">
 		<div class="scroll--balls">
 			<span class='scroll--ball'></span>
@@ -10,6 +13,7 @@
 		<div>
 	</div>
 
+	
 	<div class="shareButton-div">
 		@if(isset($content))
 			@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp

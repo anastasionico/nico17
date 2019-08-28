@@ -56,8 +56,21 @@
 					<p>Over time, we’ve become experts with skills in Website Design, Web Development, SEO, Graphics Design and Online Marketing.</p>
 					<br>
 					<p>We are involved, and successfully delivered, in a wide range of industry sectors (learning, tourism, B2B), with clients from all around the world.</p>
-					
-					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="sectionCenter mb-5">
+			<div class="sectionCenter--content">
+				<a href="mailto:nico@anastasionico.uk?Subject=I want to hire you" target="_top" class="btn-cta">
+					Hire me
+				</a>
+			</div>
+		</div>
+			
+		<div class="oneThird">		
+			<div class="oneThird--big">
+				<div class="oneThird--big--content ">
 					<small>
 						<em>
 							For whatever reason, you landed here, Join the 

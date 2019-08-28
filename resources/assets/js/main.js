@@ -159,7 +159,11 @@ function offsetTop_Hamburger_scrollBalls_home()
 function offsetTop_Hamburger_scrollBalls_whitePage()
 {
 	var scrollPosition = window.scrollY;
-	var heroHeight = document.querySelector('.hero--section').offsetHeight -200;
+	var heroHeight = document.querySelector('.hero--section');
+	if(heroHeight) {
+		var heroHeight = heroHeight.offsetHeight -200;	
+	}
+	
 	var hamburger = document.querySelectorAll('.hamburger span');
 	var bgWhite = document.querySelectorAll('.mainSection .bg-white');
 	var bgBlue = document.querySelectorAll('.mainSection .bg-blue');
@@ -664,28 +668,50 @@ function enlargeClickable(){
 	})
 }
 
-// function showPopUp(){
-// 	var screenWidth = screen.width;
-// 	var popUp = document.getElementById('popUpDelayed');
-// 	var popUpOffSetTop = popUp.offsetTop;
+function showPopUp(){
+	var screenWidth = screen.width;
+	var popUp = document.getElementById('popUpDelayed');
+	var popUpOffSetTop = popUp.offsetTop;
 	
-// 	setInterval(function(){ 
-// 		popUp.style.opacity='1'; 
-// 		if( screenWidth >= 0 && screenWidth <= 479){
-// 			popUp.style.top= '25%'; 
-// 		}else if( screenWidth >= 480 && screenWidth <= 767){
-// 			popUp.style.top= '5%'; 
-// 		}else if( screenWidth >= 768 && screenWidth <= 1023){
-// 			popUp.style.top= '10%'; 
-// 		}else if( screenWidth >= 1024 && screenWidth <= 1365){
-// 			popUp.style.top= '10%'; 
-// 		}else if( screenWidth >= 1366 && screenWidth <= 1919){
-// 			popUp.style.top= '10%'; 
-// 		}else if( screenWidth >= 1920){
-// 			popUp.style.top= '10%'; 
-// 		}
-// 	}, 50000);
-// }
+	setInterval(function(){ 
+		popUp.style.opacity='1'; 
+		if( screenWidth >= 0 && screenWidth <= 479){
+			popUp.style.top= '25%'; 
+		}else if( screenWidth >= 480 && screenWidth <= 767){
+			popUp.style.top= '5%'; 
+		}else if( screenWidth >= 768 && screenWidth <= 1023){
+			popUp.style.top= '10%'; 
+		}else if( screenWidth >= 1024 && screenWidth <= 1365){
+			popUp.style.top= '10%'; 
+		}else if( screenWidth >= 1366 && screenWidth <= 1919){
+			popUp.style.top= '10%'; 
+		}else if( screenWidth >= 1920){
+			popUp.style.top= '10%'; 
+		}
+	}, 50000);
+}
+
+function popUpDelayedCountDown() {
+	var timer = 49, minutes, seconds;
+    var popUpDelayedCountDown = document.getElementById('popUpDelayedCountDown');
+
+    setInterval(function () {
+    	minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        if (timer>0) {
+        	popUpDelayedCountDown.innerHTML = timer;	
+        } else {
+        	popUpDelayedCountDown.innerHTML = '';	
+        }
+        
+
+        if (--timer < 0) {
+            timer = duration;
+        }	
+        
+    }, 1000);
+}
 
 function faqActiveQuestion(){
 	var questions = document.querySelectorAll('.faq-question');
@@ -714,13 +740,14 @@ function faqActiveQuestion(){
 
 window.onload = function () {
 	menuVisible();
-	// showPopUp();
+	showPopUp();
 	click_testimonial_photos();
 	formBehaviour();
 	// enlargeGist();
 	enlargeClickable();
 	faqActiveQuestion();
 	
+	popUpDelayedCountDown();
 	//retrieve the page name 
 	var path = window.location.pathname;
 	var page = path.split("/").pop();

@@ -2115,6 +2115,11 @@ aside {
       flex-wrap: nowrap;
 }
 
+aside #popUpDelayedCountDown {
+  color: #fff;
+  text-shadow: 0px 2px 3px rgba(17, 17, 17, 0.3);
+}
+
 aside .scroll--ball-Div {
   display: -webkit-box;
   display: -ms-flexbox;
