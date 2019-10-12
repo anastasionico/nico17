@@ -7,15 +7,6 @@
 @section('keywords', $content->keywords )
 
 @section('head')
-	<meta property="og:title" content="{{ ucfirst($content->name) }}">
-	<meta property="og:description" content="{{ ucfirst($content->excerpt) }}">
-	<meta property="og:image" content="http://www.anastasionico.uk/img/{{$segment}}/{{$content->img}}">
-	<meta property="og:url" content="{{ url()->current() }}">
-	<meta property="og:type"               content="article" />
-
-	
-
-
 	<style type="text/css">
 		.hero--section:before{
 			background-image: url("/img/{{$segment}}/{{$content->img}}");
