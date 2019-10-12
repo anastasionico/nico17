@@ -29,7 +29,6 @@
 			@if (!strpos($_SERVER['REQUEST_URI'], 'blog/') ||
 				strpos($_SERVER['REQUEST_URI'], 'blog/') && ($content->status === 3)
 			)
-				{{ 'Analytics on' }}
 			    <!-- Global site tag (gtag.js) - Google Analytics -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52550566-2"></script>
 				<script>
