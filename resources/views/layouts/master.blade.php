@@ -22,16 +22,24 @@
 			$blacklist = ['2.31.193.21'];
 		@endphp
 		
-		@if(!in_array($_SERVER['REMOTE_ADDR'], $blacklist))
-		    <!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52550566-2"></script>
-			<script>
-				  window.dataLayer = window.dataLayer || [];
-				  function gtag(){dataLayer.push(arguments);}
-				  gtag('js', new Date());
 
-				  gtag('config', 'UA-52550566-2');
-			</script>
+		{{-- if is not blacklisted and if is a blog post with the status of 3 (published) use analytics --}}
+		@if (!in_array($_SERVER['REMOTE_ADDR'], $blacklist))
+			
+			@if (!strpos($_SERVER['REQUEST_URI'], 'blog/') ||
+				strpos($_SERVER['REQUEST_URI'], 'blog/') && ($content->status === 3)
+			)
+				{{ 'Analytics on' }}
+			    <!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52550566-2"></script>
+				<script>
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+
+					  gtag('config', 'UA-52550566-2');
+				</script>
+			@endif
 		@endif
 		
 		<title>@yield('title')</title>
