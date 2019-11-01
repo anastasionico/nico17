@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
+@php $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; @endphp
 
 @section('title', "anastasionico.uk | ". $content->name )
 @section('description', $content->excerpt )
@@ -22,7 +22,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushSql.js" type="text/javascript"></script> 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.css" rel="stylesheet" type="text/css" />
 
-	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> 
+	<script src="https://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> 
 	
 	
 @endsection

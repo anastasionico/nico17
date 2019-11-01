@@ -36,6 +36,9 @@ class AppServiceProvider extends ServiceProvider
             $view->with('blogpostsPublished', \App\Blogpost::getPostsPublished());
         });
 
+        if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
     }
 
     /**
